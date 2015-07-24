@@ -7,43 +7,21 @@
 
 define('SLUG', 'portal-timtec');
 
-add_action("wp_ajax_search", function(){
-    //ex jQuery.getJSON(ajaxurl,{action: 'search', post_type:'evento', fields:'ID,post_title', keyword:'e'}, function(r){ console.log(r); })
-        $args = array(
-            'post_type' => $_REQUEST['post_type'],
-            'posts_per_page' => -1,
-            'post_parent' => 0,
-            'orderby' => 'title',
-            'order' => 'ASC',
-            's' => $_REQUEST['keyword']
-        );
-        if($_REQUEST['fields']){
-            $fields = explode(',',$_REQUEST['fields']);
-            $response = array_map( function($item) use($fields) {
-                $result = array();
-                foreach($fields as $field){
-                    if($item->$field)
-                        $result[$field] = $item->$field;
-                }
-                return $result;
-            }, get_posts($args));
-        }else{
-            $response = get_posts($args);
-        }
-        echo json_encode($response);
-        die;
-});
-                    
+session_start();
 
+require __DIR__ . '/inc/classes/PrivateFile.php';
 require __DIR__ . '/inc/classes/OneToOneMetabox.php';
 require __DIR__ . '/inc/classes/OneToManyMetabox.php';
 require __DIR__ . '/inc/classes/ManyToManyRelation.php';
+
+require __DIR__ . '/inc/ajax.php';
 
 require __DIR__ . '/inc/post-types/teacher.php';
 require __DIR__ . '/inc/post-types/course.php';
 //require __DIR__ . '/inc/post-types/installation.php';
 
 require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
+require __DIR__ . '/inc/metaboxes/course-download.php';
 
 
 if ( ! function_exists( 'portal_timtec_setup' ) ) :
