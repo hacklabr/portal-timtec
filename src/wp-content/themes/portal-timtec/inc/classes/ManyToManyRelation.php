@@ -280,8 +280,12 @@ class ManyToManyRelation{
         }
         
         // Apaga o meta pra reinserir todos os valores
-        delete_post_meta($post_id, $meta_name1);
-        $wpdb->query("DELETE FROM $wpdb->post_meta WHERE meta_key = '$meta_name2' AND meta_value = '$post_id'");
+        $related_post_ids = implode(',',get_post_meta($post_id, $meta_name1));
+        if($related_post_ids){
+            $wpdb->query("DELETE FROM $wpdb->post_meta WHERE meta_key = '$meta_name2' AND meta_value = '$post_id' AND post_id IN ($related_post_ids)");
+            delete_post_meta($post_id, $meta_name1);
+        }
+        
 
         // OK, we're authenticated: we need to find and save the data
         if (isset($_POST[$this->meta_cfg['slug']][$meta_name1])) {
