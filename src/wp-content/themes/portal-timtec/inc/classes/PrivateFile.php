@@ -118,8 +118,10 @@ class PrivateFile {
                 header('Content-Disposition: attachment; filename="' . basename($filename) . '"');
 
                 readfile($filename);
-                
+
                 do_action('download_private_file', array('post_type' => $post_type, 'meta_name' => $meta_name, 'post_id' => $post_id));
+
+                add_post_meta($post_id, $this->_config['meta_name'] . ':download', get_current_user_id());
 
                 die;
             }
@@ -128,6 +130,21 @@ class PrivateFile {
 
     private function _getRelativePath($post_id) {
         return "{$this->_config['post_type']}/{$post_id}/{$this->_config['meta_name']}/";
+    }
+
+    public function getNumTotalDownloads($post_id, $distinct = false) {
+        global $wpdb;
+        
+        $count = $distinct ? "COUNT(DISTINCT(meta_value))" : "COUNT(meta_value)";
+        
+        return $wpdb->get_var("
+                        SELECT 
+                            $count
+                        FROM $wpdb->postmeta 
+                        WHERE 
+                            meta_key = '{$this->_config['meta_name']}:download' AND 
+                            post_id = {$post_id}
+                ");
     }
 
     public function getFilePath($post_id) {
@@ -145,7 +162,11 @@ class PrivateFile {
 
     public function addMetaBox() {
         add_meta_box(
-                $this->_config['slug'], $this->_config['title'], array(&$this, 'metabox'), $this->_config['post_type'], $this->_config['context']
+                $this->_config['slug'], 
+                $this->_config['title'], 
+                array(&$this, 'metabox'), 
+                $this->_config['post_type'], 
+                $this->_config['context']
         );
     }
 
@@ -158,19 +179,23 @@ class PrivateFile {
                 $("#post").attr('enctype', 'multipart/form-data');
             })(jQuery);
         </script>
+        <em><?php _e('Number of downloads', SLUG)?>:</em> <?php echo $this->getNumTotalDownloads($post->ID) ?><br>
+        <em><?php _e('Number of users who downloaded', SLUG) ?>:</em> <?php echo $this->getNumTotalDownloads($post->ID, true) ?><br>
+        
         <?php if ($this->_error): ?>
             ERROR: <?php echo $this->_error ?>
         <?php endif; ?>
         <p><?php echo $this->_config['description'] ?></p>
         <input type="file" name="<?php echo $this->_config['input_name'] ?>" /><br>
+        
         <?php if ($url = $this->getFileUrl($post->ID)): ?>
-            <h4><?php _e('attached file:', SLUG) ?></h4>
+            <br><strong><?php _e('attached file:', SLUG) ?></strong><br>
             <a href="<?php echo $url ?>"><?php echo get_post_meta($post->ID, $this->_config['meta_name'], true) ?></a>
             <label>
                 <input type="checkbox" name="<?php echo $this->_config['input_name'] ?>_delete"/>
-                <?php _e('remove', SLUG); ?>
+            <?php _e('remove', SLUG); ?>
             </label>
-        <?php endif; ?>
+            <?php endif; ?>
         <?php
     }
 
