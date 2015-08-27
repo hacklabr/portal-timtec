@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  * As configurações básicas do WordPress.
  *
  * Esse arquivo contém as seguintes configurações: configurações de MySQL, Prefixo de Tabelas,
@@ -14,9 +14,11 @@
  * @package WordPress
  */
 
+define('WP_ENV', 'development');
+
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'portal-timtec');
+define('DB_NAME', 'portaltimtec');
 
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');
@@ -78,6 +80,6 @@ define ('WPLANG', 'pt_BR');
 /** Caminho absoluto para o diretório WordPress. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
-	
+
 /** Configura as variáveis do WordPress e arquivos inclusos. */
 require_once(ABSPATH . 'wp-settings.php');
