@@ -9,6 +9,27 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
+
+define('SLUG', 'portal-timtec');
+
+session_start();
+
+require __DIR__ . '/inc/classes/PrivateFile.php';
+require __DIR__ . '/inc/classes/OneToOneMetabox.php';
+require __DIR__ . '/inc/classes/OneToManyMetabox.php';
+require __DIR__ . '/inc/classes/ManyToManyRelation.php';
+
+require __DIR__ . '/inc/ajax.php';
+
+require __DIR__ . '/inc/post-types/teacher.php';
+require __DIR__ . '/inc/post-types/course.php';
+//require __DIR__ . '/inc/post-types/installation.php';
+
+require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
+require __DIR__ . '/inc/metaboxes/course-download.php';
+
+
+
 $sage_includes = [
   'lib/utils.php',                 // Utility functions
   'lib/init.php',                  // Initial theme setup and constants
@@ -18,6 +39,7 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'inc/metaboxes/url-video-course.php', //MetaBox 
 ];
 
 foreach ($sage_includes as $file) {
