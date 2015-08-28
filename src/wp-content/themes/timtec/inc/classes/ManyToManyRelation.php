@@ -63,7 +63,7 @@ class ManyToManyRelation{
 
     public function addMetabox()
     {
-        if (!is_array($this->meta_cfg['post_types'])) {
+        if (isset($this->meta_cfg['post_types']) && !is_array($this->meta_cfg['post_types'])) {
             $this->meta_cfg['post_types'] = array($this->meta_cfg['post_types']);
         }
 
@@ -108,7 +108,8 @@ class ManyToManyRelation{
                 'orderby' => 'title'
             );
 
-            if(!is_null($this->meta_cfg['post_parent']))
+
+            if(isset($this->meta_cfg['post_parent']) && !is_null($this->meta_cfg['post_parent']))
                 $args['post_parent'] = $this->meta_cfg['post_parent'];
 
             $result = get_posts($args);
