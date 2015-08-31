@@ -50,3 +50,37 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/**
+* Alterar Nome PostType "Post"  para "Notícias"
+**/
+add_action( 'admin_menu', 'rename_post_for_noticia_label' );
+add_action( 'init', 'rename_post_for_noticia_object' );
+function rename_post_for_noticia_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Notícias';
+    $submenu['edit.php'][5][0] = 'Notícias';
+    $submenu['edit.php'][10][0] = 'Add Notícias';
+    $submenu['edit.php'][16][0] = 'Notícias Tags';
+    echo '';
+}
+function rename_post_for_noticia_object() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Notícias';
+    $labels->singular_name = 'Notícias';
+    $labels->add_new = 'Add Notícias';
+    $labels->add_new_item = 'Add Notícias';
+    $labels->edit_item = 'Edit Notícias';
+    $labels->new_item = 'Notícias';
+    $labels->view_item = 'View Notícias';
+    $labels->search_items = 'Search Notícias';
+    $labels->not_found = 'No Notícias found';
+    $labels->not_found_in_trash = 'No Notícias found in Trash';
+    $labels->all_items = 'All Notícias';
+    $labels->menu_name = 'Notícias';
+    $labels->name_admin_bar = 'Notícias';
+}
+ 
+
