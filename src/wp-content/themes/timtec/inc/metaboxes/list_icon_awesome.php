@@ -54,6 +54,8 @@ class add_lista_icon_awesome {
 
         // verify this came from the our screen and with proper authorization,
         // because save_post can be triggered at other times
+        if(!isset($_POST[__CLASS__.'_noncename']))
+            return;
 
         if (!wp_verify_nonce($_POST[__CLASS__.'_noncename'], 'save_'.__CLASS__))
             return;
