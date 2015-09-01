@@ -24,10 +24,14 @@ require __DIR__ . '/inc/ajax.php';
 require __DIR__ . '/inc/post-types/teacher.php';
 require __DIR__ . '/inc/post-types/course.php';
 require __DIR__ . '/inc/post-types/organization.php';
+require __DIR__ . '/inc/post-types/redessociais.php';
 //require __DIR__ . '/inc/post-types/installation.php';
 
 require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
 require __DIR__ . '/inc/metaboxes/course-download.php';
+require __DIR__ . '/inc/metaboxes/link_redesocial.php';
+require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
+
 
 
 
@@ -51,6 +55,34 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/**
+* Adicionar Select com Busca de Icones Awesome Post_type RedeSocial
+*/
+
+function rede_social_icon_select() {
+    global $post_type;
+    if(is_admin() && $post_type  ==  'rede_social' ){
+
+        wp_register_script('fontawesomeiconpicker', get_bloginfo('template_directory') .'/dist/scripts/fontawesome-iconpicker.min.js');
+        wp_enqueue_script('fontawesomeiconpicker');
+
+        wp_register_script('icon-selector', get_bloginfo('template_directory') .'/dist/scripts/icon-selector.js');
+        wp_enqueue_script('icon-selector');
+
+        wp_register_style('fontawesomecss', get_bloginfo('template_directory') .'/dist/styles/font-awesome.min.css');
+        wp_enqueue_style('fontawesomecss');
+
+        wp_register_style('fontawesomeiconpickercss', get_bloginfo('template_directory') .'/dist/styles/fontawesome-iconpicker.min.css');
+        wp_enqueue_style('fontawesomeiconpickercss');
+    }
+
+}
+
+add_action( 'admin_print_scripts-post-new.php', 'rede_social_icon_select', 11 );
+add_action( 'admin_print_scripts-post.php', 'rede_social_icon_select', 11 );
+
+
 
 /**
 * Alterar Nome PostType "Post"  para "Notícias"
