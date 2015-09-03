@@ -1,0 +1,215 @@
+$bg-cinza: #EAEAEA;
+$bg-branco: #f3f2f2;
+$teuton-light: 'Teuton22Pro';
+$teuton-normal: 'Teuton23Pro';
+
+.btn_conheca{
+	padding: 10px 15px;
+	color: #00c5fe;
+	border:1px solid #00c5fe;
+	border-radius:5px;
+	text-transform:uppercase;
+	margin:20px 0px;
+	display:inline-block;
+
+	&:hover{
+		text-decoration:none;
+		background: #00c5fe;
+		color: #fff;
+	}
+}
+
+.btn_cadastrese{
+	padding: 10px 15px;
+	color: #fff;
+	background: #00c5fe;
+	border:1px solid #00c5fe;
+	border-radius:5px;
+	text-transform:uppercase;
+	margin:20px 0px;
+	display:inline-block;
+
+	&:hover{
+		text-decoration:none;
+		background:#fff;
+		color:  #00c5fe;
+	}
+}
+
+#banner{
+	background: #095daf;
+	
+	.text{
+		h4{
+			font-family: $teuton-normal;
+			color:#fff;
+			font-size: 4em;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    margin: 30% 0%;
+		}
+	}
+
+	.image{
+		padding:2% 0px;
+		
+		img{
+			width:100%;
+		}
+	}
+	
+}
+
+#section1{
+	background:$bg-cinza;
+	padding: 5% 0px;
+	
+
+	.text{
+		text-align: center;
+		margin-bottom: 40px;
+		
+		h2{
+			font-family: $teuton-normal;
+			color:#404040;
+			font-size:3em;
+			margin-bottom: 20px;
+		}
+
+		p{	
+			font-family: verdana, sans-serif;
+			color:#656565;
+			font-size: 1.1em;
+    		font-weight: 100;
+		}
+	}
+
+	.boxs{
+	
+		.box{
+			margin:2%;
+			border:1px solid #cfcfcf;
+			border-radius:2px;
+			padding: 16%;
+    		text-align: center;
+    		cursor:pointer;
+
+    		&:hover{
+    			border-color:#00c5fe;
+    		}
+
+			.icon{ 
+				width:40%;
+				margin:20px auto;
+
+				img{	
+					width:100%;
+					max-width: 60px;
+					max-height:60px;
+				}
+			}
+
+			.title{
+				font-family: $teuton-normal;
+				color:#404040;
+				font-size:1.4em;
+				margin-bottom: 15px;
+			}
+
+			.text{			
+				font-family: verdana, sans-serif;
+				color:#656565;
+				font-size: 0.9em;
+	    		font-weight: 100;
+			}
+		}
+	}
+
+}
+
+#section2{
+	background:$bg-branco;
+	max-height: 370px;
+	padding: 6% 0px;
+
+	.text{
+		text-align: left;
+		margin-bottom: 40px;
+		
+		h2{
+			font-family: $teuton-normal;
+			color:#404040;
+			font-size:3em;
+			margin-bottom: 20px;
+		}
+
+		p{	
+			font-family: verdana, sans-serif;
+			color:#656565;
+			font-size: 1.1em;
+    		font-weight: 100;
+		}
+	}
+
+}
+
+#section3{
+	background:$bg-cinza;
+
+	.text{
+		margin-top: 250px;
+		margin-bottom: 50px;
+	
+		h2{
+			font-family: $teuton-normal;
+			color:#404040;
+			font-size:3em;
+			margin-bottom: 20px;
+		}
+
+		p{	
+			font-family: verdana, sans-serif;
+			color:#656565;
+			font-size: 1.1em;
+    		font-weight: 100;
+		}
+	}
+
+	.image{
+		text-align: center;
+	}
+
+}
+
+#section4{
+	background:$bg-branco;
+	padding: 6% 0px;
+
+	.text{
+		text-align: left;
+		margin-bottom: 40px;
+		
+		h2{
+			font-family: $teuton-normal;
+			color:#404040;
+			font-size:3em;
+			margin-bottom: 20px;
+		}
+
+		p{	
+			font-family: verdana, sans-serif;
+			color:#656565;
+			font-size: 1.1em;
+    		font-weight: 100;
+		}
+	}
+
+	.image{
+		img{
+			width:100%;
+		}
+	}
+
+}
+
+

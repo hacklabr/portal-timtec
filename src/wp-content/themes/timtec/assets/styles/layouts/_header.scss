@@ -1,6 +1,11 @@
 $break-small: 600px;
 $break-large: 1200px;
+$teuton-light: 'Teuton22Pro';
+$teuton-normal: 'Teuton23Pro';
 
+.main{
+	padding:0px;
+}
 
 
 
@@ -17,8 +22,9 @@ $break-large: 1200px;
     -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     z-index: 900;
-    font-family: 'teuton_24',sans-serif;
+  
 
+    
     .navbar-header{
     	width:40%;
 
@@ -62,11 +68,31 @@ $break-large: 1200px;
 
     }
 	
+
 	.navbar-nav{
 		border-top: 0;
 	    box-shadow: none;
 	    float: right;
 	    width: auto;
+
+	    li.btn_acesse{
+			a{
+				font-family: $teuton-light;
+				color:#fff;
+				border:1px solid #fff;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				padding: 5px;
+				font-size: 12px;
+			    margin-top: 20%;
+			    margin-left: 15px;
+
+				&:hover{
+					background:#0d4c8f;
+	    		}
+	    	}
+    	}
 
 		li{
 			float:left;
@@ -75,6 +101,10 @@ $break-large: 1200px;
 				color:#fff;
 				text-transform: uppercase;
 				padding: 30px 10px 29px;
+				font-family: $teuton-normal;
+				letter-spacing: 1px;
+    			font-size: 16px;
+
 
 				&:hover  {
 				    background-color: #0d4c8f;

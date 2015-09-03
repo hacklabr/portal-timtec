@@ -1,19 +1,21 @@
+$teuton-light: 'Teuton22Pro';
+$teuton-normal: 'Teuton23Pro';
+
 #footer-info{
 	background:#095DAF;
 	.content-footer{
-    	float:left;
-    	width: 70%;
 
 	    .widget_nav_menu{
-			display:inline-block;
-			float:left;
-			margin:2%;
+            margin:10px;
+            padding:10px;
 
 			h3{
 				color: #fff;
 			    font-size: 14px;
 			    text-transform: uppercase;
 			    letter-spacing: 1px;
+                font-family: $teuton-normal;
+
 			}
 
 			ul{
@@ -24,6 +26,7 @@
 				li{	
 					a{
 						color:#2193d4;
+                        font-family: $teuton-normal;
 					}
 					
 				}
@@ -33,19 +36,21 @@
     }
 
     .social{
-    	float:right;
-    	margin-top: 20px;
+        margin-top:30px;
 
     	h4{
+            font-family: $teuton-normal;
     		text-transform:uppercase;
     		color: #fff;
+            text-align: center;
     	}
 
     	ul{
     		list-style:none;
+            margin-left: 6%;
 
     		li{
-    			float: left;
+    			display: inline-block;
     			border-radius: 5px;
     			border: 1px solid #fff;
     			padding: 6px 10px;
@@ -53,12 +58,14 @@
 
     			a{
     				color:#fff;
+                    font-family: $teuton-normal;
     			}
     		}
     	}
 
     	p{
     		color:#2193d4;
+            text-align: center;
     	}
     }
 }
@@ -77,4 +84,35 @@
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     z-index: 900;
     font-family: 'teuton_24',sans-serif;
+
+    .links-footer{
+        a.timtec{
+            display: inline-block;
+            background-image:url("../../assets/images/logo-instituto-tim.png");
+            width: 65%;
+            height: 36px;
+            background-size:contain;
+            background-repeat:no-repeat;
+            margin-top: 30px;
+            font: 0/0 a;
+            margin-top: 25px;
+        }
+
+        span{
+            display: inline-block;
+            margin: 22px 10px;
+            font-size: 25px;
+            vertical-align: top;
+        }
+
+        a.contato{
+            color: #fff;
+            font-family: Teuton23Pro;
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 30px 0px;
+            vertical-align: top;
+        }
+
+    }
 }
