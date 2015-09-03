@@ -17,6 +17,9 @@
         "styles/editor-style.scss"
       ]
     },
+    "fonts": {
+      "files": ["fonts/**/*"]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     },
