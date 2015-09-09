@@ -68,12 +68,12 @@
 				</div>
 			</div>
 		</div> <!-- /.row -->
-	</div><!-- /.content -->
+	</div><!-- /container-->
 </section>
 
 <section id="section2" class="">
 	<div class="container">
-		<div class="row image">
+		<div class="row">
 			<div class="col-md-6 image">
 				<img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/icon_curso_soft.png" />
 			</div>
@@ -86,7 +86,7 @@
 				<a href="#" class="btn_cadastrese"><?php  _oi("Cadastre-se"); ?></a>
 			</div>
 		</div>
-	</div><!-- /.content -->
+	</div><!-- /container-->
 </section>
 <section id="section3" class="">
 	<div class="container">
@@ -102,7 +102,7 @@
 			<a href="#" class="btn_cadastrese"><?php  _oi("COMECE A TESTAR"); ?></a>
 		</div>
 		
-	</div><!-- /.content -->
+	</div><!-- /container-->
 </section>
 <section id="section4" class="">
 	<div class="container">
@@ -119,7 +119,7 @@
 				<a href="#" class="btn_cadastrese"><?php  _oi("COMECE A TESTAR"); ?></a>
 			</div>
 		</div>
-	</div><!-- /.content -->
+	</div><!-- /container-->
 </section>
 
 

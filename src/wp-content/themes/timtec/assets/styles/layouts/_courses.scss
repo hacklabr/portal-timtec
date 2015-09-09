@@ -1,0 +1,74 @@
+#page-course{
+	#banner{
+		.image{
+			margin: 60px auto 15px;
+    		text-align: center;
+			img{
+				width:auto;
+			}
+		} 
+
+		.text{
+			text-align:center;
+			padding-bottom:80px;
+			h4{
+				margin: 0px 20%;
+			}
+		}
+	}
+
+	#section1{
+		.text{
+			width:50%;
+			margin:10px auto;
+			text-align:center;
+		}
+	}
+
+	#section2{
+		max-height: none;
+		
+		.text{
+			margin:10px auto;
+			text-align:center;
+		}
+
+		.list-courses{
+			margin:20px 0px;
+
+			ul{
+				li{
+					list-style: none;
+				    display: block;
+				    width: 25%;
+				    float: left;
+
+					a{
+						display:inline-block;
+						font-family: verdana,sans-serif;
+					    color: #656565;
+					    font-size: 1.1em;
+					    font-weight: 100;
+					    text-align:center;
+					}
+				}
+			}		
+		}
+
+	}
+
+	#section3 {
+		.icon{
+				width:100px;
+				img{
+					width:100%;
+				}
+		}
+
+		.text {
+			margin-top: 220px;
+		    margin-bottom: 150px;
+	    }
+	}
+
+}
