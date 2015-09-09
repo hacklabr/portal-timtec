@@ -56,6 +56,41 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
+
+
+/*
+ *  ================ REWRITE RULES ================ *
+ */
+//*
+
+pll_register_string('URL Cursos', 'cursos', 'timtec');
+
+add_action('generate_rewrite_rules', function ($wp_rewrite) {
+  $new_rules=[];
+  foreach (pll_languages_list() as $lcode) {
+    $str_courses = pll_translate_string('cursos', $lcode); 
+    $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
+  }
+  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+  return $wp_rewrite;
+});
+
+add_filter('query_vars', function ($public_query_vars) {
+  $public_query_vars[] = "template";
+  return $public_query_vars;
+});
+
+add_action('template_redirect', function() {
+  if ($template = get_query_var('template')) {
+    if(file_exists(__DIR__ . "/templates/page-{$template}.php")){
+      require __DIR__ . "/templates/page-{$template}.php";
+      die;
+    }
+  }
+});
+
+// */
+
 /**
 * Adicionar Select com Busca de Icones Awesome Post_type RedeSocial
 */
