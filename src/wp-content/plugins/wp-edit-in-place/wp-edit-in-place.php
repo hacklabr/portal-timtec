@@ -15,6 +15,8 @@
 function wp_edit_in_place_init() {
 
     class WP_EditInPlace {
+        protected $_defaultLanguage = WPLANG;
+        protected $_currentLanguage = null;
 
         protected $source;
         protected $optionsPrefix = 'wpeip_';
@@ -44,22 +46,43 @@ function wp_edit_in_place_init() {
 
             register_deactivation_hook(__FILE__, array(&$this, 'wpeip_deactivate'));
 
-
+            
             if (current_user_can('manage-wpeip') && !is_admin()) {
-                //inicializa e carrega JS de quem pode editar as coisas
-                wp_enqueue_script('wpeip', plugins_url('wpeip.js', __FILE__), array('jquery'));
-                wp_localize_script('wpeip', 'wpeip', array(
-                    'WPLANG' => WPLANG,
-                    'cancel' => __('Cancel'),
-                    'save'  => __('Save')
-                    )
-                );
-
-                wp_enqueue_style('wpeip', plugins_url('wpeip.css', __FILE__));
+                add_action('wp_enqueue_scripts', array(&$this, 'enqueueScripts'));
             }
             add_action('admin_menu', array(&$this, 'add_options_page'));
 
             $this->actions();
+        }
+        
+        function setDefaultLanguage($lcode){
+            $this->_defaultLanguage = $lcode;
+        }
+        
+        function getDefaultLanguage(){
+            return $this->_defaultLanguage;
+        }
+        
+        function setCurrentLanguage($lcode){
+            $this->_currentLanguage = $lcode;
+        }
+        
+        function getCurrentLanguage(){
+            return $this->_currentLanguage ? $this->_currentLanguage : $this->_defaultLanguage;
+        }
+        
+        function enqueueScripts(){
+            //inicializa e carrega JS de quem pode editar as coisas
+            wp_enqueue_script('wpeip', plugins_url('wpeip.js', __FILE__), array('jquery'));
+            wp_localize_script('wpeip', 'wpeip', array(
+                'defaultLanguage' => $this->getDefaultLanguage(),
+                'currentLanguage' => $this->getCurrentLanguage(),
+                'cancel' => __('Cancel'),
+                'save'  => __('Save')
+                )
+            );
+
+            wp_enqueue_style('wpeip', plugins_url('wpeip.css', __FILE__));
         }
 
         function actions() {
@@ -141,21 +164,22 @@ function wp_edit_in_place_init() {
             ?>
             <script type="text/javascript">
                 <!--
-
                 // term filer
-                jQuery(document).ready(function(){
-                    jQuery('#wpeip-filter').keyup(function(){
+                (function($){
+                    $(function(){
+                        $('#wpeip-filter').keyup(function(){
             					
-                        jQuery(".term p.description").each(function(){
-            			    		
-                            if(jQuery(this).html().toLowerCase().indexOf(jQuery('#wpeip-filter').val().toLowerCase()) < 0){
-                                jQuery(this).parent().hide();
-                            }else{
-                                jQuery(this).parent().show();
-                            }
+                            $(".term p.description").each(function(){
+
+                                if($(this).html().toLowerCase().indexOf($('#wpeip-filter').val().toLowerCase()) < 0){
+                                    $(this).parent().hide();
+                                }else{
+                                    $(this).parent().show();
+                                }
+                            });
                         });
                     });
-                });
+                })(jQuery);
                 //-->
             </script>
 
@@ -201,7 +225,7 @@ function wp_edit_in_place_init() {
                 <?php foreach ($term as $lcode => $text): if ($lcode != 'description'): ?>
                                     <div class='language'>
                                         <label> <?php echo $lcode ?><br/>
-                                            <textarea name='<?php echo $key ?>[<?php echo $lcode; ?>]' onchange='jQuery("#hidden-<?php echo $key; ?>").val("<?php echo $key; ?>")'><?php echo htmlentities(utf8_decode($text)); ?></textarea>
+                                            <textarea name='<?php echo $key ?>[<?php echo $lcode; ?>]' onchange='$("#hidden-<?php echo $key; ?>").val("<?php echo $key; ?>")'><?php echo htmlentities(utf8_decode($text)); ?></textarea>
                                         </label>
                                     </div><!-- .language -->
                     <?php endif;
@@ -293,7 +317,12 @@ function wp_edit_in_place_init() {
             unset($this->terms_cache[$key][$lcode]);
         }
 
-        public function getTerm($term, $description = '', $lcode = WPLANG, $frontend_form = false) {
+        public function getTerm($term, $description = '', $lcode = null, $frontend_form = false) {
+            
+            if(is_null($lcode)){
+                global $WPEIP;
+                $lcode = $WPEIP->getCurrentLanguage();
+            }
             
             $key = $this->getKey($term);
 
@@ -345,7 +374,7 @@ function wp_edit_in_place_init() {
     $WPEIP = new WP_EditInPlace();
 }
 
-add_action('init', 'wp_edit_in_place_init');
+add_action('init', 'wp_edit_in_place_init',0);
 
 register_activation_hook(__FILE__, 'wpeip_activate');
 
@@ -376,7 +405,7 @@ function _oi($term, $description = '') {
     global $WPEIP;
     
     //default values
-    $lcode = pll_current_language();
+    $lcode = $WPEIP->getCurrentLanguage();
     $frontend_form = true;
     
     if(func_num_args() > 2){
@@ -413,9 +442,12 @@ function _oi($term, $description = '') {
  * 
  * @return string the text you asked for 
  */
-function __i($term, $description = '', $lcode = WPLANG, $frontend_form = false) {
+function __i($term, $description = '', $lcode = null, $frontend_form = false) {
     global $WPEIP;
+    if(is_null($lcode)){
+        $lcode = $WPEIP->getCurrentLanguage;
+    }
     $source = $WPEIP->source();
     return $source->getTerm($term, $description, $lcode, $frontend_form);
 }
-?>
+
