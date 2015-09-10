@@ -12,6 +12,15 @@
 
 define('SLUG', 'portal-timtec');
 
+add_action('init', function(){    
+    global $WPEIP;
+    if(function_exists('pll_default_language') && $WPEIP){
+        global $WPEIP;
+        $WPEIP->setDefaultLanguage(pll_default_language());
+        $WPEIP->setCurrentLanguage(pll_current_language());
+    }
+});
+
 session_start();
 
 require __DIR__ . '/inc/classes/PrivateFile.php';
