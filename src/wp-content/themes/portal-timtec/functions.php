@@ -24,6 +24,7 @@ require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
 require __DIR__ . '/inc/metaboxes/course-download.php';
 
 
+
 if ( ! function_exists( 'portal_timtec_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
