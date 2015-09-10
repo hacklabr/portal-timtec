@@ -1,10 +1,3 @@
-<?php
-/**
- * Template Name: Frontpage
- */
-?>
-
-
 <section id="banner" class=" ">
 	<div class="container">
 		<div class="col-md-6 text">
