@@ -13,12 +13,12 @@
 define('SLUG', 'portal-timtec');
 
 add_action('init', function(){    
+  global $WPEIP;
+  if(function_exists('pll_default_language') && $WPEIP){
     global $WPEIP;
-    if(function_exists('pll_default_language') && $WPEIP){
-        global $WPEIP;
-        $WPEIP->setDefaultLanguage(pll_default_language());
-        $WPEIP->setCurrentLanguage(pll_current_language());
-    }
+    $WPEIP->setDefaultLanguage(pll_default_language());
+    $WPEIP->setCurrentLanguage(pll_current_language());
+  }
 });
 
 session_start();
@@ -54,16 +54,16 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'inc/metaboxes/url-video-course.php', //MetaBox 
-];
+  ];
 
-foreach ($sage_includes as $file) {
-  if (!$filepath = locate_template($file)) {
-    trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+  foreach ($sage_includes as $file) {
+    if (!$filepath = locate_template($file)) {
+      trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+    }
+
+    require_once $filepath;
   }
-
-  require_once $filepath;
-}
-unset($file, $filepath);
+  unset($file, $filepath);
 
 
 
@@ -74,11 +74,29 @@ unset($file, $filepath);
 
 pll_register_string('URL Cursos', 'cursos', 'timtec');
 
+
+pll_register_string('URL Software', 'software', 'timtec');
+pll_register_string('URL Redes', 'redes', 'timtec');
+pll_register_string('URL Noticias', 'noticias', 'timtec');
+pll_register_string('URL Suporte', 'suporte', 'timtec');
+
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
   foreach (pll_languages_list() as $lcode) {
     $str_courses = pll_translate_string('cursos', $lcode); 
     $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
+
+    $str_software = pll_translate_string('software', $lcode); 
+    $new_rules["^$lcode/$str_software/?$"] = "index.php?template=software";
+
+    $str_redes = pll_translate_string('redes', $lcode); 
+    $new_rules["^$lcode/$str_redes/?$"] = "index.php?template=redes";
+
+    $str_noticias = pll_translate_string('noticias', $lcode); 
+    $new_rules["^$lcode/$str_noticias/?$"] = "index.php?template=noticias";
+
+    $str_suporte = pll_translate_string('suporte', $lcode); 
+    $new_rules["^$lcode/$str_suporte/?$"] = "index.php?template=suporte";
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
   return $wp_rewrite;
@@ -105,21 +123,21 @@ add_action('template_redirect', function() {
 */
 
 function rede_social_icon_select() {
-    global $post_type;
-    if(is_admin() && $post_type  ==  'rede_social' ){
+  global $post_type;
+  if(is_admin() && $post_type  ==  'rede_social' ){
 
-        wp_register_script('fontawesomeiconpicker', get_bloginfo('template_directory') .'/dist/scripts/fontawesome-iconpicker.min.js');
-        wp_enqueue_script('fontawesomeiconpicker');
+    wp_register_script('fontawesomeiconpicker', get_bloginfo('template_directory') .'/dist/scripts/fontawesome-iconpicker.min.js');
+    wp_enqueue_script('fontawesomeiconpicker');
 
-        wp_register_script('icon-selector', get_bloginfo('template_directory') .'/dist/scripts/icon-selector.js');
-        wp_enqueue_script('icon-selector');
+    wp_register_script('icon-selector', get_bloginfo('template_directory') .'/dist/scripts/icon-selector.js');
+    wp_enqueue_script('icon-selector');
 
-        wp_register_style('fontawesomecss', get_bloginfo('template_directory') .'/dist/styles/font-awesome.min.css');
-        wp_enqueue_style('fontawesomecss');
+    wp_register_style('fontawesomecss', get_bloginfo('template_directory') .'/dist/styles/font-awesome.min.css');
+    wp_enqueue_style('fontawesomecss');
 
-        wp_register_style('fontawesomeiconpickercss', get_bloginfo('template_directory') .'/dist/styles/fontawesome-iconpicker.min.css');
-        wp_enqueue_style('fontawesomeiconpickercss');
-    }
+    wp_register_style('fontawesomeiconpickercss', get_bloginfo('template_directory') .'/dist/styles/fontawesome-iconpicker.min.css');
+    wp_enqueue_style('fontawesomeiconpickercss');
+  }
 
 }
 
@@ -134,30 +152,30 @@ add_action( 'admin_print_scripts-post.php', 'rede_social_icon_select', 11 );
 add_action( 'admin_menu', 'rename_post_for_noticia_label' );
 add_action( 'init', 'rename_post_for_noticia_object' );
 function rename_post_for_noticia_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Notícias';
-    $submenu['edit.php'][5][0] = 'Notícias';
-    $submenu['edit.php'][10][0] = 'Add Notícias';
-    $submenu['edit.php'][16][0] = 'Notícias Tags';
-    echo '';
+  global $menu;
+  global $submenu;
+  $menu[5][0] = 'Notícias';
+  $submenu['edit.php'][5][0] = 'Notícias';
+  $submenu['edit.php'][10][0] = 'Add Notícias';
+  $submenu['edit.php'][16][0] = 'Notícias Tags';
+  echo '';
 }
 function rename_post_for_noticia_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Notícias';
-    $labels->singular_name = 'Notícias';
-    $labels->add_new = 'Add Notícias';
-    $labels->add_new_item = 'Add Notícias';
-    $labels->edit_item = 'Edit Notícias';
-    $labels->new_item = 'Notícias';
-    $labels->view_item = 'View Notícias';
-    $labels->search_items = 'Search Notícias';
-    $labels->not_found = 'No Notícias found';
-    $labels->not_found_in_trash = 'No Notícias found in Trash';
-    $labels->all_items = 'All Notícias';
-    $labels->menu_name = 'Notícias';
-    $labels->name_admin_bar = 'Notícias';
+  global $wp_post_types;
+  $labels = &$wp_post_types['post']->labels;
+  $labels->name = 'Notícias';
+  $labels->singular_name = 'Notícias';
+  $labels->add_new = 'Add Notícias';
+  $labels->add_new_item = 'Add Notícias';
+  $labels->edit_item = 'Edit Notícias';
+  $labels->new_item = 'Notícias';
+  $labels->view_item = 'View Notícias';
+  $labels->search_items = 'Search Notícias';
+  $labels->not_found = 'No Notícias found';
+  $labels->not_found_in_trash = 'No Notícias found in Trash';
+  $labels->all_items = 'All Notícias';
+  $labels->menu_name = 'Notícias';
+  $labels->name_admin_bar = 'Notícias';
 }
- 
+
 
