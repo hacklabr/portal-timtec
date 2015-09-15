@@ -103,7 +103,7 @@ class PrivateFile {
                 }
 
                 $filename = $this->getFilePath($post_id);
-
+                
                 if (!$filename || !file_exists($filename)) {
                     header_remove();
                     http_response_code(404);
