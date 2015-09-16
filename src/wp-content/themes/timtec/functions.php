@@ -73,8 +73,6 @@ $sage_includes = [
 //*
 
 pll_register_string('URL Cursos', 'cursos', 'timtec');
-
-
 pll_register_string('URL Software', 'software', 'timtec');
 pll_register_string('URL Redes', 'redes', 'timtec');
 pll_register_string('URL Noticias', 'noticias', 'timtec');
@@ -125,7 +123,6 @@ add_action('template_redirect', function() {
 /**
 * Adicionar Select com Busca de Icones Awesome Post_type RedeSocial
 */
-
 function rede_social_icon_select() {
   global $post_type;
   if(is_admin() && $post_type  ==  'rede_social' ){
@@ -164,6 +161,7 @@ function rename_post_for_noticia_label() {
   $submenu['edit.php'][16][0] = 'Notícias Tags';
   echo '';
 }
+
 function rename_post_for_noticia_object() {
   global $wp_post_types;
   $labels = &$wp_post_types['post']->labels;
@@ -181,5 +179,7 @@ function rename_post_for_noticia_object() {
   $labels->menu_name = 'Notícias';
   $labels->name_admin_bar = 'Notícias';
 }
+
+
 
 
