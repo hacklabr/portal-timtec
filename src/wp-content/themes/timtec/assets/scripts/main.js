@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-(function($) {
+ (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
@@ -73,5 +73,34 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+
+
+  /**
+  * Formulário de criação de usuário
+  */
+  $('.js-create-user-meta').on('submit', function () {
+    
+    var $form = $(this);
+
+    $.ajax({
+        url: vars.ajaxurl + "?action=saveCadUserDown",
+        type: 'POST',
+        dataType: 'json',
+        data: $form.serialize(),
+        success: function (r) {
+          alert("funciona");
+        },
+        error: function (r) {
+          console.log(r);
+        }
+
+    });
+
+
+    return false;
+  });
+
+
+
 
 })(jQuery); // Fully reference jQuery after this point.

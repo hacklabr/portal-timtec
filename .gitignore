@@ -1,1 +1,4 @@
 wp-config.php
+src/wp-content/themes/timtec/dist
+src/wp-content/themes/timtec/node_modules
+src/wp-content/themes/timtec/bower_components
