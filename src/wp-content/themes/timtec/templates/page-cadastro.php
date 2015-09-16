@@ -21,19 +21,21 @@ get_template_part('templates/header');
 
     <section id="section1" class="">
         <div class="container"> 
+            <div class="js-mensagem"></div>
             <div class="row text">
                 <h2>
                     <?php _oi("Cadastre-se, para fazer o download dos cursos"); ?>
                 </h2>
                 <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam."); ?></p>
-                <form>  
-                    <input type="text" placeholder="Nome" />
-                    <input type="email" placeholder="Email" />
-                    <input type="text" placeholder="telefone" />
+                <form class="js-create-user-meta "  method="post">  
+                    <input type="text" name="name" placeholder="Nome" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="login" placeholder="Login" />
+                    <input type="password" name="password" placeholder="Password" />
+                    <input type="text" name="telefone" placeholder="telefone" />
                     <input type="hidden" name="form_sent" value="true" />
-                    <input type="hidden" name="id_user" value="" />
+                    <button type="submit" class="btn_cadastrese"><?php _oi('Enviar'); ?></button>
                 </form>
-                <a href="#" class="btn_cadastrese"><?php _oi("Enviar"); ?></a>
             </div>
         </div><!-- /container-->
     </section>
