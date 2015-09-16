@@ -9,7 +9,7 @@
   WP Edit in Place is released under the GNU General Public License (GPL)
   http://www.gnu.org/licenses/gpl.txt
 
-
+  @TODO: add menu in admin bar
  */
 
 function wp_edit_in_place_init() {
@@ -52,6 +52,8 @@ function wp_edit_in_place_init() {
             }
             add_action('admin_menu', array(&$this, 'add_options_page'));
 
+            add_action("wp_ajax_wpeip_save", array(&$this, 'actionSave'));
+            
             $this->actions();
         }
         
@@ -75,15 +77,22 @@ function wp_edit_in_place_init() {
             //inicializa e carrega JS de quem pode editar as coisas
             wp_enqueue_script('wpeip', plugins_url('wpeip.js', __FILE__), array('jquery'));
             wp_localize_script('wpeip', 'wpeip', array(
-                'defaultLanguage' => $this->getDefaultLanguage(),
-                'currentLanguage' => $this->getCurrentLanguage(),
-                'cancel' => __('Cancel'),
-                'save'  => __('Save')
+                    'defaultLanguage' => $this->getDefaultLanguage(),
+                    'currentLanguage' => $this->getCurrentLanguage(),
+                    'ajaxurl' => admin_url('admin-ajax.php')
                 )
             );
 
             wp_enqueue_style('wpeip', plugins_url('wpeip.css', __FILE__));
         }
+
+        function actionSave() {
+            if (isset($_POST['key']) && isset($_POST['lcode']) && $_POST['text']) {
+                $this->source()->setTerm($_POST['key'], $_POST['lcode'], $_POST['text']);
+            }
+        }
+        
+        
 
         function actions() {
             if (isset($_POST['wpeip_action'])) {
@@ -294,8 +303,8 @@ function wp_edit_in_place_init() {
             $this->config = $config;
         }
 
-        public function getKey($term) {
-            return hash('sha1', $term);
+        public function getKey($term, $description) {
+            return md5($term, $description);
         }
 
         protected function cacheExists($key, $lcode) {
@@ -324,7 +333,7 @@ function wp_edit_in_place_init() {
                 $lcode = $WPEIP->getCurrentLanguage();
             }
             
-            $key = $this->getKey($term);
+            $key = $this->getKey($term, $description);
 
             if ($this->cacheExists($key, $lcode))
                 return $this->cacheGet($key, $lcode);
@@ -352,10 +361,6 @@ function wp_edit_in_place_init() {
             return $this->_getAll();
         }
 
-        public function getDescription($term) {
-            return $this->_getDescription($this->getKey($term));
-        }
-
         protected abstract function _termExists($key, $lcode);
 
         protected abstract function _getTerm($key, $lcode);
@@ -365,8 +370,6 @@ function wp_edit_in_place_init() {
         protected abstract function _insertTerm($lcode, $key, $term, $description, $frontend_form = false);
 
         protected abstract function _getAll();
-
-        protected abstract function _getDescription($key);
     }
 
     global $WPEIP;
@@ -420,15 +423,17 @@ function _oi($term, $description = '') {
     }
     
     
-    $key = $WPEIP->source()->getKey($term);
+    $key = $WPEIP->source()->getKey($term, $description);
     
     $text = nl2br(__i($term, $description, $lcode, $frontend_form));
     
     $frontend_forms = $WPEIP->get_option('frontend_forms');
-    if (in_array($key, $frontend_forms) && current_user_can('manage-wpeip'))
-        echo '<span id="' . $key . '" class="wpeip_term" lcode="'.$lcode.'">' . $text . '</span>';
-    else
+    if (in_array($key, $frontend_forms) && current_user_can('manage-wpeip')){
+        echo "<span id='{$key}' class='js-wpeip-term wpeip-term' data-lcode='{$lcode}'>{$text}</span>";
+        echo "<div id='{$key}-spinner' class='sk-circle'><div class='sk-circle1 sk-child'></div><div class='sk-circle2 sk-child'></div><div class='sk-circle3 sk-child'></div><div class='sk-circle4 sk-child'></div><div class='sk-circle5 sk-child'></div><div class='sk-circle6 sk-child'></div><div class='sk-circle7 sk-child'></div><div class='sk-circle8 sk-child'></div><div class='sk-circle9 sk-child'></div><div class='sk-circle10 sk-child'></div><div class='sk-circle11 sk-child'></div><div class='sk-circle12 sk-child'></div></div>";
+    }else{
         echo $text;
+    }
 }
 
 /**

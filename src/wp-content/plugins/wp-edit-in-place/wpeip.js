@@ -3,71 +3,69 @@
  */
 (function ($) {
     $(function () {
-        $(document).data('ctrl', false);
-        $(document).data('shift', false);
+        var ctrl = false;
+        var shift = false;
 
-        $(this).keydown(function (e) {
-            if (e.keyCode == 17) {
-                $(document).data('ctrl', true);
-                $(".wpeip_term").css('cursor', 'pointer');
-            }
-
-            if (e.keyCode == 16) {
-                $(document).data('shift', true);
-            }
-            if ($(document).data('ctrl') && $(document).data('shift'))
-                $(".wpeip_term").css({background: 'rgba(0,255,0,.2)'});
-        });
-        $(this).keyup(function (e) {
-            if (e.keyCode == 17) {
-                $(document).data('ctrl', false);
-                $(".wpeip_term").css('cursor', 'auto');
-            }
-
-            if (e.keyCode == 16) {
-                $(document).data('shift', false);
-            }
-
-            if (!$(document).data('ctrl') || !$(document).data('shift')) {
-                $(".wpeip_term").css({background: ''});
+        $(document).keydown(function (e) {
+            if (e.keyCode === 17){
+                console.log('entrou');
+                $(".js-wpeip-term").addClass('wpeip-hightlight');
             }
         });
+        
+        $(document).keyup(function (e) {
+            if (e.keyCode === 17) {
+                console.log('saiu');
+                $(".js-wpeip-term").removeClass('wpeip-hightlight');
+            }
+        });
+        
+        $(".js-wpeip-term").each(function () {
+            var $el = $(this);
+            var key = $el.attr('id');
+            var timeout;
+            var $spinner = $('#' + key + '-spinner');
+            var lastText = $el.html();
 
-        $(".wpeip_term").each(function () {
-            var h = $(this).height();
-            var w = $(this).height();
+            $el.attr('title', 'pressione a tecla Ctrl e clique para editar este texto');
 
-            var key = $(this).attr('id');
-            var html = $(this).html();
-            var lcode = $(this).attr('lcode');
-            $(document.body).append('<div id="' + key + '-formdiv" class="wpeip_formdiv" style="display:none;"><form method="post"><input type="hidden" name="wpeip_action" value="update_terms"><input type="hidden" name="updated[]" value="' + key + '"/><textarea name="' + key + '[' + lcode + ']"></textarea><input type="reset" value="' + wpeip.cancel + '"/><input type="submit" value="' + wpeip.save + '"/></form></div>');
-
-            $(this).attr('title', 'pressione a tecla Ctrl e clique para editar este texto');
-
-            $(this).click(function (e) {
-
+            $el.click(function (e) {
                 if (e.ctrlKey) {
-                    var div = $('#' + key + '-formdiv');
-                    var _width = parseInt(div.css('width'));
-                    var _height = parseInt(div.css('height'));
-
-                    var _left = (parseInt($(window).width() / 2 - _width / 2)) + 'px';
-                    var _top = (parseInt($(window).height() / 2 - _height / 2) + $(window).scrollTop()) + 'px';
-
-                    div.find('input:reset').click(function () {
-                        div.hide();
-                    });
-                    var val = $(this).html().replace(/<br>/gi, "");
-                    div.find('textarea').val(val);
-                    div.css({
-                        position: 'absolute',
-                        zIndex: '999',
-                        left: _left,
-                        top: _top,
-                        display: 'block'
-                    });
-                    return false;
+                    $el.attr('contenteditable',true);
+                    $el.addClass('wpeip-contenteditable');
+                    $el.focus();
                 }
+            });
+            
+            $el.keyup(function(){
+                if(lastText == $el.html()){
+                    return;
+                }
+                
+                if(timeout){
+                    clearTimeout(timeout);
+                }
+                timeout = setTimeout(function(){
+                    $spinner.addClass('active');
+                    lastText = $el.html();
+                    $.post(
+                        wpeip.ajaxurl,
+                        {
+                            action: 'wpeip_save',
+                            key: $el.attr('id'),
+                            lcode: $el.data('lcode'),
+                            text: $el.html()
+                        },
+                        function(response){
+                            $spinner.removeClass('active');
+                        }
+                    );
+                },500); 
+            });
+            
+            $el.blur(function(){
+                $el.removeClass('wpeip-contenteditable');
+                $el.attr('contenteditable',null);
             });
         });
     });

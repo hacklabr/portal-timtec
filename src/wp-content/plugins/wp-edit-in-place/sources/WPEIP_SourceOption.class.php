@@ -37,11 +37,6 @@ class WPEIP_SourceOption extends WPEIP_Source {
         
     }
 
-    protected function _getDescription($key) {
-        $option = $this->_getOption($key);
-        return $option['description'];
-    }
-
     protected function _getAll() {
         $result = array();
         $_temp = array();
