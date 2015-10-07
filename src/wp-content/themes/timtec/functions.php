@@ -147,6 +147,14 @@ add_action( 'admin_print_scripts-post.php', 'rede_social_icon_select', 11 );
 
 
 
+/* load style for DW Q&A plugin */
+if( !function_exists('dwqa_simplex_scripts') ){
+    function dwqa_simplex_scripts(){
+        wp_enqueue_style( 'dw-simplex-qa', get_stylesheet_directory_uri() . '/dwqa-templates/style.css' );
+    }
+    add_action( 'wp_enqueue_scripts', 'dwqa_simplex_scripts' );
+}
+
 /**
 * Alterar Nome PostType "Post"  para "Notícias"
 **/

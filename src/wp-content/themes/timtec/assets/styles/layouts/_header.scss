@@ -4,135 +4,138 @@ $teuton-light: 'Teuton22Pro';
 $teuton-normal: 'Teuton23Pro';
 
 .main{
-	padding:0px;
+    padding:0px;
 }
 
 
 
 #main-navbar{
-	min-height: 80px;
+    min-height: 58px;
     margin-bottom: 0;
-    background-color: #007dc3;
-    background: -webkit-gradient(linear,left top,left bottom,from(#007dc3),to(#1451a2));
-    background: -webkit-linear-gradient(top,#007dc3,#1451a2);
-    background: -moz-linear-gradient(top,#007dc3,#1451a2);
-    background: -ms-linear-gradient(top,#007dc3,#1451a2);
-    background: -o-linear-gradient(top,#007dc3,#1451a2);
     border-color: #1451a2;
     -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     z-index: 900;
+    background: rgba(6,82,163,1);
+    background: -moz-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6,82,163,1)), color-stop(45%, rgba(8,111,190,1)), color-stop(100%, rgba(17,129,214,1)));
+    background: -webkit-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
+    background: -o-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
+    background: -ms-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
+    background: linear-gradient(to bottom, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0652a3', endColorstr='#1181d6', GradientType=0 );
   
 
     
     .navbar-header{
-    	width:40%;
+        width:40%;
 
-    	h1{
-    		margin: 20px 0 0 0;
-		    width: 100%;
-		    height: 36px;
+        h1{
+            margin: 10px 0 0 0;
+            width: 100%;
+            height: 30px;
 
-    		a{	
-    			display: block;
-    			float:left;
+            a{  
+                display: block;
+                float:left;
 
-			    &.brand{
-			    	background-image:url("../../assets/images/logo-instituto-tim.png");
-			    	width: 65%;
-		    		height: 36px;
-		    		background-size:contain;
-		    		background-repeat:no-repeat;
-			    }
+                &.brand{
+                    background-image:url("../../assets/images/logo-instituto-tim.png");
+                    width: 50%;
+                    height: 36px;
+                    background-size:contain;
+                    background-repeat:no-repeat;
+                    margin-right:10%;
+                }
 
-			    &.timtec{
-			    	background-image:url("../../assets/images/logo-timtec.png");
-			    	width: 30%;
-		   			height: 36px;
-		   			margin-left: 5%;
-		   			background-size:contain;
-		    		background-repeat:no-repeat;
-			    }
+                &.timtec{
+                    background-image:url("../../assets/images/logo-timtec.png");
+                    width: 25%;
+                    height: 36px;
+                    margin-left: 5%;
+                    background-size:contain;
+                    background-repeat:no-repeat;
+                }
 
-			    &:hover, 
-			    &:active{
-			    	text-decoration: none;
-				    -webkit-transition: all .25s ease-out;
-				    -o-transition: all .25s ease-out;
-				    transition: all .25s ease-out;
-			    }
+                &:hover, 
+                &:active{
+                    text-decoration: none;
+                    -webkit-transition: all .25s ease-out;
+                    -o-transition: all .25s ease-out;
+                    transition: all .25s ease-out;
+                }
 
-    		}
+            }
 
-    	}
+        }
 
     }
-	
+    
 
-	.navbar-nav{
-		border-top: 0;
-	    box-shadow: none;
-	    float: right;
-	    width: auto;
+    .navbar-nav{
+        border-top: 0;
+        box-shadow: none;
+        float: right;
+        width: auto;
 
-	    li.btn_acesse{
-			a{
-				font-family: $teuton-light;
-				color:#fff;
-				border:1px solid #fff;
-				-webkit-border-radius: 3px;
-				-moz-border-radius: 3px;
-				border-radius: 3px;
-				padding: 5px;
-				font-size: 12px;
-			    margin-top: 20%;
-			    margin-left: 15px;
+        li.btn_acesse{
+            a{
+                font-family: $teuton-light;
+                color:#fff;
+                border:1px solid #fff;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                padding: 5px;
+                font-size: 12px;
+                margin-top: 20%;
+                margin-left: 15px;
 
-				&:hover{
-					background:#0d4c8f;
-	    		}
-	    	}
-    	}
+                &:hover{
+                    background:#0d4c8f;
+                }
+            }
+        }
 
-		li{
-			float:left;
+        li{
+            float:left;
 
-			a{
-				color:#fff;
-				text-transform: uppercase;
-				padding: 30px 10px 29px;
-				font-family: $teuton-normal;
-				letter-spacing: 1px;
-    			font-size: 16px;
+            a{
+                color:#fff;
+                text-transform: uppercase;
+                padding: 20px 10px 15px;
+                font-family: $teuton-normal;
+                letter-spacing: 1px;
+                font-size: 16px;
 
 
-				&:hover  {
-				    background-color: #0d4c8f;
-				}
-			}
+                &:hover  {
+                    background-color: #0d4c8f;
+                }
+            }
 
-		}
+        }
 
-	}
-	
+    }
+    
 }
 
 
 
 @media screen and (max-width: $break-small) {
-	#main-navbar{
-		.navbar-header{
-			width:100%;
-			padding: 0px 20px;
-		
-			h1{
-				width:60%;
-				float:left;
-			}
+    #main-navbar{
+        .navbar-header{
+            width:100%;
+            padding: 0px 20px;
+        
+            h1{
+                width:60%;
+                float:left;
+            }
 
-		   	.navbar-toggle{
-		   		padding:20px;
-			}
-		}
-	}
+            .navbar-toggle{
+                padding:20px;
+            }
+        }
+    }
 }

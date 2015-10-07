@@ -27,20 +27,10 @@
                         endwhile;
                         ?>
                     </ul>
-                    <p>Tim 2015. Todos os direitos reservados.</p>
+                    <p>TIM 2015. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer">
-        <div class="container" >
-            <div class="row">
-                <div class="col-md-3 col-md-offset-9 links-footer">
-                    <a class="timtec" href="" > TIMTec</a>
-                    <span > | </span>
-                    <a class="contato" href="" >CONTATO</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </footer>

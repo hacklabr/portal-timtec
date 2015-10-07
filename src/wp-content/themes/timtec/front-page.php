@@ -6,7 +6,7 @@
             </h4>   
         </div>
         <div class="col-md-6 image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bannerv1.png" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/principal-grande.png" />
         </div>
     </div>
 </section>
@@ -22,43 +22,51 @@
         </div>
         <div class="boxs row">
             <div class="col-md-4">
-                <div class="box">
-                    <div class="icon">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_cursos.png" />
+                <a href="#">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/software-mini.png" />
+                        </div>
+                        <div class="title">
+                            <?php _oi("SOFTWARE"); ?>
+                        </div>
+                        <div class="text">
+                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                        </div>
                     </div>
-                    <div class="title">
-                        <?php _oi("CURSOS"); ?>
-                    </div>
-                    <div class="text">
-                        <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
-                    </div>
-                </div>
+                </a>
             </div>
+
             <div class="col-md-4">
-                <div class="box">
-                    <div class="icon">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_software.png" />
+                <a href="#">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cursos-mini.png" />
+                        </div>
+                        <div class="title">
+                            <?php _oi("CURSOS"); ?>
+                        </div>
+                        <div class="text">
+                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                        </div>
                     </div>
-                    <div class="title">
-                        <?php _oi("SOFTWARE"); ?>
-                    </div>
-                    <div class="text">
-                        <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
-                    </div>
-                </div>
+                </a>
             </div>
+
             <div class="col-md-4 ">
-                <div class="box">
-                    <div class="icon">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_rede.png" />
+                <a href="#">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/redes-mini.png" />
+                        </div>
+                        <div class="title">
+                            <?php _oi("REDE"); ?>
+                        </div>
+                        <div class="text">
+                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                        </div>
                     </div>
-                    <div class="title">
-                        <?php _oi("REDE"); ?>
-                    </div>
-                    <div class="text">
-                        <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
-                    </div>
-                </div>
+                </a>
             </div>
         </div> <!-- /.row -->
     </div><!-- /container-->
@@ -68,48 +76,56 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 image">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_curso_soft.png" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/software-grande.png" />
             </div>
             <div class="col-md-6 text">
                 <h2>
-                    <?php _oi("Cursos ipsum dolor sit"); ?>
+                    <?php _oi("Software"); ?>
                 </h2>
                 <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam orem ipsum dolor sit amet porta."); ?></p>
-                <a href="#" class="btn_conheca"><?php _oi("Conheca nossa plataforma"); ?></a>
-                <a href="#" class="btn_cadastrese"><?php _oi("Cadastre-se"); ?></a>
+                <a href="#" class="btn "><?php _oi("Demo"); ?></a>
+                <a href="#" class="btn"><?php _oi("Download"); ?></a>
+                <a href="#" class="btn "><?php _oi("Funcionalidades"); ?></a>
+                <a href="#" class="btn"><?php _oi("Manual de uso"); ?></a>
             </div>
         </div>
     </div><!-- /container-->
 </section>
 <section id="section3" class="">
     <div class="container">
-        <div class="col-md-6 image">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_soft_section.png" />
+        <div class="row">
+            <div class="col-md-6 text">
+                <h2>
+                    <?php _oi("Cursos"); ?>
+                </h2>
+                <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam orem ipsum dolor sit amet porta."); ?></p>
+                <div class="links">
+                    <a href="#" class="btn "><?php _oi("Saiba mais"); ?></a>
+                    <a href="#" class="btn"><?php _oi("Todos os Cursos"); ?></a>
+                    <a href="#" class="btn "><?php _oi("Monte seu curso"); ?></a>
+                </div>
+            </div>
+            <div class="col-md-6 image">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cursos-grande.png" />
+            </div>
         </div>
-        <div class="col-md-6 text">
-            <h2>
-                <?php _oi("Software ipsum dolor sit"); ?>
-            </h2>
-            <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam orem ipsum dolor sit amet porta."); ?></p>
-            <a href="#" class="btn_conheca"><?php _oi("Conheca nossa documentacao"); ?></a>
-            <a href="#" class="btn_cadastrese"><?php _oi("COMECE A TESTAR"); ?></a>
-        </div>
-
     </div><!-- /container-->
 </section>
 <section id="section4" class="">
     <div class="container">
         <div class="row">
             <div class="col-md-6 image">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_rede_section.png" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rede-grande.png" />
             </div>
             <div class="col-md-6 text">
                 <h2>
                     <?php _oi("Rede ipsum dolor sit"); ?>
                 </h2>
                 <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam orem ipsum dolor sit amet porta."); ?></p>
-                <a href="#" class="btn_conheca"><?php _oi("Faca agora o download"); ?></a>
-                <a href="#" class="btn_cadastrese"><?php _oi("COMECE A TESTAR"); ?></a>
+                <a href="#" class="btn "><?php _oi("Instalações"); ?></a>
+                <a href="#" class="btn"><?php _oi("Faq"); ?></a>
+                <a href="#" class="btn "><?php _oi("Mural"); ?></a>
+                <a href="#" class="btn "><?php _oi("Suporte"); ?></a>
             </div>
         </div>
     </div><!-- /container-->
