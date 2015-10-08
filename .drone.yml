@@ -1,0 +1,8 @@
+image: needcaffeine/git
+script:
+- echo "Deploy do instituto tim"
+deploy:
+  bash:
+    script:
+      - make build
+
