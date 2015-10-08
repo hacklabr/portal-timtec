@@ -37,24 +37,25 @@ $teuton-normal: 'Teuton23Pro';
 
     .social{
         margin-top:30px;
-
+        text-align: center;
     	h4{
             font-family: $teuton-normal;
     		text-transform:uppercase;
     		color: #fff;
-            text-align: center;
+            
     	}
 
     	ul{
     		list-style:none;
-            margin-left: 6%;
+            margin-left:0px;
+            padding:0px;
 
     		li{
     			display: inline-block;
     			border-radius: 5px;
     			padding: 5px;
     			margin: 5px;
-                font-size:25px;
+                font-size:2.2em;
 
     			a{
     				color:#fff;
