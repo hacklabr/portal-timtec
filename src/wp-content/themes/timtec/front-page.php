@@ -31,7 +31,7 @@
                             <?php _oi("SOFTWARE"); ?>
                         </div>
                         <div class="text">
-                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                            <?php _oi("Textos boxs Software"); ?>
                         </div>
                         <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
@@ -48,7 +48,7 @@
                             <?php _oi("CURSOS"); ?>
                         </div>
                         <div class="text">
-                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                            <?php _oi("Textos boxs Cursos"); ?>
                         </div>
                         <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
@@ -65,7 +65,7 @@
                             <?php _oi("REDE"); ?>
                         </div>
                         <div class="text">
-                            <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
+                            <?php _oi("Textos boxs Redes"); ?>
                         </div>
                         <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
