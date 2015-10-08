@@ -33,6 +33,7 @@
                         <div class="text">
                             <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
                         </div>
+                        <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
                 </a>
             </div>
@@ -49,6 +50,7 @@
                         <div class="text">
                             <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
                         </div>
+                        <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
                 </a>
             </div>
@@ -65,6 +67,7 @@
                         <div class="text">
                             <?php _oi("Vivamus porta aliquet ornare. Vivamus ac pharetra mi. Cras vel est tortor. Nullam non viverra magna, non finibus libero."); ?>
                         </div>
+                        <span class="icon-seta fa fa-chevron-down"></span>
                     </div>
                 </a>
             </div>
@@ -100,9 +103,7 @@
                 </h2>
                 <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam orem ipsum dolor sit amet porta."); ?></p>
                 <div class="links">
-                    <a href="#" class="btn "><?php _oi("Saiba mais"); ?></a>
-                    <a href="#" class="btn"><?php _oi("Todos os Cursos"); ?></a>
-                    <a href="#" class="btn "><?php _oi("Monte seu curso"); ?></a>
+                    <a href="#" class="btn "><?php _oi("Lista dos cursos"); ?></a>
                 </div>
             </div>
             <div class="col-md-6 image">

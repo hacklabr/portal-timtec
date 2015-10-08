@@ -99,6 +99,40 @@ $teuton-normal: 'Teuton23Pro';
 
         li{
             float:left;
+            cursor:pointer;
+            
+            ul.sub-menu{
+                    display:none;
+                    width: 200px;
+                    background: #0d4c8f;
+                    position: absolute;
+                    z-index: 999;
+                    padding: 0px;
+                    top: 59px;
+                    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+                    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+                    
+                    li{
+                        display: block;
+                        width: 100%;
+                        font-size: 1em;
+                        text-align: left;
+                        padding: 5px;
+                        
+                        &:hover{
+                            background:#085dae;
+                        }
+                    }
+            }
+
+            &:hover{
+                background-color: #0d4c8f;
+                ul.sub-menu{
+                    display:block;
+                }
+            }
+            
 
             a{
                 color:#fff;
@@ -107,10 +141,12 @@ $teuton-normal: 'Teuton23Pro';
                 font-family: $teuton-normal;
                 letter-spacing: 1px;
                 font-size: 16px;
+                text-decoration:none;
 
 
                 &:hover  {
-                    background-color: #0d4c8f;
+                    background-color: transparent;
+                    text-decoration:none;
                 }
             }
 
