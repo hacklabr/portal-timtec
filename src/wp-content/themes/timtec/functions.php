@@ -127,16 +127,16 @@ function rede_social_icon_select() {
   global $post_type;
   if(is_admin() && $post_type  ==  'rede_social' ){
 
-    wp_register_script('fontawesomeiconpicker', get_bloginfo('template_directory') .'/dist/scripts/fontawesome-iconpicker.min.js');
+    wp_register_script('fontawesomeiconpicker', get_bloginfo('template_directory') .'/assets/scripts/fontawesome-iconpicker.min.js');
     wp_enqueue_script('fontawesomeiconpicker');
 
-    wp_register_script('icon-selector', get_bloginfo('template_directory') .'/dist/scripts/icon-selector.js');
+    wp_register_script('icon-selector', get_bloginfo('template_directory') .'/assets/scripts/icon-selector.js');
     wp_enqueue_script('icon-selector');
 
-    wp_register_style('fontawesomecss', get_bloginfo('template_directory') .'/dist/styles/font-awesome.min.css');
+    wp_register_style('fontawesomecss', get_bloginfo('template_directory') .'/assets/styles/font-awesome.min.css');
     wp_enqueue_style('fontawesomecss');
 
-    wp_register_style('fontawesomeiconpickercss', get_bloginfo('template_directory') .'/dist/styles/fontawesome-iconpicker.min.css');
+    wp_register_style('fontawesomeiconpickercss', get_bloginfo('template_directory') .'/assets/styles/fontawesome-iconpicker.min.css');
     wp_enqueue_style('fontawesomeiconpickercss');
   }
 
@@ -147,13 +147,6 @@ add_action( 'admin_print_scripts-post.php', 'rede_social_icon_select', 11 );
 
 
 
-/* load style for DW Q&A plugin */
-if( !function_exists('dwqa_simplex_scripts') ){
-    function dwqa_simplex_scripts(){
-        wp_enqueue_style( 'dw-simplex-qa', get_stylesheet_directory_uri() . '/dwqa-templates/style.css' );
-    }
-    add_action( 'wp_enqueue_scripts', 'dwqa_simplex_scripts' );
-}
 
 /**
 * Alterar Nome PostType "Post"  para "Notícias"
@@ -187,7 +180,6 @@ function rename_post_for_noticia_object() {
   $labels->menu_name = 'Notícias';
   $labels->name_admin_bar = 'Notícias';
 }
-
 
 
 
