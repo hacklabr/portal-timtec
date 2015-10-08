@@ -8,14 +8,14 @@ get_template_part('templates/header');
 	<section id="banner" class=" ">
 		<div class="container">
 			<div class="col-md-12 image">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner_cursos_v1.png" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comp-cursos.png" />
 			</div>
 			<div class="col-md-12 text">
 				<h4 >
 					<?php _oi("Lorem ipsum dolor sit amet, consectetur", "Cursos - Texto Banner"); ?>
 				</h4>   
 			</div>
-
+			<span class="icon-seta fa fa-angle-down"></span>
 		</div>
 	</section>
 
@@ -26,7 +26,7 @@ get_template_part('templates/header');
 					<?php _oi("Sobre os cursos"); ?>
 				</h2>
 				<p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam."); ?></p>
-				<a href="#" class="btn_cadastrese"><?php _oi("Saiba mais"); ?></a>
+				<a href="#" class="btn "><?php _oi("Saiba mais"); ?></a>
 			</div>
 		</div><!-- /container-->
 	</section>
@@ -54,7 +54,7 @@ get_template_part('templates/header');
 					$title = get_the_title();
 					?>
 					<li>
-						<a href="<?php echo $url ?>">
+						<a href="<?php echo $url ?>" >
 							<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
 							<h4><?php echo $title ?></h4>
 						</a>
@@ -66,7 +66,7 @@ get_template_part('templates/header');
 				</ul>
 			</div>
 			<div class="row text">
-				<a href="#" class="btn_cadastrese"><?php _oi("+ Jeja mais cursos"); ?></a>
+				<a href="#" class="btn"><?php _oi("+ Veja mais cursos"); ?></a>
 			</div>
 		</div><!-- /container-->
 	</section>
@@ -75,16 +75,16 @@ get_template_part('templates/header');
 			<div class="row">
 				<div class="col-md-6 text">
 					<div class="icon">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_cursos.png" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/curso-cursos.png" />
 					</div>
 					<h2>
 						<?php _oi("Monte seus cursos"); ?>
 					</h2>
 					<p><?php _oi("Aprenda a montar seu próprio curso com a teconologia de ponta do TIMTec. orem ipsum dolor sit amet, consectetur adipiscing elit. Maecen id velit lobortis, ultricies magna porta, molest.orem ipsum dolor sit amet, elit."); ?></p>
-					<a href="#" class="btn_conheca"><?php _oi("+ Saiba mais fazendo esse curso"); ?></a>
+					<a href="#" class="btn_transparent"><?php _oi("+ Saiba mais fazendo esse curso"); ?></a>
 				</div>
 				<div class="col-md-6 image">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon_curso_soft.png" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/na-mao.png" />
 				</div>
 
 			</div>		

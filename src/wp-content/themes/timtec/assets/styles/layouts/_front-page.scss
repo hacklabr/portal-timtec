@@ -1,4 +1,4 @@
-$cor-cinza: #EAEAEA;
+$cor-cinza: #ededed;
 $cor-branco: #ffffff;
 $cor-azul: #26356e;
 $teuton-light: 'Teuton22Pro';
@@ -15,6 +15,19 @@ $teuton-normal: 'Teuton23Pro';
 	border-radius:0px;
 	text-transform:uppercase;
 
+}
+
+.btn_transparent{
+	color: #05c3ff;
+    font-family: 'Teuton23Pro';
+    text-transform: uppercase;
+    border: 1px solid #05c3ff;
+    border-radius: 2px;
+   padding: 10px 15px;
+    
+    &:hover{
+    	text-decoration:none;
+    }
 }
 
 #banner{
@@ -116,7 +129,7 @@ $teuton-normal: 'Teuton23Pro';
 #section2{
 	background:$cor-azul;
 	max-height: 514px;
-	padding: 5% 0 0px ;
+	padding: 3% 0px;
 
 	.text{
 		text-align: left;
