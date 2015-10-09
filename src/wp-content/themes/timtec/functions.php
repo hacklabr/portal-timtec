@@ -78,6 +78,7 @@ pll_register_string('URL Redes', 'redes', 'timtec');
 pll_register_string('URL Noticias', 'noticias', 'timtec');
 pll_register_string('URL Suporte', 'suporte', 'timtec');
 pll_register_string('URL Cadastro', 'cadastro', 'timtec');
+pll_register_string('URL Contato', 'contato', 'timtec');
 
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
@@ -99,6 +100,9 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 
     $str_cadastro = pll_translate_string('cadastro', $lcode); 
     $new_rules["^$lcode/$str_cadastro/?$"] = "index.php?template=cadastro";
+
+    $str_contato = pll_translate_string('contato', $lcode); 
+    $new_rules["^$lcode/$str_contato/?$"] = "index.php?template=contato";
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
   return $wp_rewrite;

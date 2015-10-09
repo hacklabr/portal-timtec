@@ -311,7 +311,7 @@
 			}
 
 			p.organizacao{
-				 font-family: "Teuton23Pro";
+				font-family: "Teuton23Pro";
 			    line-height: 1em;
 			    margin-top: 1040px;
 			    position: absolute;
@@ -325,6 +325,76 @@
 				width:100%;
 			}
 		}
+	}
+}
+
+#page-contato{
+	.text{
+		text-align:left;
+		
+		h2{
+			text-align:left;
+		}
+
+		p{
+			text-align:left;
+		}
+		.formulario{
+			text-align:left;
+			
+			input[type="text"]{
+				border:1px solid #27356f;
+				padding:5px 10px;
+				border-radius:4px;
+				margin-bottom:10px;
+				font-family: "Teuton22Pro";
+				&.nome{
+					width:64%;
+					display:block;
+				}
+
+				&.telefone{
+					width:30%;
+					margin-left:2%;
+					display:inline-block;
+				}
+			}
+
+			input[type="email"]{
+				border:1px solid #27356f;
+				padding:5px 10px;
+				border-radius:4px;
+				width:64%;
+				display:inline-block;
+				margin-bottom:10px;
+				font-family: "Teuton22Pro";
+			}
+
+			textarea{
+				border:1px solid #27356f;
+				padding: 10px;
+				border-radius:4px;
+				width:97%;
+				margin-bottom:10px;
+				font-family: "Teuton22Pro";
+				height: 100px;
+			}
+
+			input[type="button"]{
+				background:#27356f;
+				padding:5px 10px;
+				color:#fff;
+				border:0px;
+				font-family: "Teuton23Pro";
+				font-size: 1.3em;
+				
+			}
+			
+		}
+		
+
+
+
 	}
 }
 
