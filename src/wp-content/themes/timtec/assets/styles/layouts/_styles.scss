@@ -271,5 +271,60 @@
 			}
 		}
 	}
-
 }
+
+
+#page-rede{
+	#section1{
+		background:$cor-cinza;
+		
+		.text{
+			width:100%;
+			
+			h2{
+				position: absolute;
+			    margin-top: 150px;
+			    margin-left: 380px;
+			    width: 20%;
+			    text-align: left;
+			    font-family: "Teuton24Pro";
+			}
+
+			p.mec{
+				position: absolute;
+			    margin-top: 510px;
+			    margin-left: 850px;
+			    width: 15%;
+			    text-align: right;
+			    font-family: "Teuton23Pro";
+			    line-height: 1em;
+			}
+
+			p.ifs{
+				position:absolute;
+				position: absolute;
+			    margin-top: 860px;
+			    width: 15%;
+			    margin-left: 40px;
+			    font-family: "Teuton23Pro";
+			    line-height: 1em;
+			}
+
+			p.organizacao{
+				 font-family: "Teuton23Pro";
+			    line-height: 1em;
+			    margin-top: 1040px;
+			    position: absolute;
+			    width: 15%;
+			    margin-left: 770px;
+			    text-align: left;
+			}
+
+
+			img{
+				width:100%;
+			}
+		}
+	}
+}
+
