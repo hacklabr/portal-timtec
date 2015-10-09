@@ -30,6 +30,20 @@ $teuton-normal: 'Teuton23Pro';
     }
 }
 
+
+.btn_branco{
+	color: #ffffff;
+    font-family: 'Teuton23Pro';
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+   padding: 10px 15px;
+    
+    &:hover{
+    	text-decoration:none;
+    }
+}
+
 #banner{
 	background: #085daf;
 	
@@ -194,7 +208,7 @@ $teuton-normal: 'Teuton23Pro';
 
 #section4{
 	background:$cor-azul;
-	padding: 5% 0px;
+	padding: 3% 0px;
 	margin-top: -40px;
 
 	.text{
@@ -215,7 +229,7 @@ $teuton-normal: 'Teuton23Pro';
 			font-size: 1.5em;
     		font-weight: 100;
     		text-align:center;
-    		margin: 5%;
+    		
 		}
 	}
 

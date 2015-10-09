@@ -4,7 +4,7 @@
 do_action('get_header');	
 get_template_part('templates/header');
 ?>
-<div id="page-course">
+<div id="page-course" class="base-content">
 	<section id="banner" class=" ">
 		<div class="container">
 			<div class="col-md-12 image">
