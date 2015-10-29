@@ -47,7 +47,7 @@
                         <h3><?php _oi("SOFTWARE"); ?></h3>
                     </div>
                     <div class="text">
-                        <?php _oi("Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
+                        <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
                     </div>
                     <div class="links">
                         <a href="#" class="btn"><?php _oi("INSTALE AGORA"); ?></a>
@@ -97,7 +97,7 @@
                         <h3><?php _oi("CURSOS"); ?></h3>
                     </div>
                     <div class="text">
-                        <?php _oi("Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
+                        <?php _oi("Suco de cevadiss, é um leite divinis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                     <div class="links">
                         <a href="#" class="btn"><?php _oi("LISTA DE CURSOS"); ?></a>
@@ -140,7 +140,7 @@
             <div class="col-md-4">
                 <div class="box">
                     <div class="text">
-                        <?php _oi("Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
+                        <?php _oi("Suco de cevadiss,  qui tem lupuliz, matis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                 </div>
             </div>
