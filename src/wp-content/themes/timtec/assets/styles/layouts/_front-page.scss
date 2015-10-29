@@ -4,9 +4,13 @@ $cor-azul: #26356e;
 $teuton-light: 'Teuton22Pro';
 $teuton-normal: 'Teuton23Pro';
 
+.center{
+	margin:0 auto;
+	float:none;
+}
 
 .btn{
-	width:130px;
+	width:200px;
 	text-align: center;
 	background: #05c3ff;
 	color:#fff;
@@ -14,6 +18,7 @@ $teuton-normal: 'Teuton23Pro';
 	display:inline-block;
 	border-radius:0px;
 	text-transform:uppercase;
+	margin:5px;
 
 }
 
@@ -43,202 +48,271 @@ $teuton-normal: 'Teuton23Pro';
     	text-decoration:none;
     }
 }
+#news{
+	background:#354492;
+	
+	h3{
+		color:#fff;
+	}
+}
 
 #banner{
-	background: #085daf;
-	
-	.text{
-		h4{
-			font-family: $teuton-normal;
-			color:#fff;
-			font-size: 3.5em;
+	background: url('../images/banner_top_home.png');
+    background-position: 50% 0;
+    
+    .cerebro{
+    	background: url('../images/cabeca.png');
+    	background-repeat: no-repeat;
+    	height: 700px;
+    	margin-top: 60px;
+    	padding-top: 120px;
+    	
+    	h3{
+			width: 50%;
+			font-family: Teuton24Pro;
+		    color: #FFF;
+		    font-size: 2.2em;
+		    line-height: 1em;
 		    text-transform: uppercase;
-		    font-weight: bold;
-		    margin: 35% 0%;
-		    width:88%;
+		    margin-left:30%;
+		    margin-bottom:20px;
 		}
-	}
 
-	.image{
-		padding:10% 0px;
-		
-		img{
-			width:100%;
+		.itens-banner{
+			width: 70%;
+    		margin-left: 18%;
+    		text-align: center;
+    		
+			h4{
+				font-family: Teuton23Pro;
+			    color: #fff;
+			    font-size:2em;
+			}
+
+			p{
+				font-family: Teuton23Pro;
+			    color: #fff;
+			    font-size: 1em;
+			    margin: 10px;
+			    text-align: center;
+
+			}
+				
+			img{
+				margin:0 auto;
+			}
+
+			a{
+				color: #fff;
+    			font-size: 1.5em;
+			}
+			
 		}
-	}
+    }
 	
 }
 
 #section1{
-	background:$cor-branco;
+	background:#304594;
 	padding: 3% 0px;
 	
+	.linha-verde{
+		display:inline-block;
+	}
+
+	h3{
+		font-family: Teuton24Pro;
+	    color: #fff;
+	    font-size: 4em;
+	    margin-bottom: 20px;
+	}
 
 	.text{
-		text-align: center;
-		margin-bottom: 10px;
-		
-		h2{
-			font-family: $teuton-normal;
-			color:#26356e;
-			font-size:3em;
-			margin-bottom: 20px;
-		}
+		font-family: 'Open Sans',sans-serif;
+        color: #fff;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        margin-right: 100px;
+        font-weight: 100;	
+    }
+    
+    .links{
+        margin-top: 28px;    
+    }
 
-		p{	
-			font-family: 'Teuton22Pro';
-			color:#263671;
-			font-size: 1.5em;
-    		font-weight: 100;
-		}
-	}
+    .linha-verde{
+        display: inline-block;
+        position: absolute;
+        margin-top: -57px;
+        margin-left: 10px;
+        z-index: 0;
+    }
+    
+    .icon-imgPrinc{
+        width: 140px;
+        position: absolute;
+        z-index: 999;
+        top: 140px;
+        left: -40px;
+    }
 
-	.boxs{
-		margin-top:4%;
-		
-		.box{
-			margin:2%;
-			padding: 0% 15%;
-    		text-align: center;
-    		cursor:pointer;
-    		
-    		a{
-    			text-decoration:none;
-    			
-				&:hover{
-					text-decoration:none;
-				}
-    		}
-    		
-			.icon{ 
-				width:45%;
-				margin:20px auto;
+    .icon-imgSecun{
+        position: absolute;
+        width: 90px;
+        top: 360px;
+        left: -15px;
+    }
 
-				img{	
-					width:100%;
-					max-width: 120px;
-					max-height:120px;
-				}
-			}
+    .icon-imgSecun2{
+        position: absolute;
+        width: 90px;
+        top: 500px;
+        left: -15px;
+    }
 
-			.title{
-				font-family: $teuton-normal;
-				color:#404040;
-				font-size:1.7em;
-				margin-bottom: 15px;
-			}
-
-			.text{			
-				font-family: 'Teuton22Pro';
-				color:#263671;
-				font-size: 1.2em;
-	    		font-weight: normal;
-	    		line-height: 1.4em;
-			}
-		}
-	}
+    .img{
+        margin-top: 100px;
+    }
 
 }
 
 #section2{
-	background:$cor-azul;
-	max-height: 514px;
-	padding: 3% 0px;
+	background:#0aa8b2;
+    padding: 3% 0px;
+    
+    .linha-verde{
+        display:inline-block;
+    }
 
-	.text{
-		text-align: left;
-	
-		
-		h2{
-			font-family: $teuton-normal;
-			color:#fff;
-			font-size:3.5em;
-			margin-bottom: 20px;
-			text-align:center;
-		}
+    h3{
+        font-family: Teuton24Pro;
+        color: #243670;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
 
-		p{	
-			font-family: 'Teuton22Pro';
-			color:#fff;
-			font-size: 1.5em;
-    		font-weight: 100;
-    		text-align:center;
-    		margin: 5% 10%;
-		}
-	}
+    .text{
+        font-family: 'Open Sans',sans-serif;
+        color: #243670;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        margin-right: 100px;
+        font-weight: 100;  
+    }
+
+    .text1{
+        margin-top: 150px;
+    }
+    
+    .links{
+        margin-top: 28px;    
+    }
+
+    .linha-verde{
+        display: inline-block;
+        position: absolute;
+        margin-top: -57px;
+        margin-left: 10px;
+        z-index: 0;
+    }
+    
+    .icon-imgPrinc{
+        width: 90px;
+        position: absolute;
+        z-index: 999;
+        top: 120px;
+        left: -15px;
+    }
+
+    .icon-imgSecun{
+        position: absolute;
+        width: 140px;
+        top: 270px;
+        left: -40px;
+    }
+
+    .icon-imgSecun2{
+        position: absolute;
+        width: 90px;
+        top: 480px;
+        left: -15px;
+    }
+
+    .img{
+        margin-top: 50px;
+    }
 
 }
 
 #section3{
-	background:$cor-branco;
-	padding: 3% 0 0px ;
+	background:#304594;
+    padding: 3% 0px;
+    
+    .linha-verde{
+        display:inline-block;
+    }
 
-	.text{
-		margin-top: 50px;
-	
-		h2{
-			font-family: $teuton-normal;
-			color:#26356e;
-			font-size:3.5em;
-			margin-bottom: 20px;
-			text-align:center;
-		}
+    h3{
+        font-family: Teuton24Pro;
+        color: #fff;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
 
-		p{	
-			font-family: 'Teuton22Pro';
-			color:#263671;
-			font-size: 1.5em;
-    		font-weight: 100;
-    		text-align:center;
-    		margin: 5%;
-		}
-		
-		.links{
-			text-align:center;
-		}
-	}
+    .text{
+        font-family: 'Open Sans',sans-serif;
+        color: #fff;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        margin-right: 100px;
+        font-weight: 100;   
+    }
+    
+    .links{
+        margin-top: 28px;    
+    }
 
-	.image{
-		img{
-			
-		}
-	}
+
+    .linha-verde{
+        display: inline-block;
+        position: absolute;
+        margin-top: -432px;
+        margin-left: 10px;
+        z-index: 0;
+        
+        img{
+            height: 686px;
+            width: 6px;
+        }
+    }
+    
+    .icon-imgPrinc{
+        width: 90px;
+        position: absolute;
+        z-index: 999;
+        top: -340px;
+        left: -20px;
+    }
+
+    .icon-imgSecun{
+        position: absolute;
+        width: 90px;
+        top: -180px;
+        left: -15px;
+    }
+
+    .icon-imgSecun2{
+        position: absolute;
+        width: 140px;
+        top: -40px;
+        left: -40px;
+    }
+
+    .img{
+        margin-left: 60px;
+    }
 
 }
-
-#section4{
-	background:$cor-azul;
-	padding: 3% 0px;
-	margin-top: -40px;
-
-	.text{
-		text-align: left;
-		margin-top: 50px;
-		
-		h2{
-			font-family: $teuton-normal;
-			color:#fff;
-			font-size:3.5em;
-			margin-bottom: 20px;
-			text-align:center;
-		}
-
-		p{	
-			font-family: 'Teuton22Pro';
-			color:#fff;
-			font-size: 1.5em;
-    		font-weight: 100;
-    		text-align:center;
-    		
-		}
-	}
-
-	.image{
-		img{
-			width:90%;
-		}
-	}
-
-}
-
-

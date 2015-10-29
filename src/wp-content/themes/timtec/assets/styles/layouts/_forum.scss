@@ -1,0 +1,33 @@
+.page-header{
+    font-family: Teuton23Pro;
+    color: #26356e;
+    text-transform: uppercase;
+    
+    h1{
+       font-size: 3em;
+    }
+}
+
+.sidebar{
+    max-width:300px;
+    
+    h3{
+        font-family: Teuton23Pro;
+        color: #26356e;
+        font-size: 2.2em;
+    }
+
+    ul{
+        border:1px solid #26356e;
+        padding:10px;
+        
+        li{
+            list-style: none;
+            
+            a{
+                font-family: Teuton23Pro;
+            }
+            
+        }
+    }
+}
