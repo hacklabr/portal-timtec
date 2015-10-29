@@ -2,18 +2,18 @@
     <div id="footer-info">
         <div class="container">
             <div class="row">
-                <div class="content-footer col-md-8">
+                <div class="content-footer col-md-9">
                     <?php dynamic_sidebar('sidebar-footer'); ?>
                 </div>
-                <div class="social col-md-4">
+                <div class="social col-md-3">
                     <h4>Acompanhe nossas redes.</h4>
                     <ul>
                         <?php
                         $loop_redessociais = new WP_Query(
-                                array(
-                            'post_type' => 'rede_social',
-                            'posts_per_page' => -1,
-                                )
+                            array(
+                                'post_type' => 'rede_social',
+                                'posts_per_page' => -1,
+                            )
                         );
 
                         while ($loop_redessociais->have_posts())

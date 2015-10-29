@@ -4,10 +4,14 @@ $teuton-normal: 'Teuton23Pro';
 #footer-info{
 	background:#095DAF;
 	.content-footer{
+        .nav_menu-3{
+            width:150px;
+        }
 
+        .nav_menu-5{
+            width:160px;
+        }
 	    .widget_nav_menu{
-            margin:10px;
-            padding:10px;
 
 			h3{
 				color: #fff;
@@ -117,4 +121,6 @@ $teuton-normal: 'Teuton23Pro';
         }
 
     }
+
+    
 }
