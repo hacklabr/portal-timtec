@@ -150,11 +150,11 @@ $teuton-normal: 'Teuton23Pro';
     }
     
     .icon-imgPrinc{
-        width: 140px;
+        width: 220px;
         position: absolute;
         z-index: 999;
         top: 140px;
-        left: -40px;
+        left: -125px;
     }
 
     .icon-imgSecun{
@@ -172,7 +172,7 @@ $teuton-normal: 'Teuton23Pro';
     }
 
     .img{
-        margin-top: 100px;
+        margin-top: 68px;
     }
 
 }
@@ -190,6 +190,7 @@ $teuton-normal: 'Teuton23Pro';
         color: #243670;
         font-size: 4em;
         margin-bottom: 20px;
+        text-align: right;
     }
 
     .text{
@@ -198,8 +199,9 @@ $teuton-normal: 'Teuton23Pro';
         font-size: 1.2em;
         margin-bottom: 20px;
         line-height: 1.4em;
-        margin-right: 100px;
-        font-weight: 100;  
+        font-weight: 100;
+        margin-left: 20px;
+        text-align: right;    
     }
 
     .text1{
@@ -207,7 +209,8 @@ $teuton-normal: 'Teuton23Pro';
     }
     
     .links{
-        margin-top: 28px;    
+        margin-top: 28px; 
+        text-align:right;   
     }
 
     .linha-verde{
@@ -216,10 +219,14 @@ $teuton-normal: 'Teuton23Pro';
         margin-top: -57px;
         margin-left: 10px;
         z-index: 0;
+        
+        img{
+            height: 797px;
+        }
     }
     
     .icon-imgPrinc{
-        width: 90px;
+        width: 80px;
         position: absolute;
         z-index: 999;
         top: 120px;
@@ -228,20 +235,20 @@ $teuton-normal: 'Teuton23Pro';
 
     .icon-imgSecun{
         position: absolute;
-        width: 140px;
+        width: 220px;
         top: 270px;
-        left: -40px;
+        left: -25px;
     }
 
     .icon-imgSecun2{
         position: absolute;
-        width: 90px;
+        width: 80px;
         top: 480px;
         left: -15px;
     }
 
     .img{
-        margin-top: 50px;
+        margin-top: -30px;
     }
 
 }
@@ -279,18 +286,18 @@ $teuton-normal: 'Teuton23Pro';
     .linha-verde{
         display: inline-block;
         position: absolute;
-        margin-top: -432px;
+        margin-top: -462px;
         margin-left: 10px;
         z-index: 0;
         
         img{
-            height: 686px;
+            height: 716px;
             width: 6px;
         }
     }
     
     .icon-imgPrinc{
-        width: 90px;
+        width: 80px;
         position: absolute;
         z-index: 999;
         top: -340px;
@@ -299,16 +306,16 @@ $teuton-normal: 'Teuton23Pro';
 
     .icon-imgSecun{
         position: absolute;
-        width: 90px;
+        width: 80px;
         top: -180px;
         left: -15px;
     }
 
     .icon-imgSecun2{
         position: absolute;
-        width: 140px;
-        top: -40px;
-        left: -40px;
+        width: 220px;
+        top: 0px;
+        left: -140px;
     }
 
     .img{

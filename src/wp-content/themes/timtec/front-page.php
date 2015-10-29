@@ -41,7 +41,7 @@
             <div class="col-md-6">
                 <div class="box">
                     <div class="icon">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/soft1.png" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software01.png" />
                     </div>
                     <div class="title">
                         <h3><?php _oi("SOFTWARE"); ?></h3>
@@ -50,10 +50,10 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("INSTALE AGORA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("EXPLORE A PLATAFORMA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("MANUAIS DA PLATAFORMA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("DSENVOLVA O SOFTWARE"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Explore a Plataforma"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Instale agora"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Manuais da plataforma"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Desenvolva o software"); ?></a>
                     </div>
                 </div>
             </div>
@@ -61,12 +61,12 @@
                 <span class="linha-verde" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-verde.png" />
                 </span>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="icon-imgPrinc" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-boxes-principais-software.png" class="icon-imgPrinc" />
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png"  class="icon-imgSecun"/>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="icon-imgSecun2" />
             </div>
             <div class="col-md-4">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/soft2.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software02.png" class="img"/>       
             </div>
         </div> <!-- /.row -->
     </div><!-- /container-->
@@ -78,14 +78,14 @@
     <div class="container">
         <div class="boxs row">
             <div class="col-md-6">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cursos1.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>       
             </div>
             <div class="col-md-2">
                 <span class="linha-verde" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-azul.png" />
                 </span>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="icon-imgPrinc" />
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png"  class="icon-imgSecun"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-boxes-principais-cursos.png"  class="icon-imgSecun"/>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="icon-imgSecun2" />
             </div>
             <div class="col-md-4">
@@ -100,7 +100,7 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("LISTA DE CURSOS"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Lista de cursos"); ?></a>
                     </div>
                 </div>
             </div>
@@ -116,17 +116,17 @@
     <div class="container">
         <div class="boxs row">
             <div class="col-md-12">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/rede1.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>       
             </div>
             <div class="col-md-6">
                     <div class="title">
                         <h3><?php _oi("REDES"); ?></h3>
                     </div> 
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("INSTALE AGORA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("EXPLORE A PLATAFORMA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("MANUAIS DA PLATAFORMA"); ?></a>
-                        <a href="#" class="btn"><?php _oi("DSENVOLVA O SOFTWARE"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Conheçå a rede TIM TEC"); ?></a>
+                        <a href="#" class="btn"><?php _oi("FAQ"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Fórum"); ?></a>
+                        <a href="#" class="btn"><?php _oi("Suporte"); ?></a>
                     </div>     
             </div>
             <div class="col-md-2 ">
@@ -135,7 +135,7 @@
                 </span>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="icon-imgPrinc" />
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png"  class="icon-imgSecun"/>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="icon-imgSecun2" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-boxes-principais-redes.png"  class="icon-imgSecun2" />
             </div>
             <div class="col-md-4">
                 <div class="box">
