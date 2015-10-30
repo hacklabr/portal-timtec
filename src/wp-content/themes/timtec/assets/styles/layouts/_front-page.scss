@@ -48,13 +48,7 @@ $teuton-normal: 'Teuton23Pro';
     	text-decoration:none;
     }
 }
-#news{
-	background:#354492;
-	
-	h3{
-		color:#fff;
-	}
-}
+
 
 #banner{
 	background: url('../images/banner_top_home.png');
@@ -77,6 +71,10 @@ $teuton-normal: 'Teuton23Pro';
 		    margin-left:28%;
 		    margin-bottom:20px;
             text-align: center;
+            
+            span{
+                font-size:0.8em;
+            }
 		}
 
 		.itens-banner{
@@ -94,9 +92,9 @@ $teuton-normal: 'Teuton23Pro';
 				font-family: Teuton23Pro;
 			    color: #fff;
 			    font-size: 1em;
-			    margin: 10px;
+			    margin: 10px 10px 0px;
 			    text-align: center;
-
+                line-height: 1.2em;
 			}
 				
 			img{
@@ -107,7 +105,6 @@ $teuton-normal: 'Teuton23Pro';
 				color: #fff;
     			font-size: 1.5em;
 			}
-			
 		}
     }
 	
@@ -117,10 +114,6 @@ $teuton-normal: 'Teuton23Pro';
 	background:#304594;
 	padding: 3% 0px;
 	
-	.linha-verde{
-		display:inline-block;
-	}
-
 	h3{
 		font-family: Teuton24Pro;
 	    color: #fff;
@@ -142,7 +135,7 @@ $teuton-normal: 'Teuton23Pro';
         margin-top: 28px;    
     }
 
-    .linha-verde{
+    .linha-centro{
         display: inline-block;
         position: absolute;
         margin-top: -57px;
@@ -155,21 +148,21 @@ $teuton-normal: 'Teuton23Pro';
         position: absolute;
         z-index: 999;
         top: 140px;
-        left: -125px;
+        left: -122px;
     }
 
     .icon-imgSecun{
         position: absolute;
-        width: 90px;
+        width: 80px;
         top: 360px;
-        left: -15px;
+        left: -13px;
     }
 
     .icon-imgSecun2{
         position: absolute;
-        width: 90px;
+        width: 80px;
         top: 500px;
-        left: -15px;
+        left: -10px;
     }
 
     .img{
@@ -181,10 +174,7 @@ $teuton-normal: 'Teuton23Pro';
 #section2{
 	background:#0aa8b2;
     padding: 3% 0px;
-    
-    .linha-verde{
-        display:inline-block;
-    }
+
 
     h3{
         font-family: Teuton24Pro;
@@ -214,7 +204,7 @@ $teuton-normal: 'Teuton23Pro';
         text-align:right;   
     }
 
-    .linha-verde{
+    .linha-centro{
         display: inline-block;
         position: absolute;
         margin-top: -57px;
@@ -230,22 +220,22 @@ $teuton-normal: 'Teuton23Pro';
         width: 80px;
         position: absolute;
         z-index: 999;
-        top: 120px;
+        top: 90px;
         left: -15px;
     }
 
     .icon-imgSecun{
         position: absolute;
-        width: 220px;
-        top: 270px;
-        left: -25px;
+        width: 300px;
+        top: 239px;
+        left: -51px;
     }
 
     .icon-imgSecun2{
         position: absolute;
         width: 80px;
-        top: 480px;
-        left: -15px;
+        top: 450px;
+        left: -13px;
     }
 
     .img{
@@ -256,11 +246,8 @@ $teuton-normal: 'Teuton23Pro';
 
 #section3{
 	background:#304594;
-    padding: 3% 0px;
-    
-    .linha-verde{
-        display:inline-block;
-    }
+    padding: 6px 0 57px;
+
 
     h3{
         font-family: Teuton24Pro;
@@ -284,7 +271,7 @@ $teuton-normal: 'Teuton23Pro';
     }
 
 
-    .linha-verde{
+    .linha-centro{
         display: inline-block;
         position: absolute;
         margin-top: -462px;
@@ -301,26 +288,80 @@ $teuton-normal: 'Teuton23Pro';
         width: 80px;
         position: absolute;
         z-index: 999;
-        top: -340px;
-        left: -20px;
+        top: -383px;
+        left: -13px;
     }
 
     .icon-imgSecun{
         position: absolute;
         width: 80px;
-        top: -180px;
-        left: -15px;
+        top: -210px;
+        left: -13px;
     }
 
     .icon-imgSecun2{
         position: absolute;
-        width: 220px;
-        top: 0px;
-        left: -140px;
+        width: 300px;
+        top: -23px;
+        left: -205px;
     }
 
     .img{
-        margin-left: 60px;
+        width:100%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 900px){
+    .linha{
+        display:none;
+    }
+}
+
+/**
+* Slide News
+*/
+#news{
+    background:#354492;
+    
+    h3{
+        color:#fff;
+        display: inline-block;
+        font-family: Teuton23Pro;
     }
 
+    #newsCarouselWrapper{
+        display: inline-block;
+        width: 80%;
+        a{
+            color:#fff;
+            
+            &.categoria{
+                color:#f50;
+            }
+        }
+    }
+}
+
+ @media (min-width: 768px) and (max-width: 991px) {
+      #newsCarousel .carousel-inner .item .item-item:last-child {
+        display: none;
+      }
+   }
+@media (max-width: 768px) {
+     #newsCarousel .carousel-inner {
+      height: 50px;
+    }
+ }
+
+.carousel-inner {
+  overflow-y: hidden;
+ height: 20px;
+}
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev    { left: -25%; }
+.carousel-control        { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-inner .item-item {
+  padding:0!important;
 }

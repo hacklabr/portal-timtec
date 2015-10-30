@@ -1,6 +1,56 @@
 <section id="news" class="" >
     <div class="container">
         <h3>Novidades: </h3>
+        <div id="newsCarouselWrapper" class="container-fluid">
+   <div id="newsCarousel" class="carousel slide">
+      <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="item-item col-md-6">
+                        <a href="#" class="categoria">
+                            #categoria
+                        </a>
+                        <a href="#">
+                           <span>Novidade 1 - titulo, lote, Inspum |</span>
+                            <span> ás 18h30 12/09/2015</span>
+                        </a>
+                    </div>
+                 </div>
+                 <div class="item ">
+                    <div class="item-item col-md-6">
+                        <a href="#" class="categoria">
+                            #categoria
+                        </a>
+                        <a href="#">
+                           <span>Novidade 2 - titulo, lote, Inspum |</span>
+                            <span> ás 10h30 10/09/2015</span>
+                        </a>
+                    </div>
+                 </div>
+                 <div class="item ">
+                    <div class="item-item col-md-6">
+                        <a href="#" class="categoria">
+                            #categoria
+                        </a>
+                        <a href="#">
+                           <span>Novidade 3 - titulo, lote, Inspum |</span>
+                            <span> ás 09h30 19/09/2015</span>
+                        </a>
+                    </div>
+                 </div>
+                 
+      </div>
+      <!-- Controls 
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+      -->
+   </div>
+</div>
     </div>
 </section>
 
@@ -8,7 +58,10 @@
     <div class="container">
         <div class="col-md-10 center">
             <div class="row cerebro">
-                <h3>  <?php _oi("Lorem ipsum dolor sit amet, consectetu ultricies magna porta, molestie diam."); ?> </h3>
+                <h3>  
+                    <?php _oi("Lorem ipsum dolor sit amet"); ?> 
+                    <span><?php _oi("CONSECTETU ULTRICIES MAGNA"); ?> </span>
+                </h3>
                 <div class="itens-banner">
                     <div class="col-md-4">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" />
@@ -57,8 +110,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <span class="linha-verde" >
+            <div class="col-md-2 linha">
+                <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-verde.png" />
                 </span>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-boxes-principais-software.png" class="icon-imgPrinc" />
@@ -80,8 +133,8 @@
             <div class="col-md-6">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>       
             </div>
-            <div class="col-md-2">
-                <span class="linha-verde" >
+            <div class="col-md-2 linha">
+                <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-azul.png" />
                 </span>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="icon-imgPrinc" />
@@ -129,8 +182,8 @@
                         <a href="#" class="btn"><?php _oi("Suporte"); ?></a>
                     </div>     
             </div>
-            <div class="col-md-2 ">
-                <span class="linha-verde" >
+            <div class="col-md-2 linha">
+                <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-branco.png" />
                 </span>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="icon-imgPrinc" />

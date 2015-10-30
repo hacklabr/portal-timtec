@@ -16,14 +16,12 @@ $teuton-normal: 'Teuton23Pro';
     -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
     z-index: 900;
-    background: rgba(6,82,163,1);
-    background: -moz-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(6,82,163,1)), color-stop(45%, rgba(8,111,190,1)), color-stop(100%, rgba(17,129,214,1)));
-    background: -webkit-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
-    background: -o-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
-    background: -ms-linear-gradient(top, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
-    background: linear-gradient(to bottom, rgba(6,82,163,1) 0%, rgba(8,111,190,1) 45%, rgba(17,129,214,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0652a3', endColorstr='#1181d6', GradientType=0 );
+    background-color: #007dc3;
+    background: -webkit-gradient(linear,left top,left bottom,from(#007dc3),to(#1451a2));
+    background: -webkit-linear-gradient(top,#007dc3,#1451a2);
+    background: -moz-linear-gradient(top,#007dc3,#1451a2);
+    background: -ms-linear-gradient(top,#007dc3,#1451a2);
+    background: -o-linear-gradient(top,#007dc3,#1451a2);
   
 
     
