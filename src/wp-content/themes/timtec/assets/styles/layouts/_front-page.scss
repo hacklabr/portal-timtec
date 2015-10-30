@@ -65,15 +65,16 @@ $teuton-normal: 'Teuton23Pro';
 			width: 50%;
 			font-family: Teuton24Pro;
 		    color: #FFF;
-		    font-size: 2.2em;
+		    font-size: 2.6em;
 		    line-height: 1em;
 		    text-transform: uppercase;
 		    margin-left:28%;
 		    margin-bottom:20px;
             text-align: center;
             
-            span{
-                font-size:0.8em;
+            span.titulo{
+                font-size:0.6em;
+                display: block;
             }
 		}
 
@@ -86,13 +87,14 @@ $teuton-normal: 'Teuton23Pro';
 				font-family: Teuton23Pro;
 			    color: #fff;
 			    font-size:2em;
+                margin: 10px 0px 0px;
 			}
 
 			p{
 				font-family: Teuton23Pro;
 			    color: #fff;
 			    font-size: 1em;
-			    margin: 10px 10px 0px;
+			    margin: 5px 10px 0;
 			    text-align: center;
                 line-height: 1.2em;
 			}

@@ -59,8 +59,8 @@
         <div class="col-md-10 center">
             <div class="row cerebro">
                 <h3>  
-                    <?php _oi("Lorem ipsum dolor sit amet"); ?> 
-                    <span><?php _oi("CONSECTETU ULTRICIES MAGNA"); ?> </span>
+                    <?php _oi("TIM TEC ="); ?> 
+                    <span class="titulo"><?php _oi("SOFTWARE LIVRE + CURSOS + REDE E-TEC BRASIL"); ?> </span>
                 </h3>
                 <div class="itens-banner">
                     <div class="col-md-4">
