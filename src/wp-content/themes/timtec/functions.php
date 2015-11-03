@@ -12,7 +12,7 @@
 
 define('SLUG', 'portal-timtec');
 
-add_action('init', function(){    
+add_action('init', function(){
   global $WPEIP;
   if(function_exists('pll_default_language') && $WPEIP){
     global $WPEIP;
@@ -45,6 +45,8 @@ require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 require __DIR__ . '/inc/widgets/widget-forum-categories.php';
 require __DIR__ . '/inc/widgets/widget-forum-tags.php';
 
+require __DIR__ . '/inc/menu-walkers/MenuWalker_Buttons.php';
+
 
 
 
@@ -57,7 +59,7 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
-  'inc/metaboxes/url-video-course.php', //MetaBox 
+  'inc/metaboxes/url-video-course.php', //MetaBox
   ];
 
   foreach ($sage_includes as $file) {
@@ -88,28 +90,28 @@ pll_register_string('URL Conselho', 'conselho', 'timtec');
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
   foreach (pll_languages_list() as $lcode) {
-    $str_courses = pll_translate_string('cursos', $lcode); 
+    $str_courses = pll_translate_string('cursos', $lcode);
     $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
 
-    $str_software = pll_translate_string('software', $lcode); 
+    $str_software = pll_translate_string('software', $lcode);
     $new_rules["^$lcode/$str_software/?$"] = "index.php?template=software";
 
-    $str_redes = pll_translate_string('redes', $lcode); 
+    $str_redes = pll_translate_string('redes', $lcode);
     $new_rules["^$lcode/$str_redes/?$"] = "index.php?template=redes";
 
-    $str_noticias = pll_translate_string('noticias', $lcode); 
+    $str_noticias = pll_translate_string('noticias', $lcode);
     $new_rules["^$lcode/$str_noticias/?$"] = "index.php?template=noticias";
 
-    $str_suporte = pll_translate_string('suporte', $lcode); 
+    $str_suporte = pll_translate_string('suporte', $lcode);
     $new_rules["^$lcode/$str_suporte/?$"] = "index.php?template=suporte";
 
-    $str_cadastro = pll_translate_string('cadastro', $lcode); 
+    $str_cadastro = pll_translate_string('cadastro', $lcode);
     $new_rules["^$lcode/$str_cadastro/?$"] = "index.php?template=cadastro";
 
-    $str_contato = pll_translate_string('contato', $lcode); 
+    $str_contato = pll_translate_string('contato', $lcode);
     $new_rules["^$lcode/$str_contato/?$"] = "index.php?template=contato";
 
-    $str_conselho = pll_translate_string('conselho', $lcode); 
+    $str_conselho = pll_translate_string('conselho', $lcode);
     $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
@@ -128,6 +130,18 @@ add_action('template_redirect', function() {
       die;
     }
   }
+});
+add_action( 'after_setup_theme', function(){
+    $menus = [
+        'sobre' => 'Menu Sobre',
+        'software' => 'Menu Software',
+        'cursos' => 'Menu Cursos',
+        'rede' => 'Menu Rede'
+    ];
+
+    foreach($menus as $location => $description){
+        register_nav_menu( $location , $description );
+    }
 });
 
 // */

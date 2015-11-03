@@ -37,9 +37,9 @@
                         </a>
                     </div>
                  </div>
-                 
+
       </div>
-      <!-- Controls 
+      <!-- Controls
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -58,8 +58,8 @@
     <div class="container">
         <div class="col-md-10 center">
             <div class="row cerebro">
-                <h3>  
-                    <?php _oi("TIM TEC ="); ?> 
+                <h3>
+                    <?php _oi("TIM TEC ="); ?>
                     <span class="titulo"><?php _oi("SOFTWARE LIVRE + CURSOS + REDE E-TEC BRASIL"); ?> </span>
                 </h3>
                 <div class="itens-banner">
@@ -80,7 +80,7 @@
                         <h4><?php _oi("Redes"); ?> </h4>
                         <p><?php _oi("Lorem ipsum consectetur adipiscing ultricies magna porta, molestie diam."); ?></p>
                         <a href="#"><i class="fa fa-caret-down"></i></a>
-                    </div> 
+                    </div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -103,10 +103,12 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("Explore a Plataforma"); ?></a>
-                        <a href="#" class="btn"><?php _oi("Instale agora"); ?></a>
-                        <a href="#" class="btn"><?php _oi("Manuais da plataforma"); ?></a>
-                        <a href="#" class="btn"><?php _oi("Desenvolva o software"); ?></a>
+                        <?php
+                        wp_nav_menu(array(
+                            'menu'    => 'software',
+                            'walker'  => new MenuWalker_Buttons() //use our custom walker
+                        ));
+                        ?>
                     </div>
                 </div>
             </div>
@@ -119,7 +121,7 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="icon-imgSecun2" />
             </div>
             <div class="col-md-4">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software02.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software02.png" class="img"/>
             </div>
         </div> <!-- /.row -->
     </div><!-- /container-->
@@ -131,7 +133,7 @@
     <div class="container">
         <div class="boxs row">
             <div class="col-md-6">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>
             </div>
             <div class="col-md-2 linha">
                 <span class="linha-centro" >
@@ -153,7 +155,12 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("Lista de cursos"); ?></a>
+                        <?php
+                        wp_nav_menu(array(
+                            'menu'    => 'cursos',
+                            'walker'  => new MenuWalker_Buttons() //use our custom walker
+                        ));
+                        ?>
                     </div>
                 </div>
             </div>
@@ -169,18 +176,20 @@
     <div class="container">
         <div class="boxs row">
             <div class="col-md-12">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>       
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>
             </div>
             <div class="col-md-6">
                     <div class="title">
                         <h3><?php _oi("REDES"); ?></h3>
-                    </div> 
+                    </div>
                     <div class="links">
-                        <a href="#" class="btn"><?php _oi("Conheçå a rede TIM TEC"); ?></a>
-                        <a href="#" class="btn"><?php _oi("FAQ"); ?></a>
-                        <a href="#" class="btn"><?php _oi("Fórum"); ?></a>
-                        <a href="#" class="btn"><?php _oi("Suporte"); ?></a>
-                    </div>     
+                        <?php
+                        wp_nav_menu(array(
+                            'menu'    => 'redes',
+                            'walker'  => new MenuWalker_Buttons() //use our custom walker
+                        ));
+                        ?>
+                    </div>
             </div>
             <div class="col-md-2 linha">
                 <span class="linha-centro" >
