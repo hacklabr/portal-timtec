@@ -84,7 +84,7 @@ class ManyToManyRelation{
         );
     }
 
-    private function getRelatedPosts()
+    public function getRelatedPosts()
     {
         global $post;
         

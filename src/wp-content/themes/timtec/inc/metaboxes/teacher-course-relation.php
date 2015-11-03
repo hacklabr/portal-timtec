@@ -1,5 +1,8 @@
 <?php
-new ManyToManyRelation(array(
+
+global $teacher_course_relation;
+
+$teacher_course_relation = new ManyToManyRelation(array(
             'post_type1' => 'teacher',
             'post_type2' => 'course',
             'title1' => __('Courses', SLUG),

@@ -1,45 +1,25 @@
 <?php get_template_part('templates/head'); ?>
 
 <?php
+global $teacher_course_relation;
+
 do_action('get_header');	
 get_template_part('templates/header');
 ?>
-<div id="page-course" class="base-content">
-	<section id="banner" class=" ">
-		<div class="container">
-			<div class="col-md-12 image">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comp-cursos.png" />
-			</div>
-			<div class="col-md-12 text">
-				<h4 >
-					<?php _oi("Lorem ipsum dolor sit amet, consectetur", "Cursos - Texto Banner"); ?>
-				</h4>   
-			</div>
-			<span class="icon-seta fa fa-angle-down"></span>
-		</div>
-	</section>
-
-	<section id="section1" class="">
-		<div class="container">	
-			<div class="row text">
-				<h2>
-					<?php _oi("Sobre os cursos"); ?>
-				</h2>
-				<p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id velit lobortis, ultricies magna porta, molestie diam."); ?></p>
-				<a href="#" class="btn "><?php _oi("Saiba mais"); ?></a>
-			</div>
-		</div><!-- /container-->
-	</section>
+<div id="page-course" class="base-content container">
+	<section>
+        <div class="col-md-12 ">
+            <h3><?php _oi("CURSOS"); ?></h3>  
+            <p><?php _oi("Aqui você encontra todos os cursos já produzidos e publicados pelo projeto TIM Tec ou por seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
+            <span class="box"><?php _oi("São voltados para a área de tecnologia e foram escolhidos com base no Eixo Tecnológico: Informação e Comunicação do Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec), do governo federal. Há também cursos dirigidos a professores do Ensino Fundamental e ao fortalecimento de competências consideradas básicas para a formação de qualquer profissional, como a escrita de textos.Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC­BY), a mais livre de todas"); ?></span>
+            <span class="box"><?php _oi("Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM. Que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM."); ?></span>
+        </div>
+    </section>
+    <div class="clear"></div>
 
 	<section id="section2" class="">
 		<div class="container">
-			<div class="row text">
-				<h2>
-					<?php _oi("Cursos em destaque"); ?>
-				</h2>
-				<p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. "); ?></p>
-			</div>
-			<div class="row list-courses">
+			<div class="list-courses">
 				<ul>
 					<?php
 					$args = array(
@@ -52,12 +32,19 @@ get_template_part('templates/header');
 					$url = get_the_permalink();
 					$thumb = wp_get_attachment_url(get_post_thumbnail_id());
 					$title = get_the_title();
+					$teacher = $teacher_course_relation->getRelatedPosts();
+					$teacher = $teacher[0]->post_title;
+
+
 					?>
 					<li>
-						<a href="<?php echo $url ?>" >
-							<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
+						<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
+						<div class="content-curso">
 							<h4><?php echo $title ?></h4>
-						</a>
+							<p class="author"><?php echo $teacher; ?></p>
+							<?php echo the_excerpt(); ?>
+							<a href="<?php echo $url ?>" >Ir para o curso</a>
+						</div>
 					</li>
 					<?php
 					endwhile;
@@ -65,29 +52,7 @@ get_template_part('templates/header');
 					?>
 				</ul>
 			</div>
-			<div class="row text">
-				<a href="#" class="btn"><?php _oi("+ Veja mais cursos"); ?></a>
-			</div>
-		</div><!-- /container-->
-	</section>
-	<section id="section3" class="">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 text">
-					<div class="icon">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/curso-cursos.png" />
-					</div>
-					<h2>
-						<?php _oi("Monte seus cursos"); ?>
-					</h2>
-					<p><?php _oi("Aprenda a montar seu próprio curso com a teconologia de ponta do TIMTec. orem ipsum dolor sit amet, consectetur adipiscing elit. Maecen id velit lobortis, ultricies magna porta, molest.orem ipsum dolor sit amet, elit."); ?></p>
-					<a href="#" class="btn_transparent"><?php _oi("+ Saiba mais fazendo esse curso"); ?></a>
-				</div>
-				<div class="col-md-6 image">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/na-mao.png" />
-				</div>
-
-			</div>		
+			
 		</div><!-- /container-->
 	</section>
 </div>
