@@ -1,0 +1,49 @@
+#page-conselho{
+    
+    h3 {
+        font-family: Teuton24Pro;
+        color: #243670;
+        font-size: 4em;
+        margin-bottom: 20px;
+        font-weight: bold;
+        margin-top: 60px;
+    }
+
+    p{
+        font-family: 'Open Sans',sans-serif;
+        color: #243670;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .list-conselho{
+        ul{
+            margin: 40px 0px;
+            padding: 0px;
+    
+            
+            li{
+                font-family: 'Open Sans',sans-serif;
+                list-style:none;
+                clear: both;
+                height: 120px;
+                
+                h4{
+                    display:inline;
+                    
+                }
+                
+                p{
+                    display:inline;
+                }
+
+                img{
+                    width:130px;
+                    height:105px;
+                    float:left;
+                    margin-right: 10px
+                }
+            }
+        }
+    }
+}
