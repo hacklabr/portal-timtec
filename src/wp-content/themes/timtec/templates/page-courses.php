@@ -17,11 +17,7 @@ get_template_part('templates/header');
 
               <p><?php _oi("Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC-BY), a mais livre de todas. Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM."); ?></p> 
 
-
-            <span class="box"><?php _oi("TIM Tec conta com um Conselho Consultivo, que possui função pedagógica e estratégica. Ele contribui para definir as estratégias do projeto, os temas dos cursos que serão produzidos, as funcionalidades que devem ser desenvolvidas na plataforma... Conheça o Conselho Consultivo TIM Tec"); ?></span>
-
-            <span class="box"><?php _oi("Atenção! A Licença Creative Commons é exclusiva dos cursos produzidos pelo projeto TIM Tec e não se estende aos cursos produzidos pelos parceiros."); ?></span>
-        </div>
+     </div>
     </section>
     <div class="clear"></div>
 
