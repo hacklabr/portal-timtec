@@ -19,11 +19,6 @@ get_template_part('templates/header');
 
             <p><?php _oi("Manual de Tema – Esta manual é voltado para desenvolvedores que querem criar novos temas para a plataforma. Atualmente, a plataforma TIM Tec oferece dois temas."); ?></p> 
 
-            
-            <span class="box"><?php _oi("Uma forma interessante de conhecer a plataforma é acessar as demos do software. Você pode navegar usando quatro perfis diferentes: administrador, professor coordenador, professor assistente ou aluno."); ?></span>
-
-            <span class="box"><?php _oi("A ferramenta TIM Tec é um software livre. Por isso, pode ser usada, compartilhada, modificada e instalada gratuitamente."); ?></span>
-
         </div>
     </section>
     <div class="clear"></div>

@@ -16,11 +16,7 @@ get_template_part('templates/header');
             <p><?php _oi("A ferramenta foi concebida desde a raiz para ser replicada e adotada por instituições de ensino. Ela possui diversas funcionalidades específicas para a gestão de estudantes. É possível criar turmas (cada curso pode ter sua própria divisão de turmas) e atribuir diferentes perfis para professores (professor coordenador e professor assistente). Para os educadores, fica fácil acompanhar o progresso dos estudantes, saber os cursos e atividades que cada um fez e inserir atividades novas e materiais adicionais além daqueles que já estão na plataforma. Além disso, os professores podem interagir direto com os alunos por meio de mensagem privada."); ?></p>
 
             <p><?php _oi("A plataforma permite gerar certificados de conclusão do curso e atestados de horas. TIM Tec fornece os esqueletos desses documentos, e os professores os complementam incluindo o logo da instituição de ensino, nome, assinatura, data, etc. Outra funcionalidade é que os cursos podem ser facilmente exportados e importados entre instituições. Dá para exportar um curso, gerando um pacote que mantém todas as configurações, e enviá-lo para que outras instituições o utilizem nas suas instalações da plataforma TIM Tec"); ?></p>  
-            
-            <span class="box"><?php _oi("Você é gestor ou professor? Navegue pela plataforma com os perfis de ADMINISTRADOR, PROFESSOR COORDENADOR ou PROFESSOR ASSISTENTE."); ?></span>
-          
-            <span class="box"><?php _oi("Você é estudante? Navegue pela plataforma com o perfil de ALUNO."); ?></span>
-            
+                                  
             <p><?php _oi("Quem faz o curso pode assistir às aulas em qualquer ordem, onde quiser e na hora que quiser, e assistir novamente a aulas já vistas. Os vídeos sempre iniciam e encerram um assunto; por isso, dá para ir direto ao vídeo relacionado ao tema de interesse. Há um espaço ao lado do vídeo em que o estudante pode fazer anotações enquanto assiste à aula. Cada curso tem a sua lista de materiais didáticos (uma espécie de bibliografia básica) e cada aula possui material adicional. No fórum, os estudantes podem interagir, discutir sobre o curso e trocar experiências com outros usuários da plataforma."); ?></p> 
             
         </div>

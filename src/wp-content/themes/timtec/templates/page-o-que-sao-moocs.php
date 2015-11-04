@@ -24,8 +24,6 @@ Os MOOCs foram criados em 2007, nos Estados Unidos, e se popularizaram a partir 
 
             <p><?php _oi("TIM Tec é a primeira plataforma MOOC desenvolvida inteiramente no Brasil."); ?></p> 
 
-            <span class="box"><?php _oi("TIM Tec também é o nome da primeira instalação do software TIM Tec, ou seja, a plataforma MOOC do Instituto TIM. Lá estão publicados todos os cursos já produzidos no projeto."); ?></span>
-
         </div>
     </section>
     <div class="clear"></div>
