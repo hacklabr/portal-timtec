@@ -46,8 +46,8 @@
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/noticias/">Notícias</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/contato/">Contato</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/noticias/">Notícias</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
                 </ul>
             </div>        
         </nav>
