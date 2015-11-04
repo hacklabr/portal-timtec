@@ -128,10 +128,22 @@ $('.carousel .item').each(function(){
 /**
 * Fecha Modal Home
 */
-
 $('.js-close-modal').on('click',function(e){
     e.preventDefault();
     $('#modal-home').hide(200);
+});
+
+
+/**
+* Scroll Home
+*/
+$('.js-scroll-to').on('click', function(e){
+    var targetSelector = $(this).data('target');
+    var $target = $(targetSelector);
+    if(!e.ctrlKey){
+        $('body,html').stop().animate({scrollTop: $target.offset().top},200);
+    }
+
 });
 
 })(jQuery); // Fully reference jQuery after this point.

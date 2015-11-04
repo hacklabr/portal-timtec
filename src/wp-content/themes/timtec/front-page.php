@@ -74,19 +74,19 @@
                     <span class="titulo"><?php _oi("SOFTWARE LIVRE + CURSOS + REDE E-TEC BRASIL"); ?> </span>
                 </h3>
                 <div class="itens-banner">
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section1" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" />
                         <h4><?php _oi("Software"); ?> </h4>
                         <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. "); ?> </p>
                         <a href="#"><i class="fa fa-caret-down"></i></a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section2" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png" />
                         <h4><?php _oi("Cursos"); ?> </h4>
                         <p><?php _oi("Lorem ipsum dolor sit amet, elit. Maecenasid velit lobortis."); ?></p>
                         <a href="#"><i class="fa fa-caret-down"></i></a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section3">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png" />
                         <h4><?php _oi("Redes"); ?> </h4>
                         <p><?php _oi("Lorem ipsum consectetur adipiscing ultricies magna porta, molestie diam."); ?></p>
