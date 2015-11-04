@@ -1,7 +1,7 @@
 <?php get_template_part('templates/head'); ?>
 
 <?php
-global $teacher_course_relation;
+global $teacher_course_relation, $couse_download;
 
 do_action('get_header');	
 get_template_part('templates/header');
@@ -32,10 +32,12 @@ get_template_part('templates/header');
 					$url = get_the_permalink();
 					$thumb = wp_get_attachment_url(get_post_thumbnail_id());
 					$title = get_the_title();
-					$teacher = $teacher_course_relation->getRelatedPosts();
-					$teacher = $teacher[0]->post_title;
-
-
+					$teachers = $teacher_course_relation->getRelatedPosts();
+                                        $teacher = '';
+                                        if(is_array($teachers)){
+                                            $teachers = array_map(function($e){ return $e->post_title; }, $teachers);
+                                            $teacher = implode(', ', $teachers);
+                                        }
 					?>
 					<li>
 						<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
@@ -45,6 +47,10 @@ get_template_part('templates/header');
 							<?php echo the_excerpt(); ?>
 							<a href="<?php echo $url ?>" >Ir para o curso</a>
 						</div>
+                                                <?php if($couse_download->getFilePath(get_the_ID())): 
+                                                    $download_url = $couse_download->getFileUrl(get_the_ID());?>
+                                                    <div class="links" ><a href="<?php echo $download_url ?>" class="btn">Baixar o curso</a></div>
+                                                <?php endif; ?>
 					</li>
 					<?php
 					endwhile;

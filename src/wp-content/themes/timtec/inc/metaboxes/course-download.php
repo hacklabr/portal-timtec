@@ -1,6 +1,7 @@
 <?php
+global $couse_download; 
 
-new PrivateFile(array(
+$couse_download = new PrivateFile(array(
     'slug' => 'course-download',
     'post_type' => 'course',
     'meta_name' => 'exported-file',
