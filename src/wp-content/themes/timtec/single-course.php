@@ -1,0 +1,1 @@
+<?php get_template_part('templates/content-course', get_post_type()); ?>
