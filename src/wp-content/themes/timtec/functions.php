@@ -109,6 +109,14 @@ pll_register_string('URL Cadastro', 'cadastro', 'timtec');
 pll_register_string('URL Contato', 'contato', 'timtec');
 pll_register_string('URL Conselho', 'conselho', 'timtec');
 
+pll_register_string('URL Manuais', 'manuais', 'timtec');
+pll_register_string('URL Desenvolva', 'desenvolva-o-software', 'timtec');
+pll_register_string('URL Download', 'download', 'timtec');
+pll_register_string('URL Faq', 'faq', 'timtec');
+pll_register_string('URL Mural', 'mural', 'timtec');
+pll_register_string('URL Conheça', 'conheca-timtec', 'timtec');
+pll_register_string('URL MOOCS', 'o-que-sao-moocs', 'timtec');
+
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
   foreach (pll_languages_list() as $lcode) {
@@ -133,8 +141,29 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
     $str_contato = pll_translate_string('contato', $lcode);
     $new_rules["^$lcode/$str_contato/?$"] = "index.php?template=contato";
 
-    $str_conselho = pll_translate_string('conselho', $lcode);
+    $str_conselho = pll_translate_string('conselho', $lcode); 
     $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
+
+    $str_manuais = pll_translate_string('manuais', $lcode); 
+    $new_rules["^$lcode/$str_manuais/?$"] = "index.php?template=manuais"; 
+
+    $str_desenvolva = pll_translate_string('desenvolva-o-software', $lcode); 
+    $new_rules["^$lcode/$str_desenvolva/?$"] = "index.php?template=desenvolva-o-software"; 
+
+    $str_download = pll_translate_string('download', $lcode); 
+    $new_rules["^$lcode/$str_download/?$"] = "index.php?template=download";  
+
+    $str_faq = pll_translate_string('faq', $lcode); 
+    $new_rules["^$lcode/$str_faq/?$"] = "index.php?template=faq";
+
+    $str_mural = pll_translate_string('mural', $lcode); 
+    $new_rules["^$lcode/$str_mural/?$"] = "index.php?template=mural";
+
+    $str_conheca = pll_translate_string('conheca-timtec', $lcode); 
+    $new_rules["^$lcode/$str_conheca/?$"] = "index.php?template=conheca-timtec"; 
+
+    $str_moocs = pll_translate_string('o-que-sao-moocs', $lcode); 
+    $new_rules["^$lcode/$str_moocs/?$"] = "index.php?template=o-que-sao-moocs"; 
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
   return $wp_rewrite;
