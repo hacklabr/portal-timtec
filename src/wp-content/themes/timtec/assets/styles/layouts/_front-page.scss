@@ -169,6 +169,7 @@ $teuton-normal: 'Teuton23Pro';
 
     .img{
         margin-top: 68px;
+        width:100%;
     }
 
 }
@@ -366,4 +367,41 @@ $teuton-normal: 'Teuton23Pro';
 .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
 .carousel-inner .item-item {
   padding:0!important;
+}
+
+
+#modal-home{
+    position:absolute;
+    z-index:9999;
+    width: 100%;
+    height: 100%;
+    
+    .bg-modal{
+        -moz-opacity: 0.30;
+        -khtml-opacity: 0.30;
+        opacity: 0.30;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=30);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+        filter: alpha(opacity=30);
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        position: absolute;
+    }
+
+    .modal{
+        
+        h3{
+            
+        }
+        
+        p{
+            
+        }
+
+        a{
+            
+
+        }
+    }
 }
