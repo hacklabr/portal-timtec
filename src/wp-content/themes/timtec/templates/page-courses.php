@@ -45,7 +45,7 @@ get_template_part('templates/header');
                     
                     $idPost = get_the_ID();
                     $download = get_post_meta( $idPost  ,'exported-file');
-                    $url_download = $download[0];
+                    $url_download = $download[0];   
 
 					?>
 					<li>
