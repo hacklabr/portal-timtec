@@ -8,7 +8,7 @@
     </div>
 </section>
 
-
+<!-- 
 <section id="news" class="" >
     <div class="container">
         <h3>Novidades: </h3>
@@ -59,11 +59,13 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
       </a>
-      -->
+    
    </div>
 </div>
     </div>
 </section>
+
+-->
 
 <section id="banner" class=" ">
     <div class="container">
