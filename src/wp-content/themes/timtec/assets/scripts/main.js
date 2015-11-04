@@ -124,7 +124,12 @@ $('.carousel .item').each(function(){
   }
 });
 
-
-
+$('.js-scroll-to').on('click', function(e){
+    var targetSelector = $(this).data('target');
+    var $target = $(targetSelector);
+    if(!e.ctrlKey){
+        $('body,html').stop().animate({scrollTop: $target.offset().top},200);
+    }
+});
 
 })(jQuery); // Fully reference jQuery after this point.

@@ -79,6 +79,9 @@ $teuton-normal: 'Teuton23Pro';
 		}
 
 		.itens-banner{
+                    .item-banner {
+                        cursor:pointer;
+                    }
 			width: 70%;
     		margin-left: 18%;
     		text-align: center;
