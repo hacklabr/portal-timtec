@@ -1,3 +1,4 @@
+<?php global $_MENUS; ?>
 <header id="main-navbar" class="navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -11,12 +12,44 @@
             </button>
         </div>
         <nav class="collapse navbar-collapse navbar-nav" id="main-navbar-collapse">
-
-            <?php
-            if (has_nav_menu('primary_navigation')) :
-                wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-            endif;
-            ?>
+            <div class="menu-menu-pt-container">
+                <ul id="menu-menu-pt" class="nav">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a>Sobre</a>
+                        <ul class="sub-menu">
+                            <?php foreach($_MENUS['sobre'] as $label => $url): ?>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a>Software</a>
+                        <ul class="sub-menu">
+                            <?php foreach($_MENUS['software'] as $label => $url): ?>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a>Cursos</a>
+                        <ul class="sub-menu">
+                            <?php foreach($_MENUS['cursos'] as $label => $url): ?>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a>Rede</a>
+                        <ul class="sub-menu">
+                            <?php foreach($_MENUS['rede'] as $label => $url): ?>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/noticias/">Notícias</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/contato/">Contato</a></li>
+                </ul>
+            </div>        
         </nav>
     </div>
 </header>

@@ -47,8 +47,30 @@ require __DIR__ . '/inc/widgets/widget-forum-tags.php';
 
 require __DIR__ . '/inc/menu-walkers/MenuWalker_Buttons.php';
 
+global $_MENUS;
 
-
+$_MENUS = [
+    'sobre' => [
+        'Conheça o TIMTec' => '/pt/conheca-timtec/',
+        'O que são MOOCs' => '/pt/o-que-sao-moocs/',
+        'Conselho Consultivo TIMTec' => '/pt/conselho/',
+    ],
+    'software' => [
+        'Explore a plataforma' => 'http://demo.timtec.com.br/',
+        'Instale agora' => '/pt/download/',
+        'Manuais da plataforma' => '/pt/manuais/',
+        'Desenvolva o software' => '/pt/desenvolva-o-software/',
+    ],
+    'cursos' => [
+        'Lista de cursos' => '/pt/cursos/',
+    ],
+    'rede' => [
+        'Conheça a rede TIMTec' => '/pt/conheca-timtec/',
+        'FAQ' => '/pt/faq/',
+        'Fórum' => '/pt/mural/',
+        'Suporte' => '/pt/suporte/',
+    ]
+];
 
 $sage_includes = [
   'lib/utils.php',                 // Utility functions
