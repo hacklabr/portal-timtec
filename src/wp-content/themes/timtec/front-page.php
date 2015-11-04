@@ -1,4 +1,4 @@
-<!-- <section id="modal-home">
+<section id="modal-home">
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
@@ -6,7 +6,7 @@
         <hr>
         <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
     </div>
-</section> -->
+</section>
 
 
 <section id="news" class="" >
