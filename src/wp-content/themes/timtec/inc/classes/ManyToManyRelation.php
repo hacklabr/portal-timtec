@@ -283,7 +283,7 @@ class ManyToManyRelation{
         // Apaga o meta pra reinserir todos os valores
         $related_post_ids = implode(',',get_post_meta($post_id, $meta_name1));
         if($related_post_ids){
-            $wpdb->query("DELETE FROM $wpdb->post_meta WHERE meta_key = '$meta_name2' AND meta_value = '$post_id' AND post_id IN ($related_post_ids)");
+            $wpdb->query("DELETE FROM $wpdb->postmeta WHERE meta_key = '$meta_name2' AND meta_value = '$post_id' AND post_id IN ($related_post_ids)");
             delete_post_meta($post_id, $meta_name1);
         }
         
