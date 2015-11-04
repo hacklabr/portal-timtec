@@ -55,11 +55,11 @@ $teuton-normal: 'Teuton23Pro';
     background-position: 50% 0;
     
     .cerebro{
-    	background: url('../images/cabeca.png');
+    	background-image: url('../images/cabeca.png');
     	background-repeat: no-repeat;
     	height: 700px;
     	margin-top: 60px;
-    	padding-top: 120px;
+    	padding-top: 100px;
     	
     	h3{
 			width: 50%;
@@ -314,12 +314,6 @@ $teuton-normal: 'Teuton23Pro';
 
     .img{
         width:100%;
-    }
-}
-
-@media (min-width: 300px) and (max-width: 900px){
-    .linha{
-        display:none;
     }
 }
 

@@ -1,4 +1,101 @@
+.linha-mobile {
+    display: none;
+}
+
+@media screen and (max-width: $screen-md-max) {
+    #main-navbar {
+        .navbar-header {
+            h1 {
+                a.brand {
+                    margin-top: 3px; 
+                }
+            }
+        }
+    }
+    #banner {
+        background-position: 30% 0;
+        background-size: cover;
+        .cerebro {
+            background-position: 2px 0px;
+            background-size: 94%;    
+        }
+    }
+}
 @media screen and (max-width: $screen-sm-max) {
+    #main-navbar {
+        .navbar-header {
+            width: 35%;
+            h1 {
+                margin: 18px 0 0;
+                a.brand {
+                    margin-right: 3%; 
+                }
+                a.brand, a.timtec {
+                    height: 25px; 
+                }
+            }
+        }
+        .navbar-nav {
+            padding: 0;
+        }
+    }
+    #banner {
+        .cerebro {
+            background: url('../images/cabeca-mobile.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;  
+            margin-top: 20px; 
+            padding-top: 190px;
+
+            h3 {
+                font-size: 3em;
+                margin: 0 auto;
+                width: 300px;
+            }  
+        }
+    }
+    #section1, #section2, #section3 {
+        padding: 0;
+        text-align: center;
+        .boxs {
+            position: relative;
+        }
+        h3 {
+            margin: 0 0 10px; 
+        }
+        .title {
+            padding: 25px 0;
+        }
+        .text {
+            color: #fff;
+            font-weight: normal;
+            margin: 0;
+        }
+        .links {
+            margin: 15px 0;
+        }
+        h3, .text, .links {
+            text-align: center;
+        }
+        .title, .text, .links {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .linha-mobile {
+        display: block;
+        height: 100%;
+        left: 50%;
+        margin-left: -4px;
+        opacity: 0.2;
+        overflow: hidden;
+        position: absolute;
+        width: 8px;
+        z-index: 0;
+    }
+}
+@media screen and (max-width: $screen-xs-max) {
     #main-navbar {
         .navbar-header {
             margin: 0;
@@ -10,6 +107,9 @@
                 height: 30px;
                 width: 60%;
                 float: left;
+                 a.timtec {
+                    height: 30px;
+                }
             }
             .navbar-toggle{
                 border-color: #fff;
@@ -18,10 +118,22 @@
                 margin: 15px 0 0;
                 padding: 3px 10px;
                 text-transform: uppercase;
-                &:hover {
+                &:hover, &:active {
                     background-color: $menu-hover;
                 }
             } 
+        }
+        .navbar-nav {
+            float: none;
+            margin: 10px -15px 0;
+            padding: 0;
+            li {
+                float: none;
+                width: 100%;
+                a {
+                    padding: 12px 15px 10px;
+                }
+            }
         }
     }
     #news {
@@ -37,21 +149,42 @@
         }
     }
 }
+@media screen and (max-width: 540px) { // custom breakpoint only for minor fix
+    #banner {
+        .cerebro {
+            height: 385px;
+            padding-top: 65px;
+            h3 {
+                font-size: 2.6em;
+                width: 185px;
+            }
+        }
+    }
+    .linha-mobile {
+        margin-left: -3px;
+        width: 5px;
+    }
+}
 @media screen and (max-width: $screen-xs) {
     #main-navbar {
         .navbar-header {
             h1 {
-                margin: 19px 0 0 0;
+                margin: 18px 0 0 0;
                 width: 80%;
                 a.brand {
-                    height: 20px;
-                    margin-right: 5%;
-                    width: 55%;
+                    margin-top: 2px;
+                    margin-right: 0;  
                 }
                 a.timtec {
-                    height: 20px;
+                    height: 25px;
+                    margin-left: 15px;
                 }
             }
+        }
+    }
+    #banner {
+        .cerebro {
+
         }
     }
 }
