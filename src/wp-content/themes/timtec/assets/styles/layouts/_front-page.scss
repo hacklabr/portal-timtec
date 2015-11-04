@@ -375,32 +375,87 @@ $teuton-normal: 'Teuton23Pro';
     z-index:9999;
     width: 100%;
     height: 100%;
+    top: -60px;
     
     .bg-modal{
-        -moz-opacity: 0.30;
-        -khtml-opacity: 0.30;
-        opacity: 0.30;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=30);
-        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
-        filter: alpha(opacity=30);
+        -moz-opacity: 0.60;
+        -khtml-opacity: 0.60;
+        opacity: 0.60;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=60);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+        filter: alpha(opacity=60);
         width: 100%;
         height: 100%;
         z-index: 999;
         position: absolute;
+        background: #313131;
     }
 
     .modal{
+        display: block;
+        width: 45%;
+        margin: 0 auto;
+        border-radius: 020px;
+        background: #fff;
+        top: 150px;
+        position: absolute;
+        z-index: 999;
+        height: 250px;
+        border: 2px solid #AFC0EA;
+        padding: 30px 40px;
+        overflow: visible;
         
         h3{
-            
+            color: #2B4792;
+            text-transform: uppercase;
+            font-family: 'Open Sans',sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+            width: 350px;
+            text-align: center;
+            margin: 0 auto;
         }
-        
+
+        hr{
+            border: 1px solid #AFC0EA;
+            width: 480px;
+        }
+
         p{
-            
+            color: #2B4792;
+            font-family: 'Open Sans',sans-serif;
+            width: 395px;
+            margin: 0 auto;
+            font-size: 1.3em;
+            text-align: center;
         }
 
         a{
+            color: #2B4792;
+            text-decoration: underline;
             
+            &:hover{
+                color:#0035C1;
+            }
+
+        }
+
+        .close{
+            background: #2B4792;
+            opacity: 1;
+            color: #fff;
+            font-weight: normal;
+            text-shadow: none;
+            border-radius: 20px;
+            padding: 3px 9px 6px 10px;
+            margin-top: -40px;
+            margin-right: -50px;
+            text-decoration: none;
+            
+            &:hover{
+                color:#fff;
+                text-decoration: underline;
+            }
 
         }
     }

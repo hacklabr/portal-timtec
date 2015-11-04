@@ -125,6 +125,13 @@ $('.carousel .item').each(function(){
 });
 
 
+/**
+* Fecha Modal Home
+*/
 
+$('.js-close-modal').on('click',function(e){
+    e.preventDefault();
+    $('#modal-home').hide(200);
+});
 
 })(jQuery); // Fully reference jQuery after this point.

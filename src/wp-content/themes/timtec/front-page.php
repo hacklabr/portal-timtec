@@ -1,7 +1,7 @@
 <section id="modal-home">
     <div class="bg-modal"></div>
     <div class="modal">
-        <a href="#" class="close">x</a>
+        <a href="#" class="close js-close-modal">x</a>
         <h3>Esse é o Novo Site do TIM TEC!</h3>
         <hr>
         <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
