@@ -65,7 +65,7 @@ $_MENUS = [
         'Lista de cursos' => '/pt/cursos/',
     ],
     'rede' => [
-        'Conheça a rede TIMTec' => '/pt/conheca-timtec/',
+        'Conheça a rede TIMTec' => '/pt/conheca-a-rede-tim-tec/',
         'FAQ' => '/pt/faq/',
         'Fórum' => '/pt/mural/',
         'Suporte' => '/pt/suporte/',
