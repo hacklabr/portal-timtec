@@ -1,3 +1,7 @@
+.linha-mobile {
+    display: none;
+}
+
 @media screen and (max-width: $screen-md-max) {
     #banner {
         background-position: 30% 0;
@@ -24,6 +28,45 @@
                 width: 300px;
             }  
         }
+    }
+    #section1, #section2, #section3 {
+        padding: 0;
+        text-align: center;
+        .boxs {
+            position: relative;
+        }
+        h3 {
+            margin: 0 0 10px; 
+        }
+        .title {
+            padding: 25px 0;
+        }
+        .text {
+            color: #fff;
+            font-weight: normal;
+            margin: 0;
+        }
+        .links {
+            margin: 15px 0;
+        }
+        h3, .text, .links {
+            text-align: center;
+        }
+        .title, .text, .links {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .linha-mobile {
+        display: block;
+        height: 100%;
+        left: 50%;
+        margin-left: -4px;
+        opacity: 0.2;
+        overflow: hidden;
+        position: absolute;
+        width: 8px;
+        z-index: 0;
     }
 }
 @media screen and (max-width: $screen-xs-max) {
@@ -87,6 +130,10 @@
                 width: 185px;
             }
         }
+    }
+    .linha-mobile {
+        margin-left: -3px;
+        width: 5px;
     }
 }
 @media screen and (max-width: $screen-xs) {

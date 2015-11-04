@@ -1,4 +1,4 @@
-<section id="modal-home">
+<!-- <section id="modal-home">
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
@@ -6,7 +6,7 @@
         <hr>
         <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
     </div>
-</section>
+</section> -->
 
 
 <section id="news" class="" >
@@ -67,13 +67,13 @@
 
 <section id="banner" class=" ">
     <div class="container">
-        <div class="col-md-10 center">
+        <div class="col-lg-10 col-md-12 center">
             <div class="row cerebro">
                 <h3>
                     <?php _oi("TIM TEC ="); ?>
                     <span class="titulo"><?php _oi("SOFTWARE LIVRE + CURSOS + REDE E-TEC BRASIL"); ?> </span>
                 </h3>
-                <div class="itens-banner">
+                <div class="itens-banner hidden-sm hidden-xs">
                     <div class="col-md-4 item-banner js-scroll-to" data-target="#section1" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" />
                         <h4><?php _oi("Software"); ?> </h4>
@@ -102,13 +102,19 @@
 <section id="section1" class="">
     <div class="container">
         <div class="boxs row">
+            <div class="linha-mobile">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-verde.png" />
+            </div>
+
             <div class="col-md-6">
                 <div class="box">
-                    <div class="icon">
+                    <div class="icon hidden-sm hidden-xs">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software01.png" />
                     </div>
+
                     <div class="title">
                         <h3><?php _oi("SOFTWARE"); ?></h3>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" class="hidden-md hidden-lg" />
                     </div>
                     <div class="text">
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
@@ -128,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 linha">
+            <div class="col-md-2 linha hidden-sm hidden-xs">
                 <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-verde.png" />
                 </span>
@@ -136,7 +142,7 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png"  class="icon-imgSecun"/>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="icon-imgSecun2" />
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-software02.png" class="img"/>
             </div>
         </div> <!-- /.row -->
@@ -148,10 +154,20 @@
 <section id="section2" class="">
     <div class="container">
         <div class="boxs row">
-            <div class="col-md-6">
+            <div class="linha-mobile">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-azul.png" />
+            </div>
+
+            <div class="col-md-6 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>
             </div>
-            <div class="col-md-2 linha">
+
+            <div class="title hidden-md hidden-lg">
+                <h3><?php _oi("CURSOS"); ?></h3>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png" class="hidden-md hidden-lg" />
+            </div>
+
+            <div class="col-md-2 linha hidden-sm hidden-xs">
                 <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-azul.png" />
                 </span>
@@ -164,7 +180,7 @@
                     <div class="text text1">
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
-                    <div class="title">
+                    <div class="title hidden-sm hidden-xs">
                         <h3><?php _oi("CURSOS"); ?></h3>
                     </div>
                     <div class="text">
@@ -196,28 +212,35 @@
 <section id="section3" class="">
     <div class="container">
         <div class="boxs row">
-            <div class="col-md-12">
+            <div class="linha-mobile">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-branco.png" />
+            </div>
+
+            <div class="col-md-12 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>
             </div>
+            
             <div class="col-md-6">
-                    <div class="title">
-                        <h3><?php _oi("REDES"); ?></h3>
-                    </div>
-                    <div class="links">
-                        <?php foreach($_MENUS['rede'] as $label => $url): ?>
-                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
-                        <?php endforeach; ?>
-                        <?php
-                        /*
-                        wp_nav_menu(array(
-                            'menu'    => 'redes',
-                            'walker'  => new MenuWalker_Buttons() //use our custom walker
-                        ));
-                         */
-                        ?>
-                    </div>
+                <div class="title">
+                    <h3><?php _oi("REDES"); ?></h3>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png"  class="hidden-md hidden-lg" />
+                </div>
+
+                <div class="links hidden-sm hidden-xs">
+                    <?php foreach($_MENUS['rede'] as $label => $url): ?>
+                        <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
+                    <?php endforeach; ?>
+                    <?php
+                    /*
+                    wp_nav_menu(array(
+                        'menu'    => 'redes',
+                        'walker'  => new MenuWalker_Buttons() //use our custom walker
+                    ));
+                     */
+                    ?>
+                </div>
             </div>
-            <div class="col-md-2 linha">
+            <div class="col-md-2 linha hidden-sm hidden-xs">
                 <span class="linha-centro" >
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-branco.png" />
                 </span>
@@ -231,6 +254,20 @@
                         <?php _oi("Suco de cevadiss,  qui tem lupuliz, matis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                 </div>
+            </div>
+
+            <div class="links hidden-md hidden-lg">
+                <?php foreach($_MENUS['rede'] as $label => $url): ?>
+                    <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
+                <?php endforeach; ?>
+                <?php
+                /*
+                wp_nav_menu(array(
+                    'menu'    => 'redes',
+                    'walker'  => new MenuWalker_Buttons() //use our custom walker
+                ));
+                 */
+                ?>
             </div>
         </div> <!-- /.row -->
     </div><!-- /container-->
