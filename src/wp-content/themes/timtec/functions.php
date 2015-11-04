@@ -116,6 +116,7 @@ pll_register_string('URL Faq', 'faq', 'timtec');
 pll_register_string('URL Mural', 'mural', 'timtec');
 pll_register_string('URL Conheça', 'conheca-timtec', 'timtec');
 pll_register_string('URL MOOCS', 'o-que-sao-moocs', 'timtec');
+pll_register_string('URL Explore', 'explore-a-plataforma', 'timtec');
 
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
@@ -164,6 +165,10 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 
     $str_moocs = pll_translate_string('o-que-sao-moocs', $lcode); 
     $new_rules["^$lcode/$str_moocs/?$"] = "index.php?template=o-que-sao-moocs"; 
+
+    $str_explore = pll_translate_string('explore-a-plataforma', $lcode); 
+    $new_rules["^$lcode/$str_explore/?$"] = "index.php?template=explore-a-plataforma"; 
+
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
   return $wp_rewrite;
