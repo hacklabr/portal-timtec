@@ -4,40 +4,37 @@ $teuton-normal: 'Teuton23Pro';
 #footer-info{
 	background:#095DAF;
 	.content-footer{
-        .nav_menu-3{
-            width:160px;
+
+            .widget_nav_menu{
+                width:20%;
+                float: left;
+                
+                h3{
+                    color: #fff;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-family: $teuton-normal;
+
+                }
+
+                ul{
+                    list-style:none;
+                    padding: 0px;
+                    margin: 2%;
+
+                    li{	
+                        a{
+                            color:#2193d4;
+                            font-family: $teuton-normal;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+            }
         }
-
-        .nav_menu-5{
-            width:170px;
-        }
-	    .widget_nav_menu{
-
-			h3{
-				color: #fff;
-			    font-size: 14px;
-			    text-transform: uppercase;
-			    letter-spacing: 1px;
-                font-family: $teuton-normal;
-
-			}
-
-			ul{
-				list-style:none;
-				padding: 0px;
-				margin: 2%;
-
-				li{	
-					a{
-						color:#2193d4;
-                        font-family: $teuton-normal;
-					}
-					
-				}
-
-			}
-		}
-    }
 
     .social{
         margin-top:30px;

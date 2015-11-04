@@ -15,7 +15,7 @@
 function wp_edit_in_place_init() {
 
     class WP_EditInPlace {
-        protected $_defaultLanguage = WPLANG;
+        protected $_defaultLanguage = 'en';
         protected $_currentLanguage = null;
 
         protected $source;

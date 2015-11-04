@@ -114,11 +114,16 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
                     </div>
                     <div class="links">
+                        <?php foreach($_MENUS['software'] as $label => $url): ?>
+                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
+                        <?php endforeach; ?>
                         <?php
+                        /*
                         wp_nav_menu(array(
                             'menu'    => 'software',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
+                         */
                         ?>
                     </div>
                 </div>
@@ -166,11 +171,16 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                     <div class="links">
+                        <?php foreach($_MENUS['cursos'] as $label => $url): ?>
+                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
+                        <?php endforeach; ?>
                         <?php
+                        /*
                         wp_nav_menu(array(
                             'menu'    => 'cursos',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
+                         */
                         ?>
                     </div>
                 </div>
@@ -194,11 +204,16 @@
                         <h3><?php _oi("REDES"); ?></h3>
                     </div>
                     <div class="links">
+                        <?php foreach($_MENUS['rede'] as $label => $url): ?>
+                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
+                        <?php endforeach; ?>
                         <?php
+                        /*
                         wp_nav_menu(array(
                             'menu'    => 'redes',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
+                         */
                         ?>
                     </div>
             </div>
