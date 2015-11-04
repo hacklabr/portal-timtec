@@ -157,7 +157,7 @@ class PrivateFile {
     }
 
     public function getFileUrl($post_id = null) {
-        return get_bloginfo('url') . "{$this->_config['post_type']}/{$post_id}/{$this->_config['meta_name']}/";
+        return get_bloginfo('url') . "/download/{$this->_config['post_type']}/{$this->_config['meta_name']}/{$post_id}/";
     }
 
     public function addMetaBox() {
@@ -188,9 +188,10 @@ class PrivateFile {
         <p><?php echo $this->_config['description'] ?></p>
         <input type="file" name="<?php echo $this->_config['input_name'] ?>" /><br>
         
-        <?php if ($url = $this->getFileUrl($post->ID)): ?>
+        <?php if ($filename = get_post_meta($post->ID, $this->_config['meta_name'], true)): ?>
+        
             <br><strong><?php _e('attached file:', SLUG) ?></strong><br>
-            <a href="<?php echo $url ?>"><?php echo get_post_meta($post->ID, $this->_config['meta_name'], true) ?></a>
+            <a href="<?php echo $this->getFileUrl($post->ID) ?>"><?php echo $filename ?></a>
             <label>
                 <input type="checkbox" name="<?php echo $this->_config['input_name'] ?>_delete"/>
             <?php _e('remove', SLUG); ?>
@@ -223,8 +224,13 @@ class PrivateFile {
         }
 
         global $post, $wpdb;
-
-        if (isset($_FILES[$this->_config['input_name']])) {
+        if(isset($_POST[$this->_config['input_name'] . '_delete'])){
+            if ($file = $this->getFilePath($post_id)) {
+                unlink($file);
+                delete_post_meta($post_id, $this->_config['meta_name']);
+            }
+            
+        }elseif (isset($_FILES[$this->_config['input_name']]) && $_FILES[$this->_config['input_name']]['error'] === UPLOAD_ERR_OK) {
             $f = $_FILES[$this->_config['input_name']];
             $path = $this->_privateFolder . $this->_getRelativePath($post_id);
 
@@ -233,12 +239,10 @@ class PrivateFile {
                     mkdir($path, 0777, true);
                 }
 
+                delete_post_meta($post_id, $this->_config['meta_name']);
                 if ($file = $this->getFilePath($post_id)) {
                     unlink($file);
-                    delete_post_meta($post_id, $this->_config['meta_name']);
                 }
-
-                move_uploaded_file($f['tmp_name'], $path . $f['name']);
 
                 add_post_meta($post_id, $this->_config['meta_name'], $f['name']);
             } else {
