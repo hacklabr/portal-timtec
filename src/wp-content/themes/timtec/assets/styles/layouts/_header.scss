@@ -153,23 +153,3 @@ $teuton-normal: 'Teuton23Pro';
     }
     
 }
-
-
-
-@media screen and (max-width: $break-small) {
-    #main-navbar{
-        .navbar-header{
-            width:100%;
-            padding: 0px 20px;
-        
-            h1{
-                width:60%;
-                float:left;
-            }
-
-            .navbar-toggle{
-                padding:20px;
-            }
-        }
-    }
-}

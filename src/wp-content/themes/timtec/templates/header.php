@@ -7,9 +7,7 @@
             </h1>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
                 <span class="sr-only">Alternar navegação</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="text">Menu</span>
             </button>
         </div>
         <nav class="collapse navbar-collapse navbar-nav" id="main-navbar-collapse">

@@ -1,0 +1,57 @@
+@media screen and (max-width: $screen-sm-max) {
+    #main-navbar {
+        .navbar-header {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        
+            h1 {
+                margin: 14px 0 0 0;
+                height: 30px;
+                width: 60%;
+                float: left;
+            }
+            .navbar-toggle{
+                border-color: #fff;
+                color: #fff;
+                font-family: $teuton-normal;
+                margin: 15px 0 0;
+                padding: 3px 10px;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: $menu-hover;
+                }
+            } 
+        }
+    }
+    #news {
+        h3 {
+            font-size: 14px;
+            margin: 10px 0;
+            float: left;
+            text-transform: uppercase;
+        }
+        #newsCarouselWrapper {
+            padding-right: 0;
+            width: 75%;
+        }
+    }
+}
+@media screen and (max-width: $screen-xs) {
+    #main-navbar {
+        .navbar-header {
+            h1 {
+                margin: 19px 0 0 0;
+                width: 80%;
+                a.brand {
+                    height: 20px;
+                    margin-right: 5%;
+                    width: 55%;
+                }
+                a.timtec {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
