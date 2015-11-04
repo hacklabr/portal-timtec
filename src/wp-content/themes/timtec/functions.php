@@ -56,7 +56,7 @@ $_MENUS = [
         'Conselho Consultivo TIMTec' => '/pt/conselho/',
     ],
     'software' => [
-        'Explore a plataforma' => 'http://demo.timtec.com.br/',
+        'Explore a plataforma' => '/pt/explore-a-plataforma/',
         'Instale agora' => '/pt/download/',
         'Manuais da plataforma' => '/pt/manuais/',
         'Desenvolva o software' => '/pt/desenvolva-o-software/',
