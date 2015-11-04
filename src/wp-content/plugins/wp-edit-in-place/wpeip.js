@@ -8,14 +8,12 @@
 
         $(document).keydown(function (e) {
             if (e.keyCode === 17){
-                console.log('entrou');
                 $(".js-wpeip-term").addClass('wpeip-hightlight');
             }
         });
         
         $(document).keyup(function (e) {
             if (e.keyCode === 17) {
-                console.log('saiu');
                 $(".js-wpeip-term").removeClass('wpeip-hightlight');
             }
         });
