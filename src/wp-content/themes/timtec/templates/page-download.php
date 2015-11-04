@@ -11,14 +11,18 @@ get_template_part('templates/header');
         <div class="col-md-12 ">
             <h3><?php _oi("Download"); ?></h3>  
             
-            <p><?php _oi("Aqeqweqeqweui você encontra todos rqweqwos cursos já produzidos eor seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assisteeqeq ao vídeo, faz as atividades correspondentes e podweqrqwee consultar o sfdgsdfgsdmaterial complementar disponível fdsgdfgdspara qweqada curso."); ?></p> 
+            <p><?php _oi("TIM Tec é um software livre que pode ser instalado por qualquer pessoa ou organização – escolas, universidades, coletivos, empresas – gratuitamente. Mas para fazer isso é preciso ter conhecimentos de programação ou contar com a assistência de uma equipe de programadores."); ?></p> 
+
+            <p><?php _oi("Quem instala TIM Tec tem total autonomia para alterar o código e fazer mudanças na sua versão da plataforma, de acordo com suas necessidades. Também pode adicionar à instalação os cursos já produzidos pelo projeto ou adicionar seus próprios cursos. Do ponto de vista da gestão de TI, TIM Tec é semelhante ao Moodle."); ?></p> 
             
-            <span class="box"><?php _oi("São voltados área de tecnologia Drqwerqownload e foram Explore escolhidos com base no Eixo Tecnológico: Informação e Comunicação do Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec), do governo federal. Há também cursos dirigidos a professores do Ensino Fundamental e ao fortalecimento de competências consideradas básicas para a formação de qualquer profissional, como a escrita de textos.Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC­BY), a mais livre de todas"); ?></span>
-            <span class="box"><?php _oi("Os conteúdos podem ser  Download compartilhados Explore (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM. Que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM."); ?></span>
+            <span class="box"><?php _oi("A plataforma e os conteúdos de TIM Tec estão sendo compartilhados com instituições públicas de ensino por meio da Secretaria de Educação Profissional e Tecnológica do Ministério da Educação (Setec/MEC). Saiba mais sobre o projeto aqui (LINK PARA A PÁGINA ‘CONHEÇA TIM TEC’)"); ?></span>
+        
             
-            <p><?php _oi("Aqui você encontra todos os cursos já produzidos e publicados pelo projeto TIM Teeus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. "); ?></p> 
+            <p><?php _oi("Gostei, quero instalar TIM Tec. O que preciso fazer?"); ?></p> 
             
-            <p><?php _oi("TIM Tec ou por seus parceiros. Eles podem ser acessados, alquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
+            <p><?php _oi("Para iniciar a instalação, é preciso baixar o pacote de dados contendo todas as informações sobre o código."); ?></p>
+
+            <p><?php _oi("Para iniciar a instalação, é preciso baixar o pacote de dados contendo todas as informações sobre o código."); ?></p>  
 
         </div>
     </section>

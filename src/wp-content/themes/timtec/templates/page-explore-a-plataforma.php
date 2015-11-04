@@ -9,17 +9,19 @@ get_template_part('templates/header');
 <div id="page-course" class="base-content container">
     <section>
         <div class="col-md-12 ">
-            <h3><?php _oi("Explore a Plataforma"); ?></h3>  
+            <h3><?php _oi("EXPLORE A PLATAFORMA"); ?></h3>  
             
-            <p><?php _oi("Aqui uzidos eExaplore publicados pelhgfhfgo projeto TIM Tec ou por seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
+            <p><?php _oi("Como todo MOOC, TIM Tec pode ser utilizado por muitas pessoas ao mesmo tempo. A plataforma é responsiva e leve: os vídeos ficam hospedados no Youtube, por isso, não é preciso ter um servidor pesado para assisti-los."); ?></p> 
+
+            <p><?php _oi("A ferramenta foi concebida desde a raiz para ser replicada e adotada por instituições de ensino. Ela possui diversas funcionalidades específicas para a gestão de estudantes. É possível criar turmas (cada curso pode ter sua própria divisão de turmas) e atribuir diferentes perfis para professores (professor coordenador e professor assistente). Para os educadores, fica fácil acompanhar o progresso dos estudantes, saber os cursos e atividades que cada um fez e inserir atividades novas e materiais adicionais além daqueles que já estão na plataforma. Além disso, os professores podem interagir direto com os alunos por meio de mensagem privada."); ?></p>
+
+            <p><?php _oi("A plataforma permite gerar certificados de conclusão do curso e atestados de horas. TIM Tec fornece os esqueletos desses documentos, e os professores os complementam incluindo o logo da instituição de ensino, nome, assinatura, data, etc. Outra funcionalidade é que os cursos podem ser facilmente exportados e importados entre instituições. Dá para exportar um curso, gerando um pacote que mantém todas as configurações, e enviá-lo para que outras instituições o utilizem nas suas instalações da plataforma TIM Tec"); ?></p>  
             
-            <span class="box"><?php _oi("São voltados área de tecnovcxvxlogia e fodasdasram Explore escolhidos com base no Eixo Tecnhfghfológico: Informação e Comunicação do Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec), do governo federal. Há também cursos dirigidos a professores do Ensino Fundamental e ao fortalecimento de competências consideradas básicas para a formação de qualquer profissional, como a escrita de textos.Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC­BY), a mais livre de todas"); ?></span>
+            <span class="box"><?php _oi("Você é gestor ou professor? Navegue pela plataforma com os perfis de ADMINISTRADOR, PROFESSOR COORDENADOR ou PROFESSOR ASSISTENTE."); ?></span>
           
-            <span class="box"><?php _oi("Os conteúdos podegrfdgfm ser compartilhados Explore (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM. Que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM."); ?></span>
+            <span class="box"><?php _oi("Você é estudante? Navegue pela plataforma com o perfil de ALUNO."); ?></span>
             
-            <p><?php _oi("Aqui você encontra tExplore pelo projeto TIM Tecfgdfg ou por seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. "); ?></p> 
-            
-            <p><?php _oi("TIM Tec oufsfsd por seus parceiros. acessados, cursados e bExploreaixados por qualquer pessoa, gratuitgsdfgsamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
+            <p><?php _oi("Quem faz o curso pode assistir às aulas em qualquer ordem, onde quiser e na hora que quiser, e assistir novamente a aulas já vistas. Os vídeos sempre iniciam e encerram um assunto; por isso, dá para ir direto ao vídeo relacionado ao tema de interesse. Há um espaço ao lado do vídeo em que o estudante pode fazer anotações enquanto assiste à aula. Cada curso tem a sua lista de materiais didáticos (uma espécie de bibliografia básica) e cada aula possui material adicional. No fórum, os estudantes podem interagir, discutir sobre o curso e trocar experiências com outros usuários da plataforma."); ?></p> 
             
         </div>
     </section>
