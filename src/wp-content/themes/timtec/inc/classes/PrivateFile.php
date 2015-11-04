@@ -149,15 +149,17 @@ class PrivateFile {
 
     public function getFilePath($post_id) {
         $filename = get_post_meta($post_id, $this->_config['meta_name'], true);
+        
         if ($filename) {
-            return $this->_privateFolder . $this->_getRelativePath($post_id) . $filename;
+            $filename = $this->_privateFolder . $this->_getRelativePath($post_id) . $filename;
+            return file_exists($filename) ? $filename : false;
         } else {
             return null;
         }
     }
 
     public function getFileUrl($post_id = null) {
-        return get_bloginfo('url') . "/download/{$this->_config['post_type']}/{$this->_config['meta_name']}/{$post_id}/";
+        return get_option('siteurl') . "/download/{$this->_config['post_type']}/{$this->_config['meta_name']}/{$post_id}/";
     }
 
     public function addMetaBox() {
@@ -243,6 +245,8 @@ class PrivateFile {
                 if ($file = $this->getFilePath($post_id)) {
                     unlink($file);
                 }
+                
+                move_uploaded_file($f['tmp_name'], $path . $f['name']);
 
                 add_post_meta($post_id, $this->_config['meta_name'], $f['name']);
             } else {
