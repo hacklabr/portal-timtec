@@ -1,4 +1,32 @@
+@media screen and (max-width: $screen-md-max) {
+    #banner {
+        background-position: 30% 0;
+        background-size: cover;
+        .cerebro {
+            background-position: 2px 0px;
+            background-size: 94%;    
+        }
+    }
+}
 @media screen and (max-width: $screen-sm-max) {
+    #banner {
+        .cerebro {
+            background: url('../images/cabeca-mobile.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;  
+            margin-top: 20px; 
+            padding-top: 190px;
+
+            h3 {
+                font-size: 3em;
+                margin: 0 auto;
+                width: 300px;
+            }  
+        }
+    }
+}
+@media screen and (max-width: $screen-xs-max) {
     #main-navbar {
         .navbar-header {
             margin: 0;
@@ -49,6 +77,18 @@
         }
     }
 }
+@media screen and (max-width: 540px) { // custom breakpoint only for minor fix
+    #banner {
+        .cerebro {
+            height: 385px;
+            padding-top: 65px;
+            h3 {
+                font-size: 2.6em;
+                width: 185px;
+            }
+        }
+    }
+}
 @media screen and (max-width: $screen-xs) {
     #main-navbar {
         .navbar-header {
@@ -64,6 +104,11 @@
                     height: 20px;
                 }
             }
+        }
+    }
+    #banner {
+        .cerebro {
+
         }
     }
 }
