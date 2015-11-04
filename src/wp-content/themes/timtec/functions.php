@@ -122,8 +122,11 @@ pll_register_string('URL Conheça a Rede', 'conheca-a-rede-tim-tec', 'timtec');
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
   foreach (pll_languages_list() as $lcode) {
-//    $str_courses = pll_translate_string('cursos', $lcode);
-//    $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
+    $str_courses = pll_translate_string('cursos', $lcode);
+    $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
+    
+    $str_conselho = pll_translate_string('conselho', $lcode); 
+    $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
 //
 //    $str_software = pll_translate_string('software', $lcode);
 //    $new_rules["^$lcode/$str_software/?$"] = "index.php?template=software";
@@ -143,8 +146,6 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 ////    $str_contato = pll_translate_string('contato', $lcode);
 ////    $new_rules["^$lcode/$str_contato/?$"] = "index.php?template=contato";
 //
-//    $str_conselho = pll_translate_string('conselho', $lcode); 
-//    $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
 //
 //    $str_manuais = pll_translate_string('manuais', $lcode); 
 //    $new_rules["^$lcode/$str_manuais/?$"] = "index.php?template=manuais"; 
