@@ -104,3 +104,50 @@
         }
     }
 }
+
+
+.page-id-144{
+
+    #fbuilder .medium {
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+        padding: 6px;
+    }
+
+    #fbuilder .small {
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+        padding: 6px;
+    }
+        
+    .main{
+        margin: 50px auto 150px;
+        float: none;
+        width:100%;
+        max-width: 1170px;
+        
+        label {
+            display: inline-block;
+            max-width: 100%;
+            font-family: Teuton24Pro;
+            color: #243670;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .pbSubmit{
+            width: 100%;
+            text-align: center;
+            background: #05c3ff;
+            color: #fff;
+            font-family: Teuton23Pro;
+            display: inline-block;
+            border-radius: 0;
+            text-transform: uppercase;
+            margin: 5px;
+            font-size: 1.5em;
+        }
+    }
+}
