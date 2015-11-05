@@ -1,9 +1,9 @@
 <?php global $_MENUS; ?>
-<footer class="content-info" role="contentinfo">
+<footer class="content-info hidden-xs" role="contentinfo">
     <div id="footer-info">
         <div class="container">
             <div class="row">
-                <div class="content-footer col-md-9">
+                <div class="content-footer col-md-9 col-sm-12">
                     
                     <section class="widget nav_menu-2 widget_nav_menu ">
                         <h3>Sobre</h3>
@@ -60,7 +60,7 @@
                         </div>
                     </section>                
                 </div>
-                <div class="social col-md-3">
+                <div class="social col-md-3 col-sm-12">
                     <h4>Acompanhe nossas redes.</h4>
                     <ul>
                         <?php

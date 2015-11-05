@@ -1,5 +1,5 @@
 <?php global $_MENUS; ?>
-<header id="main-navbar" class="navbar-inverse" role="navigation">
+<header id="main-navbar" class="navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <h1 class="text-hide">
