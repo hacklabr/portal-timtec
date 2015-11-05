@@ -45,8 +45,7 @@ get_template_part('templates/header');
                     
                     $idPost = get_the_ID();
                     $download = get_post_meta( $idPost  ,'exported-file');
-                    $url_download = $download[0];   
-
+                    $url_download = $download[0];
 					?>
 					<li>
 						<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
@@ -54,9 +53,12 @@ get_template_part('templates/header');
 							<h4><?php echo $title ?></h4>
 							<p class="author"><?php echo $teacher; ?></p>
 							<?php echo the_excerpt(); ?>
-							<a href="/download/course/exported-file/<?php echo $url_download ?>" >Baixar o curso</a>
+							<a href="download/course/exported-file/<?php echo $url_download ?>" >Baixar o curso</a>
 						</div>
-                        
+                        <?php if($couse_download->getFilePath(get_the_ID())): 
+                            $download_url = $couse_download->getFileUrl(get_the_ID());?>
+                            <div class="links" ><a href="<?php echo $download_url ?>" class="btn">Baixar o curso</a></div>
+                        <?php endif; ?>
 					</li>
 					<?php
 					endwhile;
