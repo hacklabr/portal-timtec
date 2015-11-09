@@ -51,8 +51,8 @@ get_template_part('templates/header');
 						<img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
 						<div class="content-curso">
 							<h4><?php echo $title ?></h4>
-							<p class="author"><?php echo $teacher; ?></p>
-							<?php echo the_excerpt(); ?>
+							<div class="author"><?php echo $teacher; ?></div>
+							<div class="description"><?php echo the_excerpt(); ?></div>
 							<a href="download/course/exported-file/<?php echo $url_download ?>" >Baixar o curso</a>
 						</div>
                         <?php if($couse_download->getFilePath(get_the_ID())): 

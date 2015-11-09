@@ -9,7 +9,7 @@
         margin-top: 60px;
     }
 
-    p{
+    p {
         font-family: 'Open Sans',sans-serif;
         color: #243670;
         font-size: 1.1em;
@@ -48,58 +48,59 @@
     }
 }
 
-#page-course{
-    #section2{
+#page-course {
+    #section2 {
         background:#f7f7f7;
         padding:0px;
         margin-top: 20px;
         
-        ul{
-            margin: 0px;
+        ul {
+            margin: 1.1% 0 0;
             padding: 0px;
     
-            li{
+            li {
                 display: inline-block;
                 width: 30%;
                 background: #fff;
-                vertical-align:top;
-                margin:1%;
+                vertical-align: top;
+                margin: 1.1%;
                 
-                img{
+                img {
                         width: 100%;
                 }
                 
-                .content-curso{
-                    padding:10px;
+                .content-curso {
+                    max-height: 340px;
+                    padding: 10px;
                     
-                    h4{
+                    h4 {
                         color: #414141;
                         font-family: Teuton23Pro;
                         font-size: 1.6em;
+                        margin: 0 0 5px;
                     }
-                    
-                    .author{
-                        color:#a5a5a5;
-                        font-size:0.9em;
+
+                    .author {
+                        color: #a5a5a5;
+                        font-size: 0.9em;
                         font-family: 'Open Sans',sans-serif;
                     }
 
-                    p{
+                    .description {
                         color: #414141;
-                        font-size:1em;
+                        font-size: 1em;
                         font-family: 'Open Sans',sans-serif;
+                        max-height: 140px;
+                        overflow: hidden;
                     }
 
-                    a{
-                        color:#05c3ff;
+                    a {
+                        color: #05c3ff;
                         font-family: Teuton23Pro;
                         text-transform: uppercase;
                         font-weight: bold;
                     }
-
                 }
-                
-                
             }
         }
     }
