@@ -9,19 +9,18 @@ get_template_part('templates/header');
 <div id="page-course" class="base-content container">
     <section>
         <div class="col-md-12 ">
-            <h3><?php _oi("O que  os MOOCs"); ?></h3>  
+            <h3><?php _oi("CONHEÇA TIM TEC"); ?></h3>  
             
-            <p><?php _oi("Aqui  os cursos já produzidos e publicados pelo projeto TIM Tec ou por seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
-            
-            <span class="box"><?php _oi("São voltados área de tecnologia e foram escolhidos com base no Eixo Tecnológico: Informação e Comunicação do Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec), do governo federal. Há também cursos dirigidos a professores do Ensino Fundamental e ao fortalecimento de competências consideradas básicas para a formação de qualquer profissional, como a escrita de textos.Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC­BY), a mais livre de todas"); ?></span>
-            <span class="box"><?php _oi("Os conteúdos podem ser compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde Os conteúdos podem ser livremente compartilhados (copiados e redistribuídos em qualquer suporte ou formato) e adaptados (remixados, transformados e usados como base para outros materiais), desde que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM. Que seja dado o devido crédito ao projeto TIM Tec e ao Instituto TIM."); ?></span>
-            
-            <p><?php _oi("Aqui você encontra todos os cursos  e publicados pelo projeto TIM Tec ou por seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. "); ?></p> 
-            
-            <p><?php _oi("TIM Tec ou por seus parceiros. acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
-            
-            <span class="box"><?php _oi("São voltados base no Eixo Tecnológico: Informação e Comunicação do Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec), do governo federal. Há também cursos dirigidos a professores do Ensino Fundamental e ao fortalecimento de competências consideradas básicas para a formação de qualquer profissional, como a escrita de textos.Os vídeos produzidos pelo projeto TIM Tec estão publicados sob a Licença Creative Commons Atribuição 3.0 Brasil (CC­BY), a mais livre de todas"); ?></span>
+            <p><?php _oi("TIM Tec é uma iniciativa do Instituto TIM baseada em três pilares: software livre, produção de cursos e parcerias com instituições de ensino. O projeto começou em 2013 com o objetivo de desenvolver uma plataforma virtual que disponibilizasse cursos online, livres e gratuitos sobre tecnologia, produzidos especialmente para esse fim."); ?></p> 
 
+            <p><?php _oi("Com o tempo, esse objetivo foi ampliado. Hoje, a plataforma e os conteúdos de TIM Tec estão sendo compartilhados com instituições federais de ensino por meio da Secretaria de Educação Profissional e Tecnológica do Ministério da Educação (Setec/MEC). As instituições parceiras conhecem o projeto, instalam o software e, se quiserem, podem adicionar os cursos de TIM Tec ou seus próprios cursos à plataforma."); ?></p> 
+            
+            <p><?php _oi("TIM Tec é uma plataforma no estilo MOOC. Qualquer pessoa pode acessá-la e fazer os cursos gratuitamente. Ao mesmo tempo, TIM Tec é um software livre que pode ser usado por escolas, universidades, coletivos – cada instituição pode ter sua própria instalação, totalmente autônoma, da plataforma. O software pode ser baixado, instalado, modificado, melhorado, alterado (desde que os programadores envolvidos conheçam sua linguagem). Os cursos de TIM Tec são licenciados em Creative Commons e também podem ser utilizados livremente."); ?></p> 
+                        
+            <p><?php _oi("O Instituto TIM acredita que inovações tecnológicas são a base de uma nova forma de trabalho; por isso, investe na criação e democratização de recursos e estratégias que promovam a inclusão tecnológica produtiva das pessoas – como é o caso de TIM Tec. O projeto contribui para ampliar a oferta gratuita de cursos técnicos, de formação inicial e continuada ou de qualificação profissional à distância."); ?></p> 
+            
+            <p><?php _oi("Seja bem-vindo e fique à vontade!"); ?></p> 
+            
         </div>
     </section>
     <div class="clear"></div>

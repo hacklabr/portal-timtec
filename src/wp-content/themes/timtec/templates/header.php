@@ -3,8 +3,8 @@
     <div class="container">
         <div class="navbar-header">
             <h1 class="text-hide">
-                <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-                <a class="timtec" href="" > TIMTec</a>
+                <a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                <a class="timtec" href="<?php echo esc_url(home_url('/')); ?>" > TIMTec</a>
             </h1>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
                 <span class="sr-only">Alternar navegação</span>
@@ -46,8 +46,8 @@
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/noticias/">Notícias</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/contato/">Contato</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/noticias/">Notícias</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
                 </ul>
             </div>        
         </nav>

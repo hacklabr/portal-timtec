@@ -11,11 +11,15 @@ get_template_part('templates/header');
         <div class="col-md-12 ">
             <h3><?php _oi("Download"); ?></h3>  
             
-            <p><?php _oi("Aqui você encontra todos os cursos já produzidos eor seus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
-                        
-            <p><?php _oi("Aqui você encontra todos os cursos já produzidos e publicados pelo projeto TIM Teeus parceiros. Eles podem ser acessados, cursados e baixados por qualquer pessoa, gratuitamente. "); ?></p> 
+            <p><?php _oi("TIM Tec é um software livre que pode ser instalado por qualquer pessoa ou organização – escolas, universidades, coletivos, empresas – gratuitamente. Mas para fazer isso é preciso ter conhecimentos de programação ou contar com a assistência de uma equipe de programadores."); ?></p> 
+
+            <p><?php _oi("Quem instala TIM Tec tem total autonomia para alterar o código e fazer mudanças na sua versão da plataforma, de acordo com suas necessidades. Também pode adicionar à instalação os cursos já produzidos pelo projeto ou adicionar seus próprios cursos. Do ponto de vista da gestão de TI, TIM Tec é semelhante ao Moodle."); ?></p> 
+                                
+            <p><?php _oi("Gostei, quero instalar TIM Tec. O que preciso fazer?"); ?></p> 
             
-            <p><?php _oi("TIM Tec ou por seus parceiros. Eles podem ser acessados, alquer pessoa, gratuitamente. Cada curso é dividido em aulas e cada aula é dividida em capítulos de até 5 minutos. O aluno assiste ao vídeo, faz as atividades correspondentes e pode consultar o material complementar disponível para cada curso."); ?></p> 
+            <p><?php _oi("Para iniciar a instalação, é preciso baixar o pacote de dados contendo todas as informações sobre o código."); ?></p>
+
+            <p><?php _oi("Para iniciar a instalação, é preciso baixar o pacote de dados contendo todas as informações sobre o código."); ?></p>  
 
         </div>
     </section>
