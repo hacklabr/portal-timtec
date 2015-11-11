@@ -35,6 +35,7 @@ require __DIR__ . '/inc/post-types/course.php';
 require __DIR__ . '/inc/post-types/organization.php';
 require __DIR__ . '/inc/post-types/redessociais.php';
 require __DIR__ . '/inc/post-types/conselho.php';
+require __DIR__ . '/inc/post-types/faq.php';
 //require __DIR__ . '/inc/post-types/installation.php';
 
 require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
@@ -112,7 +113,7 @@ pll_register_string('URL Conselho', 'conselho', 'timtec');
 pll_register_string('URL Manuais', 'manuais', 'timtec');
 pll_register_string('URL Desenvolva', 'desenvolva-o-software', 'timtec');
 pll_register_string('URL Download', 'download', 'timtec');
-pll_register_string('URL Faq', 'faq', 'timtec');
+//pll_register_string('URL Faq', 'faq', 'timtec');
 pll_register_string('URL Mural', 'mural', 'timtec');
 pll_register_string('URL Conheça', 'conheca-timtec', 'timtec');
 pll_register_string('URL MOOCS', 'o-que-sao-moocs', 'timtec');
