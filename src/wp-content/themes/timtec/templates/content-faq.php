@@ -1,4 +1,4 @@
-<div id="page-course" class="base-content container">
+<div id="page-faq" class="base-content container">
     <section>
         <div class="col-md-12 ">
             <h3><?php _oi("FAQ"); ?></h3>  

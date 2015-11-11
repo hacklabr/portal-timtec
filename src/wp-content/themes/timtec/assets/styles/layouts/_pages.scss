@@ -152,3 +152,45 @@
         }
     }
 }
+
+#page-faq {
+    .panel-group {
+        .panel+.panel {
+            margin-top: 15px;
+        }
+    }
+    .panel-default {
+        border: 0;
+        box-shadow: none;
+        >.panel-heading {
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            padding: 0;
+            .panel-title {
+                color: #666;
+                font-weight: normal;
+                margin: 0;
+                a {
+                    color: #666;
+                    display: block;
+                    padding: 10px;
+                    &:hover, &:active, &:focus { 
+                        background: #eee;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .panel-body {
+            border: 0;
+            padding: 25px 40px;
+            p {
+                color: #999;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
