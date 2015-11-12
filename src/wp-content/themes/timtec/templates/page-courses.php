@@ -50,7 +50,7 @@ get_template_part('templates/header');
                             <div class="content-curso">
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
-                                <div class="description"><?php echo the_excerpt(); ?></div>
+                                <div class="description"><?php the_excerpt(); ?></div>
                                 <?php
                                 if ($couse_download->getFilePath(get_the_ID())):
                                     $download_url = $couse_download->getFileUrl(get_the_ID());

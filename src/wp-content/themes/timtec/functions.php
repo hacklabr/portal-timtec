@@ -10,6 +10,22 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 
+pll_register_string('Texto do link leia mais', 'leia mais', 'timtec');
+
+function custom_excerpt_length( $length ) {
+  return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+function new_excerpt_more($more) {
+  global $post;
+  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> &hellip; ' . pll__('leia mais') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more', 999 );
+
+
+
 define('SLUG', 'portal-timtec');
 
 add_action('init', function(){
@@ -268,6 +284,3 @@ function rename_post_for_noticia_object() {
   $labels->menu_name = 'Notícias';
   $labels->name_admin_bar = 'Notícias';
 }
-
-
-
