@@ -9,7 +9,7 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
-
+ 
 pll_register_string('Texto do link leia mais', 'leia mais', 'timtec');
 
 function custom_excerpt_length( $length ) {
@@ -151,8 +151,8 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 //    $str_redes = pll_translate_string('redes', $lcode);
 //    $new_rules["^$lcode/$str_redes/?$"] = "index.php?template=redes";
 //
-//    $str_noticias = pll_translate_string('noticias', $lcode);
-//    $new_rules["^$lcode/$str_noticias/?$"] = "index.php?template=noticias";
+    $str_noticias = pll_translate_string('noticias', $lcode);
+    $new_rules["^$lcode/$str_noticias/?$"] = "index.php?post_type=post";
 //
 //    $str_suporte = pll_translate_string('suporte', $lcode);
 //    $new_rules["^$lcode/$str_suporte/?$"] = "index.php?template=suporte";
@@ -269,6 +269,10 @@ function rename_post_for_noticia_label() {
 
 function rename_post_for_noticia_object() {
   global $wp_post_types;
+  
+  $wp_post_types['post']->has_archive = true;
+  $wp_post_types['post']->rewrite = pll__('noticias');
+  
   $labels = &$wp_post_types['post']->labels;
   $labels->name = 'Notícias';
   $labels->singular_name = 'Notícias';
