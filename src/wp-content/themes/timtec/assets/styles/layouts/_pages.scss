@@ -77,7 +77,7 @@
                         color: #414141;
                         font-family: Teuton23Pro;
                         font-size: 1.6em;
-                        margin: 0 0 5px;
+                        margin: 0 0 5px; 
                     }
 
                     .author {
@@ -87,11 +87,13 @@
                     }
 
                     .description {
-                        color: #414141;
-                        font-size: 1em;
-                        font-family: 'Open Sans',sans-serif;
                         max-height: 140px;
                         overflow: hidden;
+                        p {
+                            color: #414141;
+                            font-size: 1em;
+                            font-family: 'Open Sans',sans-serif;
+                        }
                     }
 
                     a {
