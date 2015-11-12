@@ -171,13 +171,45 @@
                 color: #666;
                 font-weight: normal;
                 margin: 0;
+                width: 100%;
                 a {
                     color: #666;
-                    display: block;
+                    display: table;
+                    overflow: hidden;
                     padding: 10px;
+                    width: 100%;
                     &:hover, &:active, &:focus { 
                         background: #eee;
                         text-decoration: none;
+                    }
+                    .text {
+                        display: table-cell;
+                        float: left;
+                        line-height: 145%;
+                        margin-right: 50px;
+                    }
+                    .icon {
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        display: table-cell;
+                        float: right;
+                        height: 30px;
+                        width: 30px;
+                        text-align: center;
+                        &:before {
+                            color: #ccc;
+                            content: '+';
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 25px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                a[aria-expanded="true"] {
+                    .icon {
+                        &:before {
+                            content: '–'; 
+                        }
                     }
                 }
             }
