@@ -1,8 +1,5 @@
-image: ubuntu
+image: montefuscolo/ubuntu-trusty-git
 script:
-- echo "Deploy do instituto tim"
-deploy:
-  bash:
-    script:
-      - make build
+  - sudo apt-get install make
+  - make build
 
