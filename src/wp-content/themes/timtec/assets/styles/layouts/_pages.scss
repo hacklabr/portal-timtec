@@ -234,3 +234,32 @@
         }
     }
 }
+
+.contato {
+    #fbuilder {
+        .fields {
+            label {
+                color: #666;
+                font-family: 'Teuton24Pro';
+                font-size: 22px;
+                font-weight: normal;
+                padding: 9px 30px 9px 0;
+                text-align: right;
+            }
+        } 
+        input, textarea {
+            border: 1px solid #ccc;
+            padding: 12px 6px !important; 
+        }
+        .pbreak .pbPrevious, .pbreak .pbNext, .pbSubmit {
+            float: right;
+        }
+        .pbSubmit {
+            background-color: #03c3ff;
+            color: #fff;
+            font-family: 'Teuton24Pro';
+            font-size: 22px;
+            margin: 0 4% 0 0;
+        }
+    }
+}
