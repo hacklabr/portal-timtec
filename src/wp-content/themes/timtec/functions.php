@@ -24,13 +24,11 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
-function new_excerpt_more($more) {
-  global $post;
-  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> &hellip; ' . pll__('leia mais') . '</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more', 999 );
-
-
+//function new_excerpt_more($more) {
+//  global $post;
+//  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> &hellip; ' . pll__('leia mais') . '</a>';
+//}
+//add_filter( 'excerpt_more', 'new_excerpt_more', 999 );
 
 define('SLUG', 'portal-timtec');
 
@@ -105,6 +103,7 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'inc/metaboxes/url-video-course.php', //MetaBox
+  'inc/metaboxes/url-course.php', //MetaBox
   ];
 
   foreach ($sage_includes as $file) {
@@ -147,8 +146,8 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
   foreach (pll_languages_list() as $lcode) {
     $str_courses = pll_translate_string('cursos', $lcode);
     $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
-    
-    $str_conselho = pll_translate_string('conselho', $lcode); 
+
+    $str_conselho = pll_translate_string('conselho', $lcode);
     $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
 //
 //    $str_software = pll_translate_string('software', $lcode);
@@ -170,32 +169,32 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 ////    $new_rules["^$lcode/$str_contato/?$"] = "index.php?template=contato";
 //
 //
-//    $str_manuais = pll_translate_string('manuais', $lcode); 
-//    $new_rules["^$lcode/$str_manuais/?$"] = "index.php?template=manuais"; 
+//    $str_manuais = pll_translate_string('manuais', $lcode);
+//    $new_rules["^$lcode/$str_manuais/?$"] = "index.php?template=manuais";
 //
-//    $str_desenvolva = pll_translate_string('desenvolva-o-software', $lcode); 
-//    $new_rules["^$lcode/$str_desenvolva/?$"] = "index.php?template=desenvolva-o-software"; 
+//    $str_desenvolva = pll_translate_string('desenvolva-o-software', $lcode);
+//    $new_rules["^$lcode/$str_desenvolva/?$"] = "index.php?template=desenvolva-o-software";
 //
-//    $str_download = pll_translate_string('download', $lcode); 
-//    $new_rules["^$lcode/$str_download/?$"] = "index.php?template=download";  
+//    $str_download = pll_translate_string('download', $lcode);
+//    $new_rules["^$lcode/$str_download/?$"] = "index.php?template=download";
 //
-//    $str_faq = pll_translate_string('faq', $lcode); 
+//    $str_faq = pll_translate_string('faq', $lcode);
 //    $new_rules["^$lcode/$str_faq/?$"] = "index.php?template=faq";
 //
-//    $str_mural = pll_translate_string('mural', $lcode); 
+//    $str_mural = pll_translate_string('mural', $lcode);
 //    $new_rules["^$lcode/$str_mural/?$"] = "index.php?template=mural";
 //
-//    $str_conheca = pll_translate_string('conheca-timtec', $lcode); 
-//    $new_rules["^$lcode/$str_conheca/?$"] = "index.php?template=conheca-timtec"; 
+//    $str_conheca = pll_translate_string('conheca-timtec', $lcode);
+//    $new_rules["^$lcode/$str_conheca/?$"] = "index.php?template=conheca-timtec";
 //
-//    $str_moocs = pll_translate_string('o-que-sao-moocs', $lcode); 
-//    $new_rules["^$lcode/$str_moocs/?$"] = "index.php?template=o-que-sao-moocs"; 
+//    $str_moocs = pll_translate_string('o-que-sao-moocs', $lcode);
+//    $new_rules["^$lcode/$str_moocs/?$"] = "index.php?template=o-que-sao-moocs";
 //
-//    $str_explore = pll_translate_string('explore-a-plataforma', $lcode); 
-//    $new_rules["^$lcode/$str_explore/?$"] = "index.php?template=explore-a-plataforma"; 
+//    $str_explore = pll_translate_string('explore-a-plataforma', $lcode);
+//    $new_rules["^$lcode/$str_explore/?$"] = "index.php?template=explore-a-plataforma";
 
-    $str_conheca_rede = pll_translate_string('conheca-a-rede-tim-tec', $lcode); 
-    $new_rules["^$lcode/$str_conheca_rede/?$"] = "index.php?template=conheca-a-rede-tim-tec"; 
+    $str_conheca_rede = pll_translate_string('conheca-a-rede-tim-tec', $lcode);
+    $new_rules["^$lcode/$str_conheca_rede/?$"] = "index.php?template=conheca-a-rede-tim-tec";
 
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

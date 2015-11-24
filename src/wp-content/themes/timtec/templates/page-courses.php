@@ -35,6 +35,7 @@ get_template_part('templates/header');
                         $url = get_the_permalink();
                         $thumb = wp_get_attachment_url(get_post_thumbnail_id());
                         $title = get_the_title();
+                        $course_url = get_metadata('post', get_the_ID(), 'url_course', true);
 
                         $teachers = $teacher_course_relation->getRelatedPosts();
                         $teacher = '';
@@ -51,11 +52,14 @@ get_template_part('templates/header');
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
                                 <div class="description"><?php the_excerpt(); ?></div>
+                                <?php if ($course_url): ?>
+                                    <a href="<?php echo $course_url; ?>" class="btn goto">Fazer curso</a>
+                                <?php endif; ?>
                                 <?php
                                 if ($couse_download->getFilePath(get_the_ID())):
                                     $download_url = $couse_download->getFileUrl(get_the_ID());
                                     ?>
-                                    <a href="<?php echo $download_url ?>">Baixar o curso</a>
+                                    <a href="<?php echo $download_url ?>" class="btn download">Baixar o curso</a>
                                 <?php endif; ?>
 
                             </div>
