@@ -51,11 +51,12 @@ get_template_part('templates/header');
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
                                 <div class="description"><?php the_excerpt(); ?></div>
+                                <a href="http://mooc.timtec.com.br/courses" class="btn goto">Fazer curso</a>
                                 <?php
                                 if ($couse_download->getFilePath(get_the_ID())):
                                     $download_url = $couse_download->getFileUrl(get_the_ID());
                                     ?>
-                                    <a href="<?php echo $download_url ?>">Baixar o curso</a>
+                                    <a href="<?php echo $download_url ?>" class="btn download">Baixar o curso</a>
                                 <?php endif; ?>
 
                             </div>

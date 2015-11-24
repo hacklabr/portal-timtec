@@ -95,10 +95,42 @@
                     }
 
                     a {
-                        color: #05c3ff;
+                        color: #fff;
                         font-family: Teuton23Pro;
                         text-transform: uppercase;
                         font-weight: bold;
+                        &.moretag {
+                            color: #05c3ff;
+                            text-decoration: underline; 
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &.btn {
+                            display: block;
+                            margin: 0 auto;
+                        }
+                        &.btn + .btn {
+                            margin-top: 10px;
+                        } 
+                        &.goto {
+                            background-color: #E67860;
+                            &:hover { 
+                                background-color: #FF8969;
+                            }
+                            &:focus, &:active {
+                                background-color: #CF6C56;
+                            }
+                        }
+                        &.download {
+                            background-color: #a6b7da;
+                            &:hover { 
+                                background-color: #4d70b5;
+                            }
+                            &:focus, &:active {
+                                background-color: #3d5990;
+                            }
+                        }
                     }
                 }
             }
