@@ -10,6 +10,12 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 
+if(preg_match('#^/pt/cursos/?(\?.*)?#', $_SERVER['REQUEST_URI'])){
+    header('Location: http://mooc.timtec.com.br/courses');
+    http_response_code(307);
+    die;
+}
+
 pll_register_string('Texto do link leia mais', 'leia mais', 'timtec');
 
 function custom_excerpt_length( $length ) {
@@ -79,7 +85,7 @@ $_MENUS = [
         'Desenvolva o software' => '/pt/desenvolva-o-software/',
     ],
     'cursos' => [
-        'Lista de cursos' => '/pt/cursos/',
+        'Lista de cursos' => '/pt/lista-de-cursos/',
     ],
     'rede' => [
         'Conheça a rede TIMTec' => '/pt/conheca-a-rede-tim-tec/',
