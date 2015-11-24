@@ -50,20 +50,32 @@
 
 #page-course {
     #section2 {
-        background:#f7f7f7;
+        background: transparent;
         padding:0px;
         margin-top: 20px;
         
         ul {
+            background:#f7f7f7;
             margin: 1.1% 0 0;
             padding: 0px;
     
             li {
                 display: inline-block;
-                width: 30%;
                 background: #fff;
+                text-align: left;
                 vertical-align: top;
-                margin: 1.1%;
+                margin: 1% auto;
+                max-width: 350px;
+                width: 100%; 
+                @media screen and (min-width: $screen-sm-min) {
+                    margin: 1.1%;
+                    max-width: auto;
+                    width: 47%;
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    margin: 1.1%;
+                    width: 30.8%;
+                }
                 
                 img {
                         width: 100%;
@@ -107,25 +119,26 @@
                             }
                         }
                         &.btn {
-                            display: block;
-                            margin: 0 auto;
+                            display: inline-block;
+                            margin: 0;
+                            width: 120px;
                         }
                         &.btn + .btn {
-                            margin-top: 10px;
+                            margin-left: 10px;
                         } 
                         &.goto {
-                            background-color: #E67860;
+                            background-color: #FF8969;
                             &:hover { 
-                                background-color: #FF8969;
+                                background-color: #E67860;
                             }
                             &:focus, &:active {
-                                background-color: #CF6C56;
+                                background-color: #E67860;
                             }
                         }
                         &.download {
-                            background-color: #a6b7da;
+                            background-color: #4d70b5;
                             &:hover { 
-                                background-color: #4d70b5;
+                                background-color: #3d5990;
                             }
                             &:focus, &:active {
                                 background-color: #3d5990;
