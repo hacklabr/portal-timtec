@@ -61,7 +61,7 @@
                     </section>
                 </div>
                 <div class="social col-md-3 col-sm-12">
-                    <h4>Acompanhe nossas redes.</h4>
+                    <h4>Acompanhe nossas redes</h4>
                     <ul>
                         <?php
                         $loop_redessociais = new WP_Query(
