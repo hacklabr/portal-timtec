@@ -1,6 +1,3 @@
-$teuton-light: 'Teuton22Pro';
-$teuton-normal: 'Teuton23Pro';
-
 #footer-info{
 	background:#095DAF;
 	.content-footer{
@@ -14,7 +11,7 @@ $teuton-normal: 'Teuton23Pro';
                     font-size: 14px;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                    font-family: $teuton-normal;
+                    font-family: $teuton23;
 
                 }
 
@@ -26,7 +23,7 @@ $teuton-normal: 'Teuton23Pro';
                     li{	
                         a{
                             color:#2193d4;
-                            font-family: $teuton-normal;
+                            font-family: $teuton23;
                             white-space: nowrap;
                         }
 
@@ -40,7 +37,7 @@ $teuton-normal: 'Teuton23Pro';
         margin-top:30px;
         text-align: center;
     	h4{
-            font-family: $teuton-normal;
+            font-family: $teuton23;
     		text-transform:uppercase;
     		color: #fff;
             
@@ -60,7 +57,7 @@ $teuton-normal: 'Teuton23Pro';
 
     			a{
     				color:#fff;
-                    font-family: $teuton-normal;
+                    font-family: $teuton23;
     			}
     		}
     	}
@@ -110,7 +107,7 @@ $teuton-normal: 'Teuton23Pro';
 
         a.contato{
             color: #fff;
-            font-family: Teuton23Pro;
+            font-family: $teuton23;
             font-size: 1.1em;
             display: inline-block;
             margin: 30px 0px;

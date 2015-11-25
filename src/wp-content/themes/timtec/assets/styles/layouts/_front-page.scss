@@ -1,69 +1,44 @@
-$cor-cinza: #ededed;
-$cor-branco: #ffffff;
-$cor-azul: #26356e;
-$teuton-light: 'Teuton22Pro';
-$teuton-normal: 'Teuton23Pro';
-
-.center{
-	margin:0 auto;
-	float:none;
-}
-
-.btn{
-	width:200px;
-	text-align: center;
-	background: #05c3ff;
-	color:#fff;
-	font-family: 'Teuton23Pro';
-	display:inline-block;
-	border-radius:0px;
-	text-transform:uppercase;
-	margin:5px;
-
-}
-
-.btn_transparent{
+.btn_transparent {
 	color: #05c3ff;
-    font-family: 'Teuton23Pro';
+    font-family: $teuton23;
     text-transform: uppercase;
     border: 1px solid #05c3ff;
     border-radius: 2px;
-   padding: 10px 15px;
+    padding: 10px 15px;
     
-    &:hover{
-    	text-decoration:none;
+    &:hover {
+    	text-decoration: none;
     }
 }
 
-
-.btn_branco{
+.btn_branco {
 	color: #ffffff;
-    font-family: 'Teuton23Pro';
+    font-family: $teuton23;
     text-transform: uppercase;
     border: 1px solid #ffffff;
     border-radius: 2px;
-   padding: 10px 15px;
+    padding: 10px 15px;
     
-    &:hover{
+    &:hover {
     	text-decoration:none;
     }
 }
 
 
-#banner{
+#banner {
 	background: url('../images/banner_top_home.png');
     background-position: 50% 0;
     
-    .cerebro{
+    .cerebro {
     	background-image: url('../images/cabeca.png');
     	background-repeat: no-repeat;
     	height: 700px;
     	margin-top: 60px;
     	padding-top: 100px;
     	
-    	h3{
+    	h3 {
 			width: 50%;
-			font-family: Teuton24Pro;
+			font-family: $teuton24;
 		    color: #FFF;
 		    font-size: 2.6em;
 		    line-height: 1em;
@@ -72,29 +47,29 @@ $teuton-normal: 'Teuton23Pro';
 		    margin-bottom:20px;
             text-align: center;
             
-            span.titulo{
+            span.titulo {
                 font-size:0.6em;
                 display: block;
             }
 		}
 
-		.itens-banner{
-                    .item-banner {
-                        cursor:pointer;
-                    }
+		.itens-banner {
+            .item-banner {
+                cursor:pointer;
+            }
 			width: 70%;
     		margin-left: 18%;
     		text-align: center;
     		
-			h4{
-				font-family: Teuton23Pro;
+			h4 {
+				font-family: $teuton23;
 			    color: #fff;
-			    font-size:2em;
+			    font-size: 2em;
                 margin: 10px 0px 0px;
 			}
 
-			p{
-				font-family: Teuton23Pro;
+			p {
+				font-family: $teuton23;
 			    color: #fff;
 			    font-size: 1em;
 			    margin: 5px 10px 0;
@@ -102,11 +77,11 @@ $teuton-normal: 'Teuton23Pro';
                 line-height: 1.2em;
 			}
 				
-			img{
+			img {
 				margin:0 auto;
 			}
 
-			a{
+			a {
 				color: #fff;
     			font-size: 1.5em;
 			}
@@ -114,33 +89,34 @@ $teuton-normal: 'Teuton23Pro';
     }
 	
 }
-
-#section1{
-	background:#304594;
-	padding: 3% 0px;
-	
-	h3{
-		font-family: Teuton24Pro;
-	    color: #fff;
-	    font-size: 4em;
-	    margin-bottom: 20px;
-	}
-
-	.text{
-		font-family: 'Open Sans',sans-serif;
+.section {
+    h3 {
+        font-family: $teuton25;
         color: #fff;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    .text {
         font-size: 1.2em;
         margin-bottom: 20px;
-        line-height: 1.4em;
-        margin-right: 100px;
-        font-weight: 100;	
+        line-height: 1.4em;  
+    }
+}
+
+#software {
+	background: #304594;
+	padding: 3% 0px;
+
+	.text {
+        color: #fff;
+        margin-right: 100px;	
     }
     
     .links{
-        margin-top: 28px;    
+        margin-top: 28px; 
     }
 
-    .linha-centro{
+    .linha-centro {
         display: inline-block;
         position: absolute;
         margin-top: -57px;
@@ -177,26 +153,17 @@ $teuton-normal: 'Teuton23Pro';
 
 }
 
-#section2{
+#courses {
 	background:#0aa8b2;
     padding: 3% 0px;
 
-
-    h3{
-        font-family: Teuton24Pro;
-        color: #243670;
-        font-size: 4em;
-        margin-bottom: 20px;
+    h3 {
+        color: $timtec-blue;
         text-align: right;
     }
 
-    .text{
-        font-family: 'Open Sans',sans-serif;
-        color: #243670;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        line-height: 1.4em;
-        font-weight: 100;
+    .text {
+        color: $timtec-blue;
         margin-left: 20px;
         text-align: right;    
     }
@@ -250,32 +217,25 @@ $teuton-normal: 'Teuton23Pro';
 
 }
 
-#section3{
-	background:#304594;
+#network {
+	background: #304594;
     padding: 6px 0 57px;
 
-
-    h3{
-        font-family: Teuton24Pro;
+    h3 {
+        font-family: $teuton24;
         color: #fff;
         font-size: 4em;
         margin-bottom: 20px;
     }
 
     .text{
-        font-family: 'Open Sans',sans-serif;
         color: #fff;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        line-height: 1.4em;
-        margin-right: 100px;
-        font-weight: 100;   
+        margin-right: 100px; 
     }
     
     .links{
         margin-top: 28px;    
     }
-
 
     .linha-centro{
         display: inline-block;
@@ -326,7 +286,7 @@ $teuton-normal: 'Teuton23Pro';
     h3{
         color:#fff;
         display: inline-block;
-        font-family: Teuton23Pro;
+        font-family: $teuton23;
     }
 
     #newsCarouselWrapper{
@@ -405,7 +365,7 @@ $teuton-normal: 'Teuton23Pro';
         h3{
             color: #2B4792;
             text-transform: uppercase;
-            font-family: 'Open Sans',sans-serif;
+            
             font-weight: bold;
             font-size: 3em;
             width: 455px;
@@ -420,7 +380,7 @@ $teuton-normal: 'Teuton23Pro';
 
         p{
             color: #2B4792;
-            font-family: 'Open Sans',sans-serif;
+            
             width: 395px;
             margin: 0 auto;
             font-size: 1.3em;
