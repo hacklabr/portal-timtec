@@ -274,8 +274,11 @@
 
 #page-forum {
     .not-found {
-        a {
+        .dwqa-btn {
             margin-left: 10px;
+        }
+        a {
+            color: $navy-blue;
         }
     }
 }
