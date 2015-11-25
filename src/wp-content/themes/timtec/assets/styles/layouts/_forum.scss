@@ -1,10 +1,14 @@
 .page-header{
-    font-family: $teuton23;
+    border: 0;  
     color: $navy-blue;
-    text-transform: uppercase;
+    font-family: $teuton25;
+    margin: 0;
+    padding: 0;
     
-    h1{
-       font-size: 3em;
+    h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+        margin-top: 60px;
     }
 }
 
@@ -12,7 +16,7 @@
     max-width: 300px;
     
     h3 {
-        font-family: $teuton23;
+        font-family: $teuton25;
         color: $navy-blue;
         font-size: 2.2em;
     }
