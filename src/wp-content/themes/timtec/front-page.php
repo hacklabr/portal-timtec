@@ -101,7 +101,7 @@
     </div>
 </section>
 
-<section id="section1" class="">
+<section id="software" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
@@ -151,9 +151,7 @@
     </div><!-- /container-->
 </section>
 
-
-
-<section id="section2" class="">
+<section id="courses" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
@@ -207,11 +205,7 @@
     </div><!-- /container-->
 </section>
 
-
-
-
-
-<section id="section3" class="">
+<section id="network" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
