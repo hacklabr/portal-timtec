@@ -1,71 +1,68 @@
-$teuton-light: 'Teuton22Pro';
-$teuton-normal: 'Teuton23Pro';
+#footer-info {
+	background: #095DAF;
 
-#footer-info{
-	background:#095DAF;
-	.content-footer{
+	.content-footer {
 
-            .widget_nav_menu{
-                width:20%;
-                float: left;
-                
-                h3{
-                    color: #fff;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    font-family: $teuton-normal;
+        .widget_nav_menu {
+            width: 20%;
+            float: left;
+            
+            h3 {
+                color: #fff;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: $teuton23;
 
-                }
+            }
 
-                ul{
-                    list-style:none;
-                    padding: 0px;
-                    margin: 2%;
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 2% 0 0;
 
-                    li{	
-                        a{
-                            color:#2193d4;
-                            font-family: $teuton-normal;
-                            white-space: nowrap;
-                        }
-
+                li {	
+                    a {
+                        color: #2193d4;
+                        font-family: $teuton24;
+                        white-space: nowrap;
                     }
 
                 }
             }
         }
+    }
 
-    .social{
+    .social {
         margin-top:30px;
         text-align: center;
-    	h4{
-            font-family: $teuton-normal;
+    	h4 {
+            font-family: $teuton23;
     		text-transform:uppercase;
     		color: #fff;
             
     	}
 
-    	ul{
+    	ul {
     		list-style:none;
             margin-left:0px;
             padding:0px;
 
-    		li{
+    		li {
     			display: inline-block;
     			border-radius: 5px;
     			padding: 5px;
     			margin: 5px;
                 font-size:2.2em;
 
-    			a{
+    			a {
     				color:#fff;
-                    font-family: $teuton-normal;
+                    font-family: $teuton23;
     			}
     		}
     	}
 
-    	p{
+    	p {
     		color:#2193d4;
             text-align: center;
             font-family: 'Teuton22Pro';
@@ -73,7 +70,7 @@ $teuton-normal: 'Teuton23Pro';
     }
 }
 
-#footer{
+#footer {
 	min-height: 80px;
     margin-bottom: 0;
     background-color: #007dc3;
@@ -88,8 +85,8 @@ $teuton-normal: 'Teuton23Pro';
     z-index: 900;
     font-family: 'teuton_24',sans-serif;
 
-    .links-footer{
-        a.timtec{
+    .links-footer {
+        a.timtec {
             display: inline-block;
             background-image:url("../../assets/images/logo-instituto-tim.png");
             width: 65%;
@@ -101,23 +98,20 @@ $teuton-normal: 'Teuton23Pro';
             margin-top: 25px;
         }
 
-        span{
+        span {
             display: inline-block;
             margin: 22px 10px;
             font-size: 25px;
             vertical-align: top;
         }
 
-        a.contato{
+        a.contato {
             color: #fff;
-            font-family: Teuton23Pro;
+            font-family: $teuton23;
             font-size: 1.1em;
             display: inline-block;
             margin: 30px 0px;
             vertical-align: top;
         }
-
-    }
-
-    
+    }   
 }

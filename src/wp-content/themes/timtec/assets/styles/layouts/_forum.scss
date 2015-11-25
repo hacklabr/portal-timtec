@@ -1,33 +1,36 @@
 .page-header{
-    font-family: Teuton23Pro;
-    color: #26356e;
-    text-transform: uppercase;
+    border: 0;  
+    color: $navy-blue;
+    font-family: $teuton25;
+    margin: 0;
+    padding: 0;
     
-    h1{
-       font-size: 3em;
+    h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+        margin-top: 60px;
     }
 }
 
-.sidebar{
-    max-width:300px;
+.sidebar {
+    max-width: 300px;
     
-    h3{
-        font-family: Teuton23Pro;
-        color: #26356e;
+    h3 {
+        font-family: $teuton25;
+        color: $navy-blue;
         font-size: 2.2em;
     }
 
-    ul{
-        border:1px solid #26356e;
-        padding:10px;
+    ul {
+        border:1 px solid #26356e;
+        padding: 10px;
         
-        li{
+        li {
             list-style: none;
             
-            a{
-                font-family: Teuton23Pro;
+            a {
+                font-family: $teuton23;
             }
-            
         }
     }
 }

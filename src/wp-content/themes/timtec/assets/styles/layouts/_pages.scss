@@ -1,8 +1,8 @@
 #page-conselho{
     
     h3 {
-        font-family: Teuton24Pro;
-        color: #243670;
+        font-family: $teuton24;
+        color: $navy-blue;
         font-size: 4em;
         margin-bottom: 20px;
         font-weight: bold;
@@ -10,8 +10,8 @@
     }
 
     p {
-        font-family: 'Open Sans',sans-serif;
-        color: #243670;
+        
+        color: $navy-blue;
         font-size: 1.1em;
         margin-bottom: 20px;
     }
@@ -23,7 +23,7 @@
     
             
             li{
-                font-family: 'Open Sans',sans-serif;
+                
                 list-style:none;
                 clear: both;
                 height: 120px;
@@ -87,7 +87,7 @@
                     
                     h4 {
                         color: #414141;
-                        font-family: Teuton23Pro;
+                        font-family: $teuton23;
                         font-size: 1.6em;
                         margin: 0 0 5px; 
                     }
@@ -95,20 +95,20 @@
                     .author {
                         color: #a5a5a5;
                         font-size: 0.9em;
-                        font-family: 'Open Sans',sans-serif;
+                        
                     }
 
                     .description {
                         p {
                             color: #414141;
                             font-size: 1em;
-                            font-family: 'Open Sans',sans-serif;
+                            
                         }
                     }
 
                     a {
                         color: #fff;
-                        font-family: Teuton23Pro;
+                        font-family: $teuton23;
                         text-transform: uppercase;
                         font-weight: bold;
                         &.moretag {
@@ -136,9 +136,9 @@
                             }
                         }
                         &.download {
-                            background-color: #4d70b5;
+                            background-color: #C5D1EA;
                             &:hover { 
-                                background-color: #3d5990;
+                                background-color: #4d70b5;
                             }
                             &:focus, &:active {
                                 background-color: #3d5990;
@@ -177,8 +177,8 @@
         label {
             display: inline-block;
             max-width: 100%;
-            font-family: Teuton24Pro;
-            color: #243670;
+            font-family: $teuton24;
+            color: $navy-blue;
             font-size: 1.5em;
             font-weight: 700;
         }
@@ -188,7 +188,7 @@
             text-align: center;
             background: #05c3ff;
             color: #fff;
-            font-family: Teuton23Pro;
+            font-family: $teuton23;
             display: inline-block;
             border-radius: 0;
             text-transform: uppercase;
@@ -199,6 +199,9 @@
 }
 
 #page-faq {
+    h3 {
+        margin-top: 0;
+    }
     .panel-group {
         .panel+.panel {
             margin-top: 15px;
@@ -274,8 +277,12 @@
 
 #page-forum {
     .not-found {
-        a {
+        .dwqa-btn {
+            color: #fff;
             margin-left: 10px;
+        }
+        a {
+            color: $navy-blue;
         }
     }
 }
@@ -290,6 +297,7 @@
                 font-weight: normal;
                 padding: 9px 30px 9px 0;
                 text-align: right;
+                width: 190px;
             }
         } 
         input, textarea {
