@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="content-footer col-md-9 col-sm-12">
-                    
+
                     <section class="widget nav_menu-2 widget_nav_menu ">
                         <h3>Sobre</h3>
                         <div class="menu-sobre-container">
@@ -15,7 +15,7 @@
                             </ul>
                         </div>
                     </section>
-                    
+
                     <section class="widget nav_menu-3 widget_nav_menu ">
                         <h3>Software</h3>
                         <div class="menu-software-container">
@@ -26,7 +26,7 @@
                             </ul>
                         </div>
                     </section>
-                    
+
                     <section class="widget nav_menu-4 widget_nav_menu ">
                         <h3>Cursos</h3>
                         <div class="menu-cursos-container">
@@ -37,7 +37,7 @@
                             </ul>
                         </div>
                     </section>
-                    
+
                     <section class="widget nav_menu-5 widget_nav_menu ">
                         <h3>Rede</h3>
                         <div class="menu-rede-container">
@@ -48,17 +48,17 @@
                             </ul>
                         </div>
                     </section>
-                    
+
                     <section class="widget nav_menu-6 widget_nav_menu ">
                         <h3>Notícias</h3>
                         <div class="menu-noticias-container">
-                            <ul id="menu-noticias" class="menu">
+<!--                            <ul id="menu-noticias" class="menu">
                                 <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="#">Notícia 1</a></li>
                                 <li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="#">Notícia 2</a></li>
                                 <li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="#">Notícia 3</a></li>
-                            </ul>
+                            </ul>-->
                         </div>
-                    </section>                
+                    </section>
                 </div>
                 <div class="social col-md-3 col-sm-12">
                     <h4>Acompanhe nossas redes.</h4>
@@ -86,5 +86,5 @@
             </div>
         </div>
     </div>
-    
+
 </footer>
