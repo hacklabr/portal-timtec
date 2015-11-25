@@ -90,6 +90,8 @@
 	
 }
 .section {
+    padding: 60px 0;
+
     h3 {
         font-family: $teuton25;
         color: #fff;
@@ -101,52 +103,54 @@
         margin-bottom: 20px;
         line-height: 1.4em;  
     }
+    .linha-centro {
+        display: inline-block;
+        position: absolute;
+        margin-top: -60px;
+        margin-left: 9px;
+        z-index: 0;
+    }
+    .icon-imgPrinc, .icon-imgSecun, .icon-imgSecun2 {
+        position: absolute;
+        z-index: 800;
+    }
 }
 
 #software {
 	background: #304594;
-	padding: 3% 0px;
+
+    @media screen and (min-width: $screen-lg-min) {
+        padding-bottom: 100px;
+    }
 
 	.text {
         color: #fff;
         margin-right: 100px;	
     }
     
-    .links{
+    .links {
         margin-top: 28px; 
     }
-
-    .linha-centro {
-        display: inline-block;
-        position: absolute;
-        margin-top: -57px;
-        margin-left: 10px;
-        z-index: 0;
-    }
     
-    .icon-imgPrinc{
+    .icon-imgPrinc {
         width: 220px;
-        position: absolute;
-        z-index: 999;
         top: 140px;
         left: -122px;
     }
 
-    .icon-imgSecun{
-        position: absolute;
+    .icon-imgSecun {
         width: 80px;
         top: 360px;
         left: -13px;
     }
 
-    .icon-imgSecun2{
-        position: absolute;
+    .icon-imgSecun2 {
         width: 80px;
         top: 500px;
         left: -10px;
     }
 
-    .img{
+    .img {
         margin-top: 68px;
         width:100%;
     }
@@ -155,7 +159,6 @@
 
 #courses {
 	background:#0aa8b2;
-    padding: 3% 0px;
 
     h3 {
         color: $timtec-blue;
@@ -174,44 +177,35 @@
     
     .links{
         margin-top: 28px; 
-        text-align:right;   
+        text-align: right;   
     }
 
-    .linha-centro{
-        display: inline-block;
-        position: absolute;
-        margin-top: -57px;
+    .linha-centro {
         margin-left: 10px;
-        z-index: 0;
-        
-        img{
-            height: 797px;
+        img {
+            height: 800px;
         }
     }
     
-    .icon-imgPrinc{
+    .icon-imgPrinc {
         width: 80px;
-        position: absolute;
-        z-index: 999;
         top: 90px;
         left: -15px;
     }
 
-    .icon-imgSecun{
-        position: absolute;
+    .icon-imgSecun {
         width: 300px;
         top: 239px;
         left: -51px;
     }
 
-    .icon-imgSecun2{
-        position: absolute;
+    .icon-imgSecun2 {
         width: 80px;
         top: 450px;
         left: -13px;
     }
 
-    .img{
+    .img {
         margin-top: -30px;
     }
 
@@ -219,7 +213,6 @@
 
 #network {
 	background: #304594;
-    padding: 6px 0 57px;
 
     h3 {
         font-family: $teuton24;
@@ -228,51 +221,48 @@
         margin-bottom: 20px;
     }
 
-    .text{
+    .text{ 
         color: #fff;
         margin-right: 100px; 
     }
     
-    .links{
+    .links {
         margin-top: 28px;    
     }
 
-    .linha-centro{
-        display: inline-block;
-        position: absolute;
-        margin-top: -462px;
-        margin-left: 10px;
-        z-index: 0;
-        
-        img{
-            height: 716px;
-            width: 6px;
+    .linha-centro {
+        margin-left: 10px;       
+        img {
+            @media screen and (min-width: $screen-md-min) {
+                height: 744px; 
+                margin-top: -375px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                height: 772px; 
+                margin-top: -455px;
+            }
         }
     }
     
-    .icon-imgPrinc{
+    .icon-imgPrinc {
         width: 80px;
-        position: absolute;
-        z-index: 999;
         top: -383px;
         left: -13px;
     }
 
-    .icon-imgSecun{
-        position: absolute;
+    .icon-imgSecun {
         width: 80px;
         top: -210px;
         left: -13px;
     }
 
-    .icon-imgSecun2{
-        position: absolute;
+    .icon-imgSecun2 {
         width: 300px;
         top: -23px;
         left: -205px;
     }
 
-    .img{
+    .img {
         width:100%;
     }
 }
@@ -280,22 +270,22 @@
 /**
 * Slide News
 */
-#news{
+#news {
     background:#354492;
     
-    h3{
+    h3 {
         color:#fff;
         display: inline-block;
         font-family: $teuton23;
     }
 
-    #newsCarouselWrapper{
+    #newsCarouselWrapper {
         display: inline-block;
         width: 80%;
-        a{
+        a {
             color:#fff;
             
-            &.categoria{
+            &.categoria {
                 color:#f50;
             }
         }
