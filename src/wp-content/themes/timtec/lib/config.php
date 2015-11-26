@@ -56,6 +56,7 @@ function display_sidebar() {
         'is_front_page',
         ['is_page_template', 'template-custom.php'],
         ['is_page_template', 'template-forum.php'],
+        ['is_singular', ['dwqa-question']],
         ['is_post_type_archive', ['faq']]
       ]
     );
