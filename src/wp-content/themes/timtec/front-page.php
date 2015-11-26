@@ -2,9 +2,9 @@
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
-        <h3>Esse é o Novo Site do TIM TEC!</h3>
+        <h3><a href="http://mooc.timtec.com.br">CLIQUE AQUI PARA ACESSAR OS CURSOS</a></h3>
         <hr>
-        <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
+        <p>Este é o novo Portal TIM Tec. A plataforma TIM Tec mudou de endereço: <a href="http://mooc.timtec.com.br">mooc.timtec.com.br</a></p>
     </div>
 </section>
 
