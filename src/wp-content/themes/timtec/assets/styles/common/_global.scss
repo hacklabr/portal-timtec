@@ -1,3 +1,17 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    padding-bottom: 270px;
+
+    @media screen and (min-width: $screen-md-min) {
+        padding-bottom:: 135px;
+    }
+
+}
+
 .center {
     margin: 0 auto;
     float: none;

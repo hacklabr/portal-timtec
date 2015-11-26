@@ -1,5 +1,13 @@
 #footer-info {
 	background: #095DAF;
+    position: absolute;
+    bottom: 0;
+    height: 280px;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md-min) {
+        height: 145px;
+    }
 
 	.content-footer {
 
