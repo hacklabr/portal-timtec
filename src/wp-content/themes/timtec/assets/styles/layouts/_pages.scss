@@ -326,4 +326,12 @@
         font-size: 24px;
         margin: 36px 0 24px; 
     }
+    .dwqa-single-question {
+        .dwqa-comments {
+            margin-top: 45px;
+        }
+        .dwqa-headline {
+            font-family: $font-family-sans-serif;
+        }
+    }
 }
