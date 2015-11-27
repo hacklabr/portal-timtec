@@ -19,8 +19,23 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage')
-  ]);
+        'sobre-topo' => 'Menu "Sobre" do topo das páginas',
+        'sobre-footer' => 'Menu "Sobre" do topo das páginas',
+
+        'software-topo' => 'Menu "Software" do topo das páginas',
+        'software-footer' => 'Menu "Software" do topo das páginas',
+        'software-home' => 'Botões da seção "Software" da home',
+
+        'cursos-topo' => 'Menu "Cursos" do topo das páginas',
+        'cursos-footer' => 'Menu "Cursos" do topo das páginas',
+        'cursos-home' => 'Botões da seção "Cursos" da home',
+
+        'rede-topo' => 'Menu "Rede" do topo das páginas',
+        'rede-footer' => 'Menu "Rede" do topo das páginas',
+        'rede-home' => 'Botões da seção "Rede" da home',
+
+
+    ]);
 
   // Add post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails

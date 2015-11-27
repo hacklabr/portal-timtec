@@ -13,12 +13,51 @@
             </button>
         </div>
         <nav class="collapse navbar-collapse navbar-nav" id="main-navbar-collapse">
+            <ul id="menu-menu-pt" class="nav">
+                <li class="menu-item menu-item-type-post_type menu-item-has-children">
+                    <a href="#">Sobre</a>
+                    <?php
+                    wp_nav_menu(array(
+                        'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                        'menu'    => 'sobre-topo',
+//                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
+                    ));
+                    ?>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-has-children">
+                    <a href="#">Software</a>
+                    <?php
+                    wp_nav_menu(array(
+                        'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                        'menu'    => 'software-topo',
+//                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
+                    ));
+                    ?>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-has-children">
+                    <a href="#">Cursos</a>
+                    <?php
+                    wp_nav_menu(array(
+                        'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                        'menu'    => 'cursos-topo',
+//                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
+                    ));
+                    ?>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-has-children">
+                    <a href="#">Rede</a>
+                    <?php
+                    wp_nav_menu(array(
+                        'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                        'menu'    => 'rede-topo',
+//                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
+                    ));
+                    ?>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/noticias/">Notícias</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://timtec.hacklab.com.br/pt/contato/">Contato</a></li>
+            </ul>
 
-            <?php
-            if (has_nav_menu('primary_navigation')) :
-                wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-            endif;
-            ?>
         </nav>
     </div>
 </header>

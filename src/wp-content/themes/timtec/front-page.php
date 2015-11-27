@@ -105,7 +105,8 @@
                     <div class="links">
                         <?php
                         wp_nav_menu(array(
-                            'menu'    => 'software',
+                            'items_wrap' => '',
+                            'menu'    => 'software-home',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
                         ?>
@@ -157,7 +158,8 @@
                     <div class="links">
                         <?php
                         wp_nav_menu(array(
-                            'menu'    => 'cursos',
+                            'items_wrap' => '',
+                            'menu'    => 'cursos-home',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
                         ?>
@@ -185,7 +187,8 @@
                     <div class="links">
                         <?php
                         wp_nav_menu(array(
-                            'menu'    => 'redes',
+                            'items_wrap' => '',
+                            'menu'    => 'redes-home',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
                         ?>

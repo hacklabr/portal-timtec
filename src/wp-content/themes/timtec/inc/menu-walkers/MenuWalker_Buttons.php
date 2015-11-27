@@ -1,12 +1,12 @@
 <?php
 class MenuWalker_Buttons extends Walker_Nav_Menu{
-    function start_lvl(){}
-    function end_lvl(){}
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
-        ?>
-        <a href="<?php echo $item->url ?>" class="btn"><?php echo $item->title ?></a>
-        <?php
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {}
+    
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {}
+
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
+        $output .= "<a href=\"{$item->url}\" class=\"btn\">{$item->title}</a>";
     }
 
-    function end_el(){}
+    public function end_el(){}
 }

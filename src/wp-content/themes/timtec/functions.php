@@ -46,6 +46,7 @@ require __DIR__ . '/inc/widgets/widget-forum-categories.php';
 require __DIR__ . '/inc/widgets/widget-forum-tags.php';
 
 require __DIR__ . '/inc/menu-walkers/MenuWalker_Buttons.php';
+require __DIR__ . '/inc/menu-walkers/MenuWalker_SubMenu.php';
 
 
 
@@ -77,18 +78,22 @@ $sage_includes = [
  *  ================ REWRITE RULES ================ *
  */
 //*
-
-pll_register_string('URL Cursos', 'cursos', 'timtec');
-pll_register_string('URL Software', 'software', 'timtec');
-pll_register_string('URL Redes', 'redes', 'timtec');
-pll_register_string('URL Noticias', 'noticias', 'timtec');
-pll_register_string('URL Suporte', 'suporte', 'timtec');
-pll_register_string('URL Cadastro', 'cadastro', 'timtec');
-pll_register_string('URL Contato', 'contato', 'timtec');
-pll_register_string('URL Conselho', 'conselho', 'timtec');
+if(function_exists('pll_register_string')){
+    pll_register_string('URL Cursos', 'cursos', 'timtec');
+    pll_register_string('URL Software', 'software', 'timtec');
+    pll_register_string('URL Redes', 'redes', 'timtec');
+    pll_register_string('URL Noticias', 'noticias', 'timtec');
+    pll_register_string('URL Suporte', 'suporte', 'timtec');
+    pll_register_string('URL Cadastro', 'cadastro', 'timtec');
+    pll_register_string('URL Contato', 'contato', 'timtec');
+    pll_register_string('URL Conselho', 'conselho', 'timtec');
+}
 
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
+  if(!function_exists('pll_languages_list')){
+      return;
+  }
   foreach (pll_languages_list() as $lcode) {
     $str_courses = pll_translate_string('cursos', $lcode);
     $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
@@ -130,18 +135,6 @@ add_action('template_redirect', function() {
       die;
     }
   }
-});
-add_action( 'after_setup_theme', function(){
-    $menus = [
-        'sobre' => 'Menu Sobre',
-        'software' => 'Menu Software',
-        'cursos' => 'Menu Cursos',
-        'rede' => 'Menu Rede'
-    ];
-
-    foreach($menus as $location => $description){
-        register_nav_menu( $location , $description );
-    }
 });
 
 // */
