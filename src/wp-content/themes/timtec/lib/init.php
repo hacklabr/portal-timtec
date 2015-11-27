@@ -20,18 +20,18 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
         'sobre-topo' => 'Menu "Sobre" do topo das páginas',
-        'sobre-footer' => 'Menu "Sobre" do topo das páginas',
+        'sobre-footer' => 'Menu "Sobre" do rodapé das páginas',
 
         'software-topo' => 'Menu "Software" do topo das páginas',
-        'software-footer' => 'Menu "Software" do topo das páginas',
+        'software-footer' => 'Menu "Software" do rodapé das páginas',
         'software-home' => 'Botões da seção "Software" da home',
 
         'cursos-topo' => 'Menu "Cursos" do topo das páginas',
-        'cursos-footer' => 'Menu "Cursos" do topo das páginas',
+        'cursos-footer' => 'Menu "Cursos" do rodapé das páginas',
         'cursos-home' => 'Botões da seção "Cursos" da home',
 
         'rede-topo' => 'Menu "Rede" do topo das páginas',
-        'rede-footer' => 'Menu "Rede" do topo das páginas',
+        'rede-footer' => 'Menu "Rede" do rodapé das páginas',
         'rede-home' => 'Botões da seção "Rede" da home',
 
 

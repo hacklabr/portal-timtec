@@ -19,7 +19,7 @@
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
-                        'menu'    => 'sobre-topo',
+                        'theme_location'    => 'sobre-topo',
 //                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
                     ));
                     ?>
@@ -29,7 +29,7 @@
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
-                        'menu'    => 'software-topo',
+                        'theme_location'    => 'software-topo',
 //                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
                     ));
                     ?>
@@ -39,7 +39,7 @@
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
-                        'menu'    => 'cursos-topo',
+                        'theme_location'    => 'cursos-topo',
 //                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
                     ));
                     ?>
@@ -49,7 +49,7 @@
                     <?php
                     wp_nav_menu(array(
                         'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
-                        'menu'    => 'rede-topo',
+                        'theme_location'    => 'rede-topo',
 //                        'walker'  => new MenuWalker_SubMenu() //use our custom walker
                     ));
                     ?>
