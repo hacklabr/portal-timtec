@@ -1,13 +1,14 @@
 <?php global $_MENUS; ?>
-<div class="wrap " role="document">
-    <div class="container">
-        <div class="page-header">
-            <h1>
+<div id="forum-question" class="base-content container">
+    <section>
+        <div class="col-md-12 ">
+            <h3>
                 <a href="<?php echo $_MENUS['rede']['Fórum']; ?>">
                     <?php _oi("Fórum"); ?>
                 </a>
-            </h1>
+            </h3>
+            <?php get_template_part('templates/content-single', get_post_type()); ?>
         </div>
-        <?php get_template_part('templates/content-single', get_post_type()); ?>
-    </div>
-</div><!-- /.wrap -->
+    </section>
+    <div class="clear"></div>
+</div>
