@@ -326,12 +326,24 @@
         font-size: 24px;
         margin: 36px 0 24px; 
     }
+    .byline {
+        font-size: 12px;
+        margin: 24px 0;
+    }
     .dwqa-single-question {
         .dwqa-comments {
-            margin-top: 45px;
+            margin-top: 36px;
         }
         .dwqa-headline {
+            border-top: 0;
             font-family: $font-family-sans-serif;
+            margin-top: 24px;
+        }
+        .dwqa-favourite {
+            width: auto;
+        }
+        .dwqa-single-question .dwqa-current-status .dropdown-toggle, .dwqa-single-question .dwqa-current-status .dwqa-status-name, .dwqa-single-question .dwqa-question .dwqa-actions .dropdown-toggle {
+            font-size: 12px;
         }
     }
 }
