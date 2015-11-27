@@ -5,6 +5,24 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+// Breakpoints
+$break-small: 600px;
+$break-large: 1200px;
+
 // Colors
-$brand-primary:         #095DAF;
-$menu-hover:            #0d4c8f;
+$brand-primary:     #095DAF;
+$menu-hover:        #0d4c8f;
+
+$gray:              #ededed;
+$white:             #ffffff;
+$timtec-blue:       #26356e;
+$navy-blue:         #085FAC;
+
+// Fonts
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$teuton22: "Teuton22Pro", $font-family-sans-serif;
+$teuton23: "Teuton23Pro", $font-family-sans-serif;
+$teuton24: "Teuton24Pro", $font-family-sans-serif;
+$teuton25: "Teuton25Pro", $font-family-sans-serif;
+$teuton26: "Teuton26Pro", $font-family-sans-serif;

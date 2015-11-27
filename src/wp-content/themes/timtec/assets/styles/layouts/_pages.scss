@@ -1,8 +1,8 @@
 #page-conselho{
     
     h3 {
-        font-family: Teuton24Pro;
-        color: #243670;
+        font-family: $teuton24;
+        color: $navy-blue;
         font-size: 4em;
         margin-bottom: 20px;
         font-weight: bold;
@@ -10,11 +10,11 @@
     }
 
     p {
-        font-family: 'Open Sans',sans-serif;
-        color: #243670;
+        
+        color: $navy-blue;
         font-size: 1.1em;
         margin-bottom: 20px;
-    }
+    } 
 
     .list-conselho{
         ul{
@@ -23,7 +23,7 @@
     
             
             li{
-                font-family: 'Open Sans',sans-serif;
+                
                 list-style:none;
                 clear: both;
                 height: 120px;
@@ -87,7 +87,7 @@
                     
                     h4 {
                         color: #414141;
-                        font-family: Teuton23Pro;
+                        font-family: $teuton23;
                         font-size: 1.6em;
                         margin: 0 0 5px; 
                     }
@@ -95,20 +95,20 @@
                     .author {
                         color: #a5a5a5;
                         font-size: 0.9em;
-                        font-family: 'Open Sans',sans-serif;
+                        
                     }
 
                     .description {
                         p {
                             color: #414141;
                             font-size: 1em;
-                            font-family: 'Open Sans',sans-serif;
+                            
                         }
                     }
 
                     a {
                         color: #fff;
-                        font-family: Teuton23Pro;
+                        font-family: $teuton23;
                         text-transform: uppercase;
                         font-weight: bold;
                         &.moretag {
@@ -151,54 +151,10 @@
     }
 }
 
-
-.page-id-144{
-
-    #fbuilder .medium {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
-    }
-
-    #fbuilder .small {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
-    }
-        
-    .main{
-        margin: 50px auto 150px;
-        float: none;
-        width:100%;
-        max-width: 1170px;
-        
-        label {
-            display: inline-block;
-            max-width: 100%;
-            font-family: Teuton24Pro;
-            color: #243670;
-            font-size: 1.5em;
-            font-weight: 700;
-        }
-
-        .pbSubmit{
-            width: 100%;
-            text-align: center;
-            background: #05c3ff;
-            color: #fff;
-            font-family: Teuton23Pro;
-            display: inline-block;
-            border-radius: 0;
-            text-transform: uppercase;
-            margin: 5px;
-            font-size: 1.5em;
-        }
-    }
-}
-
 #page-faq {
+    h3 {
+        margin-top: 0;
+    }
     .panel-group {
         .panel+.panel {
             margin-top: 15px;
@@ -274,14 +230,34 @@
 
 #page-forum {
     .not-found {
-        a {
+        .dwqa-btn {
+            color: #fff;
             margin-left: 10px;
+        }
+        a {
+            color: $navy-blue;
         }
     }
 }
 
 .contato {
+
     #fbuilder {
+
+        .medium {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
+        .small {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
         .fields {
             label {
                 color: #666;
@@ -290,6 +266,7 @@
                 font-weight: normal;
                 padding: 9px 30px 9px 0;
                 text-align: right;
+                width: 190px;
             }
         } 
         input, textarea {
@@ -300,11 +277,77 @@
             float: right;
         }
         .pbSubmit {
-            background-color: #03c3ff;
+            text-align: center;
+            background: #05c3ff;
             color: #fff;
-            font-family: 'Teuton24Pro';
-            font-size: 22px;
-            margin: 0 4% 0 0;
+            font-family: $teuton23;
+            font-size: 1.5em;
+            display: inline-block;
+            border-radius: 0;
+            text-transform: uppercase;
+            margin: 10px 0;
+            width: 150px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-right: 50px;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                margin-right: 130px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                margin-right: 195px;
+            }
         }
+    }
+    @media screen and (max-width: $screen-xs-max) {
+        #fbuilder {
+            .fields {
+                padding: 15px 0 0;
+                label {
+                    float: none;
+                    padding-bottom: 0;
+                    text-align: left;
+                }
+                .dfield {
+                    float: none;
+                    width: 100%;
+                }
+            } 
+            input, textarea {
+                border: 1px solid #ccc;
+                padding: 12px 6px !important; 
+                margin: 0;
+            }
+        }
+    }
+}
+
+.type-dwqa-question {
+    h1 {
+        font-size: 24px;
+        margin: 36px 0 24px; 
+    }
+    .byline {
+        font-size: 12px;
+        margin: 24px 0;
+    }
+    .dwqa-comments {
+        margin-top: 36px;
+    }
+    .dwqa-headline {
+        border-top: 0;
+        font-family: $font-family-sans-serif;
+        margin-top: 24px;
+    }
+    .dwqa-favourite {
+        width: auto;
+    }
+    .dwqa-single-question .dwqa-current-status .dropdown-toggle, .dwqa-single-question .dwqa-current-status .dwqa-status-name, .dwqa-single-question .dwqa-question .dwqa-actions .dropdown-toggle {
+        font-size: 12px;
+    }
+    .dwqa-question {
+        overflow: hidden;
+    }
+    #dwqa-answers {
+        margin-top: 24px; 
     }
 }

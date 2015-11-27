@@ -46,10 +46,10 @@
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/noticias/">Notícias</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
                 </ul>
-            </div>        
+            </div>
         </nav>
     </div>
 </header>

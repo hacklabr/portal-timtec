@@ -2,9 +2,9 @@
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
-        <h3>Esse é o Novo Site do TIM TEC!</h3>
+        <h3><a href="http://mooc.timtec.com.br">CLIQUE AQUI PARA ACESSAR OS CURSOS</a></h3>
         <hr>
-        <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
+        <p>Este é o novo Portal TIM Tec. A plataforma TIM Tec mudou de endereço: <a href="http://mooc.timtec.com.br">mooc.timtec.com.br</a></p>
     </div>
 </section>
 
@@ -76,19 +76,19 @@
                     <span class="titulo"><?php _oi("SOFTWARE LIVRE + CURSOS + REDE E-TEC BRASIL"); ?> </span>
                 </h3>
                 <div class="itens-banner hidden-sm hidden-xs">
-                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section1" >
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#software" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-software.png" />
                         <h4><?php _oi("Software"); ?> </h4>
                         <p><?php _oi("Lorem ipsum dolor sit amet, consectetur adipiscing elit. "); ?> </p>
                         <a href="#"><i class="fa fa-caret-down"></i></a>
                     </div>
-                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section2" >
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#courses" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png" />
                         <h4><?php _oi("Cursos"); ?> </h4>
                         <p><?php _oi("Lorem ipsum dolor sit amet, elit. Maecenasid velit lobortis."); ?></p>
                         <a href="#"><i class="fa fa-caret-down"></i></a>
                     </div>
-                    <div class="col-md-4 item-banner js-scroll-to" data-target="#section3">
+                    <div class="col-md-4 item-banner js-scroll-to" data-target="#network">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-redes.png" />
                         <h4><?php _oi("Redes"); ?> </h4>
                         <p><?php _oi("Lorem ipsum consectetur adipiscing ultricies magna porta, molestie diam."); ?></p>
@@ -101,7 +101,7 @@
     </div>
 </section>
 
-<section id="section1" class="">
+<section id="software" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
@@ -151,9 +151,7 @@
     </div><!-- /container-->
 </section>
 
-
-
-<section id="section2" class="">
+<section id="courses" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
@@ -207,11 +205,7 @@
     </div><!-- /container-->
 </section>
 
-
-
-
-
-<section id="section3" class="">
+<section id="network" class="section">
     <div class="container">
         <div class="boxs row">
             <div class="linha-mobile">
