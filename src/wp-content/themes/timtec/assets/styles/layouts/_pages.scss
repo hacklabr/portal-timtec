@@ -14,7 +14,7 @@
         color: $navy-blue;
         font-size: 1.1em;
         margin-bottom: 20px;
-    }
+    } 
 
     .list-conselho{
         ul{
@@ -151,53 +151,6 @@
     }
 }
 
-
-.page-id-144{
-
-    #fbuilder .medium {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
-    }
-
-    #fbuilder .small {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
-    }
-        
-    .main{
-        margin: 50px auto 150px;
-        float: none;
-        width:100%;
-        max-width: 1170px;
-        
-        label {
-            display: inline-block;
-            max-width: 100%;
-            font-family: $teuton24;
-            color: $navy-blue;
-            font-size: 1.5em;
-            font-weight: 700;
-        }
-
-        .pbSubmit{
-            width: 100%;
-            text-align: center;
-            background: #05c3ff;
-            color: #fff;
-            font-family: $teuton23;
-            display: inline-block;
-            border-radius: 0;
-            text-transform: uppercase;
-            margin: 5px;
-            font-size: 1.5em;
-        }
-    }
-}
-
 #page-faq {
     h3 {
         margin-top: 0;
@@ -288,7 +241,23 @@
 }
 
 .contato {
+
     #fbuilder {
+
+        .medium {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
+        .small {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
         .fields {
             label {
                 color: #666;
@@ -308,11 +277,23 @@
             float: right;
         }
         .pbSubmit {
-            background-color: #03c3ff;
+            text-align: center;
+            background: #05c3ff;
             color: #fff;
-            font-family: 'Teuton24Pro';
-            font-size: 22px;
-            margin: 0 4% 0 0;
+            font-family: $teuton23;
+            font-size: 1.5em;
+            display: inline-block;
+            border-radius: 0;
+            text-transform: uppercase;
+            margin: 5px auto;
+            width: 150px;
         }
+    }
+}
+
+#forum-question {
+    h1 {
+        font-size: 24px;
+        margin: 36px 0 24px; 
     }
 }
