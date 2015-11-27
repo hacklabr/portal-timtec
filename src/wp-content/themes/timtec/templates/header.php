@@ -16,35 +16,39 @@
                 <ul id="menu-menu-pt" class="nav">
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <a>Sobre</a>
-                        <ul class="sub-menu">
-                            <?php foreach($_MENUS['sobre'] as $label => $url): ?>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php
+                        wp_nav_menu(array(
+                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'theme_location'    => 'sobre-topo',
+                        ));
+                        ?>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <a>Software</a>
-                        <ul class="sub-menu">
-                            <?php foreach($_MENUS['software'] as $label => $url): ?>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php
+                        wp_nav_menu(array(
+                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'theme_location'    => 'software-topo',
+                        ));
+                        ?>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <a>Cursos</a>
-                        <ul class="sub-menu">
-                            <?php foreach($_MENUS['cursos'] as $label => $url): ?>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php
+                        wp_nav_menu(array(
+                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'theme_location'    => 'cursos-topo',
+                        ));
+                        ?>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
                         <a>Rede</a>
-                        <ul class="sub-menu">
-                            <?php foreach($_MENUS['rede'] as $label => $url): ?>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo $url ?>"><?php echo $label ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <?php
+                        wp_nav_menu(array(
+                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'theme_location'    => 'rede-topo',
+                        ));
+                        ?>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
