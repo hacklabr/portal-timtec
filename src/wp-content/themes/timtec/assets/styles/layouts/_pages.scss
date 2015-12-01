@@ -135,41 +135,46 @@
             }
         }
     }
+    h3 {
+        border-bottom: 1px solid $timtec-blue;
+        font-size: 3.5em;
+    }
     #section2 {
         background: transparent;
-        padding:0px;
-        margin-top: 20px;
-        
+        padding: 0;
+
         ul {
-            background:#f7f7f7;
-            margin: 1.1% 0 0;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
     
             li {
-                display: inline-block;
+                display: block;
                 background: #fff;
                 text-align: left;
                 vertical-align: top;
                 margin: 1% auto;
-                max-width: 350px;
+                max-width: 355px;
                 width: 100%; 
                 @media screen and (min-width: $screen-sm-min) {
-                    margin: 1.1%;
-                    max-width: auto;
-                    width: 47%;
+                    display: inline-block;
+                    margin: 1%;
+                    width: 47.6%;
                 }
                 @media screen and (min-width: $screen-md-min) {
-                    margin: 1.1%;
-                    width: 30.8%;
+                    margin: 1%;
+                    width: 31%;
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    width: 31.1%;
                 }
                 
                 img {
-                        width: 100%;
+                    width: 100%;
                 }
                 
                 .content-curso {
                     max-height: 340px;
-                    padding: 10px;
+                    padding-top: 10px;
                     
                     h4 {
                         color: #414141;
