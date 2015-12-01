@@ -2,11 +2,13 @@
 	background: #095DAF;
     position: absolute;
     bottom: 0;
-    height: 280px;
+    height: 300px;
     width: 100%;
-
     @media screen and (min-width: $screen-md-min) {
-        height: 145px;
+        height: 200px;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+        height: 165px;
     }
 
 	.content-footer {

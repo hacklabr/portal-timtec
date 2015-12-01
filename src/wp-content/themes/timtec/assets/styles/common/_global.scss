@@ -4,12 +4,13 @@ html {
 }
 
 body {
-    padding-bottom: 270px;
-
+    padding-bottom: 300px;
     @media screen and (min-width: $screen-md-min) {
-        padding-bottom:: 135px;
+        padding-bottom: 200px;
     }
-
+    @media screen and (min-width: $screen-lg-min) {
+        padding-bottom: 165px;
+    }
 }
 
 .center {
