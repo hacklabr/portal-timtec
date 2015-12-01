@@ -49,6 +49,92 @@
 }
 
 #page-course {
+    .banner {
+        background-color: #0aa8b2;
+        height: 360px;
+        margin-bottom: 40px;
+        position: relative;
+        .carousel {
+            background: url('../images/ilustra-topo-cursos.png') no-repeat;
+            background-position: right 40px;
+            height: 360px;
+            overflow: hidden;
+            .carousel-title {
+                background: url('../images/icones-cursos.png') center left no-repeat;
+                background-size: 75px 75px;
+                color: $timtec-blue;
+                font-family: $teuton24;
+                font-size: 60px;
+                margin: 0;
+                padding-left: 90px;
+                position: absolute;
+                text-transform: uppercase;
+                top: 80px;
+                span {
+                    color: #fff;
+                    display: block;
+                    font-family: $teuton22;
+                    font-size: 36px;
+                    text-transform: initial;
+                }
+            }
+            .carousel-indicators {
+                bottom: initial;
+                left: 90px;
+                margin-left: 0;
+                top: 225px;
+                width: 105px;
+                li {
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    display: block;
+                    height: auto;
+                    margin-bottom: 3px;
+                    width: 105px;
+                    text-align: left;
+                    text-indent: 0;
+                    span {
+                        background-color: #b8c8c9;
+                        color: #fff;
+                        display: inline-block;
+                        font-family: $teuton22;
+                        font-size: 14px;
+                        &.number {
+                            text-align: center;
+                            width: 15px;
+                        }
+                        &.text {
+                            display: none;
+                            padding-left: 5px;
+                            width: 75px;
+                        }
+                    }
+
+                    &.active {
+                        span {
+                            background-color: $timtec-blue;
+                            font-family: $teuton24;
+                            font-size: 16px;
+                            &.text {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-inner {
+                color: #fff;
+                font-size: 16px;
+                height: auto;
+                left: 200px;
+                position: absolute;
+                right: 115px;
+                top: 222px;
+                width: auto;
+            }
+        }
+    }
     #section2 {
         background: transparent;
         padding:0px;
@@ -112,7 +198,7 @@
                         text-transform: uppercase;
                         font-weight: bold;
                         &.moretag {
-                            color: #05c3ff;
+                            color: $cyan-blue;
                             text-decoration: underline; 
                             &:hover {
                                 text-decoration: none;
@@ -278,7 +364,7 @@
         }
         .pbSubmit {
             text-align: center;
-            background: #05c3ff;
+            background: $cyan-blue;
             color: #fff;
             font-family: $teuton23;
             font-size: 1.5em;

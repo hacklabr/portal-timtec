@@ -20,7 +20,7 @@ body {
 .btn {
     width: 200px;
     text-align: center;
-    background: #05c3ff;
+    background: $cyan-blue;
     color: #fff;
     font-family: $teuton25;
     display: inline-block;
@@ -36,12 +36,12 @@ body {
 
 .main {
     padding: 0px !important;
-    margin-top: 60px;
+    margin-top: 58px;
 }
 
 .base-content{
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 58px;
+    margin-top: 58px;
 
     h3 {
         font-family: $teuton25;
@@ -71,7 +71,7 @@ body {
 
     .box {
         width: 45%;
-        background: #05c3ff;
+        background: $cyan-blue;
         color: #fff;
         display: inline-block;
         border-radius: 0;
