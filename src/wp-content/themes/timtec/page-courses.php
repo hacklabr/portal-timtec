@@ -1,4 +1,8 @@
-<?php get_template_part('templates/head'); ?>
+<?php
+/**
+ * Template Name: Lista de Cursos Template
+ */
+?>
 
 <?php
 global $teacher_course_relation, $couse_download;
@@ -78,7 +82,7 @@ get_template_part('templates/header');
                                 <div class="institute">Instituto</div>
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
-                            
+
                                 <?php if ($course_url): ?>
                                     <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
                                 <?php endif; ?>
@@ -107,8 +111,3 @@ get_template_part('templates/header');
         </section>
     </div>
 </div>
-
-<?php
-do_action('get_footer');
-get_template_part('templates/footer');
-wp_footer();
