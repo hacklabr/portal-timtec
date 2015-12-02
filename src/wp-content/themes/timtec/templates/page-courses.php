@@ -75,17 +75,20 @@ get_template_part('templates/header');
                         <li>
                             <img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
                             <div class="content-curso">
+                                <div class="institute">Instituto</div>
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
-                                <div class="description"><?php the_excerpt(); ?></div>
+                            
                                 <?php if ($course_url): ?>
-                                    <a href="<?php echo $course_url; ?>" class="btn goto">Fazer curso</a>
+                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
                                 <?php endif; ?>
                                 <?php
                                 if ($couse_download->getFilePath(get_the_ID())):
                                     $download_url = $couse_download->getFileUrl(get_the_ID());
                                     ?>
-                                    <a href="<?php echo $download_url ?>" class="btn download">Baixar o curso</a>
+                                    <a href="<?php echo $download_url ?>" class="download">
+                                        <i class="fa fa-cloud-download"></i> Baixar pacote
+                                    </a>
                                 <?php endif; ?>
 
                             </div>
@@ -96,6 +99,10 @@ get_template_part('templates/header');
                     wp_reset_query();
                     ?>
                 </ul>
+            </div>
+            <div class="show-more-courses">
+                <p>carregar mais cursos</p>
+                <i class="fa fa-angle-down"></i>
             </div>
         </section>
     </div>

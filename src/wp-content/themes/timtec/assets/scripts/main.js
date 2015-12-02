@@ -146,4 +146,14 @@ $('.js-scroll-to').on('click', function(e){
 
 });
 
+/**
+* Mostra mais cursos na lista de cursos
+*/
+
+$('.show-more-courses').on('click', function(e){
+    $(this).css('display','none');
+    $('.list-courses').addClass('open');
+});
+
+
 })(jQuery); // Fully reference jQuery after this point.
