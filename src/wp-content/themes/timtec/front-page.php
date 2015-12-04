@@ -2,13 +2,13 @@
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
-        <h3>Esse é o Novo Site do TIM TEC!</h3>
+        <h3><a href="http://mooc.timtec.com.br">CLIQUE AQUI PARA ACESSAR OS CURSOS</a></h3>
         <hr>
-        <p>Se você é aluno e quer ir para a plataforma de cursos o novo endereço é <a href="http://mooc.timtec.com.br" target="_blank">mooc.timtec.com.br</a></p>
+        <p>Este é o novo Portal TIM Tec. A plataforma TIM Tec mudou de endereço: <a href="http://mooc.timtec.com.br">mooc.timtec.com.br</a></p>
     </div>
 </section>
 
-<!-- 
+<!--
 <section id="news" class="" >
     <div class="container">
         <h3>Novidades: </h3>
@@ -59,7 +59,7 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
       </a>
-    
+
    </div>
 </div>
     </div>
@@ -122,16 +122,12 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, qui tem matis, aguis e fermentis. Interagi  vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <?php foreach($_MENUS['software'] as $label => $url): ?>
-                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
-                        <?php endforeach; ?>
                         <?php
-                        /*
                         wp_nav_menu(array(
-                            'menu'    => 'software',
+                            'items_wrap' => '<span id="%1$s" class="sub-menu">%3$s</span>',
+                            'theme_location'    => 'software-home',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
-                         */
                         ?>
                     </div>
                 </div>
@@ -187,16 +183,12 @@
                         <?php _oi("Suco de cevadiss, é um leite divinis, aguis e fermentis. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.  Aenean justo massa."); ?>
                     </div>
                     <div class="links">
-                        <?php foreach($_MENUS['cursos'] as $label => $url): ?>
-                            <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
-                        <?php endforeach; ?>
                         <?php
-                        /*
                         wp_nav_menu(array(
-                            'menu'    => 'cursos',
+                            'items_wrap' => '<span id="%1$s" class="sub-menu">%3$s</span>',
+                            'theme_location'    => 'cursos-home',
                             'walker'  => new MenuWalker_Buttons() //use our custom walker
                         ));
-                         */
                         ?>
                     </div>
                 </div>
@@ -215,7 +207,7 @@
             <div class="col-md-12 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>
             </div>
-            
+
             <div class="col-md-6">
                 <div class="title">
                     <h3><?php _oi("REDES"); ?></h3>
@@ -223,16 +215,12 @@
                 </div>
 
                 <div class="links hidden-sm hidden-xs">
-                    <?php foreach($_MENUS['rede'] as $label => $url): ?>
-                        <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
-                    <?php endforeach; ?>
                     <?php
-                    /*
                     wp_nav_menu(array(
-                        'menu'    => 'redes',
+                        'items_wrap' => '<span id="%1$s" class="sub-menu">%3$s</span>',
+                        'theme_location'    => 'rede-home',
                         'walker'  => new MenuWalker_Buttons() //use our custom walker
                     ));
-                     */
                     ?>
                 </div>
             </div>
@@ -253,16 +241,12 @@
             </div>
 
             <div class="links hidden-md hidden-lg">
-                <?php foreach($_MENUS['rede'] as $label => $url): ?>
-                    <a href="<?php echo $url ?>" class="btn"><?php echo $label; ?></a>
-                <?php endforeach; ?>
                 <?php
-                /*
                 wp_nav_menu(array(
-                    'menu'    => 'redes',
+                    'items_wrap' => '<span id="%1$s" class="sub-menu">%3$s</span>',
+                    'theme_location'    => 'software-home',
                     'walker'  => new MenuWalker_Buttons() //use our custom walker
                 ));
-                 */
                 ?>
             </div>
         </div> <!-- /.row -->

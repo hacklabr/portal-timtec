@@ -1,18 +1,33 @@
 #footer-info {
 	background: #095DAF;
+    position: absolute;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    @media screen and (min-width: $screen-md-min) {
+        height: 200px;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+        height: 165px;
+    }
 
 	.content-footer {
 
         .widget_nav_menu {
-            width: 20%;
             float: left;
+            margin-right: 1%;
+            width: 19%;
             
+            &:last-child {
+                margin-right: 0;
+            }
+
             h3 {
                 color: #fff;
-                font-size: 14px;
+                font-size: 1.3em;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                font-family: $teuton23;
+                font-family: $teuton25;
 
             }
 
@@ -21,11 +36,12 @@
                 padding: 0px;
                 margin: 2% 0 0;
 
-                li {	
+                li {
+                    margin-bottom: 5px;
                     a {
-                        color: #2193d4;
+                        color: #04c3ff;
                         font-family: $teuton24;
-                        white-space: nowrap;
+                        font-size: 1.1em;
                     }
 
                 }

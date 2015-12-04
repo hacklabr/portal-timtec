@@ -122,14 +122,14 @@ $sage_includes = [
  */
 //*
 
-pll_register_string('URL Cursos', 'cursos', 'timtec');
+//pll_register_string('URL Cursos', 'cursos', 'timtec');
 pll_register_string('URL Software', 'software', 'timtec');
 pll_register_string('URL Redes', 'redes', 'timtec');
 pll_register_string('URL Noticias', 'noticias', 'timtec');
 pll_register_string('URL Suporte', 'suporte', 'timtec');
 pll_register_string('URL Cadastro', 'cadastro', 'timtec');
 //pll_register_string('URL Contato', 'contato', 'timtec');
-pll_register_string('URL Conselho', 'conselho', 'timtec');
+//pll_register_string('URL Conselho', 'conselho', 'timtec');
 
 pll_register_string('URL Manuais', 'manuais', 'timtec');
 pll_register_string('URL Desenvolva', 'desenvolva-o-software', 'timtec');
@@ -139,16 +139,16 @@ pll_register_string('URL Mural', 'mural', 'timtec');
 pll_register_string('URL Conheça', 'conheca-timtec', 'timtec');
 pll_register_string('URL MOOCS', 'o-que-sao-moocs', 'timtec');
 pll_register_string('URL Explore', 'explore-a-plataforma', 'timtec');
-pll_register_string('URL Conheça a Rede', 'conheca-a-rede-tim-tec', 'timtec');
+// pll_register_string('URL Conheça a Rede', 'conheca-a-rede-tim-tec', 'timtec');
 
 add_action('generate_rewrite_rules', function ($wp_rewrite) {
   $new_rules=[];
   foreach (pll_languages_list() as $lcode) {
-    $str_courses = pll_translate_string('cursos', $lcode);
-    $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
+//    $str_courses = pll_translate_string('cursos', $lcode);
+//    $new_rules["^$lcode/$str_courses/?$"] = "index.php?template=courses";
 
-    $str_conselho = pll_translate_string('conselho', $lcode);
-    $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
+//    $str_conselho = pll_translate_string('conselho', $lcode);
+//    $new_rules["^$lcode/$str_conselho/?$"] = "index.php?template=conselho";
 //
 //    $str_software = pll_translate_string('software', $lcode);
 //    $new_rules["^$lcode/$str_software/?$"] = "index.php?template=software";
@@ -193,8 +193,8 @@ add_action('generate_rewrite_rules', function ($wp_rewrite) {
 //    $str_explore = pll_translate_string('explore-a-plataforma', $lcode);
 //    $new_rules["^$lcode/$str_explore/?$"] = "index.php?template=explore-a-plataforma";
 
-    $str_conheca_rede = pll_translate_string('conheca-a-rede-tim-tec', $lcode);
-    $new_rules["^$lcode/$str_conheca_rede/?$"] = "index.php?template=conheca-a-rede-tim-tec";
+//    $str_conheca_rede = pll_translate_string('conheca-a-rede-tim-tec', $lcode);
+//    $new_rules["^$lcode/$str_conheca_rede/?$"] = "index.php?template=conheca-a-rede-tim-tec";
 
   }
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

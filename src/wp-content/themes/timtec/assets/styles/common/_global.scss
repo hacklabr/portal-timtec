@@ -1,3 +1,18 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    padding-bottom: 300px;
+    @media screen and (min-width: $screen-md-min) {
+        padding-bottom: 200px;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+        padding-bottom: 165px;
+    }
+}
+
 .center {
     margin: 0 auto;
     float: none;
@@ -6,7 +21,7 @@
 .btn {
     width: 200px;
     text-align: center;
-    background: #05c3ff;
+    background: $cyan-blue;
     color: #fff;
     font-family: $teuton25;
     display: inline-block;
@@ -20,21 +35,26 @@
     clear:both;
 }
 
+.main {
+    padding: 0px !important;
+    margin-top: 58px;
+}
+
 .base-content{
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 58px;
+    margin-top: 58px;
 
     h3 {
         font-family: $teuton25;
-        color: $navy-blue;
+        color: $timtec-blue;
         font-size: 4em;
         margin-bottom: 20px;
-        margin-top: 60px;
+        margin-top: 0px;
     }
 
     h4 {
         font-family: $teuton25;
-        color: $navy-blue;
+        color: $timtec-blue;
         font-size: 1.5em;
         margin-bottom: 20px;
         margin-top: 60px;
@@ -52,7 +72,7 @@
 
     .box {
         width: 45%;
-        background: #05c3ff;
+        background: $cyan-blue;
         color: #fff;
         display: inline-block;
         border-radius: 0;

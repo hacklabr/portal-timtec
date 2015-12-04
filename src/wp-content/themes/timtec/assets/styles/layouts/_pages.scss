@@ -1,20 +1,9 @@
 #page-conselho{
-    
-    h3 {
-        font-family: $teuton24;
-        color: $navy-blue;
-        font-size: 4em;
-        margin-bottom: 20px;
-        font-weight: bold;
-        margin-top: 60px;
-    }
-
     p {
-        
         color: $navy-blue;
         font-size: 1.1em;
         margin-bottom: 20px;
-    }
+    } 
 
     .list-conselho{
         ul{
@@ -49,151 +38,235 @@
 }
 
 #page-course {
-    #section2 {
-        background: transparent;
-        padding:0px;
-        margin-top: 20px;
-        
-        ul {
-            background:#f7f7f7;
-            margin: 1.1% 0 0;
-            padding: 0px;
-    
-            li {
-                display: inline-block;
-                background: #fff;
-                text-align: left;
-                vertical-align: top;
-                margin: 1% auto;
-                max-width: 350px;
-                width: 100%; 
-                @media screen and (min-width: $screen-sm-min) {
-                    margin: 1.1%;
-                    max-width: auto;
-                    width: 47%;
+    &.base-content {
+        margin-top: 0;
+    }
+    .banner {
+        background-color: #0aa8b2;
+        height: 360px;
+        margin-bottom: 40px;
+        position: relative;
+        .carousel {
+            background: url('../images/ilustra-topo-cursos.png') no-repeat;
+            background-position: right 40px;
+            height: 360px;
+            overflow: hidden;
+            .carousel-title {
+                background: url('../images/icones-cursos.png') center left no-repeat;
+                background-size: 75px 75px;
+                color: $timtec-blue;
+                font-family: $teuton24;
+                font-size: 60px;
+                margin: 0;
+                padding-left: 90px;
+                position: absolute;
+                text-transform: uppercase;
+                top: 80px;
+                .subtitle {
+                    color: #fff;
+                    display: block;
+                    font-family: $teuton22;
+                    font-size: 36px;
+                    text-transform: initial;
                 }
-                @media screen and (min-width: $screen-md-min) {
-                    margin: 1.1%;
-                    width: 30.8%;
-                }
-                
-                img {
-                        width: 100%;
-                }
-                
-                .content-curso {
-                    max-height: 340px;
-                    padding: 10px;
-                    
-                    h4 {
-                        color: #414141;
-                        font-family: $teuton23;
-                        font-size: 1.6em;
-                        margin: 0 0 5px; 
-                    }
-
-                    .author {
-                        color: #a5a5a5;
-                        font-size: 0.9em;
-                        
-                    }
-
-                    .description {
-                        p {
-                            color: #414141;
-                            font-size: 1em;
-                            
-                        }
-                    }
-
-                    a {
+            }
+            .carousel-indicators {
+                bottom: initial;
+                left: 90px;
+                margin-left: 0;
+                top: 225px;
+                width: 110px;
+                li {
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    display: block;
+                    height: auto;
+                    margin-bottom: 3px;
+                    width: 110px;
+                    text-align: left;
+                    text-indent: 0;
+                    span {
+                        background-color: #b8c8c9;
                         color: #fff;
-                        font-family: $teuton23;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        &.moretag {
-                            color: #05c3ff;
-                            text-decoration: underline; 
-                            &:hover {
-                                text-decoration: none;
-                            }
+                        display: inline-block;
+                        font-family: $teuton22;
+                        font-size: 14px;
+                        line-height: 1.3;
+                        transition: all 0.3s ease;
+                        &.number {
+                            text-align: center;
+                            width: 15px;
                         }
-                        &.btn {
+                        &.text {
                             display: inline-block;
-                            margin: 0;
-                            width: 120px;
+                            padding-left: 5px;
+                            width: 75px;
                         }
-                        &.btn + .btn {
-                            margin-left: 10px;
-                        } 
-                        &.goto {
-                            background-color: #FF8969;
-                            &:hover { 
-                                background-color: #E67860;
-                            }
-                            &:focus, &:active {
-                                background-color: #E67860;
-                            }
+                    }
+                    &.active {
+                        span {
+                            background-color: $timtec-blue;
+                            font-family: $teuton24;
+                            font-size: 16px;
                         }
-                        &.download {
-                            background-color: #C5D1EA;
-                            &:hover { 
-                                background-color: #4d70b5;
-                            }
-                            &:focus, &:active {
-                                background-color: #3d5990;
+                    }
+                    &:hover {
+                        span {
+                            background-color: #0000ff;
+                            font-family: $teuton24;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            &.text {
+                                width: 90px;
                             }
                         }
                     }
                 }
             }
+            .carousel-inner {
+                color: #fff;
+                font-size: 16px;
+                height: auto;
+                left: 215px;
+                position: absolute;
+                right: 115px;
+                top: 222px;
+                width: auto;
+            }
         }
     }
-}
-
-
-.page-id-144{
-
-    #fbuilder .medium {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
+    h3 {
+        border-bottom: 1px solid $timtec-blue;
+        font-size: 3em;
+        padding-bottom: 5px;
     }
+    #section2 {
+        background: transparent;
+        padding: 0;
 
-    #fbuilder .small {
-        width: 100% !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding: 6px;
-    }
-        
-    .main{
-        margin: 50px auto 150px;
-        float: none;
-        width:100%;
-        max-width: 1170px;
-        
-        label {
-            display: inline-block;
-            max-width: 100%;
-            font-family: $teuton24;
+        .list-courses {
+            height: 810px;
+            overflow: hidden;
+            &.open {
+                height: auto;
+            }
+        }
+        .show-more-courses {
             color: $navy-blue;
-            font-size: 1.5em;
-            font-weight: 700;
+            cursor: pointer;
+            margin: 35px 0 0;
+            text-align: center;
+            p {
+                font-family: $teuton25;
+                font-size: 1.6em;
+                line-height: 1.3;
+                margin: 0;
+            }
+            .fa {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
         }
 
-        .pbSubmit{
-            width: 100%;
-            text-align: center;
-            background: #05c3ff;
-            color: #fff;
-            font-family: $teuton23;
-            display: inline-block;
-            border-radius: 0;
-            text-transform: uppercase;
-            margin: 5px;
-            font-size: 1.5em;
+        ul {
+            margin: 0;
+            padding: 0;
+    
+            li {
+                display: block;
+                background: #fff;
+                height: 396px;
+                margin: 1% auto;
+                max-width: 355px;
+                text-align: left;
+                vertical-align: top;
+                width: 100%; 
+                @media screen and (min-width: $screen-sm-min) {
+                    display: inline-block;
+                    margin: 1%;
+                    width: 47.6%;
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    margin: 1%;
+                    width: 31%;
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    width: 31.1%;
+                }
+                
+                img {
+                    width: 100%;
+                }
+                
+                .content-curso {
+                    max-height: 103px;
+                    padding-top: 5px;
+                    
+                    h4 {
+                        color: #4d4d4d;
+                        font-family: $font-family-sans-serif;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        line-height: 1.3;
+                        margin: 3px 0; 
+                        max-height: 44px;
+                    }
+
+                    .author, .institute {
+                        color: #333;
+                        font-size: 0.9em; 
+                        line-height: 1.3;
+                    } 
+
+                    .author {
+                        margin-bottom: 15px;
+                        max-height: 32px;
+                    }
+
+                    a {
+                        color: #fff;
+                        &.moretag {
+                            color: $cyan-blue;
+                            text-decoration: underline; 
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &.goto, &.download {
+                            float: left;
+                        }
+                        &.goto {
+                            background-color: #33cdc2;
+                            font-family: $teuton26;
+                            margin: 0;
+                            padding: 2px 12px;
+                            width: auto;
+                            &:hover { 
+                                background-color: #00c1b3;
+                            }
+                            &:focus, &:active {
+                                background-color: #009186;
+                            }
+                        }
+                        &.download {
+                            color: #ff8969;
+                            display: block;
+                            font-family: $teuton24;
+                            margin: 4px 0 0 8px;
+                            text-decoration: none;
+                            text-transform: initial;
+                            transition: color 1s ease;
+                            &:hover { 
+                                color: #e8684e;
+                            }
+                            &:focus, &:active {
+                                color: #e8684e;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -288,7 +361,23 @@
 }
 
 .contato {
+
     #fbuilder {
+
+        .medium {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
+        .small {
+            width: 100% !important;
+            padding-left: 0;
+            padding-right: 0;
+            padding: 6px;
+        }
+
         .fields {
             label {
                 color: #666;
@@ -308,11 +397,77 @@
             float: right;
         }
         .pbSubmit {
-            background-color: #03c3ff;
+            text-align: center;
+            background: $cyan-blue;
             color: #fff;
-            font-family: 'Teuton24Pro';
-            font-size: 22px;
-            margin: 0 4% 0 0;
+            font-family: $teuton23;
+            font-size: 1.5em;
+            display: inline-block;
+            border-radius: 0;
+            text-transform: uppercase;
+            margin: 10px 0;
+            width: 150px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-right: 50px;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                margin-right: 130px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                margin-right: 195px;
+            }
         }
+    }
+    @media screen and (max-width: $screen-xs-max) {
+        #fbuilder {
+            .fields {
+                padding: 15px 0 0;
+                label {
+                    float: none;
+                    padding-bottom: 0;
+                    text-align: left;
+                }
+                .dfield {
+                    float: none;
+                    width: 100%;
+                }
+            } 
+            input, textarea {
+                border: 1px solid #ccc;
+                padding: 12px 6px !important; 
+                margin: 0;
+            }
+        }
+    }
+}
+
+.type-dwqa-question {
+    h1 {
+        font-size: 24px;
+        margin: 36px 0 24px; 
+    }
+    .byline {
+        font-size: 12px;
+        margin: 24px 0;
+    }
+    .dwqa-comments {
+        margin-top: 36px;
+    }
+    .dwqa-headline {
+        border-top: 0;
+        font-family: $font-family-sans-serif;
+        margin-top: 24px;
+    }
+    .dwqa-favourite {
+        width: auto;
+    }
+    .dwqa-single-question .dwqa-current-status .dropdown-toggle, .dwqa-single-question .dwqa-current-status .dwqa-status-name, .dwqa-single-question .dwqa-question .dwqa-actions .dropdown-toggle {
+        font-size: 12px;
+    }
+    .dwqa-question {
+        overflow: hidden;
+    }
+    #dwqa-answers {
+        margin-top: 24px; 
     }
 }
