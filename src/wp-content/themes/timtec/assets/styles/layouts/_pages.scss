@@ -1,3 +1,48 @@
+.page {
+    .banner {
+        height: 360px;
+        margin-bottom: 40px;
+        position: relative;
+        .container {
+            height: 360px;
+            position: relative;
+        }
+        .title {
+            background-position: center left;
+            background-repeat: no-repeat;
+            background-size: 75px 75px;
+            color: #fff;
+            font-family: $teuton24;
+            font-size: 60px;
+            margin: 0;
+            min-height: 75px;
+            padding-left: 90px;
+            position: absolute;
+            top: 80px;
+            .subtitle {
+                color: #fff;
+                display: block;
+                font-family: $teuton22;
+                font-size: 36px;
+                text-transform: initial;
+            }
+        }
+        .info {
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            top: 170px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-left: 70px;
+                top: 200px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                top: 240px;
+            }
+        }
+    }
+}
+
 #page-conselho{
     p {
         color: $navy-blue;
@@ -9,7 +54,6 @@
         ul{
             margin: 40px 0px;
             padding: 0px;
-    
             
             li{
                 
@@ -43,32 +87,16 @@
     }
     .banner {
         background-color: #0aa8b2;
-        height: 360px;
-        margin-bottom: 40px;
-        position: relative;
         .carousel {
             background: url('../images/ilustra-topo-cursos.png') no-repeat;
             background-position: right 40px;
             height: 360px;
             overflow: hidden;
-            .carousel-title {
-                background: url('../images/icones-cursos.png') center left no-repeat;
-                background-size: 75px 75px;
+            .title {
+                background-image: url('../images/icones-cursos.png');
                 color: $timtec-blue;
                 font-family: $teuton24;
-                font-size: 60px;
-                margin: 0;
-                padding-left: 90px;
-                position: absolute;
                 text-transform: uppercase;
-                top: 80px;
-                .subtitle {
-                    color: #fff;
-                    display: block;
-                    font-family: $teuton22;
-                    font-size: 36px;
-                    text-transform: initial;
-                }
             }
             .carousel-indicators {
                 bottom: initial;
@@ -79,7 +107,7 @@
                 li {
                     background-color: transparent;
                     border: 0;
-                    border-radius: 0;
+                    border-radius: 0; 
                     display: block;
                     height: auto;
                     margin-bottom: 3px;
@@ -264,6 +292,79 @@
                                 color: #e8684e;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#page-news {
+    &.base-content {
+        margin-top: 0;
+    }
+    .banner {
+        background-position: center;
+        background-size: cover;
+        
+        .title {
+            background-image: url('../images/icones-cursos.png');
+            span {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+
+        .info {
+            .post-category {
+                background-color: $orange;
+                color: #fff;
+                display: inline-block;
+                font-family: $teuton25;
+                font-size: 13px;
+                padding: 2px 5px;
+                text-transform: uppercase;
+            }
+            .post-title {
+                color: #fff;
+                font-family: $font-family-sans-serif;
+                font-size: 36px;
+                font-weight: bold;
+                margin: 0;
+                a {
+                    color: #fff;
+                }
+            }
+            .post-excerpt {
+                color: #fff;
+                a {
+                    color: #fff;
+                }
+                @media screen and (min-width: $screen-sm-min) {
+                    float: left;
+                    max-width: 550px; 
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    max-width: 760px;
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    max-width: 840px;
+                }
+            }
+            .read-more {
+                color: #fff;
+                float: right;
+                font-weight: bold;
+                a {
+                    color: #fff;                   
+                    .arrow {
+                        border: 2px solid #fff;
+                        border-radius: 100%;
+                        display: inline-block;
+                        height: 25px;
+                        margin-left: 5px;
+                        text-align: center;
+                        width: 25px; 
                     }
                 }
             }

@@ -14,7 +14,7 @@ get_template_part('templates/header');
     <div class="banner">
         <div class="container">
             <div id="carousel-list-course" class="carousel slide" data-ride="carousel">
-                <h2 class="carousel-title"><?php _oi("CURSOS"); ?> <span class="subtitle">[<?php _oi("Lista de Cursos"); ?>]</span></h2>
+                <h2 class="title"><?php _oi("CURSOS"); ?> <span class="subtitle">[<?php _oi("Lista de Cursos"); ?>]</span></h2>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
