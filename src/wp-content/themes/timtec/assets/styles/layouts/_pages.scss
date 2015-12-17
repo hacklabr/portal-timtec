@@ -303,10 +303,39 @@
     &.base-content {
         margin-top: 0;
     }
+    .post-category {
+        color: #fff;
+        display: inline-block;
+        font-family: $teuton25;
+        font-size: 13px;
+        padding: 2px 5px;
+        text-transform: uppercase;
+        &.orange {
+            background-color: $orange;
+        }
+        &.blue {
+            background-color: $cyan-blue;
+        }
+    }
+    .post-title {
+        color: #000;
+        font-family: $font-family-sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+        a {
+            color: #000;
+        }
+    }
+    .post-excerpt {
+        color: #000;
+        a {
+            color: #000;
+        }
+    }
     .banner {
         background-position: center;
         background-size: cover;
-        
         .title {
             background-image: url('../images/icones-cursos.png');
             span {
@@ -314,59 +343,129 @@
                 margin-top: 5px;
             }
         }
-
-        .info {
-            .post-category {
-                background-color: $orange;
+        .post-title {
+            color: #fff;
+            font-size: 36px;
+            a {
                 color: #fff;
-                display: inline-block;
-                font-family: $teuton25;
-                font-size: 13px;
-                padding: 2px 5px;
-                text-transform: uppercase;
             }
-            .post-title {
+        }
+        .post-excerpt { 
+            color: #fff;
+            a {
                 color: #fff;
-                font-family: $font-family-sans-serif;
-                font-size: 36px;
-                font-weight: bold;
-                margin: 0;
-                a {
-                    color: #fff;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+                float: left;
+                max-width: 550px; 
+            }
+            @media screen and (min-width: $screen-md-min) {
+                max-width: 760px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                max-width: 840px;
+            }
+        }
+        .read-more {
+            color: #fff;
+            float: right;
+            font-weight: bold;
+            a {
+                color: #fff;                   
+                .arrow {
+                    border: 2px solid #fff;
+                    border-radius: 100%;
+                    display: inline-block;
+                    height: 25px;
+                    margin-left: 5px;
+                    text-align: center;
+                    width: 25px; 
                 }
             }
-            .post-excerpt {
-                color: #fff;
-                a {
-                    color: #fff;
-                }
+        }
+    }
+    .news {
+        .featured {
+            margin-bottom: 50px;
+            .featured-big {
+                margin-bottom: 30px;
+                @extend .col-xs-12;
                 @media screen and (min-width: $screen-sm-min) {
-                    float: left;
-                    max-width: 550px; 
+                    @extend .col-sm-12;
                 }
                 @media screen and (min-width: $screen-md-min) {
-                    max-width: 760px;
+                    @extend .col-md-12;
                 }
                 @media screen and (min-width: $screen-lg-min) {
-                    max-width: 840px;
+                    @extend .col-lg-12;
                 }
-            }
-            .read-more {
-                color: #fff;
-                float: right;
-                font-weight: bold;
-                a {
-                    color: #fff;                   
-                    .arrow {
-                        border: 2px solid #fff;
-                        border-radius: 100%;
-                        display: inline-block;
-                        height: 25px;
-                        margin-left: 5px;
-                        text-align: center;
-                        width: 25px; 
+                .news-box {
+                    height: 400px;
+                }
+                .post-title { 
+                    @media screen and (min-width: $screen-sm-min) {
+                        margin-top: 230px;
                     }
                 }
+            }
+            .featured-small {
+                @extend .col-xs-12;
+                @media screen and (min-width: $screen-sm-min) {
+                    @extend .col-sm-6;
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    @extend .col-md-6;
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    @extend .col-lg-6;
+                }
+                .news-box {
+                    height: 190px;
+                }
+                .post-title { 
+                    font-size: 20px;
+                    @media screen and (min-width: $screen-sm-min) {
+                        margin-top: 80px;
+                    }
+                }
+            }
+            .news-box {
+                background-position: center;
+                background-size: cover;
+                padding: 25px 15px;
+                .post-title { 
+                    color: #fff;
+                    a {
+                        color: #fff;
+                    }
+                }
+                .post-excerpt {
+                    color: #fff;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .list {
+            .list-title {
+                color: #000;
+                font-family: $teuton25;
+                font-size: 36px;
+                margin: 0 0 25px 0;
+            }
+            .list-item {
+                border-bottom: 1px solid #808080;
+                margin-bottom: 50px;
+                padding-bottom: 25px;
+            }
+            .post-date { 
+                float: right;
+                font-size: 11px;
+            }
+            .post-title {
+                font-size: 24px;
+                margin: 15px 0;
             }
         }
     }
