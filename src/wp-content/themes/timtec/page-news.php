@@ -23,8 +23,8 @@ get_template_part('templates/header');
 
     <div class="container">
         <div class="row">
-            <div class="news col-md-8">
-                <div class="featured row">
+            <div class="main-news">
+                <div class="featured">
                     <div class="featured-big">
                         <div class="news-box" style="background-image: url(http://lorempixel.com/600/400/);">
                             <span class="post-category blue">#Categoria</span>
@@ -71,8 +71,69 @@ get_template_part('templates/header');
                     </div>
                 </div>
             </div>
-            <div class="sidebar col-md-4">
-                
+            <div class="sidebar-news">
+                <div class="last-news">
+
+                    <h2 class="sidebar-title"><?php _oi("As mais atuais"); ?></h2>
+
+                    <div class="list-item">
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <time class="post-date">as 00h00 dia 00/00/0000</time>
+                        <div class="news-box" style="background-image: url(http://lorempixel.com/300/150/);"><span class="post-category orange">#Categoria</span></div>
+                    </div>
+
+                    <div class="list-item">
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <time class="post-date">as 00h00 dia 00/00/0000</time>
+                        <div class="news-box" style="background-image: url(http://lorempixel.com/300/150/);"><span class="post-category orange">#Categoria</span></div>
+                    </div>
+
+                    <div class="list-item">
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <time class="post-date">as 00h00 dia 00/00/0000</time>
+                        <div class="news-box" style="background-image: url(http://lorempixel.com/300/150/);"><span class="post-category orange">#Categoria</span></div>
+                    </div>
+                </div>
+                <div class="twitter-news">
+                                        
+                    <h2 class="sidebar-title"><?php _oi("Do Twitter"); ?></h2>
+
+                    <div class="list-item">
+                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
+                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
+                        <time class="twitter-date">00/00/0000 00:00</time>
+                        <div class="twitter-content">
+                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
+                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
+                        <time class="twitter-date">00/00/0000 00:00</time>
+                        <div class="twitter-content">
+                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
+                        </div>
+                    </div>
+                    
+                    <div class="list-item">
+                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
+                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
+                        <time class="twitter-date">00/00/0000 00:00</time>
+                        <div class="twitter-content">
+                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
+                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
+                        <time class="twitter-date">00/00/0000 00:00</time>
+                        <div class="twitter-content">
+                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

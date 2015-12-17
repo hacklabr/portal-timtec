@@ -314,7 +314,7 @@
             background-color: $orange;
         }
         &.blue {
-            background-color: $cyan-blue;
+            background-color: #1ba9b2;
         }
     }
     .post-title {
@@ -384,9 +384,23 @@
             }
         }
     }
-    .news {
+    .news-box {
+        background-position: center;
+        background-size: cover;
+    }
+    .main-news {
+        @extend .col-xs-12;
+        @media screen and (min-width: $screen-sm-min) {
+            @extend .col-sm-7;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            @extend .col-md-8;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            @extend .col-lg-9;
+        }
         .featured {
-            margin-bottom: 50px;
+            @extend .row;
             .featured-big {
                 margin-bottom: 30px;
                 @extend .col-xs-12;
@@ -409,6 +423,7 @@
                 }
             }
             .featured-small {
+                margin-bottom: 30px;
                 @extend .col-xs-12;
                 @media screen and (min-width: $screen-sm-min) {
                     @extend .col-sm-6;
@@ -430,8 +445,6 @@
                 }
             }
             .news-box {
-                background-position: center;
-                background-size: cover;
                 padding: 25px 15px;
                 .post-title { 
                     color: #fff;
@@ -458,6 +471,10 @@
                 border-bottom: 1px solid #808080;
                 margin-bottom: 50px;
                 padding-bottom: 25px;
+                &:last-child {
+                    border: 0;
+                    margin-bottom: 0;
+                }
             }
             .post-date { 
                 float: right;
@@ -466,6 +483,92 @@
             .post-title {
                 font-size: 24px;
                 margin: 15px 0;
+            }
+        }
+    }
+    .sidebar-news {
+        @extend .col-xs-12;
+        @media screen and (min-width: $screen-sm-min) {
+            @extend .col-sm-5;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            @extend .col-md-4;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            @extend .col-lg-3;
+        }
+        .sidebar-title {
+            color: #fff;
+            font-family: $teuton27;
+            margin: 0;
+            padding: 10px;
+            text-align: center; 
+            text-transform: uppercase;
+        }
+        .last-news {
+            border: 4px solid $orange;
+            margin-bottom: 40px;
+            .sidebar-title {
+                background-color: $orange;
+            }
+            .list-item {
+                border-bottom: 1px solid #808080;
+                margin: 15px;
+                padding-bottom: 15px;
+                text-align: center;
+                &:last-child {
+                    border: 0;
+                    margin-bottom: 0;
+                }
+            }
+            .news-box {
+                height: 120px;
+                margin: 0 10px; 
+            }
+            .post-title {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            .post-date {
+                display: block;
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+            .post-category { 
+                margin-top: 98px;
+            }
+        }
+        .twitter-news {
+            border: 4px solid #1ba9b2;
+            a {
+                color: #1ba9b2;
+            }
+            .sidebar-title {
+                background-color: #1ba9b2;
+            }
+            .list-item {
+                border-bottom: 1px solid #808080;
+                margin: 15px;
+                padding-bottom: 15px;
+                &:last-child {
+                    border: 0;
+                    margin-bottom: 0;
+                }
+            }
+            .twitter-avatar {
+                float: left;
+                margin: 0 10px 10px 0;
+                img { 
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+            .twitter-date, .twitter-content {
+                font-size: 12px;
+            }
+            .twitter-content {
+                clear: both;
+                line-height: 160%;
             }
         }
     }
