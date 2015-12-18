@@ -1,6 +1,11 @@
 #page-about {
     &.base-content {
         margin-top: 0;
+        p {
+            font-size: 1.2em;
+            line-height: 170%;
+            margin-bottom: 20px;
+        }
     }
     .banner {
         background-color: #304594;
@@ -13,8 +18,81 @@
             background-image: url('../images/icones-sobre.png');
             text-transform: uppercase;
         }
-        .info {
+        .info { 
             color: #fff;
+            top: 200px;
+            @media screen and (min-width: $screen-sm-min) {
+                max-width: 400px; 
+            }
+            @media screen and (min-width: $screen-md-min) {
+                max-width: 600px;
+                top: 240px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                max-width: 800px;
+            }
+        }
+    }
+    .page-content {
+        .title {
+            color: $timtec-blue;
+            font-family: $teuton25;
+            font-size: 36px;
+        }
+        .featured-content {
+            color: $timtec-blue;
+            font-family: $teuton25;
+            font-size: 52px;
+            line-height: 130%;
+            text-align: center;
+            @media screen and (min-width: $screen-md-min) {
+                float: left;
+                margin-right: 20px;
+                text-align: left;
+                width: 40%;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                width: 30%;
+            }
+        }
+    }
+    .page-featured {
+        margin: 40px 0;
+        .title {
+            @extend .container;
+            color: $timtec-blue;
+            font-family: $teuton25;
+            font-size: 60px;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #fff;
+            font-family: $teuton25;
+            font-size: 32px;
+            margin: 20px 0 0;
+        }
+        .featured-line {
+            background-color: $cyan-blue;
+        }
+        .featured-box {
+            @extend .col-xs-12;
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-top: -50px;
+                @extend .col-sm-4;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                @extend .col-md-4;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                @extend .col-lg-4;
+            }
+            p {
+                margin: 15px;
+            }
         }
     }
 }
