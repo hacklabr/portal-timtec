@@ -1,0 +1,37 @@
+#page-conselho{
+    p {
+        color: $navy-blue;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    } 
+
+    .list-conselho{
+        ul{
+            margin: 40px 0px;
+            padding: 0px;
+            
+            li{
+                
+                list-style:none;
+                clear: both;
+                height: 120px;
+                
+                h4{
+                    display:inline;
+                    
+                }
+                
+                p{
+                    display:inline;
+                }
+
+                img{
+                    width:130px;
+                    height:105px;
+                    float:left;
+                    margin-right: 10px
+                }
+            }
+        }
+    }
+}

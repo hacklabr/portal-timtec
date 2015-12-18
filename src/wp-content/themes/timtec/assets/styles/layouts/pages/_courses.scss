@@ -1,0 +1,217 @@
+#page-course {
+    &.base-content {
+        margin-top: 0;
+    }
+    .banner {
+        background-color: #0aa8b2;
+        .carousel {
+            background: url('../images/ilustra-topo-cursos.png') no-repeat;
+            background-position: right 40px;
+            height: 360px;
+            overflow: hidden;
+            .title {
+                background-image: url('../images/icones-cursos.png');
+                color: $timtec-blue;
+                font-family: $teuton24;
+                text-transform: uppercase;
+            }
+            .carousel-indicators {
+                bottom: initial;
+                left: 90px;
+                margin-left: 0;
+                top: 225px;
+                width: 110px;
+                li {
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 0; 
+                    display: block;
+                    height: auto;
+                    margin-bottom: 3px;
+                    width: 110px;
+                    text-align: left;
+                    text-indent: 0;
+                    span {
+                        background-color: #b8c8c9;
+                        color: #fff;
+                        display: inline-block;
+                        font-family: $teuton22;
+                        font-size: 14px;
+                        line-height: 1.3;
+                        transition: all 0.3s ease;
+                        &.number {
+                            text-align: center;
+                            width: 15px;
+                        }
+                        &.text {
+                            display: inline-block;
+                            padding-left: 5px;
+                            width: 75px;
+                        }
+                    }
+                    &.active {
+                        span {
+                            background-color: $timtec-blue;
+                            font-family: $teuton24;
+                            font-size: 16px;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            background-color: #0000ff;
+                            font-family: $teuton24;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            &.text {
+                                width: 90px;
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-inner {
+                color: #fff;
+                font-size: 16px;
+                height: auto;
+                left: 215px;
+                position: absolute;
+                right: 115px;
+                top: 222px;
+                width: auto;
+            }
+        }
+    }
+    h3 {
+        border-bottom: 1px solid $timtec-blue;
+        font-size: 3em;
+        padding-bottom: 5px;
+    }
+    #section2 {
+        background: transparent;
+        padding: 0;
+
+        .list-courses {
+            height: 810px;
+            overflow: hidden;
+            &.open {
+                height: auto;
+            }
+        }
+        .show-more-courses {
+            color: $navy-blue;
+            cursor: pointer;
+            margin: 35px 0 0;
+            text-align: center;
+            p {
+                font-family: $teuton25;
+                font-size: 1.6em;
+                line-height: 1.3;
+                margin: 0;
+            }
+            .fa {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+    
+            li {
+                display: block;
+                background: #fff;
+                height: 396px;
+                margin: 1% auto;
+                max-width: 355px;
+                text-align: left;
+                vertical-align: top;
+                width: 100%; 
+                @media screen and (min-width: $screen-sm-min) {
+                    display: inline-block;
+                    margin: 1%;
+                    width: 47.6%;
+                }
+                @media screen and (min-width: $screen-md-min) {
+                    margin: 1%;
+                    width: 31%;
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    width: 31.1%;
+                }
+                
+                img {
+                    width: 100%;
+                }
+                
+                .content-curso {
+                    max-height: 103px;
+                    padding-top: 5px;
+                    
+                    h4 {
+                        color: #4d4d4d;
+                        font-family: $font-family-sans-serif;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        line-height: 1.3;
+                        margin: 3px 0; 
+                        max-height: 44px;
+                    }
+
+                    .author, .institute {
+                        color: #333;
+                        font-size: 0.9em; 
+                        line-height: 1.3;
+                    } 
+
+                    .author {
+                        margin-bottom: 15px;
+                        max-height: 32px;
+                    }
+
+                    a {
+                        color: #fff;
+                        &.moretag {
+                            color: $cyan-blue;
+                            text-decoration: underline; 
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        &.goto, &.download {
+                            float: left;
+                        }
+                        &.goto {
+                            background-color: #33cdc2;
+                            font-family: $teuton26;
+                            margin: 0;
+                            padding: 2px 12px;
+                            width: auto;
+                            &:hover { 
+                                background-color: #00c1b3;
+                            }
+                            &:focus, &:active {
+                                background-color: #009186;
+                            }
+                        }
+                        &.download {
+                            color: #ff8969;
+                            display: block;
+                            font-family: $teuton24;
+                            margin: 4px 0 0 8px;
+                            text-decoration: none;
+                            text-transform: initial;
+                            transition: color 1s ease;
+                            &:hover { 
+                                color: #e8684e;
+                            }
+                            &:focus, &:active {
+                                color: #e8684e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+#page-about {
+    &.base-content {
+        margin-top: 0;
+    }
+    .banner {
+        background-color: #304594;
+        .container {
+            background: url('../images/ilustra-topo-sobre.png') no-repeat;
+            background-position: right 40px;
+        }
+
+        .title {
+            background-image: url('../images/icones-sobre.png');
+            text-transform: uppercase;
+        }
+        .info {
+            color: #fff;
+        }
+    }
+}
