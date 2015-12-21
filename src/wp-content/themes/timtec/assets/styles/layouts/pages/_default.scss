@@ -1,4 +1,4 @@
-#page-about {
+#page-default-template {
     &.base-content {
         margin-top: 0;
         p {
@@ -9,13 +9,7 @@
     }
     .banner {
         background-color: #304594;
-        .container {
-            background: url('../images/ilustra-topo-sobre.png') no-repeat;
-            background-position: right 40px;
-        }
-
         .title {
-            background-image: url('../images/icones-sobre.png');
             text-transform: uppercase;
         }
         .info { 
@@ -93,6 +87,41 @@
             p {
                 margin: 15px;
             }
+        }
+    }
+}
+.page-about {
+    .banner {
+        .container {
+            background: url('../images/ilustra-topo-sobre.png') no-repeat;
+            background-position: right 40px;
+        }
+        .title {
+            background-image: url('../images/icones-sobre.png');
+        }
+    }
+}
+
+.page-network {
+    .banner {
+        .container {
+            background: url('') no-repeat;
+            background-position: right 40px;
+        }
+        .title {
+            background-image: url('../images/icones-redes.png');
+        }
+    }
+}
+
+.page-software {
+    .banner {
+        .container {
+            background: url('') no-repeat;
+            background-position: right 40px;
+        }
+        .title {
+            background-image: url('../images/icones-software.png');
         }
     }
 }

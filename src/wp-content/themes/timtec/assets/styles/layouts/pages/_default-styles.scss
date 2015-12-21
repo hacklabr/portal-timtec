@@ -1,0 +1,44 @@
+.page {
+    .banner {
+        height: 360px;
+        margin-bottom: 40px;
+        position: relative;
+        .container {
+            height: 360px;
+            position: relative;
+        }
+        .title {
+            background-position: center left;
+            background-repeat: no-repeat;
+            background-size: 75px 75px;
+            color: #fff;
+            font-family: $teuton24;
+            font-size: 60px;
+            margin: 0;
+            min-height: 75px;
+            padding-left: 90px;
+            position: absolute;
+            top: 80px;
+            .subtitle {
+                color: #fff;
+                display: block;
+                font-family: $teuton22;
+                font-size: 36px;
+                text-transform: initial;
+            }
+        }
+        .info {
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            top: 170px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-left: 92px;
+                top: 200px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                top: 240px;
+            }
+        }
+    }
+}

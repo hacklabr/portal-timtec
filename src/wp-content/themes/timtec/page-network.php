@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Sobre
+ * Template Name: Rede
  */
 ?>
 
@@ -8,11 +8,11 @@
 do_action('get_header');
 get_template_part('templates/header');
 ?>
-<div id="page-default-template" class="page-about base-content">
+<div id="page-default-template" class="page-network base-content">
     <?php while ( have_posts() ) : the_post(); ?>
     <div class="banner">
         <div class="container">
-            <h2 class="title"><?php _oi("Sobre"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
+            <h2 class="title"><?php _oi("Rede"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
             <div class="info">
                 <?php the_excerpt(); ?>
             </div>
