@@ -33,8 +33,47 @@
         }
     }
     .banner {
-        background-position: center;
-        background-size: cover;
+        background-color: #304594;
+        .carousel {
+            background: url('') no-repeat;
+            background-position: right 40px;
+            height: 360px;
+            overflow: hidden;
+            .carousel-inner {
+                color: #fff;
+                font-size: 16px;
+                height: auto;
+                left: 92px;
+                position: absolute;
+                right: 0;
+                top: 220px;
+                width: auto;
+                .carousel-caption {
+                    position: static;
+                    left: initial;
+                    right: initial;
+                    bottom: initial;
+                    z-index: 10;
+                    padding-top: initial;
+                    padding-bottom: initial;
+                    color: initial;
+                    text-align: initial;
+                    text-shadow: none;
+                }
+            }
+            .carousel-indicators {
+                bottom: 0;
+            }
+        }
+        .info {
+            top: 150px;
+            @media screen and (min-width: $screen-sm-min) {
+                top: 180px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                top: 220px;
+            }
+        }
         .title {
             background-image: url('../images/icones-cursos.png');
             span {

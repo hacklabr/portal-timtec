@@ -9,16 +9,45 @@ do_action('get_header');
 get_template_part('templates/header');
 ?>
 <div id="page-news" class="base-content">
-    <div class="banner" style="background-image: url(http://lorempixel.com/1920/500/);">
+    <div class="banner">
         <div class="container">
-            <h2 class="title"><?php _oi("Novidades"); ?></h2>
-            <div class="info">
-                <span class="post-category orange">#Categoria</span>
-                <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
-                <div class="post-excerpt"><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie a dui at porttitor. Nunc at imperdiet ipsum, in consequat elit.</a></div>
-                <div class="read-more"><a href=""><?php _oi("Leia mais"); ?> <span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+            <div id="carousel-news" class="carousel slide" data-ride="carousel">
+                <h2 class="title"><?php _oi("Novidades"); ?></h2>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <span></span>
+                        <span class="post-category orange">#Categoria</span>
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <div class="post-excerpt"><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie a dui at porttitor. Nunc at imperdiet ipsum, in consequat elit.</a></div>
+                        <div class="read-more"><a href=""><?php _oi("Leia mais"); ?> <span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                    </div>
+                    <div class="item">
+                        <span></span>
+                        <span class="post-category orange">#Categoria</span>
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <div class="post-excerpt"><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie a dui at porttitor. Nunc at imperdiet ipsum, in consequat elit.</a></div>
+                        <div class="read-more"><a href=""><?php _oi("Leia mais"); ?> <span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                    </div>
+                    <div class="item">
+                        <span></span>
+                        <span class="post-category orange">#Categoria</span>
+                        <h3 class="post-title"><a href="">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h3>
+                        <div class="post-excerpt"><a href="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie a dui at porttitor. Nunc at imperdiet ipsum, in consequat elit.</a></div>
+                        <div class="read-more"><a href=""><?php _oi("Leia mais"); ?> <span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                    </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-news" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-news" data-slide-to="1"></li>
+                    <li data-target="#carousel-news" data-slide-to="2"></li>
+                </ol>
             </div>
         </div>
+        
     </div>
 
     <div class="container">
