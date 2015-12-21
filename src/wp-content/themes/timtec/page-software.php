@@ -28,23 +28,21 @@ get_template_part('templates/header');
     <section class="page-featured">
         <h2 class="title">lorem ipsum dolor sit amet</h2>
         <div class="featured-line">
-            <div class="row">
-                <div class="container">
-                    <div class="featured-box">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-1.png" alt="1">
-                        <h3 class="subtitle">Subtítulo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
-                    </div>
-                    <div class="featured-box">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-2.png" alt="2">
-                        <h3 class="subtitle">Subtítulo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
-                    </div>
-                    <div class="featured-box">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-3.png" alt="3">
-                        <h3 class="subtitle">Subtítulo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
-                    </div>
+            <div class="container">
+                <div class="featured-box">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-1.png" alt="1">
+                    <h3 class="subtitle">Subtítulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
+                </div>
+                <div class="featured-box">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-2.png" alt="2">
+                    <h3 class="subtitle">Subtítulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
+                </div>
+                <div class="featured-box">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-3.png" alt="3">
+                    <h3 class="subtitle">Subtítulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ex nec odio ultricies ornare. Ut facilisis tellus sit amet turpis sagittis, vitae pretium risus vulputate. Cras dolor ligula, aliquam in convallis non, ullamcorper eget risus. Sed malesuada lacus nec libero tempor viverra.</p>
                 </div>
             </div>
         </div>
