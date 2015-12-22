@@ -7,15 +7,19 @@
 <?php
 do_action('get_header');
 get_template_part('templates/header');
+
+$header_text = trim(get_post_meta ( get_the_ID(), 'header_text', true ));
 ?>
 <div id="page-default-template" class="page-network base-content">
     <?php while ( have_posts() ) : the_post(); ?>
-    <div class="banner">
+    <div class="banner <?php if(!$header_text) echo "no-text"; ?>">
         <div class="container">
-            <h2 class="title"><?php _oi("Rede"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
+            <h2 class="title"><?php _e("Rede"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
+            <?php if($header_text): ?>
             <div class="info">
-                <?php the_excerpt(); ?>
+                <?php echo nl2br($header_text) ?>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 

@@ -63,6 +63,8 @@ require __DIR__ . '/inc/metaboxes/course-download.php';
 require __DIR__ . '/inc/metaboxes/link_redesocial.php';
 require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 
+require __DIR__ . '/inc/metaboxes/page-header-text.php';
+
 require __DIR__ . '/inc/widgets/widget-forum-categories.php';
 require __DIR__ . '/inc/widgets/widget-forum-tags.php';
 
