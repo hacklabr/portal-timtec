@@ -52,6 +52,22 @@
     }
     .page-featured {
         margin: 40px 0;
+
+        margin-left: -2%;
+        margin-right: -2%;
+
+        @media screen and (min-width: $screen-sm-min) {
+            margin-left: -20%;
+            margin-right: -20%;
+        }
+        
+        @media screen and (min-width: $screen-lg-min) {
+            margin-left: -50%;
+            margin-right: -50%;
+        }
+
+
+
         .title {
             @extend .container;
             color: $timtec-blue;
