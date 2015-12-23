@@ -19,7 +19,7 @@ if(preg_match('#^/pt/cursos/?(\?.*)?#', $_SERVER['REQUEST_URI'])){
 pll_register_string('Texto do link leia mais', 'leia mais', 'timtec');
 
 function custom_excerpt_length( $length ) {
-  return 40;
+    return 23;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -66,6 +66,7 @@ require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 require __DIR__ . '/inc/metaboxes/page-header-text.php';
 
 require __DIR__ . '/inc/shortcode-destaque.php';
+require __DIR__ . '/inc/admin-page-destaques-noticias.php';
 
 require __DIR__ . '/inc/widgets/widget-forum-categories.php';
 require __DIR__ . '/inc/widgets/widget-forum-tags.php';
