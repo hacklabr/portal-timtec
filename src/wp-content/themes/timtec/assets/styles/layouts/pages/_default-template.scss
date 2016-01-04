@@ -52,7 +52,6 @@
     }
     .page-featured {
         margin: 40px 0;
-
         margin-left: -2%;
         margin-right: -2%;
 
@@ -60,14 +59,10 @@
             margin-left: -20%;
             margin-right: -20%;
         }
-        
         @media screen and (min-width: $screen-lg-min) {
             margin-left: -50%;
             margin-right: -50%;
         }
-
-
-
         .title {
             @extend .container;
             color: $timtec-blue;
@@ -76,11 +71,15 @@
             margin-bottom: 70px;
             text-align: center;
         }
-        .subtitle {
+        h2, h3 {
             color: #fff;
             font-family: $teuton25;
             font-size: 32px;
-            margin: 20px 0 0;
+            margin: 0;
+        }
+        p {
+            color: #fff;
+            margin: 15px 0;
         }
         .featured-line {
             background-color: $cyan-blue;
@@ -89,9 +88,7 @@
             @extend .col-xs-12;
             color: #fff;
             text-align: center;
-            margin-top: 15px;
             @media screen and (min-width: $screen-sm-min) {
-                margin-top: -50px;
                 @extend .col-sm-4;
             }
             @media screen and (min-width: $screen-md-min) {
