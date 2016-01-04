@@ -39,6 +39,9 @@
             background-position: right 40px;
             height: 360px;
             overflow: hidden;
+            @media screen and (max-width: $screen-md-max) {
+                background-size: 190px;
+            }
             .carousel-inner {
                 color: #fff;
                 font-size: 16px;
@@ -46,8 +49,11 @@
                 left: 92px;
                 position: absolute;
                 right: 0;
-                top: 220px;
+                top: 170px;
                 width: auto;
+                @media screen and (min-width: $screen-lg-min) {
+                    right: 120px;
+                }
                 .carousel-caption {
                     position: static;
                     left: initial;
@@ -101,7 +107,7 @@
                 max-width: 730px;
             }
             @media screen and (min-width: $screen-lg-min) {
-                max-width: 840px;
+                max-width: 810px;
             }
         }
         .read-more {
