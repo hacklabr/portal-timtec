@@ -1,4 +1,4 @@
-# -*- mode: ruby -*-
+#-*- mode: ruby -*-
 # vi: set ft=ruby :
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
@@ -13,7 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Default value: false
   # config.ssh.forward_agent = true
 
-  config.vm.synced_folder "./", "/var/www/wordpress/", create: true
+  config.vm.synced_folder "./", "/var/www/wordpress/", create: true,
+     owner: "vagrant",
+     group: "www-data",
+     mount_options: ["dmode=775,fmode=664"]
+
+
   config.vm.provider "virtualbox" do |vb|
   #   # Don't boot with headless mode
   #   vb.gui = true
