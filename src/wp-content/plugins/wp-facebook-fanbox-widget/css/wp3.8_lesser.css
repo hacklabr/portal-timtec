@@ -1,0 +1,37 @@
+#toplevel_page_viva_plugins .wp-submenu .wp-first-item {
+	display: none;
+}
+#fb_fanbx_frm select,
+#fb_fanbx_frm input[type="text"],
+#fb_fanbx_frm input[type="file"] {
+    min-width: 200px;
+}
+#fb_fanbx_frm label code {
+	background: none;
+}
+#fcbk_share {
+	clear: both;
+	height: 40px;
+}
+.fb_fanbx_css {
+	float: left;
+	margin-right: 10px;
+}
+.fb_fanbx_css a {
+	height: 40px;
+	display: block;
+}
+.fb_fanbx_css a:hover {
+	opacity: 0.9;
+}
+.fb_like_btn {
+	float: left;
+	position: relative;
+	top: -3px;
+}
+.fb_edge_widget_with_comment span {
+	width: 450px !important;
+}
+.fb_like_btn iframe {
+	max-width: 450px;
+}
