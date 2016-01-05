@@ -106,7 +106,6 @@ get_template_part('templates/header');
             </div>
             <div class="sidebar-news">
                 <div class="last-news">
-
                     <h2 class="sidebar-title"><?php _e("As mais atuais"); ?></h2>
                     <?php while($q_atuais->have_posts()): $q_atuais->the_post(); ?>
                         <div class="list-item">
@@ -116,6 +115,9 @@ get_template_part('templates/header');
                         </div>
                     <?php endwhile; ?>
                 </div>
+
+                <?php dynamic_sidebar('sidebar-primary'); ?>
+
                 <?php /* 
                 <div class="twitter-news">
                                         

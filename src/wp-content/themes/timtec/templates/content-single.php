@@ -17,7 +17,7 @@
         <?php endwhile; ?>
         </div>
         <div class="sidebar-news">
-
+                <?php dynamic_sidebar('sidebar-primary'); ?>
         </div>
     </div>
 </div>
