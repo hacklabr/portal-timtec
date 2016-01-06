@@ -51,6 +51,7 @@
         }
     }
     .page-featured {
+        clear: both;
         margin: 40px 0;
         margin-left: -2%;
         margin-right: -2%;
@@ -91,7 +92,7 @@
                 margin: 15px;
             }
         }
-        .featured-box {
+        .featured-box-1 {
             @extend .col-xs-12;
         }
         .featured-box-2 {
