@@ -84,10 +84,30 @@
         .featured-line {
             background-color: $cyan-blue;
         }
-        .featured-box {
-            @extend .col-xs-12;
+        .featured-box, .featured-box-2, .featured-box-3 {
             color: #fff;
             text-align: center;
+            p {
+                margin: 15px;
+            }
+        }
+        .featured-box {
+            @extend .col-xs-12;
+        }
+        .featured-box-2 {
+            @extend .col-xs-12;
+            @media screen and (min-width: $screen-sm-min) {
+                @extend .col-sm-6;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                @extend .col-md-6;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                @extend .col-lg-6;
+            }
+        }
+        .featured-box-3 {
+            @extend .col-xs-12;
             @media screen and (min-width: $screen-sm-min) {
                 @extend .col-sm-4;
             }
@@ -96,9 +116,6 @@
             }
             @media screen and (min-width: $screen-lg-min) {
                 @extend .col-lg-4;
-            }
-            p {
-                margin: 15px;
             }
         }
     }
