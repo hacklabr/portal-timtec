@@ -242,6 +242,7 @@
             @extend .col-lg-3;
         }
         .sidebar-title {
+            background-color: $orange;
             color: #fff;
             font-family: $teuton27;
             margin: 0;
@@ -249,12 +250,24 @@
             text-align: center; 
             text-transform: uppercase;
         }
-        .last-news {
+        a {
+            color: $orange;
+        }
+        .widget {
             border: 4px solid $orange;
             margin-bottom: 40px;
-            .sidebar-title {
-                background-color: $orange;
+            &.widget_twitter_timeline {
+                border: 4px solid $cyan-blue;
+                a {
+                    color: $cyan-blue;
+                }
+                .sidebar-title {
+                    background-color: $cyan-blue;
+                }
             }
+        }
+        .last-news {
+            border: 4px solid $orange;
             .list-item {
                 border-bottom: 1px solid #808080;
                 margin: 15px;
@@ -283,13 +296,7 @@
             }
         }
         .twitter-news {
-            border: 4px solid $cyan-blue;
-            a {
-                color: $cyan-blue;
-            }
-            .sidebar-title {
-                background-color: $cyan-blue;
-            }
+
             .list-item {
                 border-bottom: 1px solid #808080;
                 margin: 15px;
