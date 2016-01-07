@@ -1,4 +1,4 @@
-<section id="modal-home">
+<section id="modal-home" style="display:none" one-time-show>
     <div class="bg-modal"></div>
     <div class="modal">
         <a href="#" class="close js-close-modal">x</a>
