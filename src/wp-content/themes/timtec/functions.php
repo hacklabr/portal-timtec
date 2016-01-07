@@ -303,7 +303,7 @@ function rename_post_for_noticia_object() {
 
 // Remove sharing buttons on archive and search pages
 function jptweak_remove_share() {
-  if ( is_page( 4, 46  ) ) {
+  if ( is_page( 4  ) || is_page( 46 )) {
       remove_filter( 'the_content', 'sharing_display',19 );
       remove_filter( 'the_excerpt', 'sharing_display',19 );
       if ( class_exists( 'Jetpack_Likes' ) ) {
