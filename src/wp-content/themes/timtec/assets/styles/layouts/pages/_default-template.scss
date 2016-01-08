@@ -35,11 +35,18 @@
             font-size: 36px;
         }
         blockquote {
+            border-left: 0;
             color: $timtec-blue;
             font-family: $teuton25;
             font-size: 52px;
             line-height: 130%;
             text-align: center;
+            p {
+                color: $timtec-blue;
+                font-family: $teuton25;
+                font-size: 52px;
+                line-height: 130%;
+            }
             @media screen and (min-width: $screen-md-min) {
                 float: left;
                 margin-right: 20px;
