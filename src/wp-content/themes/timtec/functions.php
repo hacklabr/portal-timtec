@@ -66,6 +66,7 @@ require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 require __DIR__ . '/inc/metaboxes/page-header-text.php';
 
 require __DIR__ . '/inc/shortcode-destaque.php';
+require __DIR__ . '/inc/shortcode-accordion.php';
 require __DIR__ . '/inc/admin-page-destaques-noticias.php';
 
 require __DIR__ . '/inc/widgets/widget-forum-categories.php';
