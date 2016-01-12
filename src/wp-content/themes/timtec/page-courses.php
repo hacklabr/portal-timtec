@@ -66,6 +66,8 @@ get_template_part('templates/header');
                         $thumb = wp_get_attachment_url(get_post_thumbnail_id());
                         $title = get_the_title();
                         $course_url = get_metadata('post', get_the_ID(), 'url_course', true);
+                        $youtube_url = get_metadata('post', get_the_ID(), 'url_youtube_course', true);
+
 
                         $teachers = $teacher_course_relation->getRelatedPosts();
                         $teacher = '';
@@ -77,11 +79,21 @@ get_template_part('templates/header');
                         }
                         ?>
                         <li>
-                            <img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
+                            <?php 
+                                if( empty( $youtube_url) ){
+                            ?>
+                                    <img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
+                            <?php 
+                                }else{
+                                    $embed_code = wp_oembed_get( $youtube_url , array('width'=>355) ); 
+                                    echo $embed_code;
+                                }
+                            ?>
                             <div class="content-curso">
                                 <div class="institute">Instituto</div>
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
+
 
                                 <?php if ($course_url): ?>
                                     <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
