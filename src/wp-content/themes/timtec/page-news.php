@@ -105,17 +105,7 @@ get_template_part('templates/header');
                 </div>
             </div>
             <div class="sidebar-news">
-                <div class="last-news">
-                    <h2 class="sidebar-title"><?php _e("As mais atuais"); ?></h2>
-                    <?php while($q_atuais->have_posts()): $q_atuais->the_post(); ?>
-                        <div class="list-item">
-                            <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                            <time class="post-date"><?php _date() ?></time>
-                            <div class="news-box" style="<?php _img_url() ?>"><span class="post-category orange"><?php _cat() ?></span></div>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-
+               
                 <?php dynamic_sidebar('sidebar-primary'); ?>
 
                 <?php /* 
