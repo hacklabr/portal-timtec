@@ -44,10 +44,14 @@
             }
         }
         .info {
-            position: absolute;
-            left: 15px;
-            right: 15px;
-            top: 170px;
+            margin-bottom: 30px;
+            @media screen and (min-width: $screen-sm-min) {
+                position: absolute;
+                left: 15px;
+                right: 15px;
+                top: 170px;
+                margin-bottom: 0;
+            }
             @media screen and (min-width: $screen-sm-min) {
                 margin-left: 92px;
                 top: 200px;
