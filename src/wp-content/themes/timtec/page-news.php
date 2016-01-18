@@ -37,28 +37,9 @@ get_template_part('templates/header');
 <div id="page-news" class="base-content">
     <div class="banner">
         <div class="container">
-            <div id="carousel-news" class="carousel slide" data-ride="carousel">
-                <h2 class="title"><?php _oi("Novidades"); ?></h2>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <?php while($q_header->have_posts()): $q_header->the_post(); ?>
-                    <div class="item <?php if(!$q_header->current_post) echo 'active'; ?>">
-                        <span></span>
-                        <span class="post-category orange"><?php _cat(); ?></span>
-                        <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                        <div class="post-excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></div>
-                        <div class="read-more"><a href="<?php the_permalink() ?>"><?php _e("Leia mais"); ?> <span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                    </div>
-                    <?php endwhile; ?>
-                </div>
-
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <?php for($i = 0; $i < $q_header->post_count; $i++): ?>
-                    <li data-target="#carousel-news" data-slide-to="<?php echo $i ?>" <?php if(!$i) echo 'class="active"' ?>></li>
-                    <?php endfor; ?>;
-                </ol>
+            <h2 class="title"><?php _oi("Notícias"); ?></h2>
+            <div class="info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus metus, viverra at scelerisque quis, consectetur ut mauris. Nam pellentesque urna tempus sapien tincidunt, nec tempor diam consectetur. 
             </div>
         </div>
     </div>

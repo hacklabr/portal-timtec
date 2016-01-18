@@ -34,97 +34,27 @@
     }
     .banner {
         background-color: #304594;
-        .carousel {
-            background: url('../images/ilustra-header-news.png') no-repeat;
-            background-position: right 40px;
-            height: 360px;
-            overflow: hidden;
-            @media screen and (max-width: $screen-md-max) {
-                background-size: 190px;
-            }
-            .carousel-inner {
-                color: #fff;
-                font-size: 16px;
-                height: auto;
-                left: 92px;
-                position: absolute;
-                right: 0;
-                top: 170px;
-                width: auto;
-                @media screen and (min-width: $screen-lg-min) {
-                    right: 120px;
-                }
-                .carousel-caption {
-                    position: static;
-                    left: initial;
-                    right: initial;
-                    bottom: initial;
-                    z-index: 10;
-                    padding-top: initial;
-                    padding-bottom: initial;
-                    color: initial;
-                    text-align: initial;
-                    text-shadow: none;
-                }
-            }
-            .carousel-indicators {
-                bottom: 0;
-            }
-        }
-        .info {
-            top: 150px;
+        .container {
             @media screen and (min-width: $screen-sm-min) {
-                top: 180px;
-            }
-            @media screen and (min-width: $screen-lg-min) {
-                top: 220px;
+                background: url('../images/ilustra-header-news') no-repeat; 
+                background-position: right 80px;
             }
         }
         .title {
             background-image: url('../images/icones-header-news.png');
-            span {
-                display: block;
-                margin-top: 5px;
-            }
         }
-        .post-title {
+        .info { 
             color: #fff;
-            font-size: 36px;
-            a {
-                color: #fff;
-            }
-        }
-        .post-excerpt { 
-            color: #fff;
-            a {
-                color: #fff;
-            }
+            top: 200px;
             @media screen and (min-width: $screen-sm-min) {
-                float: left;
-                max-width: 520px; 
+                max-width: 400px; 
             }
             @media screen and (min-width: $screen-md-min) {
-                max-width: 730px;
+                max-width: 600px;
+                top: 240px;
             }
             @media screen and (min-width: $screen-lg-min) {
-                max-width: 810px;
-            }
-        }
-        .read-more {
-            color: #fff;
-            float: right;
-            font-weight: bold;
-            a {
-                color: #fff;                   
-                .arrow {
-                    border: 2px solid #fff;
-                    border-radius: 100%;
-                    display: inline-block;
-                    height: 25px;
-                    margin-left: 5px;
-                    text-align: center;
-                    width: 25px; 
-                }
+                max-width: 800px;
             }
         }
     }
