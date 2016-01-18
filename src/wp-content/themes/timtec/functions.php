@@ -110,6 +110,7 @@ $sage_includes = [
   'lib/extras.php',                // Custom functions
   'inc/metaboxes/url-video-course.php', //MetaBox
   'inc/metaboxes/url-course.php', //MetaBox
+  'inc/metaboxes/colorbox-category.php', //ColorBox Category
   ];
 
   foreach ($sage_includes as $file) {
