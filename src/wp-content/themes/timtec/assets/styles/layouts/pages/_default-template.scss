@@ -38,16 +38,8 @@
             border-left: 0;
             color: $timtec-blue;
             font-family: $teuton25;
-            font-size: 52px;
-            line-height: 130%;
             padding: 0;
             text-align: center;
-            p {
-                color: $timtec-blue;
-                font-family: $teuton25;
-                font-size: 52px;
-                line-height: 130%;
-            }
             @media screen and (min-width: $screen-md-min) {
                 float: left;
                 margin-right: 20px;
@@ -55,16 +47,25 @@
                 width: 40%;
             }
             @media screen and (min-width: $screen-lg-min) {
-                width: 30%;
+                width: 30%; 
+            }
+            p {
+                color: $timtec-blue;
+                font-family: $teuton25;
+                font-size: 44px;
+                line-height: 120%; 
+                @media screen and (min-width: $screen-sm-min) {
+                    font-size: 52px;
+                    line-height: 130%;
+                }
             }
         }
     }
     .page-featured {
         clear: both;
         margin: 40px 0;
-        margin-left: -2%;
-        margin-right: -2%;
-
+        margin-left: -6%;
+        margin-right: -6%;
         @media screen and (min-width: $screen-sm-min) {
             margin-left: -20%;
             margin-right: -20%;
@@ -77,9 +78,13 @@
             @extend .container;
             color: $timtec-blue;
             font-family: $teuton25;
-            font-size: 60px;
-            margin-bottom: 40px;
+            font-size: 46px;
+            margin-bottom: 20px;
             text-align: center;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 60px;
+                margin-bottom: 40px;
+            }
         }
         h2, h3 {
             color: #fff;
@@ -89,23 +94,35 @@
         }
         p {
             color: #fff;
+            font-size: 1em;
             margin: 15px 0;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 1.2em;
+            }
         }
         .featured-line {
             background-color: #0aa8b2;
         }
         .featured-box-1, .featured-box-2, .featured-box-3 {
             color: #fff;
+            padding: 0;
             text-align: center;
             p {
-                margin: 15px;
+                margin: 15px 0;
+                @media screen and (min-width: $screen-xs-min) {
+                    margin: 15px;
+                }
             }
         }
         .featured-box-1 {
-            @extend .col-xs-12;
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
         }
         .featured-box-2 {
-            @extend .col-xs-12;
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
             @media screen and (min-width: $screen-sm-min) {
                 @extend .col-sm-6;
             }
@@ -117,7 +134,9 @@
             }
         }
         .featured-box-3 {
-            @extend .col-xs-12;
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
             @media screen and (min-width: $screen-sm-min) {
                 @extend .col-sm-4;
             }
@@ -133,8 +152,10 @@
 .page-about {
     .banner {
         .container {
-            background: url('../images/ilustra-header-sobre.png') no-repeat; 
-            background-position: right 40px;
+            @media screen and (min-width: $screen-sm-min) {
+                background: url('../images/ilustra-header-sobre.png') no-repeat; 
+                background-position: right 40px;
+            }
         }
         .title {
             background-image: url('../images/icones-header-sobre.png');
