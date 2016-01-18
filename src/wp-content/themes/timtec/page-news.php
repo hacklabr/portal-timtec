@@ -28,7 +28,7 @@ function _img_url(){
 
 function _date(){
     //as 00h00 dia 00/00/0000
-    the_time('\a\s G:i \d\i\a d/m/Y');
+    the_time('d/m/Y');
 }
 
 do_action('get_header');
