@@ -30,7 +30,7 @@
             }
             @media screen and (min-width: $screen-sm-min) {
                 position: absolute;
-                top: 80px; 
+                top: 30px; 
             }
             .subtitle {
                 color: #fff;
@@ -44,20 +44,23 @@
             }
         }
         .info {
+            color: #fff;
+            font-size: 13px;
             margin-bottom: 30px;
             @media screen and (min-width: $screen-sm-min) {
                 position: absolute;
                 left: 15px;
                 right: 15px;
-                top: 170px;
+                top: 180px;
                 margin-bottom: 0;
-            }
-            @media screen and (min-width: $screen-sm-min) {
                 margin-left: 92px;
-                top: 200px;
+                max-width: 400px; 
+            }
+            @media screen and (min-width: $screen-md-min) {
+                max-width: 600px;
             }
             @media screen and (min-width: $screen-lg-min) {
-                top: 240px;
+                max-width: 800px;
             }
         }
     }
