@@ -15,6 +15,16 @@
                     <h3 class="post-title">
                         <?php the_title() ?>
                     </h3>
+                    <?php 
+                        if ( function_exists( 'sharing_display' ) ) {
+                            sharing_display( '', true );
+                        }
+                         
+                        if ( class_exists( 'Jetpack_Likes' ) ) {
+                            $custom_likes = new Jetpack_Likes;
+                            echo $custom_likes->post_likes( '' );
+                        }
+                    ?>
                 </header>
                 <div class="post-content">
                     <?php the_content(); ?>

@@ -243,6 +243,12 @@
             }
         }
     }
+
+    .sharedaddy{
+        h3.sd-title{
+            display:none;
+        }
+    }
 }
 
 #page-news {
@@ -282,7 +288,7 @@
             header {
                 border-bottom: 1px solid #ccc;
                 margin-bottom: 30px;
-                padding-bottom: 30px;
+                padding-bottom: 10px;
             }
             .post-date { 
                 float: right;
@@ -300,4 +306,13 @@
             }
         }
     }
+
+    .sharedaddy{
+        h3.sd-title{
+            display:none;
+        }
+    }
 }
+
+
+
