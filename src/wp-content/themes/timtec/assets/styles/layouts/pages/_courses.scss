@@ -120,9 +120,9 @@
         padding: 0;
 
         .list-courses {
-            height: 636px;
+            height: 695px;
             overflow: hidden;
-            @media screen and (min-width: $screen-xs-min) {
+            @media screen and (min-width: $screen-sm-min) {
                 height: 810px;
             }
             &.open {
@@ -153,7 +153,7 @@
             li {
                 display: block;
                 background: #fff;
-                height: 316px;
+                height: 330px;
                 margin: 0 auto 20px;
                 max-width: 355px;
                 overflow: hidden;
@@ -161,8 +161,11 @@
                 vertical-align: top;
                 width: 100%; 
                 @media screen and (min-width: $screen-sm-min) {
+                    height: 360px;
+                }
+                @media screen and (min-width: $screen-sm-min) {
                     display: inline-block;
-                    height: 396px;
+                    height: 395px;
                     margin: 1%;
                     width: 47.6%;
                 }
