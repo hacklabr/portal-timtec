@@ -54,10 +54,16 @@ get_template_part('templates/header');
                         if($q_principal->post_count > 3)
                             break;
                     ?>
+                    <?php  
+                        $category = get_the_category( $post->ID ); 
+                        $cat_id = $category[0]->term_id;
+                        $cat_data = get_option( "category_$cat_id" );
+                        $cat_bg = $cat_data['catBG'];
+                    ?>
                         <?php if($q_principal->current_post === 0 && ($q_principal->post_count == 1 || $q_principal->post_count >= 3)): ?>
                             <div class="featured-big">
                                 <div class="news-box" style="<?php _img_url() ?>">
-                                    <span class="post-category blue"><?php _cat() ?></span>
+                                    <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
                                     <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                                     <div class="post-excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></div>
                                 </div>
@@ -65,7 +71,7 @@ get_template_part('templates/header');
                         <?php else: ?>
                             <div class="featured-small">
                                 <div class="news-box" style="<?php _img_url() ?>">
-                                    <span class="post-category blue"><?php _cat() ?></span>
+                                    <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
                                     <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                                 </div>
                             </div>
@@ -76,8 +82,14 @@ get_template_part('templates/header');
                 <div class="list">
                     <h2 class="list-title"><?php _oi("Notícias geral") ?></h2>
                     <?php while($q_geral->have_posts()): $q_geral->the_post(); ?>
+                        <?php  
+                            $category = get_the_category( $post->ID ); 
+                            $cat_id = $category[0]->term_id;
+                            $cat_data = get_option( "category_$cat_id" );
+                            $cat_bg = $cat_data['catBG'];
+                        ?>
                         <div class="list-item">
-                            <span class="post-category orange"><?php _cat() ?></span>
+                            <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
                             <time class="post-date"><?php _date() ?></time>
                             <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                             <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
