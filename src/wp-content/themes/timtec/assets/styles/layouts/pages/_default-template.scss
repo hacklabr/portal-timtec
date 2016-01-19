@@ -66,6 +66,10 @@
         margin: 40px 0;
         margin-left: -6%;
         margin-right: -6%;
+        @media screen and (min-width: $screen-xs-min) {
+            margin-left: -2.5%;
+            margin-right: -2.5%;
+        }
         @media screen and (min-width: $screen-sm-min) {
             margin-left: -20%;
             margin-right: -20%;
