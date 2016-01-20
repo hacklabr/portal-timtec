@@ -80,20 +80,30 @@ get_template_part('templates/header');
 
                 <div class="list">
                     <h2 class="list-title"><?php _oi("Notícias geral") ?></h2>
-                    <!-- < ?php while($q_geral->have_posts()): $q_geral->the_post(); ?>
-                        < ?php  
-                            $category = get_the_category( $post->ID ); 
-                            $cat_id = $category[0]->term_id;
-                            $cat_data = get_option( "category_$cat_id" );
-                            $cat_bg = $cat_data['catBG'];
-                        ?>
+                    <?php  
+
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 4,                            
+                        );
+                        
+                        $loop_news = new WP_Query($args);
+
+                        while($loop_news->have_posts()): $loop_news->the_post(); 
+                 
+                        $category = get_the_category( $post->ID ); 
+                        $cat_name =  $category[0]->name;
+                        $cat_id = $category[0]->term_id;
+                        $cat_data = get_option( "category_$cat_id" );
+                        $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
+                    ?>
                         <div class="list-item">
-                            <span class="post-category" style="background:< ?php echo $cat_bg; ?>"><?php _cat() ?></span>
-                            <time class="post-date">< ?php _date() ?></time>
+                            <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php echo $cat_name; ?></span>
+                            <time class="post-date"><?php _date() ?></time>
                             <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                             <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
                         </div>
-                    < ?php endwhile; ?> -->
+                    <?php endwhile; ?>
                 </div>
             </div>
             <div class="sidebar-news">
