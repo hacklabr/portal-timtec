@@ -22,7 +22,7 @@ class DestaquesNoticias{
             }
         }
 
-        $destaques = get_option(self::option_name, ['header' => '', 'principal' => '', 'geral' => '']);
+        $destaques = get_option(self::option_name, ['header' => '', 'principal' => '']);//, 'geral' => ''
         ?>
         <style>
             .destaques{
@@ -44,20 +44,22 @@ class DestaquesNoticias{
             <h2>Destaques da página de notícia</h2>
             <form method="POST">
                 <p class="destaques">
-                    <label for="destaques-header">Destaques do header</label>
+                    <label for="destaques-header">Texto de destaque do header</label>
                     <textarea id="destaques-header" name="destaques[header]"><?php echo $destaques['header'] ?></textarea>
                 </p>
 
                 <p class="destaques">
                     <label for="destaques-principal">Destaques principais</label>
+                    <descripiton>Link de destaques principais</descripiton><br />
                     <textarea id="destaques-principal" name="destaques[principal]"><?php echo $destaques['principal'] ?></textarea>
                 </p>
 
+                <!-- 
                 <p class="destaques">
                     <label for="destaques-geral">Notícias geral</label>
-                    <textarea id="destaques-geral" name="destaques[geral]"><?php echo $destaques['geral'] ?></textarea>
+                    <textarea id="destaques-geral" name="destaques[geral]">< ?php echo $destaques['geral'] ?></textarea>
                 </p>
-
+                -->
                 <input type="submit" class="button button-primary button-large" value="salvar"/>
             </form>
         </div>

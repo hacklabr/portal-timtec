@@ -3,9 +3,8 @@
  * Template Name: Notícias
  */
 
-$q_header = DestaquesNoticias::getQuery('header');
+$q_header = get_option('destaques-noticias');
 $q_principal = DestaquesNoticias::getQuery('principal');
-$q_geral = DestaquesNoticias::getQuery('geral');
 $q_atuais = new WP_Query(['posts_per_page' => 3]);
 
 function _cat(){
@@ -39,7 +38,7 @@ get_template_part('templates/header');
         <div class="container">
             <h2 class="title"><?php _oi("Notícias"); ?></h2>
             <div class="info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus metus, viverra at scelerisque quis, consectetur ut mauris. Nam pellentesque urna tempus sapien tincidunt, nec tempor diam consectetur. 
+                <?php echo $q_header['header']; ?>
             </div>
         </div>
     </div>
@@ -81,20 +80,20 @@ get_template_part('templates/header');
 
                 <div class="list">
                     <h2 class="list-title"><?php _oi("Notícias geral") ?></h2>
-                    <?php while($q_geral->have_posts()): $q_geral->the_post(); ?>
-                        <?php  
+                    <!-- < ?php while($q_geral->have_posts()): $q_geral->the_post(); ?>
+                        < ?php  
                             $category = get_the_category( $post->ID ); 
                             $cat_id = $category[0]->term_id;
                             $cat_data = get_option( "category_$cat_id" );
                             $cat_bg = $cat_data['catBG'];
                         ?>
                         <div class="list-item">
-                            <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
-                            <time class="post-date"><?php _date() ?></time>
+                            <span class="post-category" style="background:< ?php echo $cat_bg; ?>"><?php _cat() ?></span>
+                            <time class="post-date">< ?php _date() ?></time>
                             <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                             <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
                         </div>
-                    <?php endwhile; ?>
+                    < ?php endwhile; ?> -->
                 </div>
             </div>
             <div class="sidebar-news">
