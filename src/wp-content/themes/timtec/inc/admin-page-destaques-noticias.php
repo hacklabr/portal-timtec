@@ -50,7 +50,7 @@ class DestaquesNoticias{
 
                 <p class="destaques">
                     <label for="destaques-principal">Destaques principais</label>
-                    <descripiton>Link de destaques principais</descripiton><br />
+                    <descripiton>Cole aqui os links de destaques principais( no máximo )</descripiton><br />
                     <textarea id="destaques-principal" name="destaques[principal]"><?php echo $destaques['principal'] ?></textarea>
                 </p>
 
