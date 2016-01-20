@@ -79,7 +79,7 @@ get_template_part('templates/header');
                 </div>
 
                 <div class="list">
-                    <h2 class="list-title"><?php _oi("Notícias geral") ?></h2>
+                    <h2 class="list-title"><?php _oi("Notícias recentes") ?></h2>
                     <?php  
 
                         $args = array(
