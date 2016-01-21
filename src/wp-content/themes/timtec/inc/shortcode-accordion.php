@@ -1,13 +1,11 @@
 <?php
+ 
 
-function shortcode_accordion() {
+class ShortcodeAccordion{
 
-    //id de cada item para o accordion
-    global $id_cont_acordion_item;
-    $id_cont_acordion_item = 1;
+    static $id_cont_acordion_item  = 1;
 
-
-    function accordion ($atts, $content) {
+    static function accordion ($atts, $content) {
         ob_start();
         
         $title = isset($atts['titulo']) ? $atts['titulo'] : false;
@@ -33,31 +31,27 @@ function shortcode_accordion() {
         return do_shortcode($html);
     }
 
-    add_shortcode('accordion', 'accordion');
-
-    
-    function item ($atts, $content) {
+    static function item ($atts, $content) {
         ob_start();
         
         $title = isset($atts['title']) ? $atts['title'] : false;
         $content = preg_replace('#^ *( *<br>| *<br />)*#', '', $content);
 
         //id de cada item para o accordion
-        global $id_cont_acordion_item;
-        $id_cont_acordion_item++;
+        self::$id_cont_acordion_item++;
 
         ?>
 
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="heading<?php echo $id_cont_acordion_item; ?>">
+            <div class="panel-heading" role="tab" id="heading<?php echo self::$id_cont_acordion_item; ?>">
                 <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $id_cont_acordion_item; ?>" aria-expanded="true" aria-controls="collapse<?php echo $id_cont_acordion_item; ?>">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo self::$id_cont_acordion_item; ?>" aria-expanded="true" aria-controls="collapse<?php echo self::$id_cont_acordion_item; ?>">
                     <span class="text"><?php echo $title ?></span>
                     <span class="icon"></span>
                     </a>
                 </h4>
             </div>
-            <div id="collapse<?php echo $id_cont_acordion_item; ?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<?php echo $id_cont_acordion_item; ?>">
+            <div id="collapse<?php echo self::$id_cont_acordion_item; ?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<?php echo self::$id_cont_acordion_item; ?>">
                 <div class="panel-body">
                     <?php echo $content; ?>
                 </div>
@@ -70,11 +64,15 @@ function shortcode_accordion() {
         $html = ob_get_clean();
 
         return $html;
-	}
+    }
 
-	add_shortcode('item', 'item');
-
+    static function init(){
+        add_shortcode('accordion', ['ShortcodeAccordion','accordion']);
+        add_shortcode('item', ['ShortcodeAccordion','item']);
+    }
+    
 }
 
-add_action('init', 'shortcode_accordion');
+add_action('init', ['ShortcodeAccordion','init']);
+
 
