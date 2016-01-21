@@ -56,6 +56,10 @@
                     transition: all .25s ease-out;
                 }
 
+                &:focus {
+                    background-color: transparent;
+                };
+
             }
 
         }
@@ -84,7 +88,11 @@
 
                 &:hover{
                     background:$menu-hover;
-                }
+                };
+
+                &:focus {
+                    background-color: transparent;
+                };
             }
         }
 
@@ -134,16 +142,32 @@
                 letter-spacing: 1px;
                 font-size: 16px;
                 text-decoration:none;
+                background-color: transparent;
+
 
 
                 &:hover  {
                     background-color: transparent;
                     text-decoration:none;
-                }
+                };
+
+                
+                &:focus {
+                    background-color: transparent;
+                    text-decoration:none;
+                };
             }
 
         }
 
     }
     
+}
+
+.nav{
+    .open{
+        a:focus{
+            background-color: transparent;
+        }
+    }
 }
