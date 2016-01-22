@@ -326,3 +326,6 @@ function jptweak_remove_share() {
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 
+add_filter('widget_text', 'do_shortcode');
+
+
