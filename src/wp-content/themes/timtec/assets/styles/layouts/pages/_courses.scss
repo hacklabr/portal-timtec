@@ -220,7 +220,7 @@
                     }
 
                     a {
-                        color: #fff;
+                        color: #095DAF;
                         &.moretag {
                             color: $cyan-blue;
                             text-decoration: underline; 
@@ -237,6 +237,7 @@
                             margin: 0;
                             padding: 2px 12px;
                             width: auto;
+                            color:#FFF;
                             &:hover { 
                                 background-color: #00c1b3;
                             }

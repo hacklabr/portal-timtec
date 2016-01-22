@@ -73,11 +73,22 @@ get_template_part('templates/header');
 
                         $teachers = $teacher_course_relation->getRelatedPosts();
                         $teacher = '';
-                        if (is_array($teachers)) {
-                            $teachers = array_map(function($e) {
+                        if (is_array($teachers)) {  
+
+                            $teachers_name = array_map(function($e) {
                                 return $e->post_title;
-                            }, $teachers);
-                            $teacher = implode(', ', $teachers);
+                            }, $teachers );
+
+                            $teachers_id = array_map(function($e) {
+                                return $e->ID;
+                            }, $teachers );
+                          
+                            for( $i = 0; $i < count( $teachers_id ); $i++  ){
+                                $link = get_the_permalink( $teachers_id[ $i ] );
+                                $teacher[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
+                            };
+
+                            $teacher = implode( ", ", $teacher);
                         }
                         ?>
                         <li>
