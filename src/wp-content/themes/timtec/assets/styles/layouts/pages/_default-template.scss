@@ -9,6 +9,16 @@
     }
     .banner {
         background-color: #304594;
+        @media screen and (min-width: $screen-sm-min) {
+            height: 240px;
+            margin-bottom: 40px;
+        }
+        .container {
+            position: relative;
+            @media screen and (min-width: $screen-sm-min) {
+                height: 270px;
+            }
+        }
         .title {
             text-transform: uppercase;
         }
@@ -141,12 +151,6 @@
 }
 .page-about {
     .banner {
-        .container {
-            @media screen and (min-width: $screen-sm-min) {
-                background: url('../images/ilustra-header-sobre.png') no-repeat; 
-                background-position: right 40px;
-            }
-        }
         .title {
             background-image: url('../images/icones-header-sobre.png');
         }
@@ -155,9 +159,12 @@
 
 .page-network {
     .banner {
-        .container {
-            background: url('') no-repeat;
-            background-position: right 40px;
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-redes.png') no-repeat;
+                background-position: right 20px;
+                background-size: 495px;
+            }
         }
         .title {
             background-image: url('../images/icones-redes.png');
@@ -167,9 +174,11 @@
 
 .page-software {
     .banner {
-        .container {
-            background: url('') no-repeat;
-            background-position: right 40px;
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-software.png') no-repeat;
+                background-position: right 20px;
+            }
         }
         .title {
             background-image: url('../images/icones-software.png');
