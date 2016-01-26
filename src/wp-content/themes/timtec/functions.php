@@ -63,6 +63,14 @@ require __DIR__ . '/inc/metaboxes/course-download.php';
 require __DIR__ . '/inc/metaboxes/link_redesocial.php';
 require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 
+require __DIR__ . '/inc/metaboxes/instituto-course.php';
+require __DIR__ . '/inc/metaboxes/nivel-course.php';
+require __DIR__ . '/inc/metaboxes/pre-requisito-course.php';
+require __DIR__ . '/inc/metaboxes/estrutura-course.php';
+require __DIR__ . '/inc/metaboxes/qtd-aulas-course.php';
+require __DIR__ . '/inc/metaboxes/qtd-horas-course.php';
+
+
 require __DIR__ . '/inc/metaboxes/page-header-text.php';
 
 require __DIR__ . '/inc/shortcode-destaque.php';
