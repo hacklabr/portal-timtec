@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www/wordpress":{"create":true,"guestpath":"/var/www/wordpress","hostpath":"/Users/elvisbmartins/workspace/portal-timtec","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/elvisbmartins/workspace/portal-timtec","disabled":false}}}

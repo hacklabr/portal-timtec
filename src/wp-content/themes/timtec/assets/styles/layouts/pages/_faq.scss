@@ -1,0 +1,76 @@
+#page-faq {
+    h3 {
+        margin-top: 0;
+    }
+    .panel-group {
+        .panel+.panel {
+            margin-top: 15px;
+        }
+    }
+    .panel-default {
+        border: 0;
+        box-shadow: none;
+        >.panel-heading {
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            padding: 0;
+            .panel-title {
+                color: #666;
+                font-weight: normal;
+                margin: 0;
+                width: 100%;
+                a {
+                    color: #666;
+                    display: table;
+                    overflow: hidden;
+                    padding: 10px;
+                    width: 100%;
+                    &:hover, &:active, &:focus { 
+                        background: #eee;
+                        text-decoration: none;
+                    }
+                    .text {
+                        display: table-cell;
+                        float: left;
+                        line-height: 145%;
+                        margin-right: 50px;
+                    }
+                    .icon {
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        display: table-cell;
+                        float: right;
+                        height: 30px;
+                        width: 30px;
+                        text-align: center;
+                        &:before {
+                            color: #ccc;
+                            content: '+';
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 25px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                a[aria-expanded="true"] {
+                    .icon {
+                        &:before {
+                            content: '–'; 
+                        }
+                    }
+                }
+            }
+        }
+        .panel-body {
+            border: 0;
+            padding: 25px 40px;
+            p {
+                color: #999;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ if(preg_match('#^/pt/cursos/?(\?.*)?#', $_SERVER['REQUEST_URI'])){
 pll_register_string('Texto do link leia mais', 'leia mais', 'timtec');
 
 function custom_excerpt_length( $length ) {
-  return 40;
+    return 23;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -63,6 +63,20 @@ require __DIR__ . '/inc/metaboxes/course-download.php';
 require __DIR__ . '/inc/metaboxes/link_redesocial.php';
 require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 
+require __DIR__ . '/inc/metaboxes/instituto-course.php';
+require __DIR__ . '/inc/metaboxes/nivel-course.php';
+require __DIR__ . '/inc/metaboxes/pre-requisito-course.php';
+require __DIR__ . '/inc/metaboxes/estrutura-course.php';
+require __DIR__ . '/inc/metaboxes/qtd-aulas-course.php';
+require __DIR__ . '/inc/metaboxes/qtd-horas-course.php';
+
+
+require __DIR__ . '/inc/metaboxes/page-header-text.php';
+
+require __DIR__ . '/inc/shortcode-destaque.php';
+require __DIR__ . '/inc/shortcode-accordion.php';
+require __DIR__ . '/inc/admin-page-destaques-noticias.php';
+
 require __DIR__ . '/inc/widgets/widget-forum-categories.php';
 require __DIR__ . '/inc/widgets/widget-forum-tags.php';
 
@@ -104,6 +118,7 @@ $sage_includes = [
   'lib/extras.php',                // Custom functions
   'inc/metaboxes/url-video-course.php', //MetaBox
   'inc/metaboxes/url-course.php', //MetaBox
+  'inc/metaboxes/colorbox-category.php', //ColorBox Category
   ];
 
   foreach ($sage_includes as $file) {
@@ -293,3 +308,32 @@ function rename_post_for_noticia_object() {
   $labels->menu_name = 'Notícias';
   $labels->name_admin_bar = 'Notícias';
 }
+
+
+
+// Remove sharing buttons on archive and search pages
+// function jptweak_remove_share() {
+//   if ( is_page( 4  ) || is_page( 46 )) {
+//       remove_filter( 'the_content', 'sharing_display',19 );
+//       remove_filter( 'the_excerpt', 'sharing_display',19 );
+//       if ( class_exists( 'Jetpack_Likes' ) ) {
+//           remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+//       }
+//   }
+
+// }
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+
+add_action( 'loop_start', 'jptweak_remove_share' );
+
+
+add_filter('widget_text', 'do_shortcode');
+
+

@@ -1,0 +1,136 @@
+#modal-home {
+    position:absolute;
+    z-index:9999;
+    width: 100%;
+    height: 100%;
+    top: -60px;
+    
+    .bg-modal {
+        -moz-opacity: 0.60;
+        -khtml-opacity: 0.60;
+        opacity: 0.60;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=60);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+        filter: alpha(opacity=60);
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        position: absolute;
+        background: #313131;
+    }
+
+    .modal-home-wrapper {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 20px;
+        overflow: visible;
+        position: relative;
+        top: 150px;
+        z-index: 999;
+        @media screen and (min-width: $screen-sm-min) {
+            left: 50%;
+            margin-left: -325px;
+            width: 650px;
+        }
+    }
+
+    .modal-home-content {
+        background: #e6e6e6;
+        border-radius: 20px;
+        border-radius: 5px;
+        padding: 30px 40px;
+        
+        h3 {
+            color: #27356f;
+            text-transform: uppercase;
+            font-family: $teuton23;
+            font-size: 2.2em;
+            text-align: center;
+            margin: 0 auto;
+            @media screen and (min-width: $screen-xs-min) {
+                font-size: 3.5em;
+                line-height: 120%;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 4em;
+            }
+            a {
+                color: #27356f !important;
+                text-decoration: none !important;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            span {
+                font-family: $teuton26;
+                font-weight: normal;
+            }
+        }
+        p {
+            color: #27356f;
+            font-size: 0.9em;
+            margin: 0; 
+            text-align: center;
+            @media screen and (min-width: $screen-xs-min) {
+                font-size: 1.2em;
+            }
+            a {
+                color: #27356f;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        .close {
+            background: #2B4792;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 24px;
+            height: 35px;
+            margin-top: -40px;
+            margin-right: -50px;
+            opacity: 1;
+            text-align: center;
+            text-decoration: none;
+            width: 35px;
+            &:hover {
+                color:#fff;
+                text-decoration: underline;
+            }
+            .fa {
+                margin: 5px 0 0 2px;
+            }
+        }
+
+        .icon {
+            margin: 70px 0 20px;
+            text-align: center;
+            @media screen and (min-width: $screen-xs-min) { 
+                border-top: 2px solid #27356f;
+            }
+            div {
+                background-color: #e6e6e6;
+                margin: -50px auto 0;
+                padding: 0 30px;
+                width: 160px;
+            }
+        }
+    }
+}
+
+.modal-triangle-up {
+    border-left: 20px transparent;
+    border-right: 20px transparent;
+    border-bottom: 25px #e6e6e6;
+    border-style: dotted dotted solid;
+    height: 0;
+    margin: 0 auto;
+    width: 0;
+}
+
+.modal-timtec-logo {
+    background: url(../images/logo-timtec-pop-up.png);
+    height: 48px;
+    margin: 0 auto 10px; 
+    width: 175px;
+}

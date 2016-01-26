@@ -1,0 +1,199 @@
+#page-default-template {
+    &.base-content {
+        margin-top: 0;
+        p {
+            font-size: 1.2em;
+            line-height: 170%;
+            margin-bottom: 20px;
+        }
+    }
+    .banner {
+        background-color: #304594;
+        @media screen and (min-width: $screen-sm-min) {
+            height: 240px;
+            margin-bottom: 40px;
+        }
+        .container {
+            position: relative;
+            @media screen and (min-width: $screen-sm-min) {
+                height: 270px;
+            }
+        }
+        .title {
+            text-transform: uppercase;
+        }
+    }
+    .page-content {
+        overflow: hidden;
+        h2 {
+            color: $timtec-blue;
+            font-family: $teuton25;
+            font-size: 36px;
+        }
+        blockquote {
+            border-left: 0;
+            color: $timtec-blue;
+            font-family: $teuton25;
+            padding: 0;
+            text-align: center;
+            @media screen and (min-width: $screen-md-min) {
+                float: left;
+                margin-right: 20px;
+                text-align: left;
+                width: 40%;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                width: 30%; 
+            }
+            p {
+                color: $timtec-blue;
+                font-family: $teuton25;
+                font-size: 44px;
+                line-height: 120%; 
+                @media screen and (min-width: $screen-sm-min) {
+                    font-size: 52px;
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+    .page-featured {
+        clear: both;
+        margin: 40px 0;
+        margin-left: -6%;
+        margin-right: -6%;
+        @media screen and (min-width: $screen-xs-min) {
+            margin-left: -2.5%;
+            margin-right: -2.5%;
+        }
+        @media screen and (min-width: $screen-sm-min) {
+            margin-left: -20%;
+            margin-right: -20%;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            margin-left: -50%;
+            margin-right: -50%;
+        }
+        .title {
+            @extend .container;
+            color: $timtec-blue;
+            font-family: $teuton25;
+            font-size: 46px;
+            margin-bottom: 20px;
+            text-align: center;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 60px;
+                margin-bottom: 40px;
+            }
+        }
+        h2, h3 {
+            color: #fff;
+            font-family: $teuton25;
+            font-size: 32px;
+            margin: 0;
+        }
+        p {
+            color: #fff;
+            font-size: 1em;
+            margin: 15px 0;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 1.2em;
+            }
+        }
+        .featured-line {
+            background-color: #0aa8b2;
+        }
+        .featured-box-1, .featured-box-2, .featured-box-3 {
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            p {
+                margin: 15px 0;
+                @media screen and (min-width: $screen-xs-min) {
+                    margin: 15px;
+                }
+            }
+        }
+        .featured-box-1 {
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
+        }
+        .featured-box-2 {
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+                @extend .col-sm-6;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                @extend .col-md-6;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                @extend .col-lg-6;
+            }
+        }
+        .featured-box-3 {
+            @media screen and (min-width: $screen-xs-min) {
+                @extend .col-xs-12;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+                @extend .col-sm-4;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                @extend .col-md-4;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                @extend .col-lg-4;
+            }
+        }
+    }
+}
+.page-about {
+    .banner {
+        .title {
+            background-image: url('../images/icones-header-sobre.png');
+        }
+    }
+}
+
+.page-network {
+    .banner {
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-redes.png') no-repeat;
+                background-position: right 20px;
+                background-size: 495px;
+            }
+        }
+        .title {
+            background-image: url('../images/icones-redes.png');
+        }
+    }
+}
+
+.page-software {
+    .banner {
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-software.png') no-repeat;
+                background-position: right 20px;
+            }
+        }
+        .title {
+            background-image: url('../images/icones-software.png');
+        }
+    }
+}
+
+.page-contact {
+    .banner {
+        background-color: #0aa8b2 !important;
+        .title {
+            background-image: url('../images/icones-header-contato.png');
+            padding-top: 10px;
+            top: 50px;
+        }
+    }
+}
+

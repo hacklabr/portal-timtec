@@ -13,46 +13,67 @@
         </div>
         <nav class="collapse navbar-collapse navbar-nav" id="main-navbar-collapse">
             <div class="menu-menu-pt-container">
-                <ul id="menu-menu-pt" class="nav">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                        <a>Sobre</a>
-                        <?php
+            <ul class="nav nav-pills" role="tablist">
+                <li class="dropdown"> 
+                    <a id="sobrebtn" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+                        Sobre 
+                    </a>
+                    <?php
                         wp_nav_menu(array(
-                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'items_wrap' => '<ul id="menu1" class="dropdown-menu" aria-labelledby="sobrebtn">%3$s</ul>',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'container'       => '',
                             'theme_location'    => 'sobre-topo',
                         ));
-                        ?>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                        <a>Software</a>
-                        <?php
+                    ?>
+                    
+                </li>
+                <li role="presentation" class="dropdown"> 
+                    <a id="softwarenv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+                        Software
+                    </a>
+                    <?php
                         wp_nav_menu(array(
-                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
-                            'theme_location'    => 'software-topo',
+                            'items_wrap' => '<ul id="menu2" class="dropdown-menu" aria-labelledby="softwarenv">%3$s</ul>',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'container'       => '',
+                            'theme_location'    => 'software-topo', 
                         ));
-                        ?>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                        <a>Cursos</a>
-                        <?php
+                    ?>
+                </li>
+                <li role="presentation" class="dropdown"> 
+                    <a id="cursonv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+                        Cursos
+                    </a>
+                    <?php
                         wp_nav_menu(array(
-                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'items_wrap' => '<ul id="menu3" class="dropdown-menu" aria-labelledby="cursonv">%3$s</ul>',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'container'       => '',
                             'theme_location'    => 'cursos-topo',
                         ));
-                        ?>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                        <a>Rede</a>
-                        <?php
+                    ?>
+                </li>
+                <li role="presentation" class="dropdown"> 
+                    <a id="redenv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+                        Rede
+                    </a>
+                    <?php
                         wp_nav_menu(array(
-                            'items_wrap' => '<ul id="%1$s" class="sub-menu">%3$s</ul>',
+                            'items_wrap' => '<ul id="menu4" class="dropdown-menu" aria-labelledby="redenv">%3$s</ul>',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'container'       => '',
                             'theme_location'    => 'rede-topo',
                         ));
-                        ?>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
-                </ul>
+                    ?>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
+            </ul>
             </div>
         </nav>
     </div>

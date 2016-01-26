@@ -4,7 +4,9 @@ html {
 }
 
 body {
-    padding-bottom: 300px;
+    @media screen and (min-width: $screen-sm-min) {
+        padding-bottom: 320px;
+    }
     @media screen and (min-width: $screen-md-min) {
         padding-bottom: 200px;
     }

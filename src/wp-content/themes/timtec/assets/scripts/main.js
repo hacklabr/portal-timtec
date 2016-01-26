@@ -156,4 +156,43 @@ $('.show-more-courses').on('click', function(e){
 });
 
 
+String.prototype.hashCode = function() {
+  var hash = 0, i, chr, len;
+  if (this.length === 0) return hash;
+  for (i = 0, len = this.length; i < len; i++) {
+      chr = this.charCodeAt(i);
+      hash = ((hash << 5) - hash) + chr;
+      hash = hash & hash;
+  }
+  return Math.abs(hash).toString(16);
+};
+
+$(function(){
+    // @depends jquery.cookie
+    // @depends String.prototype.hashCode
+    $('[one-time-show]').each(function(i, el){
+        var $el = $(el);
+        var id = $el.attr('id');
+
+        if(!id) {
+            id = 'id' + $el.html().hashCode();
+            $el.attr('id', id);
+        }
+
+        var key = 'ots_' + id;
+        if ($.cookie(key) === '1') {
+            $el.css('display', 'none');
+        } else {
+            $el.css('display', '');
+        }
+
+        $el.find('.btn.close,a.close,:input.close').click(function(){
+            var date = new Date();
+            var expires = 1296000000; // 15 * 24 * 60 * 60 * 1000 // 15 dias;
+            date.setTime(date.getTime() + expires);
+            $.cookie(key, '1', {expires: date});
+        });
+    });
+});
+
 })(jQuery); // Fully reference jQuery after this point.

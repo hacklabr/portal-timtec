@@ -1,10 +1,15 @@
-<section id="modal-home">
+<section id="modal-home" style="display:none" one-time-show>
     <div class="bg-modal"></div>
-    <div class="modal">
-        <a href="#" class="close js-close-modal">x</a>
-        <h3><a href="http://mooc.timtec.com.br">CLIQUE AQUI PARA ACESSAR OS CURSOS</a></h3>
-        <hr>
-        <p>Este é o novo Portal TIM Tec. A plataforma TIM Tec mudou de endereço: <a href="http://mooc.timtec.com.br">mooc.timtec.com.br</a></p>
+    <div class="modal-home-wrapper">
+        <div class="modal-timtec-logo"></div>
+        <div class="modal-triangle-up"></div>
+        <div class="modal-home-content">
+            <a href="#" class="close js-close-modal"><i class="fa fa-times"></i></a>
+            <h3><a href="http://mooc.timtec.com.br"><span>CLIQUE AQUI</span> PARA ACESSAR OS CURSOS</a></h3>
+            <div class="icon"><div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icones-cursos.png" alt="Cursos TIM Tec"></div></div>
+            <p>Este é o novo Portal TIM Tec.</p>
+            <p>A plataforma TIM Tec mudou de endereço: <a href="http://mooc.timtec.com.br">mooc.timtec.com.br</a></p>
+        </div>
     </div>
 </section>
 

@@ -53,16 +53,18 @@
                         </div>
                     </section>
 
-<!--                    <section class="widget nav_menu-6 widget_nav_menu ">
-                        <h3>Notícias</h3>
+                    <section class="widget nav_menu-6 widget_nav_menu ">
+                        <a href="/pt/lista-de-noticias/"><h3>Notícias</h3></a>
+                        <?php /* $q_atuais = new WP_Query(['posts_per_page' => 3]); ?>
                         <div class="menu-noticias-container">
                             <ul id="menu-noticias" class="menu">
-                                <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="#">Notícia 1</a></li>
-                                <li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="#">Notícia 2</a></li>
-                                <li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="#">Notícia 3</a></li>
+                                <?php while($q_atuais->have_posts()): $q_atuais->the_post(); ?>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
+                                <?php endwhile; ?>
+                                
                             </ul>
-                        </div>
-                    </section>-->
+                        </div> */ ?>
+                    </section>
                 </div>
                 <div class="social col-md-3 col-sm-12">
                     <h4>Acompanhe nossas redes</h4>
