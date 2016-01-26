@@ -9,7 +9,17 @@
             </h2>
         </div>
     </div>
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while (have_posts()) : the_post(); 
+
+		$pre_requisito_course;
+		$estrutura_course;
+		$instituto_course;
+		$qtd_aulas_course;
+		$qtd_horas_course;
+		$nivel_course;
+	?>
+
+
 		<div class="container">
 		    <article <?php post_class(); ?>>
 		        <header>

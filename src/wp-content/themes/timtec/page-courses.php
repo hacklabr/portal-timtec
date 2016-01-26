@@ -70,6 +70,7 @@ get_template_part('templates/header');
                         $title = get_the_title();
                         $course_url = get_metadata('post', get_the_ID(), 'url_course', true);
                         $youtube_url = get_metadata('post', get_the_ID(), 'url_youtube_course', true);
+                        $instituto = get_metadata('post', get_the_ID(), 'instituto_course', true);
 
 
                         $teachers = $teacher_course_relation->getRelatedPosts();
@@ -104,7 +105,7 @@ get_template_part('templates/header');
                                 }
                             ?>
                             <div class="content-curso">
-                                <div class="institute">Instituto</div>
+                                <div class="institute"><?php echo $instituto ?></div>
                                 <h4><?php echo $title ?></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
 
