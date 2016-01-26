@@ -9,6 +9,7 @@ global $teacher_course_relation, $couse_download;
 
 do_action('get_header');
 get_template_part('templates/header');
+
 ?>
 <div id="page-course" class="base-content">
     <div class="banner">
