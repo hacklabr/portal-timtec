@@ -299,4 +299,101 @@
             }
         }
     }
+
+    .entry-title{
+        font-family: Teuton22Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    .colunm-content{
+        padding:0px;
+        colunm: 0px;
+    }
+
+    .colunm{
+        margin: 10px 0px;
+    }
+
+    h4{
+        color: #000;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    hr{
+        border-color: #D2D2D2;
+        margin:20px;
+    }
+
+    a {
+        color: #095DAF;
+        &.moretag {
+            color: $cyan-blue;
+            text-decoration: underline; 
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &.goto, &.download {
+            float: left;
+        }
+        &.goto {
+            background-color: #33cdc2;
+            font-family: $teuton26;
+            margin: 0;
+            padding: 2px 12px;
+            width: auto;
+            color:#FFF;
+            &:hover { 
+                background-color: #00c1b3;
+            }
+            &:focus, &:active {
+                background-color: #009186;
+            }
+        }
+        &.download {
+            color: #ff8969;
+            display: block;
+            font-family: $teuton24;
+            margin: 4px 0 0 8px;
+            text-decoration: none;
+            text-transform: initial;
+            transition: color 1s ease;
+            &:hover { 
+                color: #e8684e;
+            }
+            &:focus, &:active {
+                color: #e8684e;
+            }
+        }
+    }
+
+    .instrutor{
+        display:inline-block;
+        margin-right: 20px;
+    }
+
+    .instituto{
+        display:inline-block;
+    }
+
+    .video-curso{
+        iframe{
+            width:100%;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .infos-curso{
+        margin-top:20px;
+        font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 0.9em;
+        span{
+            color: #000;
+            font-weight:bold;
+        }
+    }
 }
+    
