@@ -109,10 +109,6 @@
 <section id="software" class="section">
     <div class="container">
         <div class="boxs row">
-            <div class="linha-mobile">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-verde.png" />
-            </div>
-
             <div class="col-md-6">
                 <div class="box">
                     <div class="icon hidden-sm hidden-xs">
@@ -155,10 +151,6 @@
 <section id="courses" class="section">
     <div class="container">
         <div class="boxs row">
-            <div class="linha-mobile">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-azul.png" />
-            </div>
-
             <div class="col-md-6 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-cursos.png" class="img"/>
             </div>
@@ -205,10 +197,6 @@
 <section id="network" class="section">
     <div class="container">
         <div class="boxs row">
-            <div class="linha-mobile">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/listra-branco.png" />
-            </div>
-
             <div class="col-md-12 hidden-sm hidden-xs">
                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ilustra-redes.png" class="img"/>
             </div>
