@@ -74,10 +74,56 @@
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
             </ul>
-            <!-- menu login
-            <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a> -->
-            <div class="menu-logado"><a href="" data-toggle="modal" data-target="#modal-logado"><span class="icon">MM</span>Logado</a>
-            </div>
+            <!-- menu login/logado -->
+            <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a></div>
+            <div class="menu-logado"><a href="" data-toggle="modal" data-target="#modal-logado"><span class="icon">MM</span>Logado</a></div>
         </nav>
     </div>
 </header>
+
+<!-- modal login -->
+<div class="modal modal-menu fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-container">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-triangle-up"></div>
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3><span>Login</span></h3>
+            <h4>Olá, deseja entrar? ;)</h4>
+            <form>
+              <div class="form-group">
+                <label for="emailornamelogin-email" class="sr-only">Email ou nome</label>
+                <input type="email" class="form-control" id="login-email" placeholder="email ou nome">
+              </div>
+              <div class="form-group">
+                <label for="login-password" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="login-password" placeholder="senha">
+              </div>
+              <button type="submit" class="btn">Iniciar Sessão</button>
+            </form>
+            <p>Faça o cadastro para acessar nossos fóruns e para poder baixar cursos. <a href="#">Clique aqui</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- modal logado -->
+<div class="modal modal-menu fade" id="modal-logado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-container">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-triangle-up"></div>
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>Olá, <span>Pessoa de Tal</span>, deseja sair? ;)</h3>
+            <a href="#" class="btn btn-logout">Sim, quero me deslogar</a>
+            <a href="#" class="btn btn-cancel">Cancelar</a>
+            <div class="info">
+                <div class="icon">MM</div>
+                <div class="text"><span>Pessoa de Tal</span>, para acessar seus dados de perfil e editar <a href="">clique aqui</a>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
