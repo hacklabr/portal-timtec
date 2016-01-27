@@ -62,6 +62,7 @@ get_template_part('templates/header');
                         <?php if($q_principal->current_post === 0 && ($q_principal->post_count == 1 || $q_principal->post_count >= 3)): ?>
                             <div class="featured-big">
                                 <div class="news-box" style="<?php _img_url(); ?>">
+                                    <div class="gradient"></div>
                                     <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
                                     <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                                     <div class="post-excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></div>
@@ -70,6 +71,7 @@ get_template_part('templates/header');
                         <?php else: ?>
                             <div class="featured-small">
                                 <div class="news-box" style="<?php _img_url() ?>">
+                                    <div class="gradient"></div>
                                     <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
                                     <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                                 </div>
