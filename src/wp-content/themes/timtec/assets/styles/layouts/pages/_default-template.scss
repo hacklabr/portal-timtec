@@ -151,6 +151,13 @@
 }
 .page-about {
     .banner {
+        background-color: #243670 !important;
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-sobre.png') no-repeat;
+                background-position: right 20px;
+            }
+        }
         .title {
             background-image: url('../images/icones-header-sobre.png');
         }
@@ -159,11 +166,11 @@
 
 .page-network {
     .banner {
+        background-color: #243670 !important;
         @media screen and (min-width: $screen-sm-min) {
             .container {
                 background: url('../images/ilustra-header-redes.png') no-repeat;
-                background-position: right 20px;
-                background-size: 495px;
+                background-position: right 15px;
             }
         }
         .title {
@@ -174,10 +181,11 @@
 
 .page-software {
     .banner {
+        background-color: #304594 !important;
         @media screen and (min-width: $screen-sm-min) {
             .container {
                 background: url('../images/ilustra-header-software.png') no-repeat;
-                background-position: right 20px;
+                background-position: right 15px;
             }
         }
         .title {
