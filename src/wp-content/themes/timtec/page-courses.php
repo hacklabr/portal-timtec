@@ -106,7 +106,7 @@ get_template_part('templates/header');
                             ?>
                             <div class="content-curso">
                                 <div class="institute"><?php echo $instituto ?></div>
-                                <h4><?php echo $title ?></h4>
+                                <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
 
 
