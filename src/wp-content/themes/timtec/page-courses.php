@@ -111,7 +111,7 @@ get_template_part('templates/header');
 
 
                                 <?php if ($course_url): ?>
-                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
+                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aulas</a>
                                 <?php endif; ?>
                                 <?php
                                 if ($couse_download->getFilePath(get_the_ID())):

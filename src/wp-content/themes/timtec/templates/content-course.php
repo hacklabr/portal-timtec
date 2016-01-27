@@ -40,9 +40,13 @@
                 $url_image = wp_get_attachment_url( get_post_thumbnail_id( $teachers_id[ $i ] ) );
                 
                 $teachers[ $i ]  = "<div class='instrutor'>";
-                $teachers[ $i ] .= "<img src='".$url_image."' alt='".$teachers_name[ $i ]."' class='circular' />";
+                if( !empty( $url_image )){
+                	$teachers[ $i ] .= "<img src='".$url_image."' alt='".$teachers_name[ $i ]."' class='circular' />";
+                };
                 $teachers[ $i ] .= "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
-            	$teachers[ $i ] .= "<p>". $teachers_resumo[ $i ] ."</p>";
+            	if( !empty( $teachers_resumo[ $i ] )){
+            		$teachers[ $i ] .= "<p>". $teachers_resumo[ $i ] ."</p>";
+            	};
             	$teachers[ $i ] .= "</div>";
 
             	$teacher_title[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
@@ -84,7 +88,7 @@
 		            	<?php the_content(); ?>
 
 		            	<?php if ($course_url): ?>
-	                        <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
+	                        <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aulas</a>
 	                    <?php endif; ?>
 	                    <?php
 	                    if ($couse_download->getFilePath(get_the_ID())):
@@ -109,9 +113,25 @@
 		    </div>
 		    <div class="col-md-2 side-curso">
 	    		<div class="infos-curso">
-	            	<p>Aulas: <span><?php echo $qtd_aulas; ?></span></p>
-	            	<p>Horas: <span><?php echo $qtd_horas; ?></span></p>
-	            	<p>Nível: <span><?php echo $nivel; ?></span></p>
+	            	<?php 
+	            		if( !empty( $qtd_aulas ) ){
+	            	?>
+	            		<p>Aulas: <span><?php echo $qtd_aulas; ?></span></p>
+	            	<?php 
+	            		}
+
+	            		if( !empty( $nivel ) ){
+	            	?>
+	            		<p>Horas: <span><?php echo $qtd_horas; ?></span></p>
+	            	<?php 
+	            		}
+
+	            		if( !empty( $nivel ) ){
+	            	?>
+	            		<p>Nível: <span><?php echo $nivel; ?></span></p>
+	            	<?php 
+	            		}
+	            	?>
 	            </div>
 	            <div class="instrutores">
 	            	<h5>Instrutores:</h5>
