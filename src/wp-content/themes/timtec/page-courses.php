@@ -97,7 +97,7 @@ get_template_part('templates/header');
                             <?php 
                                 if( empty( $youtube_url) ){
                             ?>
-                                    <img src="<?php echo $thumb ?>" alt="<?php echo $title ?>"  title="<?php echo $title ?>">
+                                    <div class="thumb" style="<?php echo $thumb ?>"></div>
                             <?php 
                                 }else{
                                     $embed_code = wp_oembed_get( $youtube_url , array('width'=>355) ); 
@@ -106,7 +106,7 @@ get_template_part('templates/header');
                             ?>
                             <div class="content-curso">
                                 <div class="institute"><?php echo $instituto ?></div>
-                                <h4><?php echo $title ?></h4>
+                                <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
                                 <div class="author"><?php echo $teacher; ?></div>
 
 
