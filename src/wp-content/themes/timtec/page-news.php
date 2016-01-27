@@ -18,7 +18,7 @@ function _cat(){
 
 function _img_url(){
     if ( has_post_thumbnail( get_the_ID() ) ){
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id() );
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'single-post-thumbnail' );
         echo "background-image:url({$image[0]})";
     }else{
         echo 'background:black';
