@@ -19,9 +19,12 @@
     .post-title {
         color: #000;
         font-family: $font-family-sans-serif;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: bold;
         margin: 0;
+        @media screen and (min-width: $screen-xs-min) {
+            font-size: 30px;
+        }
         a {
             color: #000;
         }
@@ -42,11 +45,8 @@
         }
         .title {
             background-image: url('../images/icones-header-news.png');
-            padding-top: 15px;
+            padding-top: 10px;
             text-transform: uppercase;
-            @media screen and (min-width: $screen-xs-min) {
-                padding-top: 10px;
-            }
         }
     }
     .news-box {
@@ -271,6 +271,11 @@
                 color: #000;
                 min-height: 75px;
                 position: static;
+                padding-top: 15px;
+                text-transform: uppercase;
+                @media screen and (min-width: $screen-xs-min) {
+                    padding-top: 10px;
+                }
             }
         }
         .single-news {
