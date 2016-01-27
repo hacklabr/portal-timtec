@@ -92,8 +92,8 @@
             <h4>Olá, deseja entrar? ;)</h4>
             <form>
               <div class="form-group">
-                <label for="emailornamelogin-email" class="sr-only">Email ou nome</label>
-                <input type="email" class="form-control" id="login-email" placeholder="email ou nome">
+                <label for="login-email" class="sr-only">E-mail ou nome</label>
+                <input type="email" class="form-control" id="login-email" placeholder="e-mail ou nome">
               </div>
               <div class="form-group">
                 <label for="login-password" class="sr-only">Password</label>
@@ -101,7 +101,8 @@
               </div>
               <button type="submit" class="btn">Iniciar Sessão</button>
             </form>
-            <p>Faça o cadastro para acessar nossos fóruns e para poder baixar cursos. <a href="#">Clique aqui</a></p>
+            <p><a href="#">Clique aqui para fazer o cadastro.</a></p>
+            <p>O cadastro permite acessar os fóruns e baixar os cursos.</p>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
             <a href="#" class="btn btn-cancel">Cancelar</a>
             <div class="info">
                 <div class="icon">MM</div>
-                <div class="text"><span>Pessoa de Tal</span>, para acessar seus dados de perfil e editar <a href="">clique aqui</a>.</div>
+                <div class="text"><span>Pessoa de Tal</span>, para para editar seus dados de perfil, <a href="">clique aqui</a>.</div>
             </div>
           </div>
         </div>
