@@ -112,7 +112,7 @@ $('.carousel .item').each(function(){
   if (!next.length) {
     next = $(this).siblings(':first');
   }
-  next.children(':first-child').clone().appendTo($(this));
+//  next.children(':first-child').clone().appendTo($(this));
 
   for (var i=0;i<2;i++) {
     next=next.next();
@@ -120,7 +120,7 @@ $('.carousel .item').each(function(){
       next = $(this).siblings(':first');
     }
 
-    next.children(':first-child').clone().appendTo($(this));
+//    next.children(':first-child').clone().appendTo($(this));
   }
 });
 
