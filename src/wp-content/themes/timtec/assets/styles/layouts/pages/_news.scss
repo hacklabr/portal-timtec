@@ -261,7 +261,6 @@
         .banner {
             background-color: transparent;
             height: initial;
-            margin: 40px 0;
             position: relative;
             .container {
                 height: initial;
@@ -270,6 +269,7 @@
             .title {
                 color: #000;
                 min-height: 75px;
+                position: static;
             }
         }
         .single-news {
