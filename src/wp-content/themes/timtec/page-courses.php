@@ -97,7 +97,7 @@ get_template_part('templates/header');
                             <?php 
                                 if( empty( $youtube_url) ){
                             ?>
-                                    <div class="thumb" style="<?php echo $thumb ?>"></div>
+                                    <div class="thumb" style="background-image: url(<?php echo $thumb ?>)"></div>
                             <?php 
                                 }else{
                                     $embed_code = wp_oembed_get( $youtube_url , array('width'=>355) ); 
