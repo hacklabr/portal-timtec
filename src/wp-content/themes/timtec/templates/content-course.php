@@ -20,8 +20,8 @@
 
 		$teachers = $teacher_course_relation->getRelatedPosts();
         $teacher = '';
-        if (is_array($teachers)) {  
 
+        if (is_array($teachers)) { 
             $teachers_name = array_map(function($e) {
                 return $e->post_title;
             }, $teachers );
@@ -29,13 +29,27 @@
             $teachers_id = array_map(function($e) {
                 return $e->ID;
             }, $teachers );
+
+            $teachers_resumo = array_map(function($e) {
+                return $e->post_excerpt;
+            }, $teachers );
+            
           
             for( $i = 0; $i < count( $teachers_id ); $i++  ){
                 $link = get_the_permalink( $teachers_id[ $i ] );
-                $teacher[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
-            };
+                $url_image = wp_get_attachment_url( get_post_thumbnail_id( $teachers_id[ $i ] ) );
+                
+                $teachers[ $i ]  = "<div class='instrutor'>";
+                $teachers[ $i ] .= "<img src='".$url_image."' alt='".$teachers_name[ $i ]."' class='circular' />";
+                $teachers[ $i ] .= "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
+            	$teachers[ $i ] .= "<p>". $teachers_resumo[ $i ] ."</p>";
+            	$teachers[ $i ] .= "</div>";
 
-            $teacher = implode( ", ", $teacher);
+            	$teacher_title[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
+
+            };
+            $teacher_title = implode( ", ", $teacher_title);
+            $teachers = implode( "", $teachers);	
         }
 	?>
 	<div class="container">
@@ -43,14 +57,14 @@
 	        <header>
 	            <h1 class="entry-title"><?php the_title(); ?></h1>
 	            <div class="instrutor">
-	            	<span>Instrutor: </span><?php echo $teacher; ?>
+	            	<span>Instrutor: </span><?php echo $teacher_title; ?>
 	            </div>
-	            <div class="instituto">Instituto: <?php echo $instituto; ?> </div>
+	            <div class="instituto">Instituto: <span><?php echo $instituto; ?></span></div>
 	        </header>
 	        <hr />
-	        <div class="col-md-9 colunm-content">
+	        <div class="col-md-10 colunm-content">
 		        <div class="row">
-		        	<div class="col-md-5 video-curso colunm">
+		        	<div class="col-md-6 video-curso colunm">
 		            	<?php 
 		            		$thumb = wp_get_attachment_url(get_post_thumbnail_id());
 	                        $youtube_url = get_metadata('post', get_the_ID(), 'url_youtube_course', true);
@@ -65,7 +79,7 @@
                             }
                         ?>
 		            </div>
-		            <div class="col-md-7 colunm">
+		            <div class="col-md-6 colunm">
 		            	<h4><?php _oi("Descrição do curso"); ?></h4>
 		            	<?php the_content(); ?>
 
@@ -83,24 +97,25 @@
 		            </div>
 		        </div>
 		        <div class="row">
-		        	<div class="col-md-5 colunm">
+		        	<div class="col-md-6 colunm">
 		        		<h4><?php _oi("Pré-Requisitos"); ?></h4>
 		            	<?php echo $pre_requisito; ?>
 		            </div>
-		            <div class="col-md-7 colunm">
+		            <div class="col-md-6 colunm">
 		            	<h4><?php _oi("Estrutura do Curso"); ?></h4>
 		            	<?php echo $estrutura; ?>
 		            </div>
 		        </div>
 		    </div>
-		    <div class="col-md-3">
-	    		<div class="row infos-curso">
+		    <div class="col-md-2 side-curso">
+	    		<div class="infos-curso">
 	            	<p>Aulas: <span><?php echo $qtd_aulas; ?></span></p>
-	            	<p>Horas: <span><?php echo $qtd_horas ?></span></p>
-	            	<p>Nível: <span><?php echo $nivel ?></span></p>
+	            	<p>Horas: <span><?php echo $qtd_horas; ?></span></p>
+	            	<p>Nível: <span><?php echo $nivel; ?></span></p>
 	            </div>
-	            <div class="row">
+	            <div class="instrutores">
 	            	<h5>Instrutores:</h5>
+	            	<?php echo $teachers; ?>
 	            </div>
 		    </div>
 	    </article>
