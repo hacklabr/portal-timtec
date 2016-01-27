@@ -141,6 +141,11 @@
             &.open {
                 height: auto;
             }
+            .thumb {
+                background-size: cover;
+                height: 200px;
+                width: 100%;
+            } 
         }
         .show-more-courses {
             color: $navy-blue;
