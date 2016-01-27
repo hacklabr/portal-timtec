@@ -42,7 +42,11 @@
         }
         .title {
             background-image: url('../images/icones-header-news.png');
+            padding-top: 15px;
             text-transform: uppercase;
+            @media screen and (min-width: $screen-xs-min) {
+                padding-top: 10px;
+            }
         }
     }
     .news-box {
@@ -266,9 +270,6 @@
             .title {
                 color: #000;
                 min-height: 75px;
-                padding-left: 90px;
-                position: static;
-                top: 0;
             }
         }
         .single-news {
