@@ -14,7 +14,7 @@
         <nav class="collapse navbar-collapse navbar-nav" id="main-navbar-collapse">
             <div class="menu-menu-pt-container">
             <ul class="nav nav-pills" role="tablist">
-                <li class="dropdown"> 
+                <li role="presentation" class="menu-item dropdown"> 
                     <a id="sobrebtn" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
                         Sobre 
                     </a>
@@ -29,7 +29,7 @@
                     ?>
                     
                 </li>
-                <li role="presentation" class="dropdown"> 
+                <li role="presentation" class="menu-item dropdown"> 
                     <a id="softwarenv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
                         Software
                     </a>
@@ -43,7 +43,7 @@
                         ));
                     ?>
                 </li>
-                <li role="presentation" class="dropdown"> 
+                <li role="presentation" class="menu-item dropdown"> 
                     <a id="cursonv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
                         Cursos
                     </a>
@@ -57,7 +57,7 @@
                         ));
                     ?>
                 </li>
-                <li role="presentation" class="dropdown"> 
+                <li role="presentation" class="menu-item dropdown"> 
                     <a id="redenv" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
                         Rede
                     </a>
@@ -74,6 +74,9 @@
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
             </ul>
+            <!-- menu login
+            <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a> -->
+            <div class="menu-logado"><a href="" data-toggle="modal" data-target="#modal-logado"><span class="icon">MM</span>Logado</a>
             </div>
         </nav>
     </div>
