@@ -421,6 +421,12 @@
     .instrutores{
         font-family: Teuton22Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
         margin-left:5px;
+
+        h5{
+            font-size: 1.1em;
+            font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
         .instrutor{
             margin-right:0px;
             margin-bottom: 10px;
@@ -431,11 +437,6 @@
                 -webkit-border-radius: 150px;
                 -moz-border-radius: 150px;
                 display: block;
-            }
-
-            h5{
-                font-size: 1.1em;
-                font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
             }
 
             a{
