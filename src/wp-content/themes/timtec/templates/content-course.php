@@ -65,7 +65,7 @@
 	        <header>
 	            <h1 class="entry-title"><?php the_title(); ?></h1>
 	            <div class="instrutor">
-	            	<span>Instrutor: </span><?php echo $teacher_title; ?>
+	            	<span>Instrutor: </span><?php echo $teacher_name; ?>
 	            </div>
 	            <div class="instituto">Instituto: <span><?php echo $instituto; ?></span></div>
 	        </header>
