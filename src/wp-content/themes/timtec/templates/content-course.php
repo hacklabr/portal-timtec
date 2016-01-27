@@ -51,9 +51,13 @@
 
             	$teacher_title[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
 
+
+            	$teacher_name[ $i ] = "<span>" .$teachers_name[ $i ]. "</span>";
+
             };
             $teacher_title = implode( ", ", $teacher_title);
-            $teachers = implode( "", $teachers);	
+            $teachers = implode( "", $teachers);
+            $teacher_name = implode( ", ", $teacher_name);	
         }
 	?>
 	<div class="container">
@@ -135,7 +139,7 @@
 	            </div>
 	            <div class="instrutores">
 	            	<h5>Instrutores:</h5>
-	            	<?php echo $teachers; ?>
+	            	<?php echo $teacher_name; ?>
 	            </div>
 		    </div>
 	    </article>

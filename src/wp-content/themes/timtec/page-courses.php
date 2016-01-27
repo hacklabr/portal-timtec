@@ -88,9 +88,11 @@ get_template_part('templates/header');
                             for( $i = 0; $i < count( $teachers_id ); $i++  ){
                                 $link = get_the_permalink( $teachers_id[ $i ] );
                                 $teacher[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
+                                $teacher_name[ $i ] = "<span>" .$teachers_name[ $i ]. "</span>";
                             };
 
-                            $teacher = implode( ", ", $teacher);
+                            $teacher = implode( ", ", $teacher );
+                            $teacher_name = implode( ", ", $teacher_name );  
                         }
                         ?>
                         <li>
@@ -107,7 +109,7 @@ get_template_part('templates/header');
                             <div class="content-curso">
                                 <div class="institute"><?php echo $instituto ?></div>
                                 <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
-                                <div class="author"><?php echo $teacher; ?></div>
+                                <div class="author"><?php echo $teacher_name; ?></div>
 
 
                                 <?php if ($course_url): ?>
