@@ -64,8 +64,11 @@ get_template_part('templates/header');
                                 <div class="news-box" style="<?php _img_url(); ?>">
                                     <div class="gradient"></div>
                                     <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
-                                    <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                                    <div class="post-excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></div>
+                                    <div class="clearfix"></div>
+                                    <div class="info">
+                                        <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                                        <div class="post-excerpt"><a href="<?php the_permalink() ?>"><?php the_excerpt() ?></a></div>
+                                    </div>
                                 </div>
                             </div>
                         <?php else: ?>
@@ -73,7 +76,10 @@ get_template_part('templates/header');
                                 <div class="news-box" style="<?php _img_url() ?>">
                                     <div class="gradient"></div>
                                     <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
-                                    <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                                    <div class="clearfix"></div>
+                                    <div class="info">
+                                        <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                                    </div>
                                 </div>
                             </div>
                         <?php endif; ?>
