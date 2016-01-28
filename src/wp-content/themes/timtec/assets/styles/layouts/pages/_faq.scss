@@ -32,9 +32,15 @@
                     }
                     .text {
                         display: table-cell;
-                        float: left;
-                        line-height: 145%;
+                        font-size: 18px;
+                        line-height: 120%;
                         margin-right: 50px;
+                        vertical-align: middle;
+                        @media screen and (min-width: $screen-sm-min) {
+                            float: left;
+                            font-size: 21px;
+                            line-height: 145%;
+                        }
                     }
                     .icon {
                         background-color: #1fd4cd;
@@ -44,6 +50,7 @@
                         height: 30px;
                         width: 30px;
                         text-align: center;
+                        vertical-align: middle;
                         &:before {
                             color: #fff;
                             content: '+';
@@ -67,7 +74,7 @@
         }
         .panel-body {
             border: 0;
-            padding: 25px 40px;
+            padding: 25px 30px;
             p {
                 color: #999;
                 &:last-child {
