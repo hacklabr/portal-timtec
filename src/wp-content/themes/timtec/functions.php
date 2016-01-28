@@ -55,7 +55,6 @@ require __DIR__ . '/inc/post-types/course.php';
 require __DIR__ . '/inc/post-types/organization.php';
 require __DIR__ . '/inc/post-types/redessociais.php';
 require __DIR__ . '/inc/post-types/conselho.php';
-require __DIR__ . '/inc/post-types/faq.php';
 //require __DIR__ . '/inc/post-types/installation.php';
 
 require __DIR__ . '/inc/metaboxes/teacher-course-relation.php';
