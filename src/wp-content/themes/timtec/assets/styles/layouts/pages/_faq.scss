@@ -37,7 +37,7 @@
                         margin-right: 50px;
                     }
                     .icon {
-                        border: 1px solid #ccc;
+                        background-color: #1fd4cd;
                         border-radius: 50%;
                         display: table-cell;
                         float: right;
@@ -45,16 +45,17 @@
                         width: 30px;
                         text-align: center;
                         &:before {
-                            color: #ccc;
+                            color: #fff;
                             content: '+';
                             font-family: 'Open Sans', sans-serif;
                             font-size: 25px;
-                            font-weight: 300;
+                            font-weight: bold;
                         }
                     }
                 }
                 a[aria-expanded="true"] {
                     .icon {
+                        background-color: #e6785f;
                         &:before {
                             content: '–'; 
                         }
