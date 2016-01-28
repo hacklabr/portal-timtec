@@ -45,9 +45,11 @@
                         display: table-cell;
                         text-align: center;
                         vertical-align: middle;
+                        width: 30px;
                         .icon {
                             background-color: #1fd4cd;
                             border-radius: 50%;
+                            display: block;
                             height: 30px;
                             width: 30px;
                             &:before {
