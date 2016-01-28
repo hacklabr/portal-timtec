@@ -37,27 +37,27 @@
                         margin-right: 50px;
                         vertical-align: middle;
                         @media screen and (min-width: $screen-sm-min) {
-                            float: left;
                             font-size: 21px;
                             line-height: 145%;
                         }
                     }
-                    .icon {
-                        background-color: #1fd4cd;
-                        border-radius: 50%;
+                    .icon-wrapper {
                         display: table-cell;
-                        float: right;
-                        height: 30px;
-                        width: 30px;
                         text-align: center;
                         vertical-align: middle;
-                        &:before {
-                            color: #fff;
-                            content: '+';
-                            font-family: 'Open Sans', sans-serif;
-                            font-size: 27px;
-                            font-weight: bold;
-                            line-height: 110%;
+                        .icon {
+                            background-color: #1fd4cd;
+                            border-radius: 50%;
+                            height: 30px;
+                            width: 30px;
+                            &:before {
+                                color: #fff;
+                                content: '+';
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 27px;
+                                font-weight: bold;
+                                line-height: 110%;
+                            }
                         }
                     }
                 }

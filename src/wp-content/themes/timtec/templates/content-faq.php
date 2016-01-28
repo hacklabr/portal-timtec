@@ -10,7 +10,7 @@
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo get_the_ID(); ?>" aria-expanded="true" aria-controls="collapse<?php echo get_the_ID(); ?>">
                             <span class="text"><?php the_title(); ?></span>
-                            <span class="icon"></span>
+                            <span class="icon-wrapper"><span class="icon"></span></span>
                             </a>
                         </h4>
                     </div>
