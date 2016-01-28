@@ -47,7 +47,7 @@ class ShortcodeAccordion{
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo self::$id_cont_acordion_item; ?>" aria-expanded="true" aria-controls="collapse<?php echo self::$id_cont_acordion_item; ?>">
                     <span class="text"><?php echo $title ?></span>
-                    <span class="icon"></span>
+                    <span class="icon-wrapper"><span class="icon"></span></span>
                     </a>
                 </h4>
             </div>

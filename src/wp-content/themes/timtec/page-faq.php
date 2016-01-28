@@ -3,19 +3,29 @@
  * Template Name: Faq
  */
 ?>
-
 <?php
-    do_action('get_header');    
-    get_template_part('templates/header');
-?>
-<div id="page-faq" class="base-content container">
-    <section>
-        <div class="col-md-12 ">
-            <h3><?php _oi("FAQ"); ?></h3>
-            <?php while ( have_posts() ) : the_post(); ?>  
- 			 <?php the_content(); ?>
- 			 <?php endwhile; // end of the loop. ?>
+do_action('get_header');
+get_template_part('templates/header');
 
+$header_text = trim(get_post_meta (get_the_ID(), 'header_text', true ));
+?>
+<div id="page-faq" class="page-network base-content">
+    <?php while ( have_posts() ) : the_post(); ?>
+    <div class="banner <?php if(!$header_text) echo "no-text"; ?>">
+        <div class="container">
+            <h2 class="title"><?php _e("Rede"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
+            <?php if($header_text): ?>
+            <div class="info">
+                <?php echo nl2br($header_text) ?>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <section class="page-content">
+        <div class="container">
+            <?php the_content(); ?>
         </div>
     </section>
+    <?php endwhile; // end of the loop. ?>
 </div>
