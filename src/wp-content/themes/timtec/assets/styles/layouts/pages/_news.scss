@@ -201,7 +201,7 @@
             @extend .col-lg-3;
         }
         .sidebar-title {
-            background-color: $orange;
+            background-color: #304594;
             color: #fff;
             font-family: $teuton27;
             margin: 0;
@@ -210,10 +210,10 @@
             text-transform: uppercase;
         }
         a {
-            color: $orange;
+            color: #05C3FF;
         }
         .widget {
-            border: 4px solid $orange;
+            border: 4px solid #304594;
             margin-bottom: 40px;
             &.widget_twitter_timeline {
                 border: 4px solid $cyan-blue;
@@ -222,6 +222,9 @@
                 }
                 .sidebar-title {
                     background-color: $cyan-blue;
+                    iframe{
+                        padding: 0px 10px;
+                    }
                 }
 
                 iframe{
@@ -232,7 +235,7 @@
         .last-news {
             border: 4px solid $orange;
             .list-item {
-                border-bottom: 1px solid #808080;
+                border-bottom: 1px solid #304594;
                 margin: 15px;
                 padding-bottom: 15px;
                 text-align: center;
@@ -369,7 +372,7 @@
 
     .wff-fb-item{
         margin:10px;
-        border-bottom: 1px solid rgb(216, 0, 0)!important;
+        border-bottom: 1px solid #304594!important;
         overflow:hidden;
     }
 }

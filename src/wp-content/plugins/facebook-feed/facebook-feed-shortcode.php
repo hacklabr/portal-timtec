@@ -153,7 +153,8 @@ function build_my_photo_html ($mysinglefeed,$atts)
     if (isset($mysinglefeed->story))
 		{
 	    // if story exists then use the story in the post text
-	    $my_post_photo_text = $mysinglefeed->story;   
+	    $my_post_photo_text = $mysinglefeed->story; 
+
 	    // we also need to handle story tags
 	    if (array_key_exists('story_tags',$mysinglefeed ))
             {
@@ -162,9 +163,9 @@ function build_my_photo_html ($mysinglefeed,$atts)
 				{ 
 					$mystorytagname = $mystorytag[0]->name; 
 					if($atts['link_target']==1)	{
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 					} else {
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 					}
 					$my_post_photo_text = str_replace($mystorytagname, $tag_link, $my_post_photo_text);
 				}
@@ -206,26 +207,27 @@ function build_my_photo_html ($mysinglefeed,$atts)
 				$full_style_wrapper = full_post_text_inline_style($atts);
 				$line_height_style =  feed_line_height($atts);
 				/*---------------------read more text---------------------------*/
-				$str_without_tag = strip_tags($my_post_photo_text);
+				$str_without_tag = strip_tags( $my_post_photo_text );
 				$char_count = strlen($str_without_tag);
-				
+
 				if((!empty($atts['char_limit'])) && ($atts['char_limit'] < $char_count) )
 				{
-				$short_sentence = substr($str_without_tag, 0,$atts['char_limit']);
+				 
+				 $short_sentence = substr( $str_without_tag, 0,$atts['char_limit'] );
 				
-				$short_sentence = makeLinks ($short_sentence,$atts['link_target']);  //link the urls
-	     	  	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$short_sentence)) {
-				$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
-				}
+				$short_sentence = makeLinks ( $short_sentence,$atts['link_target']);  //link the urls
+	  			//if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$short_sentence)) {
+				// 	$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
+				//}
 				if (array_key_exists('story_tags',$mysinglefeed ))
 				{
 				foreach ( $mysinglefeed->story_tags as $mystorytag)
 					{ 
 					$mystorytagname = $mystorytag[0]->name;
 					if($atts['link_target']==1) {	
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 					} else {
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 					}
 					$short_sentence = str_replace($mystorytagname, $tag_link, $short_sentence);
 					}
@@ -310,9 +312,9 @@ function build_my_link_html ($mysinglefeed,$atts)
 		{ 
 			$mystorytagname = $mystorytag[0]->name;  
 			if($atts['link_target']==1)	{
-			$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+			$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 			} else {
-			$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;">' . $mystorytag[0]->name . '</a>';
+			$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" >' . $mystorytag[0]->name . '</a>';
 			}
 		    $my_post_text = str_replace($mystorytagname, $tag_link, $my_post_text);
 		}
@@ -387,9 +389,9 @@ function build_my_link_html ($mysinglefeed,$atts)
 					{ 
 					$mystorytagname = $mystorytag[0]->name; 
 					if($atts['link_target']==1)	{	
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 					} else {
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 					}
 					$short_sentence = str_replace($mystorytagname, $tag_link, $short_sentence);
 					}
@@ -496,9 +498,9 @@ function build_my_event_html ($mysinglefeed ,$atts,$myaccesstoken)
 			{ 
 				$mystorytagname = $mystorytag[0]->name; 
 				if($atts['link_target']==1)	{	
-				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 				} else {
-				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 				}
 				$my_post_text = str_replace($mystorytagname, $tag_link, $my_post_text);
 				}
@@ -527,10 +529,9 @@ function build_my_event_html ($mysinglefeed ,$atts,$myaccesstoken)
 				if((!empty($atts['char_limit'])) && ($atts['char_limit'] < $char_count) )
 				{
 				$short_sentence = substr($str_without_tag, 0,$atts['char_limit']);
-
 				$short_sentence = makeLinks ($short_sentence,$atts['link_target']);  // link the urls
 	     	  	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$short_sentence)) {
-				$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
+					$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
 				}
 				if (array_key_exists('story_tags',$mysinglefeed)) {
 				// now add the hyperlink to tags 
@@ -538,9 +539,9 @@ function build_my_event_html ($mysinglefeed ,$atts,$myaccesstoken)
 				{ 
 					$mystorytagname = $mystorytag[0]->name;
 					if($atts['link_target']==1)	{		
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" target="_blank">' . $mystorytag[0]->name . '</a>';
 					} else {
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 					}
 					$short_sentence = str_replace($mystorytagname, $tag_link, $short_sentence);
 					}
@@ -595,9 +596,9 @@ function build_my_status_html ($mysinglefeed ,$atts)
 			{ 
 				$mystorytagname = $mystorytag[0]->name;
 				if($atts['link_target']==1)	{		
-				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  target="_blank">' . $mystorytag[0]->name . '</a>';
 				} else {
-				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+				$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '"  >' . $mystorytag[0]->name . '</a>';
 				}
 				$my_post_text = str_replace($mystorytagname, $tag_link, $my_post_text);
 			}
@@ -610,7 +611,7 @@ function build_my_status_html ($mysinglefeed ,$atts)
 				$my_post_text = $mysinglefeed->message; 
 	     	  	$my_post_text = makeLinks($my_post_text,$atts['link_target']);
 	     	  	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$my_post_text)) {
-				$my_post_text = make_hash_link ($my_post_text,$atts['link_target']);
+					$my_post_text = make_hash_link ($my_post_text,$atts['link_target']);
 				}
 		}
 	     	// Build Post description 
@@ -622,7 +623,7 @@ function build_my_status_html ($mysinglefeed ,$atts)
 	     	$link_post_desc = (isset($mysinglefeed->description) ? $mysinglefeed->description : '');
 	     	$link_post_desc = makeLinks($link_post_desc,$atts['link_target']);
 	     	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$link_post_desc)) {
-			$link_post_desc = make_hash_link($link_post_desc,$atts['link_target']);
+				$link_post_desc = make_hash_link($link_post_desc,$atts['link_target']);
 	     	}
 	    if (array_key_exists('message_tags',$mysinglefeed ))
 		{
@@ -657,7 +658,7 @@ function build_my_status_html ($mysinglefeed ,$atts)
 				
 				$short_sentence = makeLinks ($short_sentence,$atts['link_target']);  // link the urls
 	     	  	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$short_sentence)) {
-				$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
+					$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
 				}
 				if (array_key_exists('story_tags',$mysinglefeed ))
 				{
@@ -665,9 +666,9 @@ function build_my_status_html ($mysinglefeed ,$atts)
 					{ 
 					$mystorytagname = $mystorytag[0]->name;  
 					if($atts['link_target']==1)	{
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" target="_blank">' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" target="_blank">' . $mystorytag[0]->name . '</a>';
 					} else {
-					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" style="color: indigo;" >' . $mystorytag[0]->name . '</a>';
+					$tag_link = '<a class="wff-link-tab" href="http://facebook.com/' . $mystorytag[0]->id . '" >' . $mystorytag[0]->name . '</a>';
 					}
 					$short_sentence = str_replace($mystorytagname, $tag_link, $short_sentence);
 					}
@@ -723,7 +724,7 @@ function build_my_video_html ($mysinglefeed ,$atts)
 	    $my_post_text = $mysinglefeed->message; 
 	    $my_post_text = makeLinks($my_post_text,$atts['link_target']);
 	    if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$my_post_text)) {
-		$my_post_text = make_hash_link($my_post_text,$atts['link_target']);
+			$my_post_text = make_hash_link($my_post_text,$atts['link_target']);
 		}
 	}
 	     	  				
@@ -735,7 +736,7 @@ function build_my_video_html ($mysinglefeed ,$atts)
 	    $link_post_desc = (isset($mysinglefeed->description) ? $mysinglefeed->description : '');
 	    $link_post_desc = makeLinks($link_post_desc,$atts['link_target']);
 	    if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$link_post_desc)) {
-		$link_post_desc = make_hash_link($link_post_desc,$atts['link_target']);
+			$link_post_desc = make_hash_link($link_post_desc,$atts['link_target']);
 	    } 	
 	if (array_key_exists('message_tags',$mysinglefeed ))
 	{
@@ -766,11 +767,11 @@ function build_my_video_html ($mysinglefeed ,$atts)
 		
 				if((!empty($atts['char_limit'])) && ($atts['char_limit'] < $char_count) )
 				{
-				$short_sentence = substr($str_without_tag, 0,$atts['char_limit']);
+					$short_sentence = substr($str_without_tag, 0,$atts['char_limit']);
 				
-				$short_sentence = makeLinks ($short_sentence,$atts['link_target']);  // link the urls
+					$short_sentence = makeLinks ($short_sentence,$atts['link_target']);  // link the urls
 	     	  	if(!preg_match('/((http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?)#(\w*[a-zA-Z_]+\w*)/',$short_sentence)) {
-				$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
+					$short_sentence = make_hash_link ($short_sentence,$atts['link_target']);
 				}
 				if (array_key_exists('message_tags',$mysinglefeed ))
 				{
