@@ -48,8 +48,9 @@
                             color: #fff;
                             content: '+';
                             font-family: 'Open Sans', sans-serif;
-                            font-size: 25px;
+                            font-size: 27px;
                             font-weight: bold;
+                            line-height: 110%;
                         }
                     }
                 }
@@ -58,6 +59,7 @@
                         background-color: #e6785f;
                         &:before {
                             content: '–'; 
+                            line-height: 95%;
                         }
                     }
                 }
