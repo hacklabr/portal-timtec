@@ -2,8 +2,12 @@
     margin-top:0px;
 
     .banner{
-        height: 260px;
+        height: 240px;
         margin-bottom: 80px;
+
+        .title{
+            text-transform: uppercase;
+        }
     }
 
     h3 {
