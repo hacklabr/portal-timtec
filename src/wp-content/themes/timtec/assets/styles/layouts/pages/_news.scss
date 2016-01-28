@@ -53,7 +53,8 @@
         background-size: cover;
         display: table;
         position: relative;
-
+        width: 100%;
+        
         .gradient {
             content: '';
             width:100%;
@@ -105,8 +106,6 @@
             .featured-small {
                 margin-bottom: 30px;
                 @extend .col-xs-12;
-                margin-top: 385px;
-                margin-bottom: 230px;
 
                 @media screen and (min-width: $screen-sm-min) {
                     @extend .col-sm-6;
