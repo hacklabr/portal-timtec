@@ -107,6 +107,13 @@
                     font-family: $icon-font-name;
                     font-size: 10px;
                 }
+                &.open {
+                    > a:after {
+                        content: '\f0d8';
+                        font-family: $icon-font-name;
+                        font-size: 10px;
+                    }
+                }
             }
 
             > a {
@@ -156,7 +163,6 @@
                     width: 100%;
                     font-size: 1em;
                     text-align: left;
-                    padding: 5px;
                     white-space:nowrap;
                     
                     &:hover{
@@ -164,7 +170,7 @@
                     }
                     a {
                         border-bottom: 0;
-                        padding: 0 10px;
+                        padding: 12px;
                         text-transform: initial;
                         @media screen and (min-width: $screen-sm-min) {
                             text-transform: uppercase;
