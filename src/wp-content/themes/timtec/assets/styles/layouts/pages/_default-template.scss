@@ -201,6 +201,12 @@
 .page-contact {
     .banner {
         background-color: #0aa8b2 !important;
+        @media screen and (min-width: $screen-sm-min) {
+            .container {
+                background: url('../images/ilustra-header-contato.png') no-repeat;
+                background-position: right 15px;
+            }
+        }
         .title {
             background-image: url('../images/icones-header-contato.png');
             padding-top: 10px;
