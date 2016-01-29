@@ -10,13 +10,17 @@
     .banner {
         background-color: #304594;
         @media screen and (min-width: $screen-sm-min) {
-            height: 240px;
+            &.no-text {
+                height: 240px;
+            }
             margin-bottom: 40px;
         }
         .container {
             position: relative;
             @media screen and (min-width: $screen-sm-min) {
-                height: 270px;
+                &.no-text {
+                    height: 270px;
+                }
             }
         }
         .title {
