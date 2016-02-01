@@ -46,8 +46,12 @@ $header_text = trim(get_post_meta(get_the_ID(), 'header_text', true ));
                         <input type="email" class="form-control" id="confirmemail" placeholder="Confirmar e-mail" required>
                     </div>
                     <div class="form-group">
-                        <label for="cidade">Cidade/Estado *</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Cidade/Estado" required>
+                        <label for="cidade">Estado *</label>
+                        <input type="text" class="form-control" id="estado" placeholder="Estado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="Cidade" required>
                     </div>
                     <div class="form-group">
                         <label for="instituicao">Instituição</label>
@@ -57,7 +61,10 @@ $header_text = trim(get_post_meta(get_the_ID(), 'header_text', true ));
                         <label for="senha">Senha *</label>
                         <input type="password" class="form-control" id="senha" placeholder="Senha" required>
                     </div>
-
+                    <div class="form-group">
+                        <label for="senha">Repetir Senha *</label>
+                        <input type="password" class="form-control" id="repetir_senha" placeholder="Repetir Senha" required>
+                    </div>
                     <button type="submit" class="btn btn-default btn-block">Criar conta</button>
                 </fieldset>
             </form>
