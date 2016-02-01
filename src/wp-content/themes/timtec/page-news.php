@@ -57,7 +57,7 @@ get_template_part('templates/header');
                         $category = get_the_category( $post->ID ); 
                         $cat_id = $category[0]->term_id;
                         $cat_data = get_option( "category_$cat_id" );
-                        $cat_bg = $cat_data['catBG'];
+                        $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
                     ?>
                         <?php if($q_principal->current_post === 0 && ($q_principal->post_count == 1 || $q_principal->post_count >= 3)): ?>
                             <div class="featured-big">
