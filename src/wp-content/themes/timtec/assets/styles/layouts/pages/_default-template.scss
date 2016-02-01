@@ -156,7 +156,7 @@
 .page-about {
     .banner {
         background-color: #243670 !important;
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-md-min) {
             .container {
                 background: url('../images/ilustra-header-sobre.png') no-repeat;
                 background-position: right 20px;
@@ -171,7 +171,7 @@
 .page-network {
     .banner {
         background-color: #243670 !important;
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-md-min) {
             .container {
                 background: url('../images/ilustra-header-redes.png') no-repeat;
                 background-position: right 15px;
@@ -186,7 +186,7 @@
 .page-software {
     .banner {
         background-color: #304594 !important;
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-md-min) {
             .container {
                 background: url('../images/ilustra-header-software.png') no-repeat;
                 background-position: right 15px;
@@ -201,7 +201,7 @@
 .page-contact {
     .banner {
         background-color: #0aa8b2 !important;
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-md-min) {
             .container {
                 background: url('../images/ilustra-header-contato.png') no-repeat;
                 background-position: right 15px;
