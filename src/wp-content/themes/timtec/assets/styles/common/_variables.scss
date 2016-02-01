@@ -9,6 +9,9 @@ $sidebar-sm-columns:    4;
 $break-small: 600px;
 $break-large: 1200px;
 
+// Overwrite screen-sm breakpoint to 768 from 720
+$screen-sm: 720px;
+
 // Colors
 $brand-primary:     #095DAF;
 $menu-hover:        #0d4c8f;
