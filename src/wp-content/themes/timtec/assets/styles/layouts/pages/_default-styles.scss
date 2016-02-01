@@ -49,17 +49,18 @@
             margin-bottom: 30px;
             font-size: 1.2em;
             @media screen and (min-width: $screen-sm-min) {
-                position: absolute;
+                font-size: 1.2em;
+                margin: 170px 0 20px 92px;
+                max-width: 400px;                
+            }
+            @media screen and (min-width: $screen-md-min) {
                 left: 15px;
                 right: 15px;
                 top: 170px;
                 margin-bottom: 0;
                 margin-left: 92px;
-                max-width: 400px; 
-                font-size: 1.2em;
-            }
-            @media screen and (min-width: $screen-md-min) {
                 max-width: 600px;
+                position: absolute;
             }
             @media screen and (min-width: $screen-lg-min) {
                 max-width: 780px;
