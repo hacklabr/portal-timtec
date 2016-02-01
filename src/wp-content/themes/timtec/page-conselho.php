@@ -13,11 +13,6 @@
     <div class="banner <?php if(!$header_text) echo "no-text"; ?>">
         <div class="container">
             <h2 class="title"><?php _e("Sobre"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
-            <?php if($header_text): ?>
-            <div class="info">
-                <?php echo nl2br($header_text) ?>
-            </div>
-            <?php endif; ?>
         </div>
     </div>
     <section class="page-content">
