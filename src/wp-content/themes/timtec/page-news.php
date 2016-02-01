@@ -6,6 +6,7 @@
 $q_header = get_option('destaques-noticias');
 $q_principal = DestaquesNoticias::getQuery('principal');
 $q_atuais = new WP_Query(['posts_per_page' => 3]);
+$not_post_list_id;
 
 function _cat(){
     foreach((get_the_category()) as $i => $category) {
@@ -50,6 +51,8 @@ get_template_part('templates/header');
                     <?php
                     while($q_principal->have_posts()):
                         $q_principal->the_post();
+                        $not_post_list_id[] = $post->ID; 
+
                         if($q_principal->post_count > 3)
                             break;
                     ?>
@@ -92,6 +95,7 @@ get_template_part('templates/header');
 
                         $args = array(
                             'post_type' => 'post',
+                            'post__not_in' => $not_post_list_id,
                             'posts_per_page' => 4,                            
                         );
                         
