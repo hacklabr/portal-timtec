@@ -10,18 +10,16 @@
     .banner {
         background-color: #304594;
         @media screen and (min-width: $screen-sm-min) {
+            margin-bottom: 40px;
             &.no-text {
                 min-height: 240px;
-            }
-            margin-bottom: 40px;
-        }
-        .container {
-            position: relative;
-            @media screen and (min-width: $screen-sm-min) {
-                &.no-text {
+                .container {
                     min-height: 270px;
                 }
             }
+        }
+        .container {
+            position: relative;
         }
         .title {
             text-transform: uppercase;
