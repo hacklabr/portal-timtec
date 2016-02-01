@@ -63,6 +63,8 @@ require __DIR__ . '/inc/metaboxes/course-download.php';
 require __DIR__ . '/inc/metaboxes/link_redesocial.php';
 require __DIR__ . '/inc/metaboxes/list_icon_awesome.php';
 
+
+require __DIR__ . '/inc/metaboxes/timtec_user_profile_fields_save.php';
 require __DIR__ . '/inc/metaboxes/page-header-text.php';
 
 require __DIR__ . '/inc/shortcode-destaque.php';
