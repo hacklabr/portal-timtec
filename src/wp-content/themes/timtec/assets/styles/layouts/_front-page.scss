@@ -114,6 +114,13 @@
         position: absolute;
         z-index: 800;
     }
+    .links {
+        .btn {
+            @media screen and (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+                width: 230px;
+            }
+        }
+    }
 }
 
 #software {
