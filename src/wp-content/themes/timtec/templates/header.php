@@ -147,18 +147,18 @@
           <div class="modal-body">
             <h3><span>Login</span></h3>
             <h4>Olá, deseja entrar? ;)</h4>
-            <form name="registerform" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
+            <form name="registerform" action="<?php echo wp_login_url( get_permalink() ); ?>" method="post">
               <div class="form-group">
                 <label for="login-email" class="sr-only">E-mail ou nome</label>
-                <input type="email" class="form-control" id="login-email" placeholder="e-mail ou nome">
+                <input type="text" name="log" class="form-control" id="login-email" placeholder="e-mail ou nome">
               </div>
               <div class="form-group">
                 <label for="login-password" class="sr-only">Password</label>
-                <input type="password" class="form-control" id="login-password" placeholder="senha">
+                <input type="password" name="pwd" class="form-control" id="login-password" placeholder="senha">
               </div>
               <button type="submit" class="btn">Iniciar Sessão</button>
             </form>
-            <p><a href="#">Clique aqui para fazer o cadastro.</a></p>
+            <p><a href="/cadastro/">Clique aqui para fazer o cadastro.</a></p>
             <p>O cadastro permite acessar os fóruns e baixar os cursos.</p>
           </div>
         </div>
