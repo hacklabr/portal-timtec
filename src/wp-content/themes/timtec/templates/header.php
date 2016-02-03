@@ -74,14 +74,71 @@
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/lista-de-noticias/">Notícias</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/pt/contato/">Contato</a></li>
             </ul>
-            <!-- menu login/logado -->
-            <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a></div>
-            <div class="menu-logado"><a href="" data-toggle="modal" data-target="#modal-logado"><span class="icon">MM</span>Logado</a></div>
+            <?php 
+                if ( is_user_logged_in() ) {
+                    $current_user = wp_get_current_user();
+                    $nome_completo = $current_user->display_name;
+                    $name = explode( " ", $nome_completo );
+                    $iniciais = "";
+                    for ($i = 0; $i < count($name); $i++) {
+                        if ($i < 2) {
+                            $iniciais .= substr($name[$i],0,1); 
+                        };
+                    }
+            ?>
+                    <div class="menu-logado"><a href="" data-toggle="modal" data-target="#modal-logado"><span class="icon"><?php echo $iniciais; ?></span>Logado</a></div>
+            <?php 
+                }else{ 
+            ?>
+                    <!-- menu login/logado -->
+                    <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a></div>
+            <?php 
+                }//End If User Logged
+            ?>
         </nav>
     </div>
 </header>
 
-<!-- modal login -->
+
+<?php 
+    if ( is_user_logged_in() ) {
+        $current_user = wp_get_current_user();
+?>
+<!-- modal logado -->
+<div class="modal modal-menu fade" id="modal-logado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-container">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-triangle-up"></div>
+        <div class="modal-content">
+          <div class="modal-body">
+                <h3>Olá, <span><?php echo esc_html( $current_user->user_firstname ); ?></span>, deseja sair? ;)</h3>
+                <a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn btn-logout">Sim, quero me deslogar</a>
+                <a href="#" class="btn btn-cancel">Cancelar</a>
+                <div class="info">
+                    <div class="icon">
+                    <?php
+                        $nome_completo = $current_user->display_name;
+                        $name = explode( " ", $nome_completo );
+                        $iniciais = "";
+                        for ($i = 0; $i < count($name); $i++) {
+                            if ($i < 2) {
+                                $iniciais .= substr($name[$i],0,1); 
+                            };
+                        }
+                        echo $iniciais;        
+                    ?>
+                    </div>
+                    <div class="text"><span><?php echo esc_html( $current_user->user_firstname ); ?></span>, para para editar seus dados de perfil, <a href="/cadastro/">clique aqui</a>.</div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<?php 
+    }else{
+?>
+    <!-- modal login -->
 <div class="modal modal-menu fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-container">
       <div class="modal-dialog modal-sm" role="document">
@@ -109,41 +166,7 @@
     </div>
 </div>
 
-<!-- modal logado -->
-<div class="modal modal-menu fade" id="modal-logado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-container">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-triangle-up"></div>
-        <div class="modal-content">
-          <div class="modal-body">
-            <?php 
-                if ( is_user_logged_in() ) {
-                    $current_user = wp_get_current_user();
-            ?>
-                <h3>Olá, <span><?php echo esc_html( $current_user->user_firstname ); ?></span>, deseja sair? ;)</h3>
-                <a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn btn-logout">Sim, quero me deslogar</a>
-                <a href="#" class="btn btn-cancel">Cancelar</a>
-                <div class="info">
-                    <div class="icon">
-                    <?php
-                        $nome_completo = $current_user->display_name;
-                        $name = explode( " ", $nome_completo );
-                        $iniciais = "";
-                        for ($i = 0; $i < count($name); $i++) {
-                            if ($i < 2) {
-                                $iniciais .= substr($name[$i],0,1); 
-                            };
-                        }
-                        echo $iniciais;        
-                    ?>
-                    </div>
-                    <div class="text"><span><?php echo esc_html( $current_user->user_firstname ); ?></span>, para para editar seus dados de perfil, <a href="/cadastro/">clique aqui</a>.</div>
-                </div>
-            <?php 
-                }//EndIf User Logged
-            ?>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
+
+<?php         
+    }//EndIf User Logged
+?>
