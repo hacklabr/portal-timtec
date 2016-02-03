@@ -90,7 +90,7 @@
           <div class="modal-body">
             <h3><span>Login</span></h3>
             <h4>Olá, deseja entrar? ;)</h4>
-            <form>
+            <form name="registerform" action="<?php echo site_url('wp-login.php?action=register', 'login_post') ?>" method="post">
               <div class="form-group">
                 <label for="login-email" class="sr-only">E-mail ou nome</label>
                 <input type="email" class="form-control" id="login-email" placeholder="e-mail ou nome">
@@ -116,13 +116,32 @@
         <div class="modal-triangle-up"></div>
         <div class="modal-content">
           <div class="modal-body">
-            <h3>Olá, <span>Pessoa de Tal</span>, deseja sair? ;)</h3>
-            <a href="#" class="btn btn-logout">Sim, quero me deslogar</a>
-            <a href="#" class="btn btn-cancel">Cancelar</a>
-            <div class="info">
-                <div class="icon">MM</div>
-                <div class="text"><span>Pessoa de Tal</span>, para para editar seus dados de perfil, <a href="">clique aqui</a>.</div>
-            </div>
+            <?php 
+                if ( is_user_logged_in() ) {
+                    $current_user = wp_get_current_user();
+            ?>
+                <h3>Olá, <span><?php echo esc_html( $current_user->user_firstname ); ?></span>, deseja sair? ;)</h3>
+                <a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn btn-logout">Sim, quero me deslogar</a>
+                <a href="#" class="btn btn-cancel">Cancelar</a>
+                <div class="info">
+                    <div class="icon">
+                    <?php
+                        $nome_completo = $current_user->display_name;
+                        $name = explode( " ", $nome_completo );
+                        $iniciais = "";
+                        for ($i = 0; $i < count($name); $i++) {
+                            if ($i < 2) {
+                                $iniciais .= substr($name[$i],0,1); 
+                            };
+                        }
+                        echo $iniciais;        
+                    ?>
+                    </div>
+                    <div class="text"><span><?php echo esc_html( $current_user->user_firstname ); ?></span>, para para editar seus dados de perfil, <a href="/cadastro/">clique aqui</a>.</div>
+                </div>
+            <?php 
+                }//EndIf User Logged
+            ?>
           </div>
         </div>
       </div>
