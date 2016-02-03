@@ -28,46 +28,57 @@ add_action("wp_ajax_search", function() {
     die;
 });
 
-add_action("wp_ajax_saveCadUserDown", function() {
+add_action( "wp_ajax_saveCadUserDown", function() {
 
-    $name = $_POST['name'];
-    $name = explode(" ", $name);
-        for ($i = 0; $i < sizeof($name); $i++) {
-            if ($i < 1) {
-                $first_name = $name[$i];
-            } else {
-                $last_name .= " " . $name[$i];
-            }
-        }
-
-    $email =  isset($_POST['email']) ? $_POST['email']: null;
-    $login = isset($_POST['login']) ? $_POST['login']: null;
-    $pass = isset($_POST['password']) ? $_POST['password']: null;
-    $telefone = isset($_POST['telefone']) ? $_POST['telefone']: null;
-    $form_sent = isset($_POST['form_sent']) ?$_POST['form_sent']: null;
-    $last_name =  isset($last_name) ? $last_name: null;
-   
-
-    $user_id = wp_insert_user(array(
-        'user_email' => $email,
-        'user_pass' => $pass,
-        'user_login' => $login,
-        'first_name' => $first_name,
-        'last_name' => $last_name
-        ));
-
-    $user_meta = add_user_meta( $user_id, 'telefone', $telefone );
-    $user_meta = add_user_meta( $user_id, 'form_sent', $form_sent );
+    $nome_completo = isset($_POST['nome']) ? $_POST['nome'] : null;
+    $nome_usuario = isset($_POST['usuario']) ? $_POST['usuario']: null;
+    $email = isset($_POST['email']) ? $_POST['email']: null;
+    $confirmar_email = isset($_POST['confirmemail']) ?$_POST['confirmemail']: null;
+    $senha = isset($_POST['senha']) ? $_POST['senha']: null;
+    $confirmar_senha = isset($_POST['repetir_senha']) ? $_POST['repetir_senha']: null;   
+    $instituicao = isset($_POST['instituicao']) ? $_POST['instituicao']: null;
+    $estado = isset($_POST['estado']) ? $_POST['estado']: null;
+    $cidade = isset($_POST['cidade']) ?$_POST['cidade']: null;
     
-    $success = !is_wp_error($user_meta);
+    $first_name = $nome_completo;
+    $last_name = " ";
+    
+    $name = explode( " ", $nome_completo );
+    for ($i = 0; $i < count($name); $i++) {
+        if ($i < 1) {
+            $first_name = $name[$i];
+        } else {
+            $last_name .= " " . $name[$i];
+        }
+    }
+   
+    $user_id = wp_insert_user(array(
+        'user_login'=> $nome_usuario,
+        'user_email' => $email,
+        'user_pass' => $senha,
+        'first_name' => $first_name,
+        'last_name' => $last_name,
+        'user_registered' => date('j F Y'),
+        'role' => 'subscriber',      
+    ));
 
-    $response = array(
-        'success' => $success,
-        'is_user_logged_in' => $success,
-        'error' => !$success ? $user_id->get_error_message() : null
-    );
+    if ( is_wp_error( $user_id ) ) {
+        $response = array(
+            'success' => "false",
+            'error' => $user_id->get_error_message(),
+        );
+    }else{
+        update_user_meta( $user_id, 'instituicao', $instituicao );
+        update_user_meta( $user_id, 'estado', $estado );
+        update_user_meta( $user_id, 'cidade', $cidade );
 
-    echo json_encode($response);
+        $response = array(
+            'success' => "true",
+            'error' => ""
+        );
+    };
 
+    echo json_encode( $response );
+ 
     die();
 });

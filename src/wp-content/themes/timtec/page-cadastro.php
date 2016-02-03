@@ -25,45 +25,47 @@ $header_text = trim(get_post_meta(get_the_ID(), 'header_text', true ));
 
     <section class="page-content">
         <div class="container">
-            <form class="form-cadastro">
+            <form class="form-cadastro js-create-user-meta" method="post">
                 <fieldset>
                     <legend><span>Crie uma conta</span></legend>
                     <p class="obrigatorios">* campos obrigatórios</p>
                     <div class="form-group">
                         <label for="nome">Nome completo *</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Nome completo" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo" required>
                     </div>
                     <div class="form-group">
                         <label for="usuario">Nome de usuario *</label>
-                        <input type="text" class="form-control" id="usuario" placeholder="Nome de usuário" required>
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nome de usuário" required>
+                        <div class="mensagem_erro erro_usuario">Este nome de usuário já existe!<br />Por favor digite outro nome de usuário.</div>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail *</label>
-                        <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+                        <div class="mensagem_erro erro_email">Este email já está em uso!<br />Por favor digite outro email.</div>
                     </div>
                     <div class="form-group">
                         <label for="confirmemail">Confirmar e-mail *</label>
-                        <input type="email" class="form-control" id="confirmemail" placeholder="Confirmar e-mail" required>
+                        <input type="email" class="form-control" id="confirmemail" name="confirmemail" placeholder="Confirmar e-mail" required>
                     </div>
                     <div class="form-group">
                         <label for="cidade">Estado *</label>
-                        <input type="text" class="form-control" id="estado" placeholder="Estado" required>
+                        <input type="text" class="form-control" id="estado" name="estado" placeholder="Estado" required>
                     </div>
                     <div class="form-group">
                         <label for="cidade">Cidade *</label>
-                        <input type="text" class="form-control" id="cidade" placeholder="Cidade" required>
+                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
                     </div>
                     <div class="form-group">
                         <label for="instituicao">Instituição</label>
-                        <input type="text" class="form-control" id="instituicao" placeholder="Instituição">
+                        <input type="text" class="form-control" id="instituicao" name="instituicao" placeholder="Instituição">
                     </div>
                     <div class="form-group">
                         <label for="senha">Senha *</label>
-                        <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
                     </div>
                     <div class="form-group">
                         <label for="senha">Repetir Senha *</label>
-                        <input type="password" class="form-control" id="repetir_senha" placeholder="Repetir Senha" required>
+                        <input type="password" class="form-control" id="repetir_senha" name="repetir_senha" placeholder="Repetir Senha" required>
                     </div>
                     <button type="submit" class="btn btn-default btn-block">Criar conta</button>
                 </fieldset>
