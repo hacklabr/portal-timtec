@@ -331,3 +331,16 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 add_filter('widget_text', 'do_shortcode');
 
 
+//Bloquear acesso ao ADMIN 
+function restrict_admin()
+{
+  if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+                wp_redirect( site_url() );
+  }
+}
+add_action( 'admin_init', 'restrict_admin', 1 );
+
+//Retirar barra de acesso do ADMIN
+if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
+}
