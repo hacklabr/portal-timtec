@@ -158,6 +158,8 @@
               </div>
               <button type="submit" class="btn">Iniciar Sessão</button>
             </form>
+            <p><a href="<?php echo get_option('home'); ?>/reset-login" title="Esqueceu sua senha? Clique aqui!">Esqueceu sua senha?</a><br /></p>
+            <hr>
             <p><a href="/cadastro/">Clique aqui para fazer o cadastro.</a></p>
             <p>O cadastro permite acessar os fóruns e baixar os cursos.</p>
           </div>
