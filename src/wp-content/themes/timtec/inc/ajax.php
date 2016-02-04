@@ -101,6 +101,9 @@ function cadastro_user(){
             'error' => ""
         );
 
+        wp_redirect( home_url() );
+        die();
+
     }else{
 
         $response = array(
