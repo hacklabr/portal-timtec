@@ -338,16 +338,19 @@ add_filter('widget_text', 'do_shortcode');
 
 
 //Bloquear acesso ao ADMIN
+
 add_action( 'admin_init', 'restrict_admin', 1 ); 
 function restrict_admin()
-{
-  if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
-                wp_redirect( site_url() );
+{ 
+  $user = wp_get_current_user();
+  if ( in_array('subscriber', $user->roles) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+    wp_redirect( site_url() );
   }
 };
 
+$user = wp_get_current_user();
 //Retirar barra de acesso do ADMIN
-if ( ! current_user_can( 'manage_options' ) ) {
+if ( in_array('subscriber', $user->roles) ) {
     show_admin_bar( false );
 };
 
