@@ -1,0 +1,81 @@
+.page-cadastro{
+	.mensagem_erro{
+		background: #1158A7;
+	    max-width: 300px;
+	    border-radius: 6px;
+	    position: absolute;
+	    color: #fff;
+	    margin-left: 480px;
+	    margin-top: -50px;
+	    padding: 10px;
+	    vertical-align: top;
+	    display:none;
+
+		&:before{
+			content: "\f0d9";
+		    display: inline;
+		    color: #1158A7;
+		    font: normal normal normal 50px FontAwesome;
+		    margin-top: -5px;
+		    margin-left: -25px;
+		    position: absolute;
+		}
+	}
+
+	input.not-editable{
+		color: #464646;
+    	border: 1px solid #BBBBBB;
+    	background-color: #ECECEC!important;
+	}
+
+	span.not-editable{
+		color: #464646;
+	}
+
+	#login-error{
+		color: #F00;
+	}
+
+	.infos-form{
+		text-align: center;
+
+		a{
+		    color: #592aa8;
+		    font-size: 14px;
+		    font-weight: 700;
+		    text-decoration: underline;
+		    font-weight: bold;
+		    text-align:center;
+		}
+
+		span.description{
+		    color: #592aa8;
+		    font-size: 12px;
+		    margin: 0;
+		    text-align: center;
+		}
+	}
+
+	hr{
+		border-bottom: 1px solid #28346e;
+	}
+
+
+	h2{
+		text-align: center;
+	    font-weight: normal;
+	    font-family: Teuton23Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+	    font-size: 5em!important;
+	    margin-bottom: 20px;
+
+	    span{
+	    	font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	    }
+	}
+	
+	.btn_azul{
+		background:#5170B3!important;
+	}
+}
+
+

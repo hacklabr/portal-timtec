@@ -92,22 +92,19 @@
                 }
             }
         }
-
-        li {
-            cursor: pointer;
-            float: left;
-            margin-left: 0;
-
-            &.open, &:hover {
-                background-color: $menu-hover;
+        .nav {
+            @media screen and (min-width: $screen-md-min) {
+                float: left;
             }
+            .menu-item {
+                cursor: pointer;
+                float: left;
+                margin-left: 0;
 
-            &.dropdown {
-                > a:after {
-                    content: '\f0d7';
-                    font-family: $icon-font-name;
-                    font-size: 10px;
+                &.open, &:hover {
+                    background-color: $menu-hover;
                 }
+
                 &.open {
                     > a:after {
                         content: '\f0d8';
@@ -117,35 +114,43 @@
                 }
             }
 
-            > a {
-                border-bottom: 1px solid rgba(0,0,0,0.1);
-                @media screen and (min-width: $screen-sm-min) {
-                    border-bottom: 0;
+                &.dropdown {
+                    > a:after {
+                        content: '\f0d7';
+                        font-family: $icon-font-name;
+                        font-size: 10px;
+                    }
                 }
-            }
-            
-            a {
-                color: #fff;
-                text-transform: uppercase;
-                padding: 20px 6px 15px;
-                font-family: $teuton23;
-                letter-spacing: 1px;
-                font-size: 16px;
-                text-decoration: none;
-                background-color: transparent;
-                @media screen and (min-width: $screen-md-min) {
-                    padding: 20px 10px 15px;
-                }
-                &:hover  {
-                    background-color: transparent;
-                    text-decoration: none;
-                }
-                &:focus {
-                    background-color: transparent;
-                    text-decoration: none;
-                }
-            }
 
+                > a {
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                    @media screen and (min-width: $screen-sm-min) {
+                        border-bottom: 0;
+                    }
+                }
+                
+                a {
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 20px 6px 15px;
+                    font-family: $teuton23;
+                    letter-spacing: 1px;
+                    font-size: 16px;
+                    text-decoration: none;
+                    background-color: transparent;
+                    @media screen and (min-width: $screen-md-min) {
+                        padding: 20px 10px 15px;
+                    }
+                    &:hover  {
+                        background-color: transparent;
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        background-color: transparent;
+                        text-decoration: none;
+                    }
+                }
+                
             .dropdown-menu {
                 border-bottom: 1px solid rgba(0,0,0,0.2);
                 border-radius: 0;
@@ -174,14 +179,57 @@
                         padding: 12px;
                         text-transform: initial;
                         @media screen and (min-width: $screen-sm-min) {
-                            text-transform: uppercase;
+                        text-transform: uppercase;
                         }
                     }
                 }
             }
         }
+        .menu-login, .menu-logado {
+            @media screen and (min-width: $screen-md-min) {
+                float: left;
+            }
+            a {
+                color: #fff;
+                display: block;
+                font-family: $teuton23;
+                letter-spacing: 1px;
+                font-size: 13px;
+                padding: 10px 10px 6px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: $menu-hover;
+                }
+            }
+        }
+        .menu-login {
+            .icon {
+                background-image:url("../../assets/images/icone-login.png");
+                display: block;
+                height: 21px;
+                margin: 0 auto 3px;
+                width: 21px;
+            }
+        }
+        .menu-logado {
+            .icon {
+                background: #fff;
+                border-radius: 50%;
+                box-sizing: border-box;
+                color: $menu-hover;
+                display: block;
+                font-family: $teuton25;
+                font-size: 12px;
+                height: 21px;
+                margin: 0 auto 3px;
+                padding: 2px 0;
+                text-align: center;
+                width: 21px;
+            }
+        }
     }
-    
 }
 
 .nav {
@@ -194,4 +242,10 @@
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
     max-height: initial !important;
+}
+
+#modal-login {
+   hr{
+    border-top: 1px solid #5D2FAA!important;
+   }
 }

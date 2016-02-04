@@ -10,6 +10,7 @@ add_action("wp_ajax_search", function() {
         'order' => 'ASC',
         's' => $_REQUEST['keyword']
         );
+
     if ($_REQUEST['fields']) {
         $fields = explode(',', $_REQUEST['fields']);
         $response = array_map(function($item) use($fields) {
@@ -28,46 +29,87 @@ add_action("wp_ajax_search", function() {
     die;
 });
 
-add_action("wp_ajax_saveCadUserDown", function() {
+add_action( "wp_ajax_saveCadUserDown", "cadastro_user");
+add_action( "wp_ajax_nopriv_saveCadUserDown", "cadastro_user");
 
-    $name = $_POST['name'];
-    $name = explode(" ", $name);
-        for ($i = 0; $i < sizeof($name); $i++) {
-            if ($i < 1) {
-                $first_name = $name[$i];
-            } else {
-                $last_name .= " " . $name[$i];
-            }
+
+function cadastro_user(){
+
+    $nome_completo = isset($_POST['nome']) ? $_POST['nome'] : null;
+    $nome_usuario = isset($_POST['usuario']) ? $_POST['usuario']: null;
+    $email = isset($_POST['email']) ? $_POST['email']: null;
+    $confirmar_email = isset($_POST['confirmemail']) ?$_POST['confirmemail']: null;
+    $senha = isset($_POST['senha']) ? $_POST['senha']: null;
+    $confirmar_senha = isset($_POST['repetir_senha']) ? $_POST['repetir_senha']: null;   
+    $instituicao = isset($_POST['instituicao']) ? $_POST['instituicao']: null;
+    $estado = isset($_POST['estado']) ? $_POST['estado']: null;
+    $cidade = isset($_POST['cidade']) ?$_POST['cidade']: null;
+
+    if ( is_user_logged_in() ) {
+        $current_user = wp_get_current_user();
+        $user_id = $current_user->ID;
+    }
+
+    $first_name = $nome_completo;
+    $last_name = " ";
+
+    $name = explode( " ", $nome_completo );
+    for ($i = 0; $i < count($name); $i++) {
+        if ($i < 1) {
+            $first_name = $name[$i];
+        } else {
+            $last_name .= " " . $name[$i];
         }
+    }
 
-    $email =  isset($_POST['email']) ? $_POST['email']: null;
-    $login = isset($_POST['login']) ? $_POST['login']: null;
-    $pass = isset($_POST['password']) ? $_POST['password']: null;
-    $telefone = isset($_POST['telefone']) ? $_POST['telefone']: null;
-    $form_sent = isset($_POST['form_sent']) ?$_POST['form_sent']: null;
-    $last_name =  isset($last_name) ? $last_name: null;
-   
 
-    $user_id = wp_insert_user(array(
-        'user_email' => $email,
-        'user_pass' => $pass,
-        'user_login' => $login,
-        'first_name' => $first_name,
-        'last_name' => $last_name
-        ));
+    if( isset( $user_id ) ){
 
-    $user_meta = add_user_meta( $user_id, 'telefone', $telefone );
-    $user_meta = add_user_meta( $user_id, 'form_sent', $form_sent );
+        $user_data = array(
+            'ID' => $user_id,
+            'user_email' => $email,
+            'user_pass' => $senha,
+            'display_name' => $nome_completo,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+        );
+
+       $user_id =  wp_update_user( $user_data );
+
+    }else{
     
-    $success = !is_wp_error($user_meta);
+        $user_id = wp_insert_user(array(
+            'user_login'=> $nome_usuario,
+            'user_email' => $email,
+            'user_pass' => $senha,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'user_registered' => date('j F Y'),
+            'role' => 'subscriber',      
+        ));
+        
+    };
 
-    $response = array(
-        'success' => $success,
-        'is_user_logged_in' => $success,
-        'error' => !$success ? $user_id->get_error_message() : null
-    );
+    if ( !is_wp_error( $user_id ) ) {
 
-    echo json_encode($response);
+        update_user_meta( $user_id, 'instituicao', $instituicao );
+        update_user_meta( $user_id, 'estado', $estado );
+        update_user_meta( $user_id, 'cidade', $cidade );
 
+        $response = array(
+            'success' => "true",
+            'error' => ""
+        );
+
+    }else{
+
+        $response = array(
+            'success' => "false",
+            'error' => $user_id->get_error_message(),
+        );       
+    };
+
+    echo json_encode( $response );
+ 
     die();
-});
+}

@@ -1,0 +1,49 @@
+.form-cadastro {
+    color: #28346e; 
+    margin: 0 auto; 
+    max-width: 460px;
+
+    .obrigatorios {
+        font-size: 1em;
+    }
+
+    legend {
+        border-bottom: 2px solid #28346e;
+        color: #28346e;
+        font-family: $teuton23;
+        font-size: 2.4em;
+        height: 26px;
+        margin: 0 0 26px;
+        text-align: center;
+        span {
+            background: #fff;
+            display: inline-block;
+            margin: 0 auto; 
+            padding: 0 15px;
+        }
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .form-control {
+        background-color: transparent !important;
+        border: 1px solid #28346e;
+        border-radius: 8px;
+        box-shadow: none;
+        color: #28346e;
+        height: 43px;
+    }
+
+    .btn {
+        background: #0aa8b3;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 20px;
+        margin: 15px 0 0; 
+        text-transform: initial; 
+        width: 100%;
+    }
+}

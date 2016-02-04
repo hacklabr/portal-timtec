@@ -88,15 +88,24 @@
         dataType: 'json',
         data: $form.serialize(),
         success: function (r) {
-          alert("funciona");
+          $(".mensagem_erro").hide();
+          if(r["error"] === "true"){
+            alert("cadastro feito com sucesso");
+          }else{
+            if( r["error"] === "Este nome de usuário já existe!" ){
+              $(".erro_usuario").show();
+            }
+
+            if( r["error"] === "Este email já está em uso!" ){
+              $(".erro_email").show();
+            }
+          }
         },
         error: function (r) {
-          console.log(r);
+          $(".mensagem_erro").hide();
+          console.log( r );  
         }
-
     });
-
-
     return false;
   });
 

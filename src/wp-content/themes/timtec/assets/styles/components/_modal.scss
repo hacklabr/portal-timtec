@@ -1,3 +1,42 @@
+.modal-triangle-up {
+    border-left: 20px transparent;
+    border-right: 20px transparent;
+    border-bottom: 25px #e6e6e6;
+    border-style: dotted dotted solid;
+    height: 0;
+    margin: 0 auto;
+    width: 0;
+}
+
+.modal-timtec-logo {
+    background: url(../images/logo-timtec-pop-up.png);
+    height: 48px;
+    margin: 0 auto 10px; 
+    width: 175px;
+}
+
+.modal {
+    .modal-container {
+        @extend .container;
+        padding: 0;
+        position: relative;
+    }
+    .modal-content {
+        background: #e6e6e6;
+        border: 0;
+        box-shadow: none;
+        border-radius: 5px;
+        .modal-body {
+            padding: 20px;
+        }
+    }
+    .modal-sm {
+        @media screen and (min-width: $screen-xs-min) {
+            width: 360px;
+        } 
+    }
+}
+
 #modal-home {
     position:absolute;
     z-index:9999;
@@ -36,7 +75,6 @@
 
     .modal-home-content {
         background: #e6e6e6;
-        border-radius: 20px;
         border-radius: 5px;
         padding: 30px 40px;
         
@@ -118,19 +156,140 @@
     }
 }
 
-.modal-triangle-up {
-    border-left: 20px transparent;
-    border-right: 20px transparent;
-    border-bottom: 25px #e6e6e6;
-    border-style: dotted dotted solid;
-    height: 0;
-    margin: 0 auto;
-    width: 0;
+.modal-menu {
+    .modal-dialog {
+        margin: 0; 
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+    .modal-triangle-up {
+        float: right;
+    }
+    .modal-content {
+        clear: both;
+    }
 }
 
-.modal-timtec-logo {
-    background: url(../images/logo-timtec-pop-up.png);
-    height: 48px;
-    margin: 0 auto 10px; 
-    width: 175px;
+#modal-login {
+    .modal-triangle-up {
+        margin-right: 14px;
+    }
+    h3, h4 {
+        color: #592aa8;
+        font-family: $teuton23;
+        font-weight: normal;
+        text-align: center;
+    }
+    h3 {
+        border-bottom: 2px solid #592aa8;
+        font-size: 32px;
+        height: 20px;
+        margin: 0 0 26px;
+        span {
+            background: #e6e6e6;
+            display: inline-block;
+            margin: 0 auto; 
+            padding: 0 15px;
+        }
+    }
+    h4 {
+        font-size: 22px; 
+        margin: 0 0 16px; 
+    }
+    .form-group {
+        margin-bottom: 12px; 
+    }
+    .form-control {
+        background-color: transparent !important;
+        border: 1px solid #592aa8;
+        border-radius: 8px;
+        box-shadow: none;
+        color: #4D5885;
+        padding: 8px 12px;
+    }
+    .btn {
+        background: #5170B3;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 0 20px; 
+        text-transform: initial; 
+        width: 100%;
+    }
+    p {
+        color: #592aa8;
+        font-size: 12px;
+        margin: 0;
+        text-align: center;
+        a {
+            color: #592aa8;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: underline; 
+        }
+    }
 }
+#modal-logado {
+    .modal-triangle-up {
+        margin-right: 21px;
+    }
+    h3 {
+        color: #592aa8;
+        font-family: $teuton23;
+        font-size: 32px;
+        font-weight: normal;
+        margin: 0 0 20px;
+        text-align: center;
+        span {
+            font-family: $teuton26;
+        }
+    }
+    .btn {
+        border-radius: 8px;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 0 12px; 
+        text-transform: initial; 
+        width: 100%;
+    }
+    .btn-logout {
+        background-color: #0997a0;
+    }
+    .btn-cancel {
+        background-color: #FF8969;
+    }
+    .info {
+        border-top: 2px solid #592aa8;
+        margin-top: 8px;
+        padding-top: 12px;
+        .icon {
+            background: #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            color: #592aa8;
+            display: block;
+            float: left;
+            font-family: $teuton25;
+            font-size: 22px;
+            height: 40px;
+            margin-right: 10px;
+            padding: 5px 0;
+            text-align: center;
+            width: 40px;
+        }
+        .text {
+            color: #592aa8;
+            font-size: 14px;
+            span {
+                font-weight: bold;
+            }
+        }
+        a {
+            color: #592aa8;
+            font-weight: bold;
+            text-decoration: underline; 
+        }
+    }
+}
+
