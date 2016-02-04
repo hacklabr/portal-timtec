@@ -344,3 +344,23 @@ add_action( 'admin_init', 'restrict_admin', 1 );
 if ( ! current_user_can( 'manage_options' ) ) {
     show_admin_bar( false );
 }
+
+
+//Redireciona para página de login, caso erro.
+add_action( 'wp_login_failed', 'login_failed_redirect' ); 
+function login_failed_redirect( $user ) {
+  // check what page the login attempt is coming from
+  $referrer = $_SERVER['HTTP_REFERER'];
+
+  // check that were not on the default login page
+  if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') && $user!=null ) {
+    // make sure we don't already have a failed login attempt
+    if ( !strstr($referrer, '?login=failed' )) {
+      // Redirect to the login page and append a querystring of login failed
+        wp_redirect( $referrer . '?login=failed');
+      } else {
+          wp_redirect( $referrer );
+      }
+      exit;
+  }
+}
