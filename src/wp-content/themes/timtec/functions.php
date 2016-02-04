@@ -331,36 +331,59 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 add_filter('widget_text', 'do_shortcode');
 
 
-//Bloquear acesso ao ADMIN 
+//Bloquear acesso ao ADMIN
+add_action( 'admin_init', 'restrict_admin', 1 ); 
 function restrict_admin()
 {
   if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
                 wp_redirect( site_url() );
   }
-}
-add_action( 'admin_init', 'restrict_admin', 1 );
+};
 
 //Retirar barra de acesso do ADMIN
 if ( ! current_user_can( 'manage_options' ) ) {
     show_admin_bar( false );
-}
+};
 
 
 //Redireciona para página de login, caso erro.
 add_action( 'wp_login_failed', 'login_failed_redirect' ); 
 function login_failed_redirect( $user ) {
-  // check what page the login attempt is coming from
+
   $referrer = $_SERVER['HTTP_REFERER'];
 
-  // check that were not on the default login page
   if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') && $user!=null ) {
-    // make sure we don't already have a failed login attempt
+
     if ( !strstr($referrer, '?login=failed' )) {
-      // Redirect to the login page and append a querystring of login failed
-        wp_redirect( $referrer . '?login=failed');
-      } else {
-          wp_redirect( $referrer );
-      }
-      exit;
+      wp_redirect( $referrer . 'login/?login=failed');
+    } else {
+      wp_redirect( $referrer );
+    }
+    exit;
   }
+
+};
+
+
+//Verifica se o reset de login existe
+add_action('lostpassword_post', 'validate_reset', 99, 3);
+function validate_reset(){
+    if(isset($_POST['user_login']) && !empty($_POST['user_login'])){
+        $email_address = $_POST['user_login'];
+        if(filter_var( $email_address, FILTER_VALIDATE_EMAIL )){
+            if(!email_exists( $email_address )){
+                wp_redirect( '/reset-login/?userexist=emailfalse' );
+                exit;
+            }
+        }else{
+                $username = $_POST['user_login'];
+                if ( !username_exists( $username ) ){
+                    wp_redirect( '/reset-login/?userexist=userfalse' );
+                    exit;
+                }
+            } 
+    }else{
+        wp_redirect( '/reset-login/?lostempty=true' );
+        exit;   
+    }
 }
