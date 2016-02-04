@@ -19,7 +19,8 @@
 		$course_url = get_metadata('post', get_the_ID(), 'url_course', true);
 
 		$teachers = $teacher_course_relation->getRelatedPosts();
-        $teacher = '';
+        $teacher = [];
+        $teacher_name = [];
 
         if (is_array($teachers)) { 
             $teachers_name = array_map(function($e) {

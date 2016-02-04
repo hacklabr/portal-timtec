@@ -74,8 +74,8 @@ get_template_part('templates/header');
 
 
                         $teachers = $teacher_course_relation->getRelatedPosts();
-                        $teacher = '';
-                        $teacher_name = '';
+                        $teacher = [];
+                        $teacher_name = [];
                         if (is_array($teachers)) {  
                             $teacher = [];
                             $teachers_name = array_map(function($e) {
