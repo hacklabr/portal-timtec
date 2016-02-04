@@ -10,13 +10,10 @@ $couse_download = new PrivateFile(array(
     'validation' => '.*',
     'validation_error' => __('Invalid file', SLUG),
     'access_control' => function(){
-        return true; // enquanto não implementa o form de cadastro
-        
         if(is_user_logged_in()){
-            $form_sent = get_user_meta(get_current_user_id(), 'form_sent', true);
-            return $form_sent;
+            return true;
         } else {
-            return false;
+           return wp_redirect( home_url() . "/lista-de-cursos" );;
         }
     },
 ));

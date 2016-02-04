@@ -90,7 +90,7 @@
             <?php 
                 }else{ 
             ?>
-                    <!-- menu login/logado -->
+                    <!-- menu login -->
                     <div class="menu-login"><a href="" data-toggle="modal" data-target="#modal-login"><span class="icon"></span>Login</a></div>
             <?php 
                 }//End If User Logged
