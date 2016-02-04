@@ -89,21 +89,21 @@
         data: $form.serialize(),
         success: function (r) {
           $(".mensagem_erro").hide();
-          if(r['error'] === "true"){
+          if(r["error"] === "true"){
             alert("cadastro feito com sucesso");
           }else{
-            if( r['error'] === "Este nome de usuário já existe!" ){
+            if( r["error"] === "Este nome de usuário já existe!" ){
               $(".erro_usuario").show();
             }
 
-            if( r['error'] === "Este email já está em uso!" ){
+            if( r["error"] === "Este email já está em uso!" ){
               $(".erro_email").show();
             }
           }
         },
         error: function (r) {
           $(".mensagem_erro").hide();
-          console.log( r['error'] );  
+          console.log( r );  
         }
     });
     return false;
