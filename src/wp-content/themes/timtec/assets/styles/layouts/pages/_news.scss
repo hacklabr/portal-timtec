@@ -357,24 +357,28 @@
         }
     }
 
-    .sharedaddy{
-        h3.sd-title{
-            display:none;
+    .sharedaddy {
+        h3.sd-title{ 
+            display: none;
         }
     }
 
-    .description-wrapper{
+    .description-wrapper {
         display: none;
     }
 
-    .wff-facebook-feed-title-div{
+    .wff-facebook-feed-title-div {
         width: 70%;
     }
 
-    .wff-fb-item{
+    .wff-fb-item {
         margin: 10px;
         border-bottom: 1px solid #304594!important;
         overflow: hidden;
+    }
+
+    .wff-fb-item:last-child {
+        border-bottom: 0;
     }
 
     .wff-date {
