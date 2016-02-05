@@ -364,7 +364,7 @@
     }
 
     .description-wrapper{
-        display:none;
+        display: none;
     }
 
     .wff-facebook-feed-title-div{
@@ -372,9 +372,21 @@
     }
 
     .wff-fb-item{
-        margin:10px;
+        margin: 10px;
         border-bottom: 1px solid #304594!important;
-        overflow:hidden;
+        overflow: hidden;
+    }
+
+    .wff-date {
+        font-size: 0.8em;
+    }
+
+    .wff-link-title {
+        font-size: 1em;
+    }
+
+    .wff-post-description {
+        font-size: 0.9em;
     }
 }
 
