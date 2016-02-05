@@ -104,6 +104,7 @@
                 }
             }
             .featured-small {
+                height: 220px;
                 margin-bottom: 30px;
                 @extend .col-xs-12;
 
@@ -117,7 +118,7 @@
                     @extend .col-lg-6;
                 }
                 .news-box {
-                    height: 190px;
+                    height: 220px;
                 }
                 .post-title { 
                     font-size: 20px;
