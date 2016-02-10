@@ -104,19 +104,18 @@
                     background-color: $menu-hover;
                 }
 
-                &.open {
-                    > a:after {
-                        content: '\f0d8';
-                        font-family: $icon-font-name;
-                        font-size: 10px;
-                    }
-                }
-
                 &.dropdown {
                     > a:after {
                         content: '\f0d7';
                         font-family: $icon-font-name;
                         font-size: 10px;
+                    }
+                    &.open {
+                        > a:after {
+                            content: '\f0d8';
+                            font-family: $icon-font-name;
+                            font-size: 10px;
+                        }
                     }
                 }
 
