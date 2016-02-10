@@ -5,13 +5,13 @@ html {
 
 body {
     @media screen and (min-width: $screen-sm-min) {
-        padding-bottom: 320px;
+        padding-bottom: 400px;
     }
     @media screen and (min-width: $screen-md-min) {
-        padding-bottom: 200px;
+        padding-bottom: 250px;
     }
     @media screen and (min-width: $screen-lg-min) {
-        padding-bottom: 165px;
+        padding-bottom: 230px;
     }
 }
 

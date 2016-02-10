@@ -2,13 +2,13 @@
 	background: #095DAF;
     position: absolute;
     bottom: 0;
-    height: 320px;
+    height: 400px;
     width: 100%;
     @media screen and (min-width: $screen-md-min) {
-        height: 200px;
+        height: 250px;
     }
     @media screen and (min-width: $screen-lg-min) {
-        height: 165px;
+        height: 230px;
     }
 
 	.content-footer {
@@ -81,8 +81,17 @@
     	p {
     		color:#2193d4;
             text-align: center;
-            font-family: 'Teuton22Pro';
+            font-family: $teuton23;
     	}
+    }
+
+    .creative-commons {
+        color: #fff;
+        font-family: $teuton23;
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 }
 
