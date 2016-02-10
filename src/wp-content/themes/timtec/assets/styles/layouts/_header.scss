@@ -190,16 +190,18 @@
             }
             a {
                 color: #fff;
-                display: inline-block;
+                display: block;
                 font-family: $teuton23;
                 letter-spacing: 1px;
                 font-size: 13px;
                 padding: 10px 10px 6px;
-                text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
                 &:hover {
                     background-color: $menu-hover;
+                }
+                @media screen and (min-width: $screen-sm-min) {
+                    text-align: center;
                 }
             }
         }
@@ -208,8 +210,11 @@
                 background-image:url("../../assets/images/icone-login.png");
                 display: block;
                 height: 21px;
-                margin: 0 auto 3px;
+                margin: 0 0 3px 7px;
                 width: 21px;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin: 0 auto 3px;
+                }
             }
         }
         .menu-logado {
@@ -222,10 +227,13 @@
                 font-family: $teuton25;
                 font-size: 12px;
                 height: 21px;
-                margin: 0 auto 3px;
+                margin: 0 0 3px 13px;
                 padding: 2px 0;
                 text-align: center;
                 width: 21px;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin: 0 auto 3px;
+                }
             }
         }
     }

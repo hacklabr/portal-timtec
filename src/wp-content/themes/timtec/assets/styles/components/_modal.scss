@@ -160,11 +160,20 @@
     .modal-dialog {
         margin: 0; 
         position: absolute;
-        right: 0;
-        top: 50px;
+        left: 0;
+        top: 460px;
+        @media screen and (min-width: $screen-sm-min) {
+            left: initial;
+            right: 0;
+            top: 55px; 
+        }
     }
     .modal-triangle-up {
-        float: right;
+        margin: 0 0 0 7px;
+        @media screen and (min-width: $screen-sm-min) {
+            float: right;
+            margin-right: 14px;
+        }
     }
     .modal-content {
         clear: both;
@@ -172,6 +181,7 @@
 }
 
 #modal-login {
+    margin: 0 0 0 7px;
     .modal-triangle-up {
         margin-right: 14px;
     }
