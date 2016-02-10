@@ -164,6 +164,15 @@ $('.show-more-courses').on('click', function(e){
     $('.list-courses').addClass('open');
 });
 
+/**
+* Esconde a modal quando o menu mobile é fechado
+*/
+
+$('.navbar-toggle').on('click', function(e){
+  if (!$(this).hasClass('collapsed')) {
+    $('.modal-menu').modal('hide')
+  }
+});
 
 String.prototype.hashCode = function() {
   var hash = 0, i, chr, len;
