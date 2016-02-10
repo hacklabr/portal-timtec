@@ -1,0 +1,176 @@
+.category{
+	.main{
+		width: 100%;
+	}
+}
+
+#page-list-category-noticia{
+	&.base-content {
+        margin-top: 0;
+    }
+
+    .banner {
+    	background-color: #304594;
+        height: initial;
+        position: relative;
+
+        .container {
+        	height: initial;
+            position: relative;
+            @media screen and (min-width: $screen-sm-min) {
+                background: url('../images/ilustra-header-news.png') no-repeat; 
+                background-position: right 40px;
+            }
+        }
+        .title {
+            background-image: url('../images/icones-header-news.png');
+            padding-top: 10px;
+            text-transform: uppercase;
+            color: #fff;
+            max-height: 75px;
+            position: static;
+            padding-top: 15px;
+            text-transform: uppercase;
+            @media screen and (min-width: $screen-xs-min) {
+                padding-top: 10px;
+            }
+        }
+
+        .info {
+            display: table-cell;
+            padding-bottom: 10px;
+            vertical-align: bottom;
+            @media screen and (min-width: $screen-sm-min) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .main-news {
+        @extend .col-xs-12;
+        @media screen and (min-width: $screen-sm-min) {
+            @extend .col-sm-7;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            @extend .col-md-8;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            @extend .col-lg-9;
+        }
+
+        h3{
+        	font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		    font-size: 2.7em;
+		    color: #000;
+		    margin-bottom:0px;
+        }
+
+        h4{
+        	font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		    font-size: 1.3em;
+		    color: #000;
+		    margin-bottom:20px;
+		       margin-top: 10px;
+
+		    a{
+		    	text-transform: uppercase;
+				padding: 5px 10px;
+				font-size: 0.8em;
+    			color: #fff;
+		    }
+        }
+
+
+
+        .list {
+            .list-title {
+                color: #000;
+                font-family: $teuton25;
+                font-size: 36px;
+                margin: 0 0 25px 0;
+
+                a {
+		            color: #000;
+		        }
+            }
+            .list-item {
+                border-bottom: 1px solid #808080;
+                margin-bottom: 20px;
+                padding-bottom: 25px;
+                &:last-child {
+                    border: 0;
+                    margin-bottom: 0;
+                }
+
+                a {
+		            color: #000;
+
+		            span{
+						color: #fff;
+					    display: inline-block;
+					    font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+					    font-size: 13px;
+					    padding: 2px 5px;
+					    text-transform: uppercase;
+		            }
+		        }
+            }
+            .post-date { 
+                float: right;
+                font-size: 11px;
+
+            }
+            .post-title {
+                font-size: 24px;
+                margin: 15px 0;
+                a {
+		            color: #000;
+		        }
+            }
+
+            .pagination{
+            	a{
+            		font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            		font-size: 1.2em;	
+            	}
+            }
+        }
+    }
+
+    .sidebar-news {
+        @extend .col-xs-12;
+        @media screen and (min-width: $screen-sm-min) {
+            @extend .col-sm-5;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            @extend .col-md-4;
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            @extend .col-lg-3;
+        }
+
+        h3{
+        	font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		    font-size: 2.5em;
+		    color: #000;
+		    margin-bottom:20px;
+        }
+
+        ul{
+        	margin: 0px;
+		    list-style: none;
+		    padding: 0px;
+
+		    li{
+		    	margin-bottom: 10px;
+
+		    	a{
+		    		font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+				    color: #fff;
+				    text-transform: uppercase;
+				    padding: 5px 10px;
+		    	}
+		    }
+        }
+   	}
+}

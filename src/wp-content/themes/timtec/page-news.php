@@ -58,7 +58,8 @@ get_template_part('templates/header');
                     ?>
                     <?php  
                         $category = get_the_category( $post->ID ); 
-                        $cat_id = $category[0]->term_id;
+                        $cat_id = $category[0]->cat_ID;
+                        $cat_url =  get_category_link( $cat_id );
                         $cat_data = get_option( "category_$cat_id" );
                         $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
                     ?>
@@ -66,7 +67,7 @@ get_template_part('templates/header');
                             <div class="featured-big">
                                 <div class="news-box" style="<?php _img_url(); ?>">
                                     <div class="gradient"></div>
-                                    <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
+                                    <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php _cat() ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span></a>
                                     <div class="clearfix"></div>
                                     <div class="info">
                                         <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
@@ -78,7 +79,7 @@ get_template_part('templates/header');
                             <div class="featured-small">
                                 <div class="news-box" style="<?php _img_url() ?>">
                                     <div class="gradient"></div>
-                                    <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span>
+                                    <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php _cat() ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat() ?></span></a>
                                     <div class="clearfix"></div>
                                     <div class="info">
                                         <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
@@ -106,11 +107,12 @@ get_template_part('templates/header');
                         $category = get_the_category( $post->ID ); 
                         $cat_name =  $category[0]->name;
                         $cat_id = $category[0]->term_id;
+                        $cat_url =  get_category_link( $cat_id );
                         $cat_data = get_option( "category_$cat_id" );
                         $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
                     ?>
                         <div class="list-item">
-                            <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php echo $cat_name; ?></span>
+                            <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php echo $cat_name; ?></span></a>
                             <time class="post-date"><?php _date() ?></time>
                             <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                             <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
