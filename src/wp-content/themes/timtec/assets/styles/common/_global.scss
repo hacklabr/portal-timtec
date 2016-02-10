@@ -15,6 +15,11 @@ body {
     }
 }
 
+/* fix bootstrap modal padding */
+body, .navbar-fixed-top, .navbar-fixed-bottom {
+  padding-right: 0 !important;
+}
+
 .center {
     margin: 0 auto;
     float: none;
