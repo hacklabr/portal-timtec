@@ -207,11 +207,13 @@
         .menu-login {
             .icon {
                 background-image:url("../../assets/images/icone-login.png");
-                display: block;
+                display: inline-block;
                 height: 21px;
-                margin: 0 0 3px 7px;
+                margin: 5px 10px 6px 0px;
                 width: 21px;
+                vertical-align: middle;
                 @media screen and (min-width: $screen-sm-min) {
+                    display: block;
                     margin: 0 auto 3px;
                 }
             }
@@ -222,15 +224,16 @@
                 border-radius: 50%;
                 box-sizing: border-box;
                 color: $menu-hover;
-                display: block;
+                display: inline-block;
                 font-family: $teuton25;
                 font-size: 12px;
                 height: 21px;
-                margin: 0 0 3px 13px;
+                margin: 5px 10px 6px 0px;
                 padding: 2px 0;
                 text-align: center;
                 width: 21px;
                 @media screen and (min-width: $screen-sm-min) {
+                    display: block;
                     margin: 0 auto 3px;
                 }
             }
