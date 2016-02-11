@@ -50,7 +50,7 @@
             	<?php 
 					$category = get_the_category(); 
 					$cat_id = $category[0]->cat_ID;
-					$cat_id = $category[0]->cat_ID;
+					$cat_name = $category[0]->name;
                     $cat_url =  get_category_link( $cat_id );
                     $cat_data = get_option( "category_$cat_id" );
                     $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF'; 

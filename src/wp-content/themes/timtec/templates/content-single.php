@@ -6,11 +6,13 @@
                 <?php  
                     $category = get_the_category( $post->ID ); 
                     $cat_id = $category[0]->term_id;
+                    $cat_name = $category[0]->name;
                     $cat_data = get_option( "category_$cat_id" );
+                    $cat_url =  get_category_link( $cat_id );
                     $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
                 ?>
                 <header>
-                    <span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php _cat(); ?></span>
+                    <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php echo $cat_name ?></span></a>
                     <time class="post-date"><?php _date() ?></time>
                     <h3 class="post-title">
                         <?php the_title() ?>
