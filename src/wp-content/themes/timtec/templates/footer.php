@@ -94,10 +94,26 @@
             <div class="row creative-commons">
                 <div class="container">
                     <div class="pull-left"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cc-banner.png" alt="Licença Creative Commons Atribuição 4.0 Internacional"></div>
-                    <div class="col-sm-10 col-md-8 col-lg-8">Todo o conteúdo deste site está publicado sob a <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR">Licença Creative Commons Atribuição 4.0 Internacional</a> exceto quando especificado em contrário e nos conteúdos replicados de outras fontes.</div>
+                    <div class="col-sm-10 col-md-8 col-lg-8">
+                        <?php 
+                            
+                            $current_lang = pll_current_language();
+
+                            if( $current_lang == "pt"){
+                              dynamic_sidebar('creative-commons-pt');
+                            }
+
+                            if( $current_lang == "en"){
+                              dynamic_sidebar('creative-commons-en');
+                            }
+
+                            if( $current_lang == "es"){
+                              dynamic_sidebar('creative-commons-es');
+                            }
+                         ?>  
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </footer>

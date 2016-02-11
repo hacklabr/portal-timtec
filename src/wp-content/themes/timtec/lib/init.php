@@ -76,5 +76,32 @@ function widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
+
+  register_sidebar([
+    'name'          => 'Creative Commons PT',
+    'id'            => 'creative-commons-pt',
+    'before_widget' => '',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => 'Creative Commons EN',
+    'id'            => 'creative-commons-en',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => 'Creative Commons ES',
+    'id'            => 'creative-commons-es',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
