@@ -92,6 +92,9 @@
 
 
         .list {
+            
+            
+
             .list-title {
                 color: #000;
                 font-family: $teuton25;
@@ -102,17 +105,17 @@
 		            color: #000;
 		        }
             }
-            div.list-item {
+            
+            ul{
+                margin: 0px;
+                padding: 0px;
+            }
 
+            .list-item {
                 border-bottom: 1px solid #808080;
                 margin-bottom: 20px;
                 padding-bottom: 25px;
-
-                &:last-child {
-                    border: 0;
-                    margin-bottom: 0;
-                    border-bottom: 0px;
-                }
+                list-style:none;
 
                 a {
 		            color: #000;
@@ -127,6 +130,13 @@
 		            }
 		        }
             }
+
+            li.list-item:last-child{
+                border: 0;
+                margin-bottom: 0;
+                border-bottom: 0px;
+            }
+
             .post-date { 
                 float: right;
                 font-size: 11px;

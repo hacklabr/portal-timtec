@@ -58,7 +58,7 @@
 					$args = array( 
 						'post_type' => 'post',
 						'cat' => $cat_id,
-						'posts_per_page' => 12, 
+						'posts_per_page' => 11, 
 						'paged' => $paged,
 					);
 						
@@ -70,17 +70,20 @@
             		<?php _oi('Tag selecionada: ') ?>
             		 <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>" style="background:<?php echo $cat_bg; ?>"><span class="post-category">#<?php echo $cat_name; ?></span></a>
             	</h4>
-                <div class="list">
+            	<div class="list">
+                	<ul>
                   	<?php 
                   		while ( have_posts() ) :the_post();
                   	?>
 
-                  	<div class="list-item">
+                  	<li class="list-item">
                         <time class="post-date"><?php the_time('d/m/Y'); ?></time>
                         <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                         <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
-                    </div>
+                    </li>
                     <?php endwhile; ?>
+                    </ul>
+
 
                     <div class="pagination">
 						<?php 
