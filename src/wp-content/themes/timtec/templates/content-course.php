@@ -116,6 +116,7 @@
 		            </div>
 		        </div>
 		    </div>
+            <hr class="hidden-md hidden-lg">
 		    <div class="col-md-2 side-curso">
 	    		<div class="infos-curso">
 	            	<?php 

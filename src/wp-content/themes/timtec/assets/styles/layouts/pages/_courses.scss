@@ -314,18 +314,23 @@
     }
 
     .colunm-content{
-        padding:0px;
-        colunm: 0px;
+        padding: 0px;
+        @media screen and (max-width: $screen-sm-max) {
+            margin-bottom: 30px;
+        }
     }
 
     .colunm{
         margin: 10px 0px;
     }
 
-    h4{
+    h4 {
         color: #000;
         margin-top: 0px;
         margin-bottom: 10px;
+        @media screen and (max-width: $screen-sm-max) {
+            margin-top: 30px;
+        }
     }
 
     p{
@@ -458,9 +463,15 @@
     .side-curso{
         margin-right: 0px;
         padding-right: 0px;
-        padding-left: 40px;
+        padding-left: 0;
+        @media screen and (min-width: $screen-md-min) {
+            padding-left: 40px;
+        }
+        @media screen and (max-width: $screen-sm-max) {
+            margin-top: 30px;
+        }
 
-        p{
+        p {
             margin-right: 0px;
         }
     }
