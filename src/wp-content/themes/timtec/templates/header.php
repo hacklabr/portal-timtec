@@ -108,7 +108,7 @@
 <div class="modal modal-menu fade" id="modal-logado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-container">
       <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-triangle-up"></div>
+        <div class="modal-triangle-up fa fa-caret-up"></div>
         <div class="modal-content">
           <div class="modal-body">
                 <h3>Olá, <span><?php echo esc_html( $current_user->user_firstname ); ?></span>, deseja sair? ;)</h3>
@@ -142,7 +142,7 @@
 <div class="modal modal-menu fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-container">
       <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-triangle-up"></div>
+        <div class="modal-triangle-up fa fa-caret-up"></div>
         <div class="modal-content">
           <div class="modal-body">
             <h3><span>Login</span></h3>

@@ -1,11 +1,7 @@
 .modal-triangle-up {
-    border-left: 20px transparent;
-    border-right: 20px transparent;
-    border-bottom: 25px #e6e6e6;
-    border-style: dotted dotted solid;
-    height: 0;
-    margin: 0 auto;
-    width: 0;
+    color: #E6E6E6;
+    font-size: 70px;
+    height: 45px;
 }
 
 .modal-timtec-logo {
@@ -165,7 +161,7 @@
         @media screen and (min-width: $screen-sm-min) {
             left: initial;
             right: 0;
-            top: 55px; 
+            top: 40px; 
         }
     }
     .modal-triangle-up {
