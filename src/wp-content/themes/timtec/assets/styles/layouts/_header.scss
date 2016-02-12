@@ -38,6 +38,9 @@
                     background-size:contain;
                     background-repeat:no-repeat;
                     margin-right: 10%;
+                    @media ( max-width: 770px ){
+                        width: 54%;
+                    }
                 }
 
                 &.timtec {
@@ -46,6 +49,10 @@
                     height: 36px;
                     background-size:contain;
                     background-repeat:no-repeat;
+
+                    @media ( max-width: 770px ){
+                      width: 35%;
+                    }
                 }
 
                 &:hover, 
@@ -68,6 +75,9 @@
         box-shadow: none;
         float: right;
         width: auto;
+        @media ( max-width: 770px ){
+            margin-right: -10px;
+        }
 
         li.btn_acesse {
             a {
@@ -135,6 +145,9 @@
                     font-size: 16px;
                     text-decoration: none;
                     background-color: transparent;
+                    @media ( max-width: 770px ){
+                        font-size: 15px;
+                    }
                     @media screen and (min-width: $screen-lg-min) {
                         padding: 20px 10px 15px;
                     }
@@ -186,6 +199,9 @@
         .menu-login, .menu-logado {
             @media screen and (min-width: $screen-sm-min) {
                 float: left;
+            }
+            @media ( max-width: 770px ){
+                margin-left: 20px;
             }
             a {
                 color: #fff;
