@@ -1,16 +1,17 @@
 <?php 
 	$q_header = get_option('destaques-noticias');
+
+
+    $categoria_atual = get_the_category();
+    $cat_id_atual =  $categoria_atual[0]->cat_ID;
+    $cat_name_atual = $categoria_atual[0]->name;
 ?>
 
 <div id="page-list-category-noticia" class="base-content page">
-    <div class="banner">
+    <div class="banner no-text">
         <div class="container">
-            <h2 class="title"><?php _oi("Notícias"); ?></h2>
-            <div class="info">
-            	<?php echo $q_header['header']; ?>
-        	</div>
+            <h2 class="title"><?php _oi("Notícias"); ?><span class="subtitle">[ #<?php echo $cat_name_atual ?> ]</span></h2>
         </div>
-        
     </div>
 
     <div class="container">
@@ -18,10 +19,7 @@
         	<div class="sidebar-news">
         		<h3><?php _oi('Lista de Tags') ?></h3>
                	<?php 
-				    
-				    $categoria_atual = get_the_category();
-				    $cat_id_atual =  $categoria_atual[0]->cat_ID; 
-
+				  
 				    $lista_categorias = "";
 				    $list_cat = get_categories();
 

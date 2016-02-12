@@ -14,6 +14,11 @@
         height: initial;
         position: relative;
 
+        &.no-text{
+            height: 200px;
+            min-height: 230px;
+        }
+
         .container {
         	height: initial;
             position: relative;
@@ -34,6 +39,10 @@
             @media screen and (min-width: $screen-xs-min) {
                 padding-top: 10px;
             }
+        }
+
+        .subtitle{
+            text-transform:uppercase;
         }
 
         .info {
