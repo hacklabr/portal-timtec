@@ -102,13 +102,16 @@
 		            color: #000;
 		        }
             }
-            .list-item {
+            div.list-item {
+
                 border-bottom: 1px solid #808080;
                 margin-bottom: 20px;
                 padding-bottom: 25px;
+
                 &:last-child {
                     border: 0;
                     margin-bottom: 0;
+                    border-bottom: 0px;
                 }
 
                 a {
