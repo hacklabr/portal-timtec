@@ -36,6 +36,7 @@
     }
     .banner {
         background-color: #304594;
+        height: 300px;
         .container {
             @media screen and (min-width: $screen-sm-min) {
                 background: url('../images/ilustra-header-news.png') no-repeat; 
