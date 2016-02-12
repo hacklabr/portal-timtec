@@ -10,7 +10,7 @@
 ?>
 
 <div id="page-default-template" class="page-about page-conselho base-content">
-    <div class="banner <?php if(!$header_text) echo "no-text"; ?>">
+    <div class="banner no-text">
         <div class="container">
             <h2 class="title"><?php _e("Sobre"); ?> <span class="subtitle">[<?php the_title(); ?>]</span></h2>
         </div>
