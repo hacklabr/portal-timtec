@@ -7,6 +7,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -15,7 +17,9 @@
 		 url('../fonts/Teuton22Pro.ttf')  format('truetype');
 	font-weight: normal;
 	font-style: normal;
-	font-stretch: normal; 
+	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
 }
 
 @font-face {
@@ -25,6 +29,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -34,6 +40,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -43,6 +51,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -52,6 +62,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -61,6 +73,8 @@
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Open Sans */
@@ -71,6 +85,8 @@
          url('../fonts/OpenSans-Light-webfont.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -78,6 +94,8 @@
          url('../fonts/OpenSans-LightItalic-webfont.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -85,6 +103,8 @@
          url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -92,6 +112,8 @@
          url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -99,6 +121,8 @@
          url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -106,6 +130,8 @@
          url('../fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -113,6 +139,8 @@
          url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 @font-face {
     font-family: 'Open Sans';
@@ -120,4 +148,6 @@
          url('../fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
