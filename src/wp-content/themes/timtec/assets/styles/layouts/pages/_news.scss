@@ -224,6 +224,21 @@
         a {
             color: #05C3FF;
         }
+        
+        .wff-fb-item{
+           margin: 10px 10px 0px!important;
+
+           &:last-child{
+                border-bottom:0px!important;
+           }
+
+           .wff-shared-link-wrapper{
+                display:none!important;
+            }
+        }
+
+
+
         .widget {
             border: 4px solid #304594;
             margin-bottom: 40px;
