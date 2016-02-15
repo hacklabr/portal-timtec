@@ -35,7 +35,30 @@
         <?php endwhile; ?>
         </div>
         <div class="sidebar-news">
-                <?php dynamic_sidebar('sidebar-primary'); ?>
+            <?php dynamic_sidebar('sidebar-primary'); ?>
         </div>
+    </div>
+    <div id="post_relacionados" class="content row">
+        <h3>Relacionados</h3>
+        <?php 
+            $not_post_list_id = $post->ID;
+            $args = array(
+                'post_type' => 'post',
+                'cat' => $cat_id,
+                'posts_per_page' => 4, 
+            );
+            
+            $loop_relacionados = new WP_Query($args);
+
+            while($loop_relacionados->have_posts()): $loop_relacionados->the_post();
+        ?>
+            <div class="col-md-3">
+                <h4><a href="<?php the_permalink(); ?>"><?php  the_title(); ?></a></h4>
+                <p><?php  the_excerpt(); ?></p>
+            </div>
+        <?php     
+            endwhile; 
+        ?>
+
     </div>
 </div>

@@ -311,6 +311,30 @@
     .wff-post-description{
         display:none;
     }
+
+    #post_relacionados{
+        margin-left: 8.3333333333%;
+        border-top: 1px solid #444;
+        padding-top: 20px;
+        
+        .col-md-3{
+            margin-left: -1%;
+        }
+
+        h3{
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        h4{
+            font-family: Teuton23Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            color: #243670;
+            font-size: 1.7em;
+            margin-bottom: 20px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+    }
 }
 
 #page-news {
