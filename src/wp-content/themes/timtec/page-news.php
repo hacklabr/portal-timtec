@@ -119,54 +119,12 @@ get_template_part('templates/header');
                         </div>
                     <?php endwhile; ?>
                 </div>
+                <a href="/todas-as-noticias/" class="btn-ver-mais"> Ver mais notícias </a>
             </div>
             <div class="sidebar-news">
                
                 <?php dynamic_sidebar('sidebar-primary'); ?>
 
-                <?php /* 
-                <div class="twitter-news">
-                                        
-                    <h2 class="sidebar-title"><?php _e("Do Twitter"); ?></h2>
-
-                    <div class="list-item">
-                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
-                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
-                        <time class="twitter-date">00/00/0000 00:00</time>
-                        <div class="twitter-content">
-                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
-                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
-                        <time class="twitter-date">00/00/0000 00:00</time>
-                        <div class="twitter-content">
-                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
-                        </div>
-                    </div>
-                    
-                    <div class="list-item">
-                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
-                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
-                        <time class="twitter-date">00/00/0000 00:00</time>
-                        <div class="twitter-content">
-                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
-                        </div>
-                    </div>
-
-                    <div class="list-item">
-                        <div class="twitter-avatar"><a href="https://twitter.com/timtec_oficial"><img src="https://pbs.twimg.com/profile_images/481125416648728578/kmFmSt39_400x400.jpeg" alt="TIM Tec Oficial"></a></div>
-                        <div class="twitter-username"><a href="https://twitter.com/timtec_oficial">TIM Tec Oficial</a></div>
-                        <time class="twitter-date">00/00/0000 00:00</time>
-                        <div class="twitter-content">
-                            RT <a href="#">@UFMGBR</a> Importância cultural de jogos digitais será tema de simpósio nesta semana <a href="#">https://t.co/zEXB6LB0G2</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <?php  */ ?>
             </div>
         </div>
     </div>

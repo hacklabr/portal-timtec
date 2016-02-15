@@ -200,6 +200,22 @@
                 margin: 15px 0;
             }
         }
+
+        a{
+            &.btn-ver-mais{
+                text-align: center;
+                background: #095DAF;
+                color: #fff;
+                font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+                display: inline-block;
+                border-radius: 0;
+                text-transform: uppercase;
+                margin: 5px;
+                padding: 6px 18px;
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+        }
     }
     .sidebar-news {
         @extend .col-xs-12;

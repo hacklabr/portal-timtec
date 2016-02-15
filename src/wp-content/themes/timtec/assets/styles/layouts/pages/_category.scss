@@ -79,7 +79,8 @@
 		    font-size: 1.3em;
 		    color: #000;
 		    margin-bottom:20px;
-		       margin-top: 10px;
+		    margin-top: 10px;
+            display:inline;
 
 		    a{
 		    	text-transform: uppercase;
@@ -89,6 +90,12 @@
 		    }
         }
 
+        .btn-todas-noticias{
+            float: right;
+            font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 1.3em;
+            margin-top: -27px;
+        }
 
 
         .list {

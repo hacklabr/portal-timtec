@@ -70,6 +70,7 @@
             		<?php _oi('Tag selecionada: ') ?>
             		 <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>" style="background:<?php echo $cat_bg; ?>"><span class="post-category">#<?php echo $cat_name; ?></span></a>
             	</h4>
+            	<a href="/todas-as-noticias/" class="btn-todas-noticias">Todas as notícias ></a>
             	<div class="list">
                 	<ul>
                   	<?php 
