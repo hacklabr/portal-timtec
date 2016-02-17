@@ -241,21 +241,21 @@
                             float: left;
                         }
                         &.goto {
-                            background-color: #33cdc2;
+                            background-color: rgba(0, 193, 179, 0.5);
                             font-family: $teuton26;
                             margin: 0;
                             padding: 2px 12px;
                             width: auto;
                             color:#FFF;
                             &:hover { 
-                                background-color: #00c1b3;
+                                background-color: rgba(0, 193, 179, 1);
                             }
                             &:focus, &:active {
-                                background-color: #009186;
+                                background-color: rgba(0, 193, 179, 1);
                             }
                         }
                         &.download {
-                            color: #ff8969;
+                            color: rgba(255, 137, 105, 0.7);
                             display: block;
                             font-family: $teuton24;
                             margin: 4px 0 0 8px;
@@ -263,10 +263,10 @@
                             text-transform: initial;
                             transition: color 1s ease;
                             &:hover { 
-                                color: #e8684e;
+                                color: rgba(255, 137, 105, 1) ;
                             }
                             &:focus, &:active {
-                                color: #e8684e;
+                                color: rgba(255, 137, 105, 1) ;
                             }
                         }
                     }
