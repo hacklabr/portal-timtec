@@ -7,7 +7,7 @@
     <div class="banner">
         <div class="container">
             <h2 class="title"><?php _oi("CURSOS"); ?> 
-            	<span class="subtitle">{<?php _oi("Detalhes do Professor"); ?>}</span>
+            	<span class="subtitle">{<?php _oi("Sobre o Professor"); ?>}</span>
             </h2>
         </div>
     </div>
