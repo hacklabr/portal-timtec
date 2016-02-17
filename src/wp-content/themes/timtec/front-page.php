@@ -2,7 +2,7 @@
     <div class="bg-modal"></div>
     <div class="modal-home-wrapper">
         <div class="modal-timtec-logo"></div>
-        <div class="modal-triangle-up"></div>
+        <div class="modal-triangle-up fa fa-caret-up"></div>
         <div class="modal-home-content">
             <a href="#" class="close js-close-modal"><i class="fa fa-times"></i></a>
             <h3><a href="http://mooc.timtec.com.br"><span>CLIQUE AQUI</span> PARA ACESSAR OS CURSOS</a></h3>
