@@ -5,7 +5,7 @@
 	<div class="banner">
         <div class="container">
             <h2 class="title"><?php _oi("CURSOS"); ?> 
-            	<span class="subtitle">[<?php _oi("Detalhes do Curso"); ?>]</span>
+            	<span class="subtitle">[<?php _oi("Sobre o Curso"); ?>]</span>
             </h2>
         </div>
     </div>
@@ -53,7 +53,7 @@
             	$teacher_title[ $i ] = "<a href='".$link."' alt='".$teachers_name[ $i ]."'>" .$teachers_name[ $i ]. "</a>";
 
 
-            	$teacher_name[ $i ] = "<span>" .$teachers_name[ $i ]. "</span>";
+            	$teacher_name[ $i ] = "<span class='prof'>" .$teachers_name[ $i ]. "</span>";
 
             };
             $teacher_title = implode( ", ", $teacher_title);
@@ -66,9 +66,9 @@
 	        <header>
 	            <h1 class="entry-title"><?php the_title(); ?></h1>
 	            <div class="instrutor">
-	            	<span>Instrutor: </span><?php echo $teacher_name; ?>
+	            	<span>Instrutor: </span><?php echo $teacher_title; ?>
 	            </div>
-	            <div class="instituto">Instituto: <span><?php echo $instituto; ?></span></div>
+	            <div class="instituto">Instituição: <span><?php echo $instituto; ?></span></div>
 	        </header>
 	        <hr />
 	        <div class="col-md-10 colunm-content">

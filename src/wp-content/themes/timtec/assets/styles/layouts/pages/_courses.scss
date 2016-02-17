@@ -389,8 +389,9 @@
         display:inline-block;
         margin-right: 20px;
 
-        a{
+        a, span.prof{
             color: #05C3FF;
+            font-size: 1.2em;
         }
     }
 
@@ -428,7 +429,7 @@
         margin-left:5px;
 
         h5{
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
         }
 
