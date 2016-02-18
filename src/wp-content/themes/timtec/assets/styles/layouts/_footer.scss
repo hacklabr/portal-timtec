@@ -2,8 +2,9 @@
 	background: #095DAF;
     position: absolute;
     bottom: 0;
-    height: 400px;
+    height: auto!important;
     width: 100%;
+    padding: 1% 0px;
     @media screen and (min-width: $screen-md-min) {
         height: 250px;
     }
@@ -15,7 +16,7 @@
 
         .widget_nav_menu {
             float: left;
-            margin-right: 1%;
+            margin-right: 6%;
             width: 19%;
             
             &:last-child {
@@ -50,7 +51,7 @@
     }
 
     .social {
-        margin-top:30px;
+        margin-top:10px;
         text-align: center;
     	h4 {
             font-family: $teuton23;
@@ -88,6 +89,7 @@
     .creative-commons {
         color: #fff;
         font-family: $teuton23;
+        margin-top: 1.5%;
         a {
             color: #fff;
             text-decoration: underline;

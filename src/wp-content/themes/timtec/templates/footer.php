@@ -52,19 +52,6 @@
                             ?>
                         </div>
                     </section>
-
-                    <section class="widget nav_menu-6 widget_nav_menu ">
-                        <a href="/pt/lista-de-noticias/"><h3>Notícias</h3></a>
-                        <?php /* $q_atuais = new WP_Query(['posts_per_page' => 3]); ?>
-                        <div class="menu-noticias-container">
-                            <ul id="menu-noticias" class="menu">
-                                <?php while($q_atuais->have_posts()): $q_atuais->the_post(); ?>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
-                                <?php endwhile; ?>
-                                
-                            </ul>
-                        </div> */ ?>
-                    </section>
                 </div>
                 <div class="social col-md-3 col-sm-12">
                     <h4>Acompanhe nossas redes</h4>
@@ -88,7 +75,7 @@
                         endwhile;
                         ?>
                     </ul>
-                    <p>TIM 2015. Todos os direitos reservados.</p>
+                    <p>Powered by Instituto TIM.</p>
                 </div>
             </div>
             <div class="row creative-commons">
