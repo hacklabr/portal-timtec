@@ -1621,7 +1621,7 @@ msgstr "Publicar sua pergunta"
 
 #: ../inc/templates/default/search-question.php:4
 msgid "Search"
-msgstr "Pesquisar"
+msgstr "O que você que saber"
 
 #: ../inc/templates/default/single-question.php:17
 msgid "Your question has been submitted and is currently awaiting approval"
