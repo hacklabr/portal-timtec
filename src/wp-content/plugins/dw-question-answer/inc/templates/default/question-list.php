@@ -3,7 +3,7 @@
 		<?php dwqa_load_template( 'search', 'question' ); ?>
 		<div class="filter-bar">
 			<?php wp_nonce_field( '_dwqa_filter_nonce', '_filter_wpnonce', false ); ?>
-			<?php dwqa_get_ask_question_link( ); ?>
+			<?php dwqa_get_ask_question_link( true, "Nova pergunta" ); ?>
 			<div class="filter">
 				<li class="status">
 					<?php $selected = isset( $_GET['status'] ) ? esc_html( $_GET['status'] ) : 'all'; ?>

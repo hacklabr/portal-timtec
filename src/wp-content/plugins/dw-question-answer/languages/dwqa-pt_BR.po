@@ -349,7 +349,7 @@ msgstr "DWQA Perguntas"
 
 #: ../dw-question-answer.php:301
 msgid "DWQA Ask Question"
-msgstr "DWQA Faça uma pergunta"
+msgstr "DWQA Nova pergunta"
 
 #: ../dw-question-answer.php:396
 #, php-format
@@ -1402,7 +1402,7 @@ msgstr "Fixar Pergunta"
 
 #: ../inc/template-functions.php:575
 msgid "Ask a question"
-msgstr "Faça uma pergunta"
+msgstr "Nova pergunta"
 
 #: ../inc/template-functions.php:577
 #, fuzzy
