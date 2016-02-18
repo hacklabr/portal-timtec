@@ -39,10 +39,11 @@
         </div>
     </div>
     <div id="post_relacionados" class="content row">
-        <h3>Relacionados</h3>
+        <h3><?php _oi('Notícias relacionadas'); ?></h3>
         <?php 
-            $not_post_list_id = $post->ID;
+            $post_id = $post->ID;
             $args = array(
+                'post__not_in' =>  array($post_id),
                 'post_type' => 'post',
                 'cat' => $cat_id,
                 'posts_per_page' => 4, 

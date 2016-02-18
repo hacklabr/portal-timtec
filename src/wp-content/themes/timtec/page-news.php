@@ -91,7 +91,7 @@ get_template_part('templates/header');
                 </div>
 
                 <div class="list">
-                    <h2 class="list-title"><?php _oi("Mais recentes") ?></h2>
+                    <h2 class="list-title"><?php _oi("Últimas notícias") ?></h2>
                     <?php  
 
                         $args = array(
