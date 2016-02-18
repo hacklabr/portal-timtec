@@ -136,7 +136,7 @@
 		<div class="archive-question-footer">
 			<?php dwqa_load_template( 'navigation', 'archive' ); ?>
 
-			<?php dwqa_get_ask_question_link(); ?>
+			<?php dwqa_get_ask_question_link( true, "Nova pergunta" ); ?>
 		</div>
 		<?php else : ?>
 			<?php dwqa_load_template( 'archive', 'question-notfound' ); ?>

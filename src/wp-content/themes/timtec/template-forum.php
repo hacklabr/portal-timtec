@@ -3,9 +3,17 @@
  * Template Name: Forum
  */
 ?>
-<div class="container">
-<?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/page', 'header'); ?>
-    <?php get_template_part('templates/content', 'forum'); ?>
-<?php endwhile; ?>
+<div id="page-forum" class="page single">
+	
+		<?php while (have_posts()) : the_post(); ?>
+		    <div class="banner">
+		    	<div class="container">
+		        	<h2 class="title"><?php _oi("Forúm"); ?></h2>
+		        </div>
+		    </div>
+		    <div class="container">
+		    	<?php the_content(); ?>
+		    </div>
+		<?php endwhile; ?>
+	</div>
 </div>

@@ -5,7 +5,7 @@ do_action('get_header');
 get_template_part('templates/header');
 ?>
 
-<div id="page-news" class="base-content page single">
+<div id="page-forum" class=" page single">
     <div class="banner">
         <div class="container">
             <h2 class="title"><?php _oi("Fórum - Pergunta"); ?></h2>
