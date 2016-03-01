@@ -364,12 +364,15 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
         }
 
         h4{
-            font-family: Teuton23Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-            color: #243670;
             font-size: 1.7em;
             margin-bottom: 20px;
             margin-top: 0;
-            text-transform: uppercase;
+            font-weight: 600;
+            webkit-font-smoothing: antialiased;
+            font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            a{
+                color:#000;
+            }
         }
     }
 }
