@@ -76,7 +76,7 @@
                   	<li class="list-item">
                         <time class="post-date"><?php the_time('d/m/Y'); ?></time>
                         <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
-                        <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>" style="background:<?php echo $cat_bg; ?>"><span class="post-category"><?php echo $cat_name; ?></span></a>
+                        <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>" style="background:<?php echo $cat_bg; ?>"><span class="post-category">#<?php echo $cat_name; ?></span></a>
                         <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
                     </li>
                     <?php endwhile; ?>

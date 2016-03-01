@@ -112,7 +112,7 @@ get_template_part('templates/header');
                         $cat_bg = !empty($cat_data['catBG']) ? $cat_data['catBG'] : '#05C3FF';
                     ?>
                         <div class="list-item">
-                            <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>"><?php echo $cat_name; ?></span></a>
+                            <a href="<?php echo esc_url( $cat_url ); ?>" title="<?php echo $cat_name; ?>"><span class="post-category" style="background:<?php echo $cat_bg; ?>">#<?php echo $cat_name; ?></span></a>
                             <time class="post-date"><?php _date() ?></time>
                             <h3 class="post-title"><a href="<?php the_permalink()?>"><?php the_title() ?></a></h3>
                             <div class="post-excerpt"><a href="<?php the_permalink()?>"><?php the_excerpt() ?></a></div>
