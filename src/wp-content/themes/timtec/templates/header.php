@@ -156,7 +156,7 @@
                 <label for="login-password" class="sr-only">Password</label>
                 <input type="password" name="pwd" class="form-control" id="login-password" placeholder="senha">
               </div>
-              <button type="submit" class="btn">Iniciar Sessão</button>
+              <button type="submit" class="btn">Iniciar sessão</button>
             </form>
             <p><a href="<?php echo get_option('home'); ?>/reset-login" title="Esqueceu sua senha? Clique aqui!">Esqueceu sua senha?</a><br /></p>
             <hr>

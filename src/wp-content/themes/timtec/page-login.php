@@ -52,7 +52,7 @@
 					}
 				?>
 				<p class="submit">
-					<input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default btn-block btn_azul" value="Iniciar Sessão" tabindex="100" />
+					<input type="submit" name="wp-submit" id="wp-submit" class="btn btn-default btn-block btn_azul" value="Iniciar sessão" tabindex="100" />
 					<input type="hidden" name="redirect_to" value="<?php echo get_option('home'); ?>/wp-admin/" />
 					<input type="hidden" name="testcookie" value="1" />
 				</p>
