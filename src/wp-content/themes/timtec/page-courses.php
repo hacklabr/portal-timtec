@@ -110,7 +110,7 @@ get_template_part('templates/header');
                             <div class="content-curso">
                                 <div class="institute"><?php echo $instituto ?></div>
                                 <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
-                                <div class="author"><?php echo $teacher_name; ?></div>
+                                <div class="author"><?php echo $teacher; ?></div>
 
 
                                 <?php if ($course_url): ?>
