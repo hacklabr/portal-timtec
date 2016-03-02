@@ -128,7 +128,7 @@
 
 	            		if( !empty( $nivel ) ){
 	            	?>
-	            		<p>Horas: <span><?php echo $qtd_horas; ?></span></p>
+	            		<p>Carga horária: <span><?php echo $qtd_horas; ?></span></p>
 	            	<?php 
 	            		}
 
@@ -141,7 +141,7 @@
 	            </div>
 	            <div class="instrutores">
 	            	<h5>Instrutores:</h5>
-	            	<?php echo $teacher_name; ?>
+	            	<?php echo $teachers ; ?>
 	            </div>
 		    </div>
 	    </article>
