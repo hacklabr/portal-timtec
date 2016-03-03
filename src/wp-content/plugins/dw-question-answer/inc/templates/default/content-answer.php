@@ -72,9 +72,9 @@
 
 			</div>
 			<div class="dwqa-author">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
+				<?php //echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
 				<span class="author">
-				<?php if ( ! dwqa_is_anonymous( $answer_id ) )  { the_author_posts_link(); ?>
+				<?php if ( ! dwqa_is_anonymous( $answer_id ) )  { echo  get_the_author_meta( 'display_name' ); //the_author_posts_link(); ?>
 					<?php if ( user_can( $answer->post_author, 'edit_posts' ) ) {
 							echo ' <strong>&sdot;</strong> <span class="dwqa-label dwqa-staff">'.__( 'Staff','dwqa' ).'</span>';
 						} ?>

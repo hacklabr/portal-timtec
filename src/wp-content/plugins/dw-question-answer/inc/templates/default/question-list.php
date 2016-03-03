@@ -1,4 +1,4 @@
-<div id="archive-question" class="dw-question">
+<div id="archive-question" class="dw-question container">
 	<div class="dwqa-list-question">
 		<?php dwqa_load_template( 'search', 'question' ); ?>
 		<div class="filter-bar">

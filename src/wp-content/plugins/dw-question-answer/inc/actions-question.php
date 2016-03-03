@@ -28,7 +28,8 @@ function dwqa_get_latest_action_date( $question = false, $before = '<span>', $af
 			wp_cache_set( 'avatar_of_'. $author_id, $author_avatar, 'dwqa', 60*60*24*7 );
 		}
 		$author_link = sprintf(
-			'<span class="dwqa-author"><span class="dwqa-user-avatar">%4$s</span> <a href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+			//'<span class="dwqa-author"><span class="dwqa-user-avatar">%4$s</span> <a href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+			'<span class="dwqa-author">%3$s</span>',
 			$author_url,
 			esc_attr( sprintf( __( 'Posts by %s' ), $display_name ) ),
 			$display_name,
@@ -38,9 +39,9 @@ function dwqa_get_latest_action_date( $question = false, $before = '<span>', $af
 	
 	if ( $last_activity_date && $post->last_activity_type == 'answer' ) {
 		$date = dwqa_human_time_diff( strtotime( $last_activity_date ), false, get_option( 'date_format' ) );
-		return sprintf( __( '%s answered <span class="dwqa-date">%s</span>', 'dwqa' ), $author_link, $date );
+		return sprintf( __( '%s respondida <span class="dwqa-date">%s</span>', 'dwqa' ), $author_link, $date );
 	}
-	return sprintf( __( '%s asked <span class="dwqa-date">%s</span>', 'dwqa' ), $author_link, get_the_date() );
+	return sprintf( __( '%s perguntou <span class="dwqa-date">%s</span>', 'dwqa' ), $author_link, get_the_date() );
 }
 
 

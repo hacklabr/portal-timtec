@@ -448,7 +448,7 @@ msgstr ""
 #: ../inc/widgets/list-closed-question.php:48
 #: ../inc/widgets/popular-question.php:40
 msgid "asked by"
-msgstr ""
+msgstr "perguntado"
 
 #: ../inc/actions-question.php:14 ../inc/actions.php:1670
 #: ../inc/class-answers-list-table.php:92 ../inc/notification.php:146
@@ -473,7 +473,7 @@ msgstr ""
 #: ../inc/actions-question.php:30
 #, php-format
 msgid "%s asked <span class=\"dwqa-date\">%s</span>"
-msgstr ""
+msgstr "%s perguntou <span class=\"dwqa-date\">%s</span>"
 
 #: ../inc/actions-vote.php:6
 msgid "Are you cheating, huh?"
@@ -1214,7 +1214,7 @@ msgstr ""
 
 #: ../inc/template-functions.php:92 ../inc/template-functions.php:129
 msgid "Type your email"
-msgstr ""
+msgstr "Tipo do seu email"
 
 #: ../inc/template-functions.php:97
 msgid "Already a member?"
@@ -1252,7 +1252,7 @@ msgstr ""
 
 #: ../inc/template-functions.php:112
 msgid "Your email *"
-msgstr ""
+msgstr "Seu email *"
 
 #: ../inc/template-functions.php:113
 msgid "Email address ..."
@@ -1571,7 +1571,7 @@ msgstr ""
 
 #: ../inc/templates/default/single-question.php:38
 msgid "asked"
-msgstr ""
+msgstr "pergunta"
 
 #: ../inc/widgets/latest-question.php:11
 #: ../inc/widgets/list-closed-question.php:11

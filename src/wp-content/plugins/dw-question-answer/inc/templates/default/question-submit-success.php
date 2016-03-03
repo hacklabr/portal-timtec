@@ -48,8 +48,8 @@
                 <li>
                  <a href="<?php the_permalink(); ?>" class="question-title"><?php the_title(); ?></a>
                  <div class="dwqa-meta">
-                    <span class="dwqa-user-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 12 ); ?></span>
-                    <span class="dwqa-author"><?php the_author_posts_link(); ?></span>
+                    <!-- span class="dwqa-user-avatar">< ?php echo get_avatar( get_the_author_meta( 'ID' ), 12 ); ?></span -->
+                    <span class="dwqa-author"><?php echo get_the_author_meta( 'display_name' );  //the_author_posts_link();  ?></span>
                     <span class="dwqa-date"><?php echo get_the_date(); ?></span>
                     <?php echo get_the_term_list( get_the_ID(), 'dwqa-question_category', '<span class="dwqa-category">in ', ', ', '</span>' ); ?>    
                     <?php echo get_the_term_list( get_the_ID(), 'dwqa-question_tag', '<span class="dwqa-tag">@ ', ', ', '</span>' ); ?>
@@ -97,8 +97,8 @@
                 <li>
                     <a href="<?php the_permalink(); ?>" class="question-title"><?php the_title(); ?></a>
                     <div class="dwqa-meta">
-                        <span class="dwqa-user-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 12 ); ?></span>
-                        <span class="dwqa-author"><?php the_author_posts_link(); ?></span>
+                        <!-- span class="dwqa-user-avatar">< ?php echo get_avatar( get_the_author_meta( 'ID' ), 12 ); ?></span -->
+                        <span class="dwqa-author"><?php echo get_the_author_meta( 'display_name' ); //the_author_posts_link(); ?></span>
                         <span class="dwqa-date"><?php echo get_the_date(); ?></span>
                         <?php echo get_the_term_list( get_the_ID(), 'dwqa-question_category', '<span class="dwqa-category">in ', ', ', '</span>' ); ?>    
                         <?php echo get_the_term_list( get_the_ID(), 'dwqa-question_tag', '<span class="dwqa-tag">@ ', ', ', '</span>' ); ?>

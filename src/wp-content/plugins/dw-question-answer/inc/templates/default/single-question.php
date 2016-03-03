@@ -18,15 +18,15 @@
 						<?php endif; ?>
 						<?php dwqa_question_meta_button( $post_id ); ?>
 						<div class="dwqa-author">
-							<?php echo get_avatar( $post->post_author, 64, false ); ?>
+							<?php //echo get_avatar( $post->post_author, 64, false ); ?>
 							<span class="author">
 							<?php if ( dwqa_is_anonymous( $post->ID ) ) : ?>
 									<?php _e( 'Anonymous', 'dwqa' ); ?>
 							<?php else : ?>
 								<?php
 									printf( 
-										'<a href="%1$s" title="%2$s %3$s">%3$s</a>',
-										get_author_posts_url( get_the_author_meta( 'ID' ) ),
+										//'<a href="%1$s" title="%2$s %3$s">%3$s</a>',
+										//get_author_posts_url( get_the_author_meta( 'ID' ) ),
 										__( 'Posts by', 'dwqa' ),
 										get_the_author_meta( 'display_name' ) 
 									);

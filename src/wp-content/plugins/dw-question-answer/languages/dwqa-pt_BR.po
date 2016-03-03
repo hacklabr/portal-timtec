@@ -460,7 +460,7 @@ msgstr "visitas"
 #: ../inc/widgets/list-closed-question.php:48
 #: ../inc/widgets/popular-question.php:40
 msgid "asked by"
-msgstr "perguntado por"
+msgstr "perguntado"
 
 #: ../inc/actions-question.php:14 ../inc/actions.php:1670
 #: ../inc/class-answers-list-table.php:92 ../inc/notification.php:146
@@ -1637,7 +1637,7 @@ msgstr "Posts de"
 
 #: ../inc/templates/default/single-question.php:38
 msgid "asked"
-msgstr "perguntado"
+msgstr "perguntou"
 
 #: ../inc/widgets/latest-question.php:11
 #: ../inc/widgets/list-closed-question.php:11

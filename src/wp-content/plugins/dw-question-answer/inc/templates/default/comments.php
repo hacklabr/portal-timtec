@@ -33,7 +33,7 @@ if ( ! comments_open( get_the_ID() ) )
 		<?php
 			global $current_user;
 			$args = array(
-				'comment_field' => ( ( is_user_logged_in() ) ? get_avatar( $current_user->ID, 32 ) : '' ) .'<textarea id="comment" name="comment" aria-required="true" placeholder="' . __( 'Write a reply...', 'dwqa' ).'"></textarea>',
+				'comment_field' => /* ( ( is_user_logged_in() ) ? get_avatar( $current_user->ID, 32 ) : '' ) .*/'<textarea id="comment" name="comment" aria-required="true" placeholder="' . __( 'Write a reply...', 'dwqa' ).'"></textarea>',
 				'comment_notes_before' => '',
 				'logged_in_as' => '',
 				'comment_notes_after' => '',

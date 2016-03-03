@@ -2,10 +2,11 @@
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'dwqa-comment' ); ?>> 
 		<div class="dwqa-comment-author">
 			<?php if ( $comment->user_id ) {
-					echo get_avatar( $comment->user_id, 32 );
+					//echo get_avatar( $comment->user_id, 32 );
 					$author = get_userdata( $comment->user_id );  
 					printf( 
-						'<span class="author"><a href="%1$s" title="%2$s %3$s">%3$s</a> %4$s</span>',
+						//'<span class="author"><a href="%1$s" title="%2$s %3$s">%3$s</a> %4$s</span>',
+						'<span class="author">>%3$s %4$s</span>',
 						get_author_posts_url( $comment->user_id ),
 						__( 'Post by','dwqa' ),
 						$author->display_name,
@@ -18,7 +19,7 @@
 			
 			<span class="dwqa-date">
 				<?php  
-					echo get_avatar( $comment->user_id, 0 );
+					//echo get_avatar( $comment->user_id, 0 );
 					printf( '<strong>&sdot;</strong> <a href="#comment-%1$d" title="%2$s #%1$d">%3$s</a>',
 						$comment->comment_ID,
 						__( 'Link to comment', 'dwqa' ),
