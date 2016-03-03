@@ -33,25 +33,26 @@
 
                 &.brand {
                     background-image:url("../../assets/images/logo-instituto-tim.png");
-                    width: 50%;
+                    width: 40%;
                     height: 36px;
                     background-size:contain;
                     background-repeat:no-repeat;
-                    margin-right: 10%;
+                    margin-right: 6%;
+                    margin-top: 5px;
                     @media ( max-width: 770px ){
-                        width: 54%;
+                        width: 50%;
                     }
                 }
 
                 &.timtec {
                     background-image:url("../../assets/images/logo-timtec.png");
-                    width: 25%;
+                    width: 20%;
                     height: 36px;
                     background-size:contain;
                     background-repeat:no-repeat;
 
                     @media ( max-width: 770px ){
-                      width: 35%;
+                      width: 30%;
                     }
                 }
 
