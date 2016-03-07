@@ -5,6 +5,11 @@
         height: 240px;
         margin-bottom: 80px;
 
+        &.no-text {
+            min-height: 240px;
+            height: 240px;
+        }
+
         .title{
             text-transform: uppercase;
         }
