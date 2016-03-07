@@ -77,10 +77,10 @@
             background: rgba(255,255,255,0.9);
             background: -moz-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
             background: -webkit-gradient(left top, left bottom, color-stop(-131%, rgba(255,255,255,0.9)), color-stop(0%, rgba(255,255,255,0.9)), color-stop(36%, rgba(146,146,146,0.1)), color-stop(82%, rgba(0,0,0,0.97)), color-stop(100%, rgba(0,0,0,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255,255, 0.1) 36%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0.9) 6%, rgba(0,0,0,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
+            background: -o-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
+            background: -ms-linear-gradient(top, rgba(255,255,255,0.9) -131%, rgba(255,255,255,0.1) 0%, rgba(146,146,146,0.9) 36%, rgba(0,0,0,0.97) 82%, rgba(0,0,0,1) 100%);
+            background: linear-gradient(to bottom,rgba(255,255,255,.9) -70%,rgba(255,255,255,.1) 9%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,.9) 6%,#000 10%);
         }
     }
     .main-news {
@@ -392,7 +392,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
             position: relative;
             min-height: 140px;
             max-height: 150px;
-            
+
             a{
                 text-decoration: none;
                 &:hover{
