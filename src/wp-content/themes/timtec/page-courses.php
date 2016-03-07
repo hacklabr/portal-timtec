@@ -108,32 +108,35 @@ get_template_part('templates/header');
                                 }
                             ?>
                             <div class="content-curso">
-                                <div class="institute"><?php echo $instituto ?></div>
-                                <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
-                                <div class="author"><?php echo $teacher; ?></div>
+                                <div class="content-lista">
+                                    <div class="institute"><?php echo $instituto ?></div>
+                                    <h4><a href="<?php echo $url ?>"><?php echo $title ?></a></h4>
+                                    <div class="author"><?php echo $teacher; ?></div>
+                                </div>
 
-
-                                <?php if ($course_url): ?>
-                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aulas</a>
-                                <?php endif; ?>
-                                <?php
-                                if ($couse_download->getFilePath(get_the_ID())):
-                                    if ( is_user_logged_in() ) {
-                                        $download_url = $couse_download->getFileUrl(get_the_ID());
-                                ?>
-                                    <a href="<?php echo $download_url ?>" class="download">
-                                        <i class="fa fa-cloud-download"></i> Baixar pacote
-                                    </a>
-                                <?php 
-                                    }else{
-                                ?>
-                                        <a href="#" data-toggle="modal" data-target="#modal-login" class="download">
+                                <div class="btns_lista_curso">
+                                    <?php if ($course_url): ?>
+                                        <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aulas</a>
+                                    <?php endif; ?>
+                                    <?php
+                                    if ($couse_download->getFilePath(get_the_ID())):
+                                        if ( is_user_logged_in() ) {
+                                            $download_url = $couse_download->getFileUrl(get_the_ID());
+                                    ?>
+                                        <a href="<?php echo $download_url ?>" class="download">
                                             <i class="fa fa-cloud-download"></i> Baixar pacote
                                         </a>
-                                <?php                                     
-                                    }//EndIf user Logged
-                                endif;//COURSE
-                                ?>
+                                    <?php 
+                                        }else{
+                                    ?>
+                                            <a href="#" data-toggle="modal" data-target="#modal-login" class="download">
+                                                <i class="fa fa-cloud-download"></i> Baixar pacote
+                                            </a>
+                                    <?php                                     
+                                        }//EndIf user Logged
+                                    endif;//COURSE
+                                    ?>
+                                </div>
                             </div>
 
                         </li>
