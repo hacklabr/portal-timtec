@@ -14,6 +14,15 @@
         height: initial;
         position: relative;
 
+        a{
+            text-decoration: none;
+            &:hover{
+                span{
+                    color:#00C1B3;
+                }
+            }   
+        }
+
         &.no-text{
             height: 200px;
             min-height: 230px;
@@ -53,15 +62,18 @@
     }
 
     .main-news {
+       
         @extend .col-xs-12;
+
+
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-7;
+            @extend .col-sm-6;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-8;
+            @extend .col-md-7;
         }
         @media screen and (min-width: $screen-lg-min) {
-            @extend .col-lg-9;
+            @extend .col-lg-8;
         }
 
         h3{
@@ -97,8 +109,6 @@
 
         .list {
             
-            
-
             .list-title {
                 color: #000;
                 font-family: $teuton25;

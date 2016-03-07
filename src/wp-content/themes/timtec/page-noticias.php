@@ -11,7 +11,7 @@
 <div id="page-list-category-noticia" class="base-content page">
     <div class="banner no-text">
         <div class="container">
-            <h2 class="title"><?php _oi("Notícias"); ?><span class="subtitle">[ <?php _oi("#TodasNotícias"); ?> ]</span></h2>
+            <a href="/lista-de-noticias" title="Noticias"><h2 class="title"><?php _oi("Notícias"); ?><span class="subtitle">[ <?php _oi("#TodasNotícias"); ?> ]</span></h2></a>
         </div>
     </div>
 

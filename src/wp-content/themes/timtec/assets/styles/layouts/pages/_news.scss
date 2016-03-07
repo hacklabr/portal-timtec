@@ -84,22 +84,26 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
         }
     }
     .main-news {
+        margin-right:5%;
         @extend .col-xs-12;
+
+
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-7;
+            @extend .col-sm-6;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-8;
+            @extend .col-md-7;
         }
         @media screen and (min-width: $screen-lg-min) {
-            @extend .col-lg-9;
+            @extend .col-lg-8;
         }
         .featured {
             @extend .row;
             .featured-big {
                 @extend .col-xs-12;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 position: relative;
+                padding: 10px;
                 @media screen and (min-width: $screen-sm-min) {
                     @extend .col-sm-12;
                 }
@@ -109,8 +113,9 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
                 @media screen and (min-width: $screen-lg-min) {
                     @extend .col-lg-12;
                 }
+                height: 500px;
                 .news-box {
-                    height: 400px;
+                    height: 500px;
                 }
                 .post-excerpt {
                     display: none;
@@ -120,9 +125,10 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
                 }
             }
             .featured-small {
-                height: 220px;
-                margin-bottom: 30px;
+                height: 240px;
+                margin-bottom: 120px;
                 @extend .col-xs-12;
+                padding: 10px;
 
                 @media screen and (min-width: $screen-sm-min) {
                     @extend .col-sm-6;
@@ -134,7 +140,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
                     @extend .col-lg-6;
                 }
                 .news-box {
-                    height: 220px;
+                    height: 240px;
                 }
                 .post-title { 
                     font-size: 20px;
@@ -231,7 +237,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
             @extend .col-md-4;
         }
         @media screen and (min-width: $screen-lg-min) {
-            @extend .col-lg-3;
+            width: 28%;
         }
         .sidebar-title {
             background-color: #304594;
@@ -386,6 +392,15 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
             position: relative;
             min-height: 140px;
             max-height: 150px;
+            
+            a{
+                text-decoration: none;
+                &:hover{
+                    span{
+                        color:#00C1B3;
+                    }
+                }   
+            }
             .container {
                 height: initial;
                 position: relative;
@@ -403,17 +418,17 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.9) -131%, rgba(255,255
             }
         }
         .single-news {
-            @extend .col-xs-12;
+            @extend .col-xs-11;
             @media screen and (min-width: $screen-sm-min) {
-                @extend .col-sm-7;
+                @extend .col-sm-6;
             }
             @media screen and (min-width: $screen-md-min) {
                 @extend .col-md-offset-1;
-                @extend .col-md-7;
+                @extend .col-md-6;
             }
             @media screen and (min-width: $screen-lg-min) {
                 @extend .col-lg-offset-1;
-                @extend .col-lg-8;
+                @extend .col-lg-7;
             }
         }
         article{
