@@ -88,6 +88,7 @@
         dataType: 'json',
         data: $form.serialize(),
         success: function (r) {
+          /*jshint -W069 */
           $(".mensagem_erro").hide();
           if(r["error"] === "true"){
             alert("cadastro feito com sucesso");
@@ -170,14 +171,16 @@ $('.show-more-courses').on('click', function(e){
 
 $('.navbar-toggle').on('click', function(e){
   if (!$(this).hasClass('collapsed')) {
-    $('.modal-menu').modal('hide')
+    $('.modal-menu').modal('hide');
   }
 });
 
 String.prototype.hashCode = function() {
 /*jslint bitwise: true */
   var hash = 0, i, chr, len;
-  if (this.length === 0) return hash;
+  if (this.length === 0){
+    return hash;
+  }
   for (i = 0, len = this.length; i < len; i++) {
       chr = this.charCodeAt(i);
       hash = ((hash << 5) - hash) + chr;
