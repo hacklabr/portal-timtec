@@ -370,6 +370,18 @@
         margin-left: 8.3333333333%;
         border-top: 1px solid #444;
         padding-top: 20px;
+
+
+        @media screen and (min-width: $screen-sm-min) {
+            margin-left: 1.333333%;
+            margin-right: 1.333333%;
+
+
+           .col-md-3{
+                margin-left: -6%;
+                margin-bottom: 40px;
+           }
+        }
         
         .col-md-3{
             margin-left: -1%;
@@ -403,6 +415,10 @@
             position: relative;
             min-height: 140px;
             max-height: 150px;
+            
+            @media screen and (min-width: $screen-sm-min) {
+                margin: 40px 0 0px;
+            }
 
             a{
                 text-decoration: none;
