@@ -189,10 +189,12 @@
                     display: inline-block;
                     height: 366px;
                     margin: 1%;
+                    margin-top:1.5em;
                     width: 47.6%;
                 }
                 @media screen and (min-width: $screen-md-min) {
                     margin: 1%;
+                    margin-top:1.5em;
                     width: 31%;
                 }
                 @media screen and (min-width: $screen-lg-min) {
