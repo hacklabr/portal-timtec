@@ -170,6 +170,8 @@
             padding: 0;
     
             li {
+
+                margin-top: 1.5em;
                 display: block;
                 background: #fff;
                 height: 330px;
@@ -185,7 +187,7 @@
                 }
                 @media screen and (min-width: $screen-sm-min) {
                     display: inline-block;
-                    height: 395px;
+                    height: 366px;
                     margin: 1%;
                     width: 47.6%;
                 }
@@ -202,10 +204,10 @@
                 }
                 
                 .content-curso {
-                    max-height: 103px;
-
                     .content-lista{
-                        height:155px;
+                        height:124px;
+                        display: block;
+                        margin-top: 3px;
                     }
 
                     .institute{
@@ -232,9 +234,7 @@
                     } 
 
                     .author {
-                        margin-bottom: 15px;
-                        max-height: 60px;
-                        height: 55px;
+
                     }
 
 
