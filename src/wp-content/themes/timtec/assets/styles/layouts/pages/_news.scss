@@ -89,13 +89,13 @@
 
 
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-6;
+            @extend .col-sm-7;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-7;
+            @extend .col-md-8;
         }
         @media screen and (min-width: $screen-lg-min) {
-            @extend .col-lg-8;
+            @extend .col-lg-9;
         }
         .featured {
             @extend .row;
@@ -230,15 +230,19 @@
     }
     .sidebar-news {
         @extend .col-xs-12;
+        
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-5;
+            @extend .col-sm-4;
         }
+
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-4;
+            @extend .col-md-3;
         }
+
         @media screen and (min-width: $screen-lg-min) {
-            width: 28%;
+            width: 25%;
         }
+
         .sidebar-title {
             background-color: #304594;
             color: #fff;
