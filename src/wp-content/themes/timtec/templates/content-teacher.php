@@ -7,7 +7,7 @@
     <div class="banner">
         <div class="container">
             <h2 class="title"><?php _oi("CURSOS"); ?> 
-            	<span class="subtitle">{<?php _oi("Sobre o Professor"); ?>}</span>
+            	<span class="subtitle">[<?php _oi("Sobre o Professor"); ?>]</span>
             </h2>
         </div>
     </div>
@@ -17,13 +17,13 @@
 	        <?php while (have_posts()) : the_post(); ?>
 	            <article <?php post_class(); ?>>
 	             	<div class="row">
-		            	<div class="col-md-4 img-professor">
+		            	<div class="col-md-3 img-professor">
 		            		<?php
 		                    	$thumb = wp_get_attachment_url(get_post_thumbnail_id());
 		                    ?>
 		                    <img src="<?php echo $thumb; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="circular">
 		            	</div>
-		            	<div class="col-md-8">
+		            	<div class="col-md-9">
 			                <header>
 			                    <span class="post-category" style="background:"></span>
 			                    <h3 class="post-title">
