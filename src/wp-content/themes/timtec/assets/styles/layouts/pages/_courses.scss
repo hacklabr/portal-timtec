@@ -407,12 +407,17 @@
             font-size: 1.2em;
         }
     }
-
     .instituto{
         display:inline-block;
         span{
             color: #05C3FF;
         }
+
+
+        @media screen and (min-width: $screen-sm-min) {
+            margin-top: 20px;
+        }
+
     }
 
     .video-curso{
@@ -427,7 +432,7 @@
     }
 
     .infos-curso{
-        margin-top:20px;
+        margin-top: 5px;
         margin-left:5px;
         font-family: Teuton25Proon24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 0.9em;
@@ -449,6 +454,11 @@
         .instrutor{
             margin-right:0px;
             margin-bottom: 10px;
+
+            @media screen and (min-width: $screen-sm-min) {
+                display:block;
+            }
+
             .circular{
                 width: 90px;
                 height: 90px;
