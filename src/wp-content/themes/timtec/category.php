@@ -10,7 +10,7 @@
 <div id="page-list-category-noticia" class="base-content page">
     <div class="banner no-text">
         <div class="container">
-             <a href="/lista-de-noticias" title="Noticias"> <h2 class="title"><?php _oi("Notícias"); ?><span class="subtitle">[ #<?php echo $cat_name_atual ?> ]</span></h2></a>
+             <h2 class="title"><a href="/lista-de-noticias" title="Noticias"> <?php _oi("Notícias"); ?></a><span class="subtitle">[ #<?php echo $cat_name_atual ?> ]</span></h2>
         </div>
     </div>
 
