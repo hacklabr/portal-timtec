@@ -95,21 +95,24 @@
                                 }
                             ?>
                             <div class="content-curso">
-                                <div class="institute"><?php echo $instituto; ?></div>
-                                <h4><a href="<?php echo $url;  ?>" class="link-curso"><?php echo $title ?></a></h4>
-                                <div class="author"><?php echo $teacher; ?></div>
-                                <?php if ($course_url): ?>
-                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
-                                <?php endif; ?>
-                                <?php
-                                if ($couse_download->getFilePath(get_the_ID())):
-                                    $download_url = $couse_download->getFileUrl(get_the_ID());
-                                    ?>
-                                    <a href="<?php echo $download_url ?>" class="download">
-                                        <i class="fa fa-cloud-download"></i> Baixar pacote
-                                    </a>
-                                <?php endif; ?>
-
+                             	<div class="content-lista">
+	                                <div class="institute"><?php echo $instituto; ?></div>
+	                                <h4><a href="<?php echo $url;  ?>" class="link-curso"><?php echo $title ?></a></h4>
+	                                <div class="author"><?php echo $teacher; ?></div>
+                                </div>
+                                <div class="btns_lista_curso">
+	                                <?php if ($course_url): ?>
+	                                    <a href="<?php echo $course_url; ?>" class="btn goto">Assistir aula</a>
+	                                <?php endif; ?>
+	                                <?php
+	                                if ($couse_download->getFilePath(get_the_ID())):
+	                                    $download_url = $couse_download->getFileUrl(get_the_ID());
+	                                    ?>
+	                                    <a href="<?php echo $download_url ?>" class="download">
+	                                        <i class="fa fa-cloud-download"></i> Baixar pacote
+	                                    </a>
+	                                <?php endif; ?>
+                                </div>
                             </div>
 
                         </li>
