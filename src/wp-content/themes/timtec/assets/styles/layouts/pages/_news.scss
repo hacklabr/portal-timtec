@@ -93,7 +93,7 @@
             @extend .col-sm-7;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-8;
+            width: 63%;
         }
         @media screen and (min-width: $screen-lg-min) {
             width: 69%;
@@ -148,7 +148,7 @@
                     @extend .col-sm-6;
                 }
                 @media screen and (min-width: $screen-md-min) {
-                    @extend .col-md-6;
+                   width: 47%;
                 }
                 @media screen and (min-width: $screen-lg-min) {
                     @extend .col-lg-6;
