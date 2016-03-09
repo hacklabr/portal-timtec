@@ -90,10 +90,12 @@
 
 
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-7;
+            width: 57%;
+            margin-bottom: 310px;
         }
         @media screen and (min-width: $screen-md-min) {
-            width: 63%;
+            width: 57%;
+            margin-bottom: 310px;
         }
         @media screen and (min-width: $screen-lg-min) {
             width: 69%;
@@ -137,21 +139,27 @@
                 margin-bottom: 78px;
                 margin-top:36px;
                 padding: 0px;
+                float: left;
 
                 & + .featured-small{
                     margin-left: 36px  
                 }
 
-
-
                 @media screen and (min-width: $screen-sm-min) {
-                    @extend .col-sm-6;
+                    width: 48%;
+                    & + .featured-small{
+                        margin-left: 15px  
+                    }
+
                 }
                 @media screen and (min-width: $screen-md-min) {
                    width: 47%;
                 }
                 @media screen and (min-width: $screen-lg-min) {
-                    @extend .col-lg-6;
+                    width: 45%;
+                    & + .featured-small{
+                        margin-left: 15px  
+                    }
                 }
                 .news-box {
                     height: 244px;
@@ -251,11 +259,11 @@
         @extend .col-xs-12;
 
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-4;
+           width: 39%;
         }
 
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-4;
+            width: 39%;
         }
 
         @media screen and (min-width: $screen-lg-min) {
