@@ -106,7 +106,12 @@
             font-family: Teuton24Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
             font-size: 1.3em;
             margin-top: -27px;
+            
             @media screen and (min-width: $screen-sm-min) {
+                margin-top: 11px;
+            }
+
+            @media  (min-width:300px)  and (max-width){
                 margin-top: 11px;
                 float: initial;
             }
