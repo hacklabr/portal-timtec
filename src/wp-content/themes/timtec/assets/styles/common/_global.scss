@@ -4,15 +4,18 @@ html {
 }
 
 body {
-    @media screen and (min-width: $screen-sm-min) {
-        padding-bottom: 400px;
-    }
-    @media screen and (min-width: $screen-md-min) {
-        padding-bottom: 250px;
-    }
     @media screen and (min-width: $screen-lg-min) {
         padding-bottom: 230px;
     }
+
+    @media screen and (min-width: $screen-md-min) {
+        padding-bottom: 250px;
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+        padding-bottom: 210px;
+    }
+    
 }
 
 /* fix bootstrap modal padding */
