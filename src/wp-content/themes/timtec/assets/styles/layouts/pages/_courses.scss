@@ -182,6 +182,12 @@
                 vertical-align: top;
                 width: 100%; 
                 border-bottom: 1px solid #bbb;
+
+                @media screen (min-width:300px) and (max-width:480){
+                    height: 362px;
+                    margin-bottom: 40px;
+                }
+
                 @media screen and (min-width: $screen-sm-min) {
                     height: 360px;
                 }
