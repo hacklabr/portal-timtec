@@ -75,7 +75,9 @@ get_template_part('templates/header');
                                     </div>
                                 </div>
                             </div>
-                        <?php else: ?>
+                        <?php else:
+
+                         ?>
                             <div class="featured-small">
                                 <div class="news-box" style="<?php _img_url() ?>">
                                     <div class="gradient"></div>
