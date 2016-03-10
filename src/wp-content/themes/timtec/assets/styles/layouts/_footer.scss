@@ -1,3 +1,11 @@
+footer{
+    &.content-info{
+        @media screen and (min-width: $screen-sm-min) {
+            margin-top: 100px;
+        }
+    }
+}
+
 #footer-info {
 	background: #095DAF;
     position: absolute;
