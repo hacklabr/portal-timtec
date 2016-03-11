@@ -1,6 +1,6 @@
 footer{
     &.content-info{
-        @media screen and (min-width: $screen-sm-min) {
+        @media (min-width: 300px) and (max-width: 480px) {
             margin-top: 100px;
         }
     }
