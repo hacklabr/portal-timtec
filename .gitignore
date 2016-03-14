@@ -3,6 +3,7 @@ src/wp-content/themes/timtec/dist
 src/wp-content/themes/timtec/node_modules
 src/wp-content/themes/timtec/bower_components
 src/wp-content/uploads
+node_modules/
 private-files/
 src/revision.txt
 .vagrant/
