@@ -471,7 +471,8 @@
 
            .col-md-3{
                 margin-left: -6%;
-                margin-bottom: 40px;
+                display: inline-block;
+                margin-bottom: 220px;
            }
         }
         
@@ -537,8 +538,11 @@
         }
         .single-news {
             @extend .col-xs-11;
+            @media (min-width: 600px) and (max-width:780px){
+                width:100%;
+            }
             @media screen and (min-width: $screen-sm-min) {
-                @extend .col-sm-6;
+               @extend .col-lg-6;
             }
             @media screen and (min-width: $screen-md-min) {
                 @extend .col-md-offset-1;

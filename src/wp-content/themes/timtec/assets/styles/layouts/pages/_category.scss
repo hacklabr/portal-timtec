@@ -69,10 +69,11 @@
 
 
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-6;
+            @extend .col-sm-9;
+            margin-bottom: 130px;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-7;
+            @extend .col-md-9;
         }
         @media screen and (min-width: $screen-lg-min) {
             @extend .col-lg-8;
@@ -110,6 +111,7 @@
             @media (min-width: 300px) and (max-width:480px) {
                 margin-top: 11px;
                 float: initial;
+                display: inline-block;
             }
         }
 
@@ -189,10 +191,10 @@
     .sidebar-news {
         @extend .col-xs-12;
         @media screen and (min-width: $screen-sm-min) {
-            @extend .col-sm-5;
+            @extend .col-sm-3;
         }
         @media screen and (min-width: $screen-md-min) {
-            @extend .col-md-4;
+            @extend .col-md-3;
         }
         @media screen and (min-width: $screen-lg-min) {
             @extend .col-lg-3;
@@ -203,6 +205,9 @@
 		    font-size: 2.5em;
 		    color: #000;
 		    margin-bottom:20px;
+            @media (min-width: 300px) and (max-width:480px) {
+                margin-bottom:10px;
+            }
         }
 
         ul{
@@ -212,6 +217,10 @@
 
 		    li{
 		    	margin-bottom: 10px;
+                @media (min-width: 300px) and (max-width:570px){
+                    margin: 0px 5px 20px;
+                    display: inline-block;
+                }
 
 		    	a{
 		    		font-family: Teuton25Pro,"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
