@@ -10,7 +10,7 @@ class DestaquesCursos{
     static protected $idsCache = [];
 
     static function register(){
-        add_submenu_page( 'edit.php?post_type=course', 'Slide', 'Slide', 'manage_options', 'cursos-destaques', [__CLASS__, 'renderPage'] );
+        add_submenu_page( 'edit.php?post_type=course', 'Textos Cabeçalho', 'Textos Cabeçalho', 'manage_options', 'cursos-destaques', [__CLASS__, 'renderPage'] );
     }
 
     static function renderPage() {
@@ -42,8 +42,8 @@ class DestaquesCursos{
             }
         </style>
         <div class="wrap"><div id="icon-tools" class="icon32"></div>
-            <h2>Destaques textos slide Cursos</h2>
-            <descripiton>Textos slides, home lista de cursos. </descripiton>
+            <h2>Textos de destaque do cabeçalho da home cursos</h2>
+           
             <form method="POST">
                 
                 <p class="destaques">
